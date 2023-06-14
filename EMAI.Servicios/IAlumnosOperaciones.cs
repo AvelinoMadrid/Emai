@@ -8,15 +8,13 @@ using EMAI.Entidades;
 using EMAI.Servicios;
 
 
-
-
 namespace EMAI.Servicios
 {
     public interface IAlumnosOperaciones
     {
-
         // obtener todos los datos 
         Task<List<AlumnosModel>> GetAlumnos();
+        Task<AlumnosbyIDModel> GetAlumnosbyID(int id);
 
 
 

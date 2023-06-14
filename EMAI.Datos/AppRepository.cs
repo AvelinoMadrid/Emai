@@ -41,7 +41,7 @@ namespace EMAI.Datos
 
         #region " Sección Alumnos --> "
 
-        //MOSTAR
+        //MOSTAR TODO
         public async Task<List<AlumnosModel>> GetAlumnos()
         {
             using (SqlConnection  sql = new SqlConnection(EMAIConnection))
@@ -59,7 +59,6 @@ namespace EMAI.Datos
                             response.Add(MapToAlumnos(reader));//2
                         }
                     }
-
                     return response;
                 }
             }
@@ -94,11 +93,94 @@ namespace EMAI.Datos
                 InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
                 DiaOpcional = reader["DiaOpcio"].ToString(),
                 HoraOpcional = reader["HoraOpcio"].ToString()
-
-
-
             };
         }
+
+        // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
+        public async Task<AlumnosbyIDModel> GetAlumnosbyID(int Id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_MunicipioObtenerPorId", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IDMunicipio", Id));
+                    AlumnosbyIDModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MaptoAlumnosbyID(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+
+        private AlumnosbyIDModel MaptoAlumnosbyID (SqlDataReader reader)
+        {
+            return new AlumnosbyIDModel()
+            {
+                IdAlumno = (int)reader["IdAlumno"],
+                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
+                Tag = reader["Tag"].ToString(),
+                NoClasesDia = (int)reader["NoDiaClases"],
+                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
+                FechaFinClaseGratis = (DateTime) reader ["FechaFinClaseGratis"],
+                Nombre = reader["Nombre"].ToString(),
+                ApPaterno = reader["ApellidoP"].ToString(), 
+                ApMaterno = reader["ApellidoM"].ToString(),
+                Edad = (int)reader["Edad"],
+                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
+                Telefono = reader["TelCasa"].ToString(),
+                Celular = reader["Celular"].ToString(),
+                Facebook = reader["Facebook"].ToString(),
+                Email = reader["E-mail"].ToString(),
+                Enfermedades = reader["Enfermedades"].ToString(),
+                Discapacidad = (bool)reader["Discapacidad"],
+                InstrumentoBase = reader["InstrumentoBase"].ToString(),
+                Dia = reader["Dia"].ToString(),
+                Hora = reader["Hora"].ToString(),
+                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
+                DiaOpcional = reader["DiaOpcio"].ToString(),
+                HoraOpcional = reader["HoraOpcio"].ToString(),
+                NombrePapa = reader["NombrePapas"].ToString(),
+                TelefonoPapa = reader["Celularpapas"].ToString(),
+                FacebookPapa = reader["FacebookPapas"].ToString(),
+                EmailPapa = reader["E-mail"].ToString(),
+                TutorRecoger = reader["TutorRecoger"].ToString(),
+                CelularTR = reader["CelularTR"].ToString(),
+                NumEmergencia = reader["NumEmergencia"].ToString(),
+                Estudios = (bool)reader["Estudios"],
+                GradoEstudios = reader["GradoEstudios"].ToString(),
+                EscuelaActual = reader["EscuelaActual"].ToString(),
+                Trabajo = (bool)reader["Trabajas"],
+                LugarTrabajo = reader["LugarTrabajo"].ToString(),
+                conActual = reader["ConActual"].ToString(),
+                instrumentoMusical = reader["Instrumento"].ToString(),
+                InstrumentoCasa = (bool)reader["InstrumentoCasa"],
+                NoInstrumentoMusical = reader["NoInstrumento"].ToString(),
+                EntersteEsc = reader["EnterasteEsc"].ToString(),
+                interesGnroMusical = (bool)reader["InteresGnroMusical"],
+                interesgros = reader["Cuales"].ToString(),
+                interes = reader["lectura"].ToString(), // verificar en la base de daatos 
+                classOpcional = (bool)reader["ClaOpcional"],
+                Descuento = (bool)reader["DescuentoP"],
+                amable = (bool)reader["Amable"],
+                IDRecepcionista = (int)reader["Recepcionista"],
+                NombreRecepcionista = reader["Nombre"].ToString()
+            };
+        }
+
+
+
+
+
 
         #endregion
 

@@ -19,5 +19,18 @@ namespace EMAI.LND
             var rsp = await db.GetAlumnos();
             return rsp;
         }
+
+        public async Task <AlumnosbyIDModel> GetAlumnosbyID(int id) 
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.GetAlumnosbyID(id);
+            return rsp;
+        
+        }
+
+
+
+
+
     }
 }
