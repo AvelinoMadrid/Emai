@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EMAI.Comun/1.0.0": {
+        "runtime": {
+          "EMAI.Comun.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EMAI.Comun/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

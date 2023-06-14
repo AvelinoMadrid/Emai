@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EMAI.Comun\EMAI.Comun.csproj" />
+    <ProjectReference Include="..\EMAI.Entidades\EMAI.Entidades.csproj" />
+    <ProjectReference Include="..\EMAI.Helpers\EMAI.Helpers.csproj" />
+    <ProjectReference Include="..\EMAI.Servicios\EMAI.Servicios.csproj" />
+  </ItemGroup>
+
+</Project>
