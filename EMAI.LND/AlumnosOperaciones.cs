@@ -12,7 +12,6 @@ namespace EMAI.LND
     public class AlumnosOperaciones : IAlumnosOperaciones
     {
 
-        // mostrar 
         //MOSTRAR
         public async Task<List<AlumnosModel>> GetAlumnos()
         {
@@ -20,9 +19,5 @@ namespace EMAI.LND
             var rsp = await db.GetAlumnos();
             return rsp;
         }
-
-
-
-
     }
 }

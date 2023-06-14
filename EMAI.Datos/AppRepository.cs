@@ -35,7 +35,7 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            EMAIConnection = "Data Source=DESKTOP-BO8E6AP,1433;Initial Catalog=email;Integrated Security=False;MultipleActiveResultSets=True";
+            EMAIConnection = "Data Source=LAPTOP-OM95FUOE\\SQLEXPRESS;Initial Catalog=EMAI;TrustServerCertificate=True;Integrated Security=True";
         }
 
 
@@ -46,7 +46,7 @@ namespace EMAI.Datos
         {
             using (SqlConnection  sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("ObtenerAlumnos", sql))
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerAlumnos", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     var response = new List<AlumnosModel>(); //1
@@ -78,8 +78,8 @@ namespace EMAI.Datos
                 FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
                 FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
                 Nombre = reader["Nombre"].ToString(),
-                ApPaterno = reader["ApPaterno"].ToString(),
-                ApMaterno = reader["ApMaterno"].ToString(),
+                ApPaterno = reader["ApellidoP"].ToString(),
+                ApMaterno = reader["ApellidoM"].ToString(),
                 Edad = (int) reader["Edad"],
                 FechaNacimiento = (DateTime) reader["FechaNacimiento"],
                 Telefono = reader["TelCasa"].ToString(),
