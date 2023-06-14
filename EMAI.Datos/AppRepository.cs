@@ -11,10 +11,7 @@ using System.Data.SqlClient;
 
 using System;
 using System.Collections.Generic;
-
-
 using EMAI.Servicios;
-
 using EMAI.Helpers;
 using EMAI.Comun.Models;
 using Microsoft.Data.SqlClient;
@@ -177,14 +174,59 @@ namespace EMAI.Datos
             };
         }
 
+        #endregion
 
+        #region "Seccion ---> Clases"
+        public async Task<List<ClasesModel>> GetClases()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerClases", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<ClasesModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToClases(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private ClasesModel MapToClases(SqlDataReader reader)
+        {
+            return new ClasesModel()
+            {
+
+                idClase = (int)reader["IdClase"],
+                Nombre = (string)reader["Nombre"],
+                CNormal = (string)reader["CNormal"],
+                CVerano = (string)reader["CVerano"],
+                Dia = (string)reader["Dia"],
+                Horario = (string)reader["Horario"],
+                Dia2 = (string)reader["Dia2"],
+                Horario2 = (string)reader["Horario2"],
+                Dia3 = (string)reader["Dia3"],
+                Horario3 = (string)reader["Horario3"],
+                Costo = (decimal)reader["Costo"],
+                ClaseOpc = (string)reader["ClaseOpc"].ToString(),
+                HorarioOpc = (string)reader["HorarioOpc"].ToString(),
+                DiaOpc = (string)reader["DiaOpc"].ToString(),
+
+            };
+        }
 
 
 
 
         #endregion
-
-
 
 
 

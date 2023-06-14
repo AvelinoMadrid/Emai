@@ -23,12 +23,11 @@ namespace EMAI.Servicios
         Task<List<AlumnosModel>> GetAlumnos();
 
         Task<AlumnosbyIDModel> GetAlumnosbyID(int id);
-
-
-
-
         #endregion
 
+        #region "Clases"
+        Task<List<ClasesModel>> GetClases();
+       #endregion
 
 
 

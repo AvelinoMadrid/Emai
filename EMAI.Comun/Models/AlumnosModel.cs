@@ -124,11 +124,8 @@ namespace EMAI.Comun.Models
         public string EntersteEsc { get; set; }
         public bool interesGnroMusical { get; set; }
         public string interesgros { get; set; }
-        
         public bool InstrumentoCasa { get; set; }
        
-
-
         //// tabla interes instrumento 
         public string interes { get; set; }
 

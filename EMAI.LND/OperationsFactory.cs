@@ -15,6 +15,10 @@ namespace EMAI.LND
             return new AlumnosOperaciones();
         }
 
+        public static IClasesOperaciones ObtenerClasesOperaciones()
+        {
+            return new ClasesOperaciones(); 
+        }
 
 
 
