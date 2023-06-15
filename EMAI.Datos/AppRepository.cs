@@ -32,7 +32,7 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            EMAIConnection = "Data Source=LAPTOP-OM95FUOE\\SQLEXPRESS;Initial Catalog=EMAI;TrustServerCertificate=True;Integrated Security=True";
+            EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
         }
 
 
@@ -225,24 +225,7 @@ namespace EMAI.Datos
 
 
 
-
         #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         #region "dispose"
         public void Dispose()
@@ -251,7 +234,6 @@ namespace EMAI.Datos
         }
 
         #endregion
-
 
     }
 }

@@ -23,6 +23,10 @@ namespace EMAI.Servicios
         Task<List<AlumnosModel>> GetAlumnos();
 
         Task<AlumnosbyIDModel> GetAlumnosbyID(int id);
+
+        //Task<bool> InsertarAlumno(AlumnosModel value);
+
+
         #endregion
 
         #region "Clases"
