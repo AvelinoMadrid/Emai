@@ -15,10 +15,30 @@ namespace EMAI.LND
             return new AlumnosOperaciones();
         }
 
+        public static IAsistenciaOperaciones ObtenerAsistenciaOperaciones()
+        {
+            return new AsistenciaOperaciones();
+        }
+
         public static IClasesOperaciones ObtenerClasesOperaciones()
         {
             return new ClasesOperaciones(); 
         }
+
+        public static IHorariosOperaciones ObtenerHorariosOperaciones()
+        {
+            return new HorariosOperaciones();
+        }
+
+
+
+
+        public static IMaestrosOperaciones ObtenerMaestrosOperaciones()
+        {
+            return new MaestrosOperaciones();
+        }
+
+
 
 
 

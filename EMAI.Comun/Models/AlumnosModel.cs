@@ -140,4 +140,116 @@ namespace EMAI.Comun.Models
         public string NombreRecepcionista { get; set; }
     }
 
+    // Insert model
+    public class InsertAlumnoModel
+    {
+
+        // tabla Alumnos 
+        public DateTime FechaInscripcion { get; set; }
+        public string Tag { get; set; }
+        public int NoDiaClases { get; set; }
+        public DateTime FechaInicioClaseGratis { get; set; }
+        public DateTime FechaFinClaseGratis { get; set; }
+        public string Nombre { get; set; }
+        public string ApPaterno { get; set; }
+        public string ApMaterno { get; set; }
+        public int Edad { get; set; }
+        public DateTime FechaNacimiento{get;set;}
+        public string TelefonoCasa { get; set; }
+        public string Celular { get; set; }
+        public string Facebook { get; set; }
+        public string Email { get; set; }
+        public string Enfermedades { get; set; } 
+        public bool Discapacidad { get; set; }
+        public string InstrumentoBase { get; set; }
+        public string Dia { get;set; }  
+        public string InstrumentoOpcional { get; set; }
+        public string DiaOpcio { get; set; }
+        public string HoraOpcio { get; set; }
+
+        // Tabla papas
+        public string NombrePapa { get; set; }
+        public string CelularPapas { get; set; }
+        public string FacebookPapas { get; set; }
+        public string EmailPapas { get; set; }
+        public string TutorRecoger { get; set; }
+        public string CelularTR { get; set; }
+        public string NumEmergencia { get; set; }
+
+        //tabla estudios 
+        public bool Estudios { get; set; }
+        public string GradoEstudios { get; set; }
+        public string EscuelaActuales { get; set; }
+        public bool Trabajas { get; set; }
+        public string LugarTrabajo { get; set; }
+
+
+        // Tabla conocimientos Actuales
+        public string ConActual { get; set; }
+        public string Instrumento { get; set; }
+        public bool InstrumentoCasa { get; set; }
+        public string NoInstrumento { get; set; }
+        public string EnterasteEscuela { get; set; }
+        public bool InteresGnroMusical { get; set; }
+        public string Cuales { get; set; }
+
+        // Tabla interes Instrumento
+        public string Otro { get; set; }
+
+        // Tabla Personal 
+        public bool ClaseOpcional { get; set; }
+        public bool DescuentoP { get; set; }
+        public bool amable { get; set; }
+
+        // Tabla Recepcionista 
+        public string NombreRecepcionista { get; set; }
+
+    }
+    
+    // actualizar
+
+    public class AlumnosUpdateModel
+    {
+        // Tabla Alumnos
+        public int IdAlumno { get; set; }
+        //public DateTime FechaInscripcion { get; set; }
+        public string Tag { get; set; }
+        public int NoDiaClases { get; set; }
+        public DateTime FechaInicioClaseGratis { get; set; }
+        public DateTime FechaFinClaseGratis { get; set; }
+        public string Nombre { get; set; }
+        public string ApellidoP { get; set; }
+        public string ApellidoM { get; set; }
+        public int Edad { get; set; }
+        public DateTime FechaNacimiento { get; set;}
+        public string TelefonoCasa { get; set; }
+        public string Celular { get; set; }
+        public string Facebook { get; set; }
+        public string Email { get; set; }
+        public string Enfermedades { get; set; }
+        public bool Discapacidad { get; set; }
+        public string InstrumentoBase { get; set; }
+        public string Dia { get; set; }
+        public string Hora { get; set; }
+        public string InstrumentoOpcional { get; set; }
+        public string DiaOpcional { get; set; }
+        public string HoraOpcional { get; set; }
+
+        // tabla Papas 
+        public string CelularPapas { get; set; }
+        public string EmailPapas { get; set; }
+        public string RecogerPapas { get; set; }
+        public string CelularTR { get; set; }
+        public string NumEmergencia { get; set; }
+
+
+    }
+
+
+
+
+
+
+
+
 }

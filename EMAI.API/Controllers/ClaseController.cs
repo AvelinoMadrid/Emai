@@ -23,5 +23,44 @@ namespace EMAI.API.Controllers
             return await _repository.GetClases();
         }
 
+        // buscar ID 
+        [HttpGet("{IdClase}")]
+        public async Task<ActionResult<ClasesIdModel>> GetAlumnosbyID(int IdClase)
+        {
+            return await _repository.GetClasesId(IdClase);
+        }
+
+        //Insertar clase 
+
+        [HttpPost("/api/Clases/Insertar")]
+        public async Task Post([FromBody] ClasesModelInsertar value)
+        {
+            await _repository.InsertarClase(value);
+        }
+
+        //Actualizar clase
+        [HttpPut("/api/Clases/Actualizar")]
+        public async Task Put([FromBody] ClasesModelActualizar value)
+        {
+            await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
+                value.Dia, value.Horario, value.Dia2, value.Horario2, value.Dia3, value.Horario3,
+                value.Costo, value.ClaseOpc, value.HorarioOpc, value.DiaOpc);
+        }
+
+        //Eliminar Clase
+        [HttpDelete("Eliminar/{IdClase}")]
+        public async Task Delete(int IdClase)
+        {
+            await _repository.EliminarClase(IdClase);
+        }
+
+
+
+
+
+
+
+
+
     }
 }

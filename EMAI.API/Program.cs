@@ -26,8 +26,6 @@ IWebHostEnvironment enviroment = builder.Environment;
 
 
 //// Add services to the container.
-
-
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 
@@ -37,13 +35,12 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddSwaggerGen();
 
 
-// aca van las operaciones 
-
+// aca van las operaciones
 builder.Services.AddScoped(typeof(IAlumnosOperaciones), f => OperationsFactory.ObtenerAlumnosOperaciones());
 builder.Services.AddScoped(typeof(IClasesOperaciones), f => OperationsFactory.ObtenerClasesOperaciones());
-
-
-
+builder.Services.AddScoped(typeof(IAsistenciaOperaciones),f=> OperationsFactory.ObtenerAsistenciaOperaciones());
+builder.Services.AddScoped(typeof(IMaestrosOperaciones), f => OperationsFactory.ObtenerMaestrosOperaciones());
+builder.Services.AddScoped(typeof(IHorariosOperaciones), f => OperationsFactory.ObtenerHorariosOperaciones());
 
 
 
