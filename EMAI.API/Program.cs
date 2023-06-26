@@ -41,10 +41,16 @@ builder.Services.AddScoped(typeof(IClasesOperaciones), f => OperationsFactory.Ob
 builder.Services.AddScoped(typeof(IAsistenciaOperaciones),f=> OperationsFactory.ObtenerAsistenciaOperaciones());
 builder.Services.AddScoped(typeof(IMaestrosOperaciones), f => OperationsFactory.ObtenerMaestrosOperaciones());
 builder.Services.AddScoped(typeof(IHorariosOperaciones), f => OperationsFactory.ObtenerHorariosOperaciones());
-
-
-
-
+builder.Services.AddScoped(typeof(INominaOperaciones), f => OperationsFactory.ObtenerNominaOperaciones());
+builder.Services.AddScoped(typeof(ICooperacionesOperaciones), f => OperationsFactory.ObtenerCooperacionesOperaciones());
+builder.Services.AddScoped(typeof(IDotacionDiaOperaciones), f => OperationsFactory.ObtenerDotacionDiaOperaciones());
+builder.Services.AddScoped(typeof(IUsuariosOperaciones), f => OperationsFactory.ObtenerUsuariosOperaciones());
+builder.Services.AddScoped(typeof(IPromosionesOperaciones), f => OperationsFactory.ObtenerPromocionesOperaciones());
+builder.Services.AddScoped(typeof(IPagosOperaciones), f => OperationsFactory.ObtenerPagosOperaciones());
+builder.Services.AddScoped(typeof(IGastosOperaciones), f => OperationsFactory.ObtenerGastosOperaciones());
+builder.Services.AddScoped(typeof(IGastosDiaOperaciones), f => OperationsFactory.ObtenerGastosDiaOperaciones());
+builder.Services.AddScoped(typeof(IColegiaturaOperaciones), f => OperationsFactory.ObtenerColegiaturaOperaciones());
+builder.Services.AddScoped(typeof(IAdicionalesOperaciones), f => OperationsFactory.ObtenerAdicionalesOperaciones());
 
 var app = builder.Build();
 
