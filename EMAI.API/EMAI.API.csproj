@@ -40,4 +40,10 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>
