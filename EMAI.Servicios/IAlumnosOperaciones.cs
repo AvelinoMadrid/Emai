@@ -13,7 +13,7 @@ namespace EMAI.Servicios
     {
         // obtener todos los datos 
         Task<List<AlumnosModel>> GetAlumnos();
-        Task<AlumnosbyIDModel> GetAlumnosbyID(int id);
+        Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> UpdateAlumnos(int IdAlumno, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,

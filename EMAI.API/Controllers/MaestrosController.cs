@@ -24,7 +24,7 @@ namespace EMAI.API.Controllers
             return await _repository.GetMaestros();
         }
 
-        [HttpGet("{IdClase}")]
+        [HttpGet("{IdMaestro}")]
         public async Task<ActionResult<MaestrosIDModel>> GetMaestrosID(int IdMaestro)
         {
             return await _repository.GetMaestrosID(IdMaestro);

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -100,9 +102,8 @@ namespace EMAI.Comun.Models
 
         //public string Img { get; set; }
 
-        //// tabla Papàs
-
-        public string NombrePapa { get; set; }
+        //// tabla Papà
+        public string NombrePapas { get; set; }
         public string TelefonoPapa { get; set; }
         public string FacebookPapa { get; set; }
         public string TutorRecoger { get; set; }
@@ -241,6 +242,78 @@ namespace EMAI.Comun.Models
         public string RecogerPapas { get; set; }
         public string CelularTR { get; set; }
         public string NumEmergencia { get; set; }
+
+
+    }
+
+
+    // EJEMPLO DE MODELO NUEVO DE ACTUALIZAR
+    public class ObtenerAlumno
+    {
+        public int IDAlumno { get; set; }
+        public DateTime FechaInscripcion{get;set ;}
+        public string Tag { get; set; } 
+        public int NoDiaClases { get; set; }    
+        public DateTime FechaInicioClaseGratis { get; set; }
+        public DateTime FechaFinClaseGratis { get; set; }
+        public string Nombre { get; set; }
+        public string ApellidoP { get; set; }
+        public string ApellidoM { get; set; }
+        public int Edad { get; set; }
+        public DateTime FechaNaciminto { get; set; }
+        public string TelCasa { get; set; } 
+        public string Celular { get; set; }
+        public string Facebook { get; set; }
+        public string Email { get; set; }
+        public string Enfermedades { get; set; }
+        public bool Discapacidad { get; set; }
+        public string Instrumentobase { get; set; } 
+        public string Dia { get; set; }
+        public string Hora { get; set; }    
+        public string InstrumentoOpcional { get; set; }
+        public string DiaOpcional { get; set; }
+        public string HoraOpcional { get; set; }
+
+        //public string IMG { get; set; }
+
+        // Tabla Papas 
+
+        public string NombrePapas { get; set; }
+        public string CelularPapas { get; set; }
+        public string FacebookPaps { get; set; }    
+        public string EmailPapas { get; set; }  
+        public string TutorRecoger { get; set; }
+        public string CelularTR { get; set; }
+        public string NumeroEmergencia { get; set; }
+
+        
+        // tabla estudios 
+        public bool Estudios { get; set; }
+        public string GradoEstudios { get; set; }
+        public string EscuelaActual { get; set; }
+        public bool Trabajas { get; set; }
+        public string LugarTrabajo { get; set; }
+
+        // TABLA CONOCIMIENTOS MUSICALES 
+        public string ConActual { get; set; }
+        public string Instrumento { get; set; }
+        public bool InstrumentoCasa { get; set;}
+        public string NoInstrumento { get; set; }
+        public string EnterasteESc { get;set; }
+        public bool InteresGroMusical { get; set; }
+        public string Cuales { get; set; }
+
+        // TABLA INTERES 
+
+        public string Otro { get; set; }
+
+        // TABLA PERSONAL 
+        public bool ClasOpcional { get; set; }
+        public bool Descuento { get; set; }
+        public bool Amable { get; set; }
+
+        // TABLA RECEPCIONISTA 
+        public string NombreRecepcionista { get; set; }
 
 
     }

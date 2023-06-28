@@ -50,3 +50,15 @@ C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.deps.json
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfo.cs
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.dll
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll

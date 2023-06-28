@@ -15,6 +15,7 @@ using EMAI.Servicios;
 using EMAI.Helpers;
 using EMAI.Comun.Models;
 using Microsoft.Data.SqlClient;
+using System.Diagnostics.Metrics;
 
 namespace EMAI.Datos
 {
@@ -61,7 +62,7 @@ namespace EMAI.Datos
             }
         }
 
-
+         
         private AlumnosModel MapToAlumnos(SqlDataReader reader)
         {
             return new AlumnosModel()
@@ -94,7 +95,7 @@ namespace EMAI.Datos
         }
 
         // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
-        public async Task<AlumnosbyIDModel> GetAlumnosbyID(int Id)
+        public async Task<ObtenerAlumno> GetAlumnosbyID(int Id)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -102,14 +103,14 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdAlumno", Id));
-                    AlumnosbyIDModel response = null;//3
+                    ObtenerAlumno response = null;//3
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         while (await reader.ReadAsync())
                         {
-                            response = MaptoAlumnosbyID(reader);//3
+                            response = MapToAlumnosTodo(reader);//3
                         }
                     }
 
@@ -148,8 +149,8 @@ namespace EMAI.Datos
                 HoraOpcional = reader["HoraOpcio"].ToString(),
 
                 // tabla papas
-                NombrePapa = reader["NombrePapas"].ToString(),
-                TelefonoPapa = reader["Celularpapas"].ToString(),
+                NombrePapas = reader["NombrePapas"].ToString(),
+                TelefonoPapa = reader["CelularPapas"].ToString(),
                 FacebookPapa = reader["FacebookPapas"].ToString(),
                 EmailPapa = reader["E-mail"].ToString(),
                 TutorRecoger = reader["TutorRecoger"].ToString(),
@@ -175,14 +176,85 @@ namespace EMAI.Datos
                 classOpcional = (bool)reader["ClaOpcional"],
                 Descuento = (bool)reader["DescuentoP"],
                 amable = (bool)reader["Amable"],
+
+
                 IDRecepcionista = (int)reader["Recepcionista"],
                 NombreRecepcionista = reader["Nombre"].ToString()
             };
         }
 
+        private ObtenerAlumno MapToAlumnosTodo (SqlDataReader reader)
+        {
+
+            return new ObtenerAlumno()
+            {
+
+                // TABLA DE ALUMNO
+                IDAlumno = (int)reader["IdAlumno"],
+                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
+                Tag = reader["Tag"].ToString(),
+                NoDiaClases = (int)reader["NoDiaClases"],
+                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
+                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
+                Nombre = reader["Nombre"].ToString(),
+                ApellidoP = reader["ApellidoP"].ToString(),
+                ApellidoM = reader["ApellidoM"].ToString(),
+                Edad = (int)reader["Edad"],
+                FechaNaciminto = (DateTime)reader["FechaNacimiento"],
+                TelCasa = reader["TelCasa"].ToString(),
+                Celular = reader["Celular"].ToString(),
+                Facebook = reader["Facebook"].ToString(),
+                Email = reader["E-mail"].ToString(),
+                Enfermedades = reader["Enfermedades"].ToString(),
+                Discapacidad = (bool)reader["Discapacidad"],
+                Instrumentobase = reader["InstrumentoBase"].ToString(),
+                Dia = reader["Dia"].ToString(), 
+                Hora = reader["Hora"].ToString(), 
+                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(), 
+                DiaOpcional = reader["DiaOpcio"].ToString(), 
+                HoraOpcional = reader["HoraOpcio"].ToString(),
+
+                // TABLA PAPAS 
+                NombrePapas = reader["NombrePapas"].ToString(), 
+                CelularPapas = reader["CelularPapas"].ToString(), 
+                FacebookPaps = reader["FacebookPapas"].ToString(), 
+                EmailPapas = reader["E-mail"].ToString(), 
+                TutorRecoger = reader["TutorRecoger"].ToString(),
+                CelularTR = reader["CelularTR]"].ToString(),
+                NumeroEmergencia = reader["NumEmergencia"].ToString(), 
+
+                // TABLA ESTUDIOS 
+                Estudios = (bool) reader["Estudios"], 
+                GradoEstudios = reader["GradoEstudios"].ToString(),
+                EscuelaActual = reader["EscuelaActual"].ToString(), 
+                Trabajas = (bool)reader["Trabajas"], 
+                LugarTrabajo = reader["LugarTrabajo"].ToString(), 
+
+                // TABLA CONOCIMIENTOS 
+                ConActual = reader["ConActual"].ToString(), 
+                Instrumento = reader["Instrumento"].ToString(), 
+                InstrumentoCasa = (bool)reader["InstrumentoCasa"], 
+                NoInstrumento = reader["InstrumentoCasa"].ToString(), 
+                EnterasteESc = reader["EnterasteEsc"].ToString(), 
+                InteresGroMusical = (bool)reader["InteresGnroMusical"], 
+                Cuales = reader["Cuales"].ToString(), 
+
+                // TABLA INTEREES 
+                Otro = reader["Otro"].ToString(),
+
+                // TABLA PERSONAL
+                ClasOpcional = (bool)reader["ClasOpcional"],
+                Descuento = (bool)reader["DescuentoP"],
+                Amable = (bool)reader["Amable"],
+
+                // TABLA RECEPCIONISTA
+                NombreRecepcionista = reader["Nombre"].ToString()
+                
+            };
+        }
+
 
         // insert Alumno 
-
 
         public async Task<bool> InsertarAlumno(InsertAlumnoModel value)
         {

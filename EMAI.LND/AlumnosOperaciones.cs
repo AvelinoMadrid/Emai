@@ -20,7 +20,7 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task <AlumnosbyIDModel> GetAlumnosbyID(int id) 
+        public async Task<ObtenerAlumno> GetAlumnosbyID(int id) 
         {
             using var db = AppRepositoryFactory.GetAppRepository();
             var rsp = await db.GetAlumnosbyID(id);

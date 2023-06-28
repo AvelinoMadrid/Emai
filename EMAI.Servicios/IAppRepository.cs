@@ -30,7 +30,7 @@ namespace EMAI.Servicios
 
         Task<List<AlumnosModel>> GetAlumnos();
 
-        Task<AlumnosbyIDModel> GetAlumnosbyID(int id);
+        Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
 
         Task<bool> DeleteByIdAlumno(int Id);
@@ -167,10 +167,6 @@ namespace EMAI.Servicios
         Task<bool> ActualizarUsuario(int IdUsuario, string Usuario, string Contraseña, string Email, string Direccion, string Telefono);
         Task<bool> EliminarUsuario(int IdUsuario);
         #endregion
-
-
-
-
 
 
     }
