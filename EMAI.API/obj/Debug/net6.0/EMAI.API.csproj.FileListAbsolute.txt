@@ -312,6 +312,7 @@ C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.AP
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\ref\EMAI.API.dll
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\appsettings.json
+C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.API.staticwebassets.runtime.json
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.API.exe
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.API.deps.json
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.API.runtimeconfig.json

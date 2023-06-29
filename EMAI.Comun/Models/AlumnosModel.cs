@@ -280,13 +280,13 @@ namespace EMAI.Comun.Models
 
         public string NombrePapas { get; set; }
         public string CelularPapas { get; set; }
-        public string FacebookPaps { get; set; }    
-        public string EmailPapas { get; set; }  
+        public string FacebookPaps { get; set; }
+        public string EmailPapas { get; set; }
         public string TutorRecoger { get; set; }
         public string CelularTR { get; set; }
         public string NumeroEmergencia { get; set; }
 
-        
+
         // tabla estudios 
         public bool Estudios { get; set; }
         public string GradoEstudios { get; set; }

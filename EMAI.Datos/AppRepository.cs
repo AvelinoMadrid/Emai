@@ -99,7 +99,7 @@ namespace EMAI.Datos
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_ObtenerAlumnosCompleto", sql))
+                using (SqlCommand cmd = new SqlCommand("ObtenerAlumnoPorId", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdAlumno", Id));
@@ -118,6 +118,7 @@ namespace EMAI.Datos
                 }
             }
         }
+
 
 
         private AlumnosbyIDModel MaptoAlumnosbyID (SqlDataReader reader)
@@ -190,65 +191,66 @@ namespace EMAI.Datos
             {
 
                 // TABLA DE ALUMNO
-                IDAlumno = (int)reader["IdAlumno"],
-                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
-                Tag = reader["Tag"].ToString(),
-                NoDiaClases = (int)reader["NoDiaClases"],
-                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
-                Nombre = reader["Nombre"].ToString(),
-                ApellidoP = reader["ApellidoP"].ToString(),
-                ApellidoM = reader["ApellidoM"].ToString(),
-                Edad = (int)reader["Edad"],
-                FechaNaciminto = (DateTime)reader["FechaNacimiento"],
-                TelCasa = reader["TelCasa"].ToString(),
-                Celular = reader["Celular"].ToString(),
-                Facebook = reader["Facebook"].ToString(),
-                Email = reader["E-mail"].ToString(),
-                Enfermedades = reader["Enfermedades"].ToString(),
-                Discapacidad = (bool)reader["Discapacidad"],
-                Instrumentobase = reader["InstrumentoBase"].ToString(),
-                Dia = reader["Dia"].ToString(), 
-                Hora = reader["Hora"].ToString(), 
-                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(), 
-                DiaOpcional = reader["DiaOpcio"].ToString(), 
-                HoraOpcional = reader["HoraOpcio"].ToString(),
+                IDAlumno = (int)reader["IdAlumno"], //1
+                FechaInscripcion = (DateTime)reader["FechaInscripcion"], //2
+                Tag = reader["Tag"].ToString(), //3
+                NoDiaClases = (int)reader["NoDiaClases"], //4
+                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"], //5
+                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"], //6
+                Nombre = reader["Nombre"].ToString(),//7
+                ApellidoP = reader["ApellidoP"].ToString(), //8
+                ApellidoM = reader["ApellidoM"].ToString(), //9
+                Edad = (int)reader["Edad"], //10
+                FechaNaciminto = (DateTime)reader["FechaNacimiento"], //11
+                TelCasa = reader["TelCasa"].ToString(), //12
+                Celular = reader["Celular"].ToString(), //13
+                Facebook = reader["Facebook"].ToString(), //14
+                Email = reader["E-mail"].ToString(), //15
+                Enfermedades = reader["Enfermedades"].ToString(), //16
+                Discapacidad = (bool)reader["Discapacidad"], //17
+                Instrumentobase = reader["InstrumentoBase"].ToString(), //18
+                Dia = reader["Dia"].ToString(), //19
+                Hora = reader["Hora"].ToString(), //30
+                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(), //21
+                DiaOpcional = reader["DiaOpcio"].ToString(), //22
+                HoraOpcional = reader["HoraOpcio"].ToString(), //23
 
                 // TABLA PAPAS 
-                NombrePapas = reader["NombrePapas"].ToString(), 
-                CelularPapas = reader["CelularPapas"].ToString(), 
-                FacebookPaps = reader["FacebookPapas"].ToString(), 
-                EmailPapas = reader["E-mail"].ToString(), 
-                TutorRecoger = reader["TutorRecoger"].ToString(),
-                CelularTR = reader["CelularTR]"].ToString(),
-                NumeroEmergencia = reader["NumEmergencia"].ToString(), 
+
+                NombrePapas = reader["NombrePapas"].ToString(), //24
+                CelularPapas = reader["CelularPapas"].ToString(), //25
+                FacebookPaps = reader["FacebookPapas"].ToString(), //26
+                EmailPapas = reader["E-mail"].ToString(), //27
+                TutorRecoger = reader["TutorRecoger"].ToString(), //28
+                CelularTR = reader["CelularTR]"].ToString(),//29
+                NumeroEmergencia = reader["NumEmergencia"].ToString(), //30  
 
                 // TABLA ESTUDIOS 
-                Estudios = (bool) reader["Estudios"], 
-                GradoEstudios = reader["GradoEstudios"].ToString(),
-                EscuelaActual = reader["EscuelaActual"].ToString(), 
-                Trabajas = (bool)reader["Trabajas"], 
-                LugarTrabajo = reader["LugarTrabajo"].ToString(), 
+                Estudios = (bool) reader["Estudios"], //31
+                GradoEstudios = reader["GradoEstudios"].ToString(), //32
+                EscuelaActual = reader["EscuelaActual"].ToString(), //33
+                Trabajas = (bool)reader["Trabajas"], //34
+                LugarTrabajo = reader["LugarTrabajo"].ToString(), //35  
 
                 // TABLA CONOCIMIENTOS 
-                ConActual = reader["ConActual"].ToString(), 
-                Instrumento = reader["Instrumento"].ToString(), 
-                InstrumentoCasa = (bool)reader["InstrumentoCasa"], 
-                NoInstrumento = reader["InstrumentoCasa"].ToString(), 
-                EnterasteESc = reader["EnterasteEsc"].ToString(), 
-                InteresGroMusical = (bool)reader["InteresGnroMusical"], 
-                Cuales = reader["Cuales"].ToString(), 
+                ConActual = reader["ConActual"].ToString(), //36
+                Instrumento = reader["Instrumento"].ToString(), //37
+                InstrumentoCasa = (bool)reader["InstrumentoCasa"], //38
+                NoInstrumento = reader["InstrumentoCasa"].ToString(), //39
+                EnterasteESc = reader["EnterasteEsc"].ToString(), //40
+                InteresGroMusical = (bool)reader["InteresGnroMusical"], //41 
+                Cuales = reader["Cuales"].ToString(), //42 
 
                 // TABLA INTEREES 
-                Otro = reader["Otro"].ToString(),
+                Otro = reader["Otro"].ToString(), //43
 
                 // TABLA PERSONAL
-                ClasOpcional = (bool)reader["ClasOpcional"],
-                Descuento = (bool)reader["DescuentoP"],
-                Amable = (bool)reader["Amable"],
+                ClasOpcional = (bool)reader["ClasOpcional"], //44
+                Descuento = (bool)reader["DescuentoP"], //45
+                Amable = (bool)reader["Amable"], //46
 
                 // TABLA RECEPCIONISTA
-                NombreRecepcionista = reader["Nombre"].ToString()
+                NombreRecepcionista = reader["Nombre"].ToString()  //47
                 
             };
         }
