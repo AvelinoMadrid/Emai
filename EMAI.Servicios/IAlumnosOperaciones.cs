@@ -20,7 +20,10 @@ namespace EMAI.Servicios
             int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,
             string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia);
 
-    
+
+
+        // prueba de obtener alumnos por id
+        Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
 
 
 

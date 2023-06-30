@@ -40,6 +40,13 @@ namespace EMAI.Servicios
            string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia);
 
         
+         Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
+
+
+
+
+
+
 
         #endregion
 

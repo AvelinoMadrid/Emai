@@ -53,6 +53,16 @@ namespace EMAI.LND
 
        
 
+        // prueba para obtener alumnos por ID 
+
+        public async Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.ObtenerAlumnosporID(id);
+            return rsp;
+            
+        }
+
 
 
     }

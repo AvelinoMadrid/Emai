@@ -100,9 +100,10 @@ namespace EMAI.Comun.Models
         public string DiaOpcional { get; set; }
         public string HoraOpcional { get; set; }
 
-        //public string Img { get; set; }
+        public string Img { get; set; }
 
         //// tabla Papà
+        public int IdPapas { get; set; }
         public string NombrePapas { get; set; }
         public string TelefonoPapa { get; set; }
         public string FacebookPapa { get; set; }
@@ -112,6 +113,8 @@ namespace EMAI.Comun.Models
         public string EmailPapa { get; set; }
 
         //// tabla estudios 
+        
+        public int IdEstudios { get; set; }
         public bool Estudios { get; set; }
         public string GradoEstudios { get; set; }
         public string EscuelaActual { get; set; }
@@ -119,6 +122,8 @@ namespace EMAI.Comun.Models
         public string LugarTrabajo { get; set; }
 
         //// tabla conociientos Musicales
+        
+        public int IdConocimientoMusicales { get; set; }
         public string conActual { get; set; }
         public string instrumentoMusical { get; set; }
         public string NoInstrumentoMusical { get; set; }
@@ -128,10 +133,15 @@ namespace EMAI.Comun.Models
         public bool InstrumentoCasa { get; set; }
        
         //// tabla interes instrumento 
+        
+        public int IdInteresInstrumento { get; set; }
         public string interes { get; set; }
 
+        public string otro { get; set; }
 
         //// tabla personal 
+        
+        public int Idpersonal { get; set; }
         public bool classOpcional { get; set; }
         public bool Descuento { get; set; }
         public bool amable { get; set; }
@@ -140,6 +150,10 @@ namespace EMAI.Comun.Models
         public int IDRecepcionista { get; set; }
         public string NombreRecepcionista { get; set; }
     }
+
+
+
+
 
     // Insert model
     public class InsertAlumnoModel

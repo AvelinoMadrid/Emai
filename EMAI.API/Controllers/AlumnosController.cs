@@ -28,9 +28,9 @@ namespace EMAI.API.Controllers
 
         // buscar ID /api/Adicional/Insertar
         [HttpGet("{id}")]
-        public async Task <ActionResult<ObtenerAlumno>> GetAlumnosbyID(int id)
+        public async Task <ActionResult<AlumnosbyIDModel>> ObtenerAlumnosporID(int id)
         {
-            return await _repository.GetAlumnosbyID(id);
+            return await _repository.ObtenerAlumnosporID(id);
         }
 
        

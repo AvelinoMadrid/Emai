@@ -121,6 +121,39 @@ namespace EMAI.Datos
 
 
 
+
+
+        // mostrar usando inner join 
+
+        // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
+        public async Task<AlumnosbyIDModel> ObtenerAlumnosporID(int Id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("ObtenerAlumnoPorId", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", Id));
+                    AlumnosbyIDModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MaptoAlumnosbyID(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+
+
+
+
         private AlumnosbyIDModel MaptoAlumnosbyID (SqlDataReader reader)
         {
             return new AlumnosbyIDModel()
@@ -130,9 +163,9 @@ namespace EMAI.Datos
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
                 FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                FechaFinClaseGratis = (DateTime) reader ["FechaFinClaseGratis"],
+                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
                 Nombre = reader["Nombre"].ToString(),
-                ApPaterno = reader["ApellidoP"].ToString(), 
+                ApPaterno = reader["ApellidoP"].ToString(),
                 ApMaterno = reader["ApellidoM"].ToString(),
                 Edad = (int)reader["Edad"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
@@ -148,8 +181,11 @@ namespace EMAI.Datos
                 InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
                 DiaOpcional = reader["DiaOpcio"].ToString(),
                 HoraOpcional = reader["HoraOpcio"].ToString(),
+                Img = reader["Imagen"].ToString(),
+
 
                 // tabla papas
+                IdPapas = (int)reader["IdPapas"],
                 NombrePapas = reader["NombrePapas"].ToString(),
                 TelefonoPapa = reader["CelularPapas"].ToString(),
                 FacebookPapa = reader["FacebookPapas"].ToString(),
@@ -159,6 +195,7 @@ namespace EMAI.Datos
                 NumEmergencia = reader["NumEmergencia"].ToString(),
 
                 // tabla estudios
+                IdEstudios = (int)reader["IdEstudio"],
                 Estudios = (bool)reader["Estudios"],
                 GradoEstudios = reader["GradoEstudios"].ToString(),
                 EscuelaActual = reader["EscuelaActual"].ToString(),
@@ -166,6 +203,7 @@ namespace EMAI.Datos
                 LugarTrabajo = reader["LugarTrabajo"].ToString(),
 
                 // tabla conocimientos actuales
+                IdConocimientoMusicales = (int)reader["ID"],
                 conActual = reader["ConActual"].ToString(),
                 instrumentoMusical = reader["Instrumento"].ToString(),
                 InstrumentoCasa = (bool)reader["InstrumentoCasa"],
@@ -174,12 +212,16 @@ namespace EMAI.Datos
                 interesGnroMusical = (bool)reader["InteresGnroMusical"],
                 interesgros = reader["Cuales"].ToString(),
                 interes = reader["Otro"].ToString(), // verificar en la base de daatos 
-                classOpcional = (bool)reader["ClaOpcional"],
+                classOpcional = (bool)reader["ClasOpcional"],
                 Descuento = (bool)reader["DescuentoP"],
                 amable = (bool)reader["Amable"],
+               
+                IdInteresInstrumento = (int)reader["ID"],
+                otro = reader["Otro"].ToString(),
+                Idpersonal = (int)reader["ID"],
 
 
-                IDRecepcionista = (int)reader["Recepcionista"],
+                IDRecepcionista = (int)reader["IdRecepcionista"],
                 NombreRecepcionista = reader["Nombre"].ToString()
             };
         }
