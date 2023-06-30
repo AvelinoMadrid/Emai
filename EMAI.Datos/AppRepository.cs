@@ -120,9 +120,6 @@ namespace EMAI.Datos
         }
 
 
-
-
-
         // mostrar usando inner join 
 
         // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
@@ -149,9 +146,6 @@ namespace EMAI.Datos
                 }
             }
         }
-
-
-
 
 
         private AlumnosbyIDModel MaptoAlumnosbyID (SqlDataReader reader)

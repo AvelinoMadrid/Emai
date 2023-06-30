@@ -217,6 +217,9 @@ namespace EMAI.Comun.Models
         public bool amable { get; set; }
 
         // Tabla Recepcionista 
+
+
+        //public int IdRecepcionista { get; set; }
         public string NombreRecepcionista { get; set; }
 
     }
