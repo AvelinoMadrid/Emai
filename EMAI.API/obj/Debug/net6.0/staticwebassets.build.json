@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t+WrhbSnyE1Rv/2FV+2kAXuqEBSN0DSJycp6mIirFwY=",
+  "Hash": "O6bpA4+5SJ9Vb33j47rV/8JoqMvmCft5p+XZdJV8BOQ=",
   "Source": "EMAI.API",
   "BasePath": "_content/EMAI.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "EMAI.API\\wwwroot",
       "Source": "EMAI.API",
-      "ContentRoot": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.API\\wwwroot\\",
       "BasePath": "_content/EMAI.API",
       "Pattern": "**"
     }

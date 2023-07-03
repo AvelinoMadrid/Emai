@@ -210,13 +210,13 @@ namespace EMAI.Datos
                 Descuento = (bool)reader["DescuentoP"],
                 amable = (bool)reader["Amable"],
                
-                IdInteresInstrumento = (int)reader["ID"],
+                IdInteresInstrumento = (int)reader["IDInteres"], //
                 otro = reader["Otro"].ToString(),
-                Idpersonal = (int)reader["ID"],
+                Idpersonal = (int)reader["IDPersonal"],
 
 
                 IDRecepcionista = (int)reader["IdRecepcionista"],
-                NombreRecepcionista = reader["Nombre"].ToString()
+                NombreRecepcionista = reader["NombreRecepcionista"].ToString()
             };
         }
 
