@@ -51,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
       "projectName": "EMAI.Servicios",
-      "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
       "projectStyle": "PackageReference",
@@ -79,11 +79,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+            "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
             },
-            "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+            "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
             }
           }
         }

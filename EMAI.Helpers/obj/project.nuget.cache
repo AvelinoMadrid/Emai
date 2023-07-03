@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zws5rmBCHg8q8fGqlYkudIPFqzzUQow2v+bweU6U8L7ziRhlsawl1ToRROMtWML3UOr+0W5lZfGjsxvFuBcwqQ==",
+  "dgSpecHash": "h2xN7Cd61+cIsTCMaJlyNmUDkZjWe4wWGtoxVjbmen09vx6KHWR1XVe2Fq2Y2LEd1wliT5zK1SaiHWTypt7woA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
