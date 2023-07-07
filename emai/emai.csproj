@@ -16,6 +16,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
     <PackageReference Include="Puya.Platform.Infrastructure.Data.SqlServer" Version="1.0.0.140" />
     <PackageReference Include="Reec.Inspection.SqlServer" Version="1.0.5" />
   </ItemGroup>

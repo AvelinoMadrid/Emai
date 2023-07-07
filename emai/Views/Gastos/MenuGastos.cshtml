@@ -30,7 +30,8 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     @*<img src="~/dist/svg/solid/graduation-cap.svg" width="20" />*@
-                    <a href="#">
+                    <a href="@Url.Action("Colegiatura", "Colegiatura")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Colegiatura" ? "active" : "") nav-link">
+
                         <p>Entrada de Colegiaturas</p>
                     </a>
 

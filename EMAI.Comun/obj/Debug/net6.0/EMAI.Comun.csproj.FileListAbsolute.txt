@@ -74,3 +74,15 @@ C:\Users\anubi\source\repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.
 C:\Users\anubi\source\repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
 C:\Users\anubi\source\repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
 C:\Users\anubi\source\repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.deps.json
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.AssemblyReference.cache
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfoInputs.cache
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfo.cs
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.CoreCompileInputs.cache
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.dll
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll
