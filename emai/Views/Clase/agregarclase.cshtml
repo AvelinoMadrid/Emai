@@ -1,0 +1,87 @@
+﻿@model Clase
+
+@{
+    ViewData["Title"] = "agregarclase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Clase" method="post">
+
+            <input asp-for="idClase" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Nombre" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">CNormal</label>
+                <input type="text" class="form-control form-control-sa" asp-for="CNormal" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">CVerano</label>
+                <input type="text" class="form-control form-control-sa" asp-for="CVerano" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Horario</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Horario" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia2</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia2" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Horario2</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Horario2" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia3</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia3" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Horario3</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Horario3" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Costo</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Costo" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">ClaseOpc</label>
+                <input type="text" class="form-control form-control-sa" asp-for="ClaseOpc" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">HorarioOpc</label>
+                <input type="text" class="form-control form-control-sa" asp-for="HorarioOpc" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">DiaOpc</label>
+                <input type="text" class="form-control form-control-sa" asp-for="DiaOpc" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Clase" asp-controller="Clase" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+
+
+
+    </div>
+</div>
+
+
+

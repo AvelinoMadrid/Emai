@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
         "projectName": "EMAI.Comun",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\obj\\",
+        "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,52 +60,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
         "projectName": "EMAI.Datos",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\obj\\",
+        "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               },
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
               },
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
               }
             }
           }
@@ -143,35 +139,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
+        "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -205,35 +199,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "projectName": "EMAI.Helpers",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
+        "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -281,46 +273,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+    "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
         "projectName": "EMAI.Servicios",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
+        "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               }
             }
           }
@@ -350,7 +340,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

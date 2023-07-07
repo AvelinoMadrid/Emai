@@ -1,0 +1,52 @@
+﻿@model Usuarios
+@{
+    ViewData["Title"] = "agregarusuario1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post">
+
+            <input asp-for="idUsuario" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Usuario" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Contraseña</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Contraseña" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Email" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Direccion</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Direccion" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Telefono</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Telefono" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Usuario" asp-controller="Usuarios" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+
+
+
+    </div>
+</div>
+

@@ -1,19 +1,11 @@
 {
   "Version": 1,
-  "Hash": "O6bpA4+5SJ9Vb33j47rV/8JoqMvmCft5p+XZdJV8BOQ=",
+  "Hash": "LMLf9fVjgZQWgg1P0/CKA0cvOud8gWPTCKWTX7m1HsE=",
   "Source": "EMAI.API",
   "BasePath": "_content/EMAI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "EMAI.API\\wwwroot",
-      "Source": "EMAI.API",
-      "ContentRoot": "C:\\Users\\USUARIO\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.API\\wwwroot\\",
-      "BasePath": "_content/EMAI.API",
-      "Pattern": "**"
-    }
-  ],
+  "DiscoveryPatterns": [],
   "Assets": []
 }
