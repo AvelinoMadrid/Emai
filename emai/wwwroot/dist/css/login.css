@@ -35,8 +35,8 @@
     width: 50%;
     background-color: var(--image-bg);
     box-sizing: border-box;
-    background-image: url('../img/isa.svg');
-    background-size: cover
+    background-image: url('../img/EMAI2.svg');
+    background-size: contain
 }
 
 .title {
@@ -44,7 +44,9 @@
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--title-bg);
-    padding:50px
+    padding:50px;
+    position:relative;
+    top:50px
 }
 
 .social-login {
@@ -85,8 +87,12 @@
 }
 
 .login-info-container > img {
-    width:100%;
-    max-width:210px
+    width: 100%;
+    max-width: 100px;
+    float: left;
+    flex-direction:;
+    align-content:;
+    margin-left: -300px;
 }
 
 .inputs-container {
@@ -118,7 +124,7 @@
     }
 
 .btn {
-    width: 80%;
+    width: 40%;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: white;

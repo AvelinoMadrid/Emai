@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\dist\\img\\E2.jpg"
     },
     {
+      "Id": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\emai\\wwwroot\\dist\\img\\EMAI2.svg",
+      "PackagePath": "staticwebassets\\dist\\img\\EMAI2.svg"
+    },
+    {
       "Id": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\emai\\wwwroot\\dist\\img\\EMAI_logo.svg",
       "PackagePath": "staticwebassets\\dist\\img\\EMAI_logo.svg"
     },

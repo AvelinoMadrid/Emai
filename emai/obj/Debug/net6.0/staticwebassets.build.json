@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7M5U8a1Byw7Rnwc9rZ5eS1FaWX802ILlIi16L3nOQo8=",
+  "Hash": "Xhsvzfmoul+SeVe4noK93PR84bIhdn8xMcWbNf2oUFc=",
   "Source": "emai",
   "BasePath": "_content/emai",
   "Mode": "Default",
@@ -814,6 +814,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\img\\EMAI_logo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\emai\\wwwroot\\dist\\img\\EMAI2.svg",
+      "SourceId": "emai",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\emai\\wwwroot\\",
+      "BasePath": "_content/emai",
+      "RelativePath": "dist/img/EMAI2.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dist\\img\\EMAI2.svg"
     },
     {
       "Identity": "C:\\Users\\anubi\\source\\repos\\AvelinoMadrid\\Emai\\emai\\wwwroot\\dist\\img\\icons.png",

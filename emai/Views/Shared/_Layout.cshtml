@@ -70,7 +70,7 @@
                              with font-awesome or any other icon font library -->
                         <li  class="nav-item">
                             <a href="@Url.Action("Index", "Home")" class=" @(ViewContext.RouteData.Values["Action"].ToString()== "Index" ? "active" : "")    nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
                                 
                                   
                                    <p>Panel de control</p>
@@ -82,7 +82,7 @@
                         <li class="@(ViewContext.RouteData.Values["Action"].ToString()== "Usuario" ? "menu-open" : "")    nav-item ">
 
                             <a href="#" class="@(ViewContext.RouteData.Values["Action"].ToString()== "Usuario" ? "active" : "") nav-link ">
-                                <i class="   nav-icon fas fa-tachometer-alt"></i>
+                                <i class="   nav-icon fas fa-user-alt"></i>
                                 <p>
                                     Perfil
                                     <i class="right fas fa-angle-left"></i>
@@ -115,7 +115,7 @@
 
                         <li class="@(ViewContext.RouteData.Values["Action"].ToString()== "/" ? "menu-open" : "")    nav-item ">
                             <a href="#" class="@(ViewContext.RouteData.Values["Action"].ToString()== "/" ? "active" : "") nav-link ">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <i class="nav-icon fas fa-school"></i>
                                 <p>
                                     Control Escolar
                                     <i class="fas fa-angle-left right"></i>
@@ -168,7 +168,7 @@
 
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon far fa-clock"></i>
                                 <p>
                                     Horario
 
@@ -178,7 +178,7 @@
 
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon far fa-bookmark"></i>
                                 <p>
                                     Plan de estudio
 
@@ -196,7 +196,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                     @*   <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
@@ -204,7 +204,7 @@
 
                                 </p>
                             </a>
-                        </li>
+                        </li>*@
 
 
                         <li class="nav-item">
@@ -229,7 +229,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/inline.html" class="nav-link">
+                                     <a href="@Url.Action("MenuGastos", "Gastos")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "MenuGastos" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Gastos</p>
                                     </a>
@@ -250,7 +250,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tree"></i>
+                                <i class="nav-icon fas fa-download"></i>
                                 <p>
                                     Reporte
                                     <i class="fas fa-angle-left right"></i>
@@ -276,7 +276,7 @@
 
                         <li class="nav-item">
                             <a href="@Url.Action("Login", "Account")" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <i class="nav-icon fa fa-unlock"></i>
                                 <p>
                                     Cerrar Sesión
 
