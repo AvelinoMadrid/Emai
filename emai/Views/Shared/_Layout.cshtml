@@ -217,7 +217,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="@Url.Action("Pago", "Pago")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Pago" ? "active" : "") nav-link" ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ver Pagos</p>
                                     </a>

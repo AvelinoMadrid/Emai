@@ -1,0 +1,75 @@
+﻿@model List<Nomina>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tabla Nomina</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="0" class="btn btn-primary btn-sm">Nueva Nomina </a>
+
+
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>IdNomina</th>
+                                    <th>Fecha</th>
+                                    <th>NoPedido</th>
+                                    <th>Proveedor</th>
+                                    <th>Descripcion</th>
+                                    <th>Cantidad</th>
+                                    <th>Subtotal</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdNomina</td>
+                                        <td>@item.Fecha</td>
+                                        <td>@item.NoPedido</td>
+                                        <td>@item.Proveedor</td>
+                                        <td>@item.Descripcion</td>
+                                        <td>@item.Cantidad</td>
+                                        <td>@item.Subtotal</td>
+                                        <td>@item.Total</td>
+                                        <td>
+                                            <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-primary btn-sm">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            @* <tfoot>
+                            <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Contraseña</th>
+                            <th>Correo</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            </tr>
+                            </tfoot>*@
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+

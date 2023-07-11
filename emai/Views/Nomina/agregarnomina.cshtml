@@ -1,0 +1,57 @@
+﻿@model Nomina
+@{
+    ViewData["Title"] = "agregarnomina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Nomina" method="post">
+
+            <input asp-for="IdNomina" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">NoPedido</label>
+                <input type="text" class="form-control form-control-sa" asp-for="NoPedido" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Proveedor</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Proveedor" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Descripcion</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Descripcion" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Cantidad</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Cantidad" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Subtotal</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Total</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Total" />
+            </div>
+           
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Nomina" asp-controller="Nomina" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>
+

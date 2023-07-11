@@ -9,6 +9,10 @@ builder.Services.AddScoped<IServicio_Api, Servicio_Api>();
 builder.Services.AddScoped<IServicioClase_Api, ClaseServicio_Api>();
 builder.Services.AddScoped<IServicioMaestro_Api, MaestroServicio_Api>();
 builder.Services.AddScoped<IServicioColegiatura_Api, ColegiaturaServicio_Api>();
+builder.Services.AddScoped<IServicioDotacionDia_Api, DotacionDiaServicio_Api>();
+builder.Services.AddScoped<IServicioGastosDia_Api, GastosDiaServicio_Api>();
+builder.Services.AddScoped<IServicioNomina_Api, NominaServicio_Api>();
+builder.Services.AddScoped<IServicioPago_Api, PagoServicio_Api>();
 
 var app = builder.Build();
 

@@ -73,3 +73,15 @@ C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Enti
 C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
 C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
 C:\Users\Horusvivo\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.deps.json
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.AssemblyReference.cache
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
