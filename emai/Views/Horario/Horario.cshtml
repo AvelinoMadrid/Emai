@@ -1,0 +1,71 @@
+﻿@model List<Horario>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tabla Horarios</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="0" class="btn btn-primary btn-sm">Nuevo Horario </a>
+
+
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>IdHorario</th>
+                                    <th>IdAlumno</th>
+                                    <th>IdMaestro</th>
+                                    <th>IdClase</th>
+                                    <th>Dia</th>
+                                    <th>Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdHorario</td>
+                                        <td>@item.IdAlumno</td>
+                                        <td>@item.IdMaestro</td>
+                                        <td>@item.IdClase</td>
+                                        <td>@item.Dia</td>
+                                        <td>@item.Fecha</td>
+                                        <td>
+                                            <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-primary btn-sm">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            @* <tfoot>
+                            <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Contraseña</th>
+                            <th>Correo</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            </tr>
+                            </tfoot>*@
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+

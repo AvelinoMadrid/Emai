@@ -1,0 +1,48 @@
+﻿@model Horario
+
+@{
+    ViewData["Title"] = "agregarhorario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Horario" method="post">
+
+            <input asp-for="IdHorario" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">IdAlumno</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdAlumno" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdMaestro</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdMaestro" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdClase</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Horario" asp-controller="Horario" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>

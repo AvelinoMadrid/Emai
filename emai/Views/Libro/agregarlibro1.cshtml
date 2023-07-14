@@ -1,0 +1,44 @@
+﻿@model Libro
+@{
+    ViewData["Title"] = "agregarlibro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios1" asp-controller="Libro" method="post">
+
+            <input asp-for="IdLibro" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">NombreLibro</label>
+                <input type="text" class="form-control form-control-sa" asp-for="NombreLibro" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">costo</label>
+                <input type="text" class="form-control form-control-sa" asp-for="costo" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Status</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Status" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Libro" asp-controller="Libro" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+
+
+
+    </div>
+</div>
+

@@ -13,6 +13,8 @@ builder.Services.AddScoped<IServicioDotacionDia_Api, DotacionDiaServicio_Api>();
 builder.Services.AddScoped<IServicioGastosDia_Api, GastosDiaServicio_Api>();
 builder.Services.AddScoped<IServicioNomina_Api, NominaServicio_Api>();
 builder.Services.AddScoped<IServicioPago_Api, PagoServicio_Api>();
+builder.Services.AddScoped<IServicioHorario_Api, HorarioServicio_Api>();
+builder.Services.AddScoped<IServicioLibro_Api, LibroServicio_Api>();
 
 var app = builder.Build();
 

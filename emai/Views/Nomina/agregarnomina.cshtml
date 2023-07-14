@@ -11,6 +11,7 @@
     <!-- /.card-header -->
     <div class="card-body">
 
+
         <form asp-action="GuardarCambios" asp-controller="Nomina" method="post">
 
             <input asp-for="IdNomina" type="hidden" />
@@ -43,7 +44,7 @@
                 <label class="form-label">Total</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Total" />
             </div>
-           
+     
             <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
 
             <a asp-action="Nomina" asp-controller="Nomina" class="btn btn-warning btn-sm">Volver a la vista </a>
@@ -54,4 +55,6 @@
 
     </div>
 </div>
+
+
 

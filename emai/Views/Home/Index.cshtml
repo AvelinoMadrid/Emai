@@ -45,7 +45,7 @@
             <div class="small-box bg-success">
                 <div class="inner">
                     <img src="~/dist/svg/solid/book-open-reader.svg" width="20" />
-                    <a href="#">
+                    <a href="@Url.Action("Clase", "Clase")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Clase" ? "active" : "") nav-link">
                         <p>Clases</p>
                     </a>
 
@@ -59,7 +59,7 @@
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <a href="#">
+                    <a href="@Url.Action("Maestro" , "Maestro" )" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Maestro" ? "active" : "") nav-link">
                         <img src="~/dist/svg/solid/person-chalkboard.svg" width="20" />
                         <p>Maestros</p>
                     </a>
@@ -76,7 +76,7 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     <img src="~/dist/svg/solid/credit-card.svg" width="20" />
-                    <a href="#">
+                    <a href="@Url.Action("Pago", "Pago")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Pago" ? "active" : "") nav-link">
 
                         <p>Pagos</p>
                     </a>

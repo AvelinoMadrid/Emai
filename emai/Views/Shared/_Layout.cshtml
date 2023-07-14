@@ -167,7 +167,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
+                            <a href="@Url.Action("Horario", "Horario")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Horario" ? "active" : "") nav-link">
                                 <i class="nav-icon far fa-clock"></i>
                                 <p>
                                     Horario
@@ -217,7 +217,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Pago", "Pago")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Pago" ? "active" : "") nav-link" ">
+                                    <a href="@Url.Action("Pago", "Pago")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Pago" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ver Pagos</p>
                                     </a>
@@ -235,7 +235,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/uplot.html" class="nav-link">
+                                    <a href="@Url.Action("Libro", "Libro")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Libro" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Pago de libro</p>
                                     </a>
