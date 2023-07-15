@@ -1712,6 +1712,261 @@ namespace EMAI.Datos
 
         #endregion
 
+        #region "Seccion ---> HorariosVerano"
+        public async Task<List<HorariosVeranoModel>> GetAllHorariosVerano()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_HorariosVeranoObtenerTodo", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<HorariosVeranoModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToHorariosVerano(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        public async Task<HorariosVeranoModel> GetHorariosVeranoById(int Id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_HorariosVeranoObtenerByID", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdHorarioVerano", Id));
+                    HorariosVeranoModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToHorariosVerano(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+
+        private HorariosVeranoModel MapToHorariosVerano(SqlDataReader reader)
+        {
+            return new HorariosVeranoModel()
+            {
+                IdHorarioVerano = (int)reader["IdHorarioVerano"],
+                IdAlumno = (int)reader["IdAlumno"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                Dia = reader["Dia"].ToString(),
+                Fecha = (DateTime)reader["Fecha"]
+            };
+        }
+
+
+        public async Task<bool> InsertHorarioVerano(HorariosVeranoInsertModel value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_HorarioVeranoInsertar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
+                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", value.IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> UpdateHorarioVerano(int IdHorarioVerano, string Fecha)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_HorarioVeranoActualizar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdHorarioVerano", IdHorarioVerano));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
+
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> DeleteHorarioVerano(int Id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_HorarioVeranoEliminar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdHorarioVerano", Id));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        #endregion
+
+        #region "Seccion ---> Libros"
+        private LibrosModel MapToLibros(SqlDataReader reader)
+        {
+            return new LibrosModel()
+            {
+                IdLibro = (int)reader["IdLibro"],
+                NombreLibro = reader["NombreLibro"].ToString(),
+                costo = (decimal)reader["Costo"],
+                Status = (bool)reader["Status"]
+            };
+        }
+
+        public async Task<List<LibrosModel>> GetAllLibros()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerLibros", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<LibrosModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToLibros(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        public async Task<LibrosModel> GetLibrobyId(int id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_LibroObtenerByID", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Libro", id));
+                    LibrosModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToLibros(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        public async Task<bool> InsertLibro(InsertLibrosModel value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_InsertarLibro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@NombreLibro", value.NombreLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Costo", value.costo));
+                    cmd.Parameters.Add(new SqlParameter("@Status", value.Status));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> StatusDesactivadoLibro(int IdLibro)
+        {
+            int status = 0;
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_DesactivadorLibro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdLibro", IdLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Status", status));
+
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+
+        public async Task<bool> StatusActivadorLibro(int IdLibro)
+        {
+            int status = 1;
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ActivadorLibro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdLibro", IdLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Status", status));
+
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+
+        public async Task<bool> UpdateLibro(int IDLibro, decimal costo)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_UpdateLibroLibro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdLibro", IDLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Costo", costo));
+
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        #endregion
+
         #region "Seccion ---> Maestros"
         public async Task<List<MaestrosModel>> GetMaestros()
         {

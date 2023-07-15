@@ -1,0 +1,68 @@
+﻿@model List<Libro>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Libro</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="0" class="btn btn-primary btn-sm">Nuevo Libro</a>
+
+
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>IdLibro</th>
+                                    <th>Nombre</th>
+                                    <th>Costo</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdLibro</td>
+                                        <td>@item.NombreLibro</td>
+                                        <td>@item.costo</td>
+                                        <td>@item.Status</td>
+                                        <td>
+                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">EDITAR COSTO </a>
+                                            <a asp-action="agregarlibro1" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">ACTIVAR</a>
+                                            <a asp-action="agregarlibro2" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">DESACTIVAR </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            @* <tfoot>
+                            <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Contraseña</th>
+                            <th>Correo</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>   
+                            </tr>
+                            </tfoot>*@
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+

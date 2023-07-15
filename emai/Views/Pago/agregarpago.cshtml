@@ -1,0 +1,94 @@
+﻿@model Pago
+
+@{
+    ViewData["Title"] = "agregarpago";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Pago" method="post">
+
+            <input asp-for="IdPago" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">IdPromosiones</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdPromosiones" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdAdicionales</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdAdicionales" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Folio</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Folio" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">FechaPago</label>
+                <input type="text" class="form-control form-control-sa" asp-for="FechaPago" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">SaldoPendiente</label>
+                <input type="text" class="form-control form-control-sa" asp-for="SaldoPendiente" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Mes</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Mes" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdHorario</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdHorario" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdClase</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdRecepcionista</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdRecepcionista" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Costo</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Costo" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Autorizacion</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Autorizacion" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Subtotal</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Iva</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Iva" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Total</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Total" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Pago" asp-controller="Pago" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>
+

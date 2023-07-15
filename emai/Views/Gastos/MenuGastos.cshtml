@@ -30,7 +30,8 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     @*<img src="~/dist/svg/solid/graduation-cap.svg" width="20" />*@
-                    <a href="#">
+                    <a href="@Url.Action("Colegiatura", "Colegiatura")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Colegiatura" ? "active" : "") nav-link">
+
                         <p>Entrada de Colegiaturas</p>
                     </a>
 
@@ -59,7 +60,7 @@
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <a href="#">
+                    <a href="@Url.Action("DotacionDia", "DotacionDia")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "DotacionDia" ? "active" : "") nav-link">
                         <img src="~/dist/svg/solid/person-chalkboard.svg" width="20" />
                         <p>Dotación del Día</p>
                     </a>
@@ -75,9 +76,8 @@
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <img src="~/dist/svg/solid/credit-card.svg" width="20" />
-                    <a href="#">
-
+                    <a href="@Url.Action("GastosDia", "GastosDia")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "GastosDia" ? "active" : "") nav-link">
+                        <img src="~/dist/svg/solid/credit-card.svg" width="20" />
                         <p>Gastos varios de Escuela</p>
                     </a>
 
@@ -92,9 +92,8 @@
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <img src="~/dist/svg/solid/credit-card.svg" width="20" />
-                    <a href="#">
-
+                    <a href="@Url.Action("Nomina", "Nomina")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Nomina" ? "active" : "") nav-link">
+                        <img src="~/dist/svg/solid/credit-card.svg" width="20" />
                         <p>Nómina</p>
                     </a>
 

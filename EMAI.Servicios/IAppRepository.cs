@@ -126,6 +126,24 @@ namespace EMAI.Servicios
         Task<bool> EliminarHorario(int IdHorario);
         #endregion
 
+        #region "HorariosVerano"
+        Task<List<HorariosVeranoModel>> GetAllHorariosVerano();
+        Task<HorariosVeranoModel> GetHorariosVeranoById(int Id);
+        Task<bool> InsertHorarioVerano(HorariosVeranoInsertModel value);
+        Task<bool> UpdateHorarioVerano(int IdHorarioVerano, string Fecha);
+        Task<bool> DeleteHorarioVerano(int Id);
+
+        #endregion
+
+        #region "Libros"
+        Task<List<LibrosModel>> GetAllLibros();
+        Task<LibrosModel> GetLibrobyId(int id);
+        Task<bool> InsertLibro(InsertLibrosModel value);
+        Task<bool> UpdateLibro(int IDLibro, decimal costo);
+        Task<bool> StatusDesactivadoLibro(int IdLibro);
+        Task<bool> StatusActivadorLibro(int IdLibro);
+        #endregion
+
         #region "Maestros" 
         Task<List<MaestrosModel>> GetMaestros();
 

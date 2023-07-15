@@ -32,7 +32,7 @@ namespace EMAI.API.Controllers
             return response;
         }
 
-        [HttpPost]
+        [HttpPost("/api/DotacionDia/Insertar")]
         public async Task Post([FromBody] InsertDotacionDiaModel value)
         {
             await _repository.InsertarDotacionDia(value);

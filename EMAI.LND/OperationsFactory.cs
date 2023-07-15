@@ -87,8 +87,14 @@ namespace EMAI.LND
             return new UsuariosOperaciones();
         }
 
-        
+        public static ILibrosOperaciones ObtenerLibrosOperaciones()
+        {
+            return new LibrosOperaciones();
+        }
 
-
+        public static IHorariosVeranoOperaciones ObtenerHorariosVeranoOperaciones()
+        {
+            return new HorariosVeranoOperaciones();
+        }
     }
 }

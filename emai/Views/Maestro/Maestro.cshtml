@@ -11,7 +11,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Maestro</a>
+                        <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="0" class="btn btn-primary btn-sm">Nuevo Maestro</a>
 
 
                         <table id="example2" class="table table-bordered table-hover">
@@ -54,8 +54,8 @@
                                         <td>@item.Suplente</td>
                                         <td>@item.Pago</td>
                                         <td>
-                                            <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdUsuario="@item.IdMaestro" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Maestro" asp-route-idUsuario="@item.IdMaestro" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-primary btn-sm">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-danger btn-sm">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }
