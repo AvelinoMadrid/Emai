@@ -12691,7 +12691,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .nav-sidebar > .nav-item {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .nav-sidebar > .nav-item .nav-icon {
