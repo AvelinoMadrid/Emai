@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Horarios";
+}
+
+<div class="content-container" style="min-height: calc(554.067px);">
+
+
+
+    <div class="contentcards">
+        <h2 class="cardstitle">Catálogo de Gastos</h2>
+        <div class="cardsdash-container">
+            <div class="card-dash">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    @*<img src="~/dist/svg/solid/graduation-cap.svg" width="20" />*@
+                    <a href="@Url.Action("Horario", "Horario")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Horario" ? "active" : "") nav-link">
+
+                        <p>Horario Normal</p>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                  
+                    <a href="@Url.Action("Horarioverano", "Horarioverano")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Horarioverano" ? "active" : "") nav-link">
+                        <p>Horario de Verano</p>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ./col -->
+       
+   
+        <!-- ./col -->
+        <!-- ./col -->
+
+        <!-- ./col -->
+    </div>
+
+</div>

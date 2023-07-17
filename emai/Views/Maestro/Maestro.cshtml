@@ -15,7 +15,7 @@
 
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
                                     <th>ID Maestro</th>
@@ -25,12 +25,12 @@
                                     <th>Direccion</th>
                                     <th>Telefono</th>
                                     <th>FechaNacimiento</th>
-                                    <th>ID Clase</th>
+                                    @*<th>ID Clase</th>
                                     <th>ID Horario</th>
-                                    <th>ID Alumno</th>
+                                    <th>ID Alumno</th>*@
                                     <th>Status</th>
-                                    <th>Base</th>
-                                    <th>Suplente</th>
+                                   @* <th>Base</th>
+                                    <th>Suplente</th>*@
                                     <th>Pago</th>
                                 </tr>
                             </thead>
@@ -47,12 +47,12 @@
                                         <td>@item.Direccion</td>
                                         <td>@item.Telefono</td>
                                         <td>@item.FechaNacimiento</td>
-                                        <td>@item.IdClase</td>
+                                       @* <td>@item.IdClase</td>
                                         <td>@item.IdHorario</td>
-                                        <td>@item.IdAlumno</td>
+                                        <td>@item.IdAlumno</td>*@
                                         <td>@item.Status</td>
-                                        <td>@item.Base</td>
-                                        <td>@item.Suplente</td>
+                                       @* <td>@item.Base</td>
+                                        <td>@item.Suplente</td>*@
                                         <td>@item.Pago</td>
                                         <td>
                                             <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
@@ -85,3 +85,12 @@
     </div>
     <!-- /.container-fluid -->
 </section>
+
+ <script>
+    $(document).ready(function () {
+        $('#example2').DataTable({
+            "scrollX": true
+        });
+        $('.dataTables_length').addClass('bs-select');
+    });
+ </script>
