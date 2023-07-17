@@ -31,12 +31,14 @@
 
                                         <td>@item.IdLibro</td>
                                         <td>@item.NombreLibro</td>
-                                        <td>@item.costo</td>
+                                        <td>$@item.costo</td>
                                         <td>@item.Status</td>
                                         <td>
                                             <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">EDITAR COSTO </a>
                                             <a asp-action="agregarlibro1" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">ACTIVAR</a>
                                             <a asp-action="agregarlibro2" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">DESACTIVAR </a>
+                                           
+
                                         </td>
                                     </tr>
                                 }

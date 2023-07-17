@@ -1,7 +1,10 @@
 ﻿@model Usuarios
+
+
 @{
     ViewData["Title"] = "agregarusuario1";
     Layout = "~/Views/Shared/_Layout.cshtml";
+  
 }
 
 <div class="card">
@@ -9,42 +12,75 @@
         @ViewBag.Accion
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
+    <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post">
+        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post" class="was-validated">
 
             <input asp-for="idUsuario" type="hidden" />
 
-            <div class="mb-2">
-                <label class="form-label">Usuario</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Usuario" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Contraseña</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Contraseña" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Email</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Email" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Direccion</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Direccion" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Telefono</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Telefono" />
-            </div>
+            <div class="row">
 
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Nombre del Usuario</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Usuario" name="Usuario" id="Usuario" required/>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
 
-            <a asp-action="Usuario" asp-controller="Usuarios" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+
+        
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-sa" asp-for="Email" id="email" name="email"  required  />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese un correo electrónico.</div>
+                </div>
+
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Direccion</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Direccion" id="direccion" name="direccion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese una Dirección.</div>
+                </div>
+
+
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control form-control-sa" asp-for="Telefono" id="telefono" name="telefono" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese un numero Telefónico.</div>
+                </div>
+
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Contraseña</label>
+                    <input type="password" class="form-control form-control-sa" asp-for="Contraseña" min="8"  id="contraseña" name="contraseña" required/>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">ingrese la contraseña.</div>
+                </div>
+
+                <div class="col-md-6 form-group">
+
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="Usuario" asp-controller="Usuarios" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                </div>
+
+
+            </div>                 
+       
 
         </form>
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
 
-
+       
 
 
     </div>

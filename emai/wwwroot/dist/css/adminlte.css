@@ -2732,17 +2732,18 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning {
-  color: #1f2d3d;
+  color: #fff;
   background-color: #ffc107;
   border-color: #ffc107;
   box-shadow: none;
 }
 
-.btn-warning:hover {
-  color: #1f2d3d;
-  background-color: #e0a800;
-  border-color: #d39e00;
-}
+    .btn-warning:hover {
+        color: #ffc107;
+        background-color: transparent;
+        background-image: none;
+        border-color: #ffc107;
+    }
 
 .btn-warning:focus, .btn-warning.focus {
   color: #1f2d3d;
@@ -2808,17 +2809,18 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #1f2d3d;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
-  box-shadow: none;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    box-shadow: none;
 }
 
-.btn-light:hover {
-  color: #1f2d3d;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
-}
+    .btn-light:hover {
+        color: #17a2b8;
+        background-color: transparent;
+        background-image: none;
+        border-color: #17a2b8;
+    }
 
 .btn-light:focus, .btn-light.focus {
   color: #1f2d3d;
@@ -32193,18 +32195,19 @@ html.maximized-card {
   box-shadow: 0 0 0 0 rgba(130, 138, 145, 0.5);
 }
 
-.dark-mode .btn-success {
+ .btn-success {
   color: #fff;
   background-color: #00bc8c;
   border-color: #00bc8c;
   box-shadow: none;
 }
 
-.dark-mode .btn-success:hover {
-  color: #fff;
-  background-color: #009670;
-  border-color: #008966;
-}
+    .btn-success:hover {
+        color: #28a745;
+        background-color: transparent;
+        background-image: none;
+        border-color: #28a745;
+    }
 
 .dark-mode .btn-success:focus, .dark-mode .btn-success.focus {
   color: #fff;
@@ -32307,18 +32310,19 @@ html.maximized-card {
   box-shadow: 0 0 0 0 rgba(211, 139, 24, 0.5);
 }
 
-.dark-mode .btn-danger {
+ .btn-danger {
   color: #fff;
   background-color: #e74c3c;
   border-color: #e74c3c;
   box-shadow: none;
 }
 
-.dark-mode .btn-danger:hover {
-  color: #fff;
-  background-color: #e12e1c;
-  border-color: #d62c1a;
-}
+    .btn-danger:hover {
+        color: #dc3545;
+        background-color: transparent;
+        background-image: none;
+        border-color: #dc3545;
+    }
 
 .dark-mode .btn-danger:focus, .dark-mode .btn-danger.focus {
   color: #fff;
@@ -53124,3 +53128,26 @@ a.text-muted:hover {
         padding-bottom: 1.875rem;
         margin-left: 0
     }
+
+.required-field {
+    border: 1px solid red;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    height: auto;
+    margin-top: -3px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 8px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

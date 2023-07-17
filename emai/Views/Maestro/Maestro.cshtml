@@ -7,26 +7,27 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Tabla Maestros</h3>
+
+                        <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="0" class="btn btn-dark btn-sm" style="float:right !important">Nuevo Maestro</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="0" class="btn btn-primary btn-sm">Nuevo Maestro</a>
 
 
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>idMaestro</th>
+                                    <th>ID Maestro</th>
                                     <th>Nombre</th>
-                                    <th>ApellidoP</th>
-                                    <th>ApellidoM</th>
+                                    <th>Apellido Paterno</th>
+                                    <th>Apellido Materno</th>
                                     <th>Direccion</th>
                                     <th>Telefono</th>
                                     <th>FechaNacimiento</th>
-                                    <th>IdClase</th>
-                                    <th>IdHorario</th>
-                                    <th>IdAlumno</th>
+                                    <th>ID Clase</th>
+                                    <th>ID Horario</th>
+                                    <th>ID Alumno</th>
                                     <th>Status</th>
                                     <th>Base</th>
                                     <th>Suplente</th>
@@ -54,8 +55,8 @@
                                         <td>@item.Suplente</td>
                                         <td>@item.Pago</td>
                                         <td>
-                                            <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }

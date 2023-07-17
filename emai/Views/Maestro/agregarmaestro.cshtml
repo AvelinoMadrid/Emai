@@ -12,66 +12,142 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="Maestro" method="post">
+        <form asp-action="GuardarCambios" asp-controller="Maestro" method="post" class="was-validated">
 
+
+            <div class="row">
+                  
+         
             <input asp-for="IdMaestro" type="hidden" />
 
-            <div class="mb-2">
+                <div class="col-md-4 form-group">
                 <label class="form-label">Nombre</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Nombre" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Nombre" name="Nombre" id="Nombre" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">ApellidoP</label>
-                <input type="text" class="form-control form-control-sa" asp-for="ApellidoP" />
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Apellido Paterno</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="ApellidoP" name="ApellidoP" id="ApellidoP" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">ApellidoM</label>
-                <input type="text" class="form-control form-control-sa" asp-for="ApellidoM" />
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Apellido Materno</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="ApellidoM" name="ApellidoM" id="ApellidoM" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">Direccion</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Direccion" />
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Dirección</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Direccion" name="Direccion" id="Direccion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">Telefono</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Telefono" />
+
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Teléfono</label>
+                    <input type="text" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="Telefono" name="Telefono" id="Telefono" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">FechaNacimiento</label>
-                <input type="text" class="form-control form-control-sa" asp-for="FechaNacimiento" />
+
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Fecha de Nacimiento</label>
+                    <input type="text" class="form-control form-control-sa" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask asp-for="FechaNacimiento" name="FechaNacimiento" id="FechaNacimiento" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">IdClase</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Id Clase</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="IdClase" name="IdClase" id="IdClase" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">IdHorario</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdHorario" />
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Id Horario</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="IdHorario" name="IdHorario" id="IdHorario" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">IdAlumno</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdAlumno" />
+
+
+                <div class="col-md-4 form-group">
+                <label class="form-label">Id Alumno</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="IdAlumno" name="IdAlumno" id="IdAlumno" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+
+
+              @*  <div class="col-md-4 form-group">
                 <label class="form-label">Status</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Status" />
             </div>
-            <div class="mb-2">
+*@
+
+            
+
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select  class="form-control  select2-hidden-accessible"  style="width: 100%;" asp-for="Status" name="Status" id="Status" required>
+                            <option selected disabled value="">Escoger el Status</option>
+                            <option value="Base">Base</option>
+                            <option value="Suplente">Suplente</option>
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
+                    
+                    <!-- /.form-group -->
+                </div>
+
+
+
+                <div class="col-md-4 form-group">
                 <label class="form-label">Base</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Base" />
             </div>
+
+
+
             <div class="mb-2">
                 <label class="form-label">Suplente</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Suplente" />
             </div>
-            <div class="mb-2">
+
+
+
+           <div class="mb-2">
                 <label class="form-label">Pago</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Pago" />
             </div>
 
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
 
-            <a asp-action="Maestro" asp-controller="Maestro" class="btn btn-warning btn-sm">Volver a la vista </a>
+                <div class="col-md-6 form-group">
+                <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+                </div>
+                <div class="col-md-6 form-group">
+                <a asp-action="Maestro" asp-controller="Maestro" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+                </div>
+
+            </div>
 
         </form>
 

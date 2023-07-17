@@ -7,17 +7,18 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Tabla de Usuarios</h3>
+                        <a asp-action="agregarusuario1" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Usuario </a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarusuario1" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>
+                      
 
 
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>idUsuario</th>
+                                    <th>ID Usuario</th>
                                     <th>Nombre</th>
                                     <th>Contraseña</th>
                                     <th>Correo</th>
@@ -39,8 +40,8 @@
                                         <td>@item.Direccion</td>
                                         <td>@item.Telefono</td>
                                         <td>
-                                            <a asp-action="agregarusuario1" asp-controller="Usuarios" asp-route-IdUsuario="@item.idUsuario" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Usuarios" asp-route-idUsuario="@item.idUsuario" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarusuario1" asp-controller="Usuarios" asp-route-IdUsuario="@item.idUsuario" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Usuarios" asp-route-idUsuario="@item.idUsuario" class="btn btn-danger btn-sm" style="width:100%">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }
