@@ -15,12 +15,12 @@ namespace emai.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public int IdClase { get; set; }
-        public int IdHorario { get; set; }
-        public int IdAlumno { get; set; }
+        //public int IdClase { get; set; }
+        //public int IdHorario { get; set; }
+        //public int IdAlumno { get; set; }
         public bool Status { get; set; }
-        public bool Base { get; set; }
-        public string Suplente { get; set; }
+        //public bool Base { get; set; }
+        //public string Suplente { get; set; }
         public decimal Pago { get; set; }
 
         public List<Maestro> Lista { get; set; }

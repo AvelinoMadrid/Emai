@@ -1,0 +1,53 @@
+﻿@model Evento
+
+@{
+    ViewData["Title"] = "agregarevento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Evento" method="post">
+
+            <input asp-for="IdEvento" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">IdEvento</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdEvento" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Nombre Evento</label>
+                <input type="text" class="form-control form-control-sa" asp-for="NombreEvento" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Hora</label>
+                <input type="time" class="form-control form-control-sa" asp-for="Hora" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Alumno</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdAlumno" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Clase</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+            </div>
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="Evento" asp-controller="Evento" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>
+

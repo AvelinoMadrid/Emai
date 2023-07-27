@@ -32,6 +32,7 @@ namespace emai.Controllers
 
         public async Task<IActionResult> agregarmaestro(int IdMaestro)
         {
+
             Maestro modelo_maestro = new Maestro();
 
             ViewBag.Accion = "Nuevo Maestro";
@@ -40,9 +41,10 @@ namespace emai.Controllers
                 modelo_maestro = await _ServicioMaestro_Api.Obtener(IdMaestro);
                 ViewBag.Action = "Editar Maestro";
             }
-
-            return View(modelo_maestro);
+                return View(modelo_maestro);
         }
+
+
 
 
         [HttpPost]

@@ -15,6 +15,9 @@ builder.Services.AddScoped<IServicioNomina_Api, NominaServicio_Api>();
 builder.Services.AddScoped<IServicioPago_Api, PagoServicio_Api>();
 builder.Services.AddScoped<IServicioHorario_Api, HorarioServicio_Api>();
 builder.Services.AddScoped<IServicioLibro_Api, LibroServicio_Api>();
+builder.Services.AddScoped<IServicioHorarioVerano_Api, HorarioVeranoServicio_Api>();
+builder.Services.AddScoped<IServicioEvento_Api, EventoServicio_Api>();
+
 
 var app = builder.Build();
 

@@ -1,0 +1,52 @@
+﻿@model HorarioVerano
+@{
+    ViewData["Title"] = "agregarhorarioVr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="HorarioVerano" method="post">
+
+            <input asp-for="IdHorarioVerano" type="hidden" />
+
+            <div class="mb-2">
+                <label class="form-label">IdMaestro</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdMaestro" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IdClase</label>
+                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Dia</label>
+                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Fecha</label>
+                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Hora Inicio</label>
+                <input type="time" class="form-control form-control-sa" asp-for="HoraInicio" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Hora Fin</label>
+                <input type="time" class="form-control form-control-sa" asp-for="HoraFin" />
+            </div>
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+            <a asp-action="HorarioVerano" asp-controller="HorarioVerano" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>
+

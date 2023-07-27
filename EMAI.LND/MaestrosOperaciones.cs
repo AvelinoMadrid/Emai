@@ -38,10 +38,10 @@ namespace EMAI.LND
 
         //Actualizar Clase
 
-        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, int IdClase, int IdHorario, int IdAlumno, bool Status, bool Base, string Suplente, decimal Pago)
+        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, bool Status, decimal Pago)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarMaestro(IdMaestro,Nombre,ApellidoP,ApellidoM,Direccion,Telefono,FechaNacimiento,IdClase,IdHorario,IdAlumno,Status,Base,Suplente,Pago);
+            var rsp = await db.ActualizarMaestro(IdMaestro,Nombre,ApellidoP,ApellidoM,Direccion,Telefono,FechaNacimiento,Status,Pago);
             return rsp;
         }
 

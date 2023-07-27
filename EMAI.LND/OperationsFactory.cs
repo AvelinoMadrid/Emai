@@ -96,5 +96,10 @@ namespace EMAI.LND
         {
             return new HorariosVeranoOperaciones();
         }
+
+        public static IEventosOperaciones ObtenerEventosOperaciones()
+        {
+            return new EventosOperaciones();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace EMAI.Servicios
         Task<List<HorariosVeranoModel>> GetAllHorariosVerano();
         Task<HorariosVeranoModel> GetHorariosVeranoById(int Id);
         Task<bool> InsertHorarioVerano(HorariosVeranoInsertModel value);
-        Task<bool> UpdateHorarioVerano(int IdHorarioVerano, string Fecha);
+        Task<bool> UpdateHorarioVerano(int IdHorarioVerano,int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin);
         Task<bool> DeleteHorarioVerano(int id);
 
 

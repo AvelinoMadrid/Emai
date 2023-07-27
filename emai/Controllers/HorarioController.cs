@@ -15,6 +15,7 @@ namespace emai.Controllers
     public class HorarioController : Controller
     {
         private readonly IServicioHorario_Api _ServicioHorarioApi;
+       
 
         public HorarioController(IServicioHorario_Api servicioHorario_Api)
         {
@@ -75,5 +76,7 @@ namespace emai.Controllers
             else
                 return NoContent();
         }
+
+        
     }
 }

@@ -17,10 +17,6 @@
             <input asp-for="IdHorario" type="hidden" />
 
             <div class="mb-2">
-                <label class="form-label">IdAlumno</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdAlumno" />
-            </div>
-            <div class="mb-2">
                 <label class="form-label">IdMaestro</label>
                 <input type="text" class="form-control form-control-sa" asp-for="IdMaestro" />
             </div>
@@ -34,7 +30,15 @@
             </div>
             <div class="mb-2">
                 <label class="form-label">Fecha</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Hora Inicio</label>
+                <input type="time" class="form-control form-control-sa" asp-for="HoraInicio" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Hora Fin</label>
+                <input type="time" class="form-control form-control-sa" asp-for="HoraFin" />
             </div>
             <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
 
