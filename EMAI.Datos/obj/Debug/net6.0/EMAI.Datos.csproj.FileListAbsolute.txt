@@ -154,3 +154,24 @@ C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Dato
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
