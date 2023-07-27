@@ -94,15 +94,3 @@ C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.He
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Helpers\obj\Debug\net6.0\refint\EMAI.Helpers.dll
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.pdb
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Helpers\obj\Debug\net6.0\ref\EMAI.Helpers.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.deps.json
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.csproj.AssemblyReference.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.AssemblyInfoInputs.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.AssemblyInfo.cs
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.csproj.CoreCompileInputs.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\refint\EMAI.Helpers.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Helpers\obj\Debug\net6.0\ref\EMAI.Helpers.dll

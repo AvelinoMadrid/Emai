@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\plant\\OneDrive\\Documentos\\Programacion\\Clon\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {}
+    "C:\\Users\\Barco Usuario\\Desktop\\emai7j\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\plant\\OneDrive\\Documentos\\Programacion\\Clon\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai7j\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\plant\\OneDrive\\Documentos\\Programacion\\Clon\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai7j\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\Users\\plant\\OneDrive\\Documentos\\Programacion\\Clon\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-        "packagesPath": "C:\\Users\\plant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\plant\\OneDrive\\Documentos\\Programacion\\Clon\\Emai\\EMAI.Entidades\\obj\\",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai7j\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai7j\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\plant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Barco Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

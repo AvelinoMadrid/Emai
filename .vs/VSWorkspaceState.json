@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\emai",
+    "\\emai\\Views",
+    "\\emai\\Views\\Shared"
   ],
+  "SelectedNode": "\\emai\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

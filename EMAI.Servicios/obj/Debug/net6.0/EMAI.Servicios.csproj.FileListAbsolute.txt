@@ -112,20 +112,3 @@ C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Servicios\obj\Debug\net6.0\refint\EMAI.Servicios.dll
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.pdb
 C:\Users\Barco Usuario\Desktop\emai7j\Emai\EMAI.Servicios\obj\Debug\net6.0\ref\EMAI.Servicios.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Servicios.deps.json
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Servicios.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Servicios.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Comun.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Entidades.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Comun.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\bin\Debug\net6.0\EMAI.Entidades.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.csproj.AssemblyReference.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.AssemblyInfoInputs.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.AssemblyInfo.cs
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.csproj.CoreCompileInputs.cache
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.csproj.CopyComplete
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\refint\EMAI.Servicios.dll
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.pdb
-C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.Servicios\obj\Debug\net6.0\ref\EMAI.Servicios.dll
