@@ -22,6 +22,13 @@ namespace emai.Controllers
             _ServicioMaestro_Api = servicioMaestro_Api;
         }
 
+        public async Task<List<Maestro>> ObtenerTodos()
+        {
+            List<Maestro> obtener = await _ServicioMaestro_Api.Lista();
+
+            return obtener;
+        }
+
         public async Task<IActionResult> Maestro()
         {
             List<Maestro> Lista = await _ServicioMaestro_Api.Lista();

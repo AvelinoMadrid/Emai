@@ -18,5 +18,10 @@ namespace emai.Models
         public DateTime HoraFin { get; set; }
         public List<Horario> Lista { get; set; }
 
+        public string NombreMaestro { get; set; }
+        public string NombreClase { get; set; }
+
+        public List<Maestro> MaestrosDisponibles { get; set; }
+        public List<Clase> ClasesDisponibles { get; set; }
     }
 }

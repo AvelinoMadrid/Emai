@@ -13,6 +13,8 @@ namespace emai.Servicios
         Task<bool> Editar(Clase clase);
 
         Task<bool> Eliminar(int IdClase);
+
+        Task<List<Clase>> ObtenerTodos();
     }
 
 }
