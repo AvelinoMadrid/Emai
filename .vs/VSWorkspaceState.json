@@ -3,8 +3,8 @@
     "",
     "\\emai",
     "\\emai\\Views",
-    "\\emai\\Views\\Shared"
+    "\\emai\\Views\\Horario"
   ],
-  "SelectedNode": "\\emai\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\emai\\Views\\Horario\\agregarhorario.cshtml",
   "PreviewInSolutionExplorer": false
 }
