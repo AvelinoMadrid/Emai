@@ -1,0 +1,68 @@
+﻿@model List<AsigClase>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tabla Asignacion Clase</h3>
+                        <a asp-action="agregarasigclase" asp-controller="AsigClase" asp-route-idClase="0" class="btn btn-dark btn-sm" style="float: right !important">Nueva Asignacion </a>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+
+
+                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" ">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Maestro</th>
+                                    <th>Clases</th>
+                                    <th>Fecha Asignacion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+
+                                    <td>@item.AsgnId</td>
+                                    <td>@item.NombreMaestro</td>
+                                    <td>@item.NombreClase</td>
+                                    <td>@item.FechaAsignacion.ToString("dd/MM/yyyy")</td>
+
+                                    <td>
+                                        @*<a asp-action="agregarclase" asp-controller="AsigClase" asp-route-idClase="@item.AsgnId" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">Asignar </a>*@
+                                        <a asp-action="Eliminar" asp-controller="AsigClase" asp-route-AsgnId="@item.AsgnId" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                            @* <tfoot>
+                            <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Contraseña</th>
+                            <th>Correo</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            </tr>
+                            </tfoot>*@
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>

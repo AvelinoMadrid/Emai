@@ -16,12 +16,24 @@
             <input asp-for="IdHorarioVerano" type="hidden" />
 
             <div class="mb-2">
-                <label class="form-label">IdMaestro</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdMaestro" />
+                <label class="form-label">Maestro</label>
+                <select class="form-control form-control-sa" asp-for="IdMaestro">
+                    <option value="">Seleccione un Maestro</option>
+                    @foreach (var maestro in Model.MaestrosDisponibles)
+                    {
+                        <option value="@maestro.IdMaestro">@maestro.Nombre</option>
+                    }
+                </select>
             </div>
             <div class="mb-2">
-                <label class="form-label">IdClase</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+                <label class="form-label">Clase</label>
+                <select class="form-control form-control-sa" asp-for="IdClase">
+                    <option value="">Seleccione una clase</option>
+                    @foreach (var clase in Model.ClasesDisponibles)
+                    {
+                        <option value="@clase.idClase">@clase.Nombre</option>
+                    }
+                </select>
             </div>
             <div class="mb-2">
                 <label class="form-label">Dia</label>

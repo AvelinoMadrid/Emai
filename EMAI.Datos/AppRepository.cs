@@ -2846,6 +2846,112 @@ namespace EMAI.Datos
         }
         #endregion
 
+        #region "Seccion ---> AsignacionClase"
+        public async Task<List<AsigClaseModel>> GetAsigClase()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerAsigClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<AsigClaseModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToAsigClase(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private AsigClaseModel MapToAsigClase(SqlDataReader reader)
+        {
+            return new AsigClaseModel()
+            {
+
+                AsgnId = (int)reader["AsgnId"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                FechaAsignacion = (DateTime)reader["FechaAsignacion"],
+            };
+        }
+
+        public async Task<AsigClaseId> GetAsigClaseId(int IdEvento)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("BuscarPorIDAsigClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgnId", IdEvento));
+                    AsigClaseId response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToAsigClaseId(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private AsigClaseId MapToAsigClaseId(SqlDataReader reader)
+        {
+            return new AsigClaseId()
+            {
+
+                AsgnId = (int)reader["AsgnId"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                FechaAsignacion = (DateTime)reader["FechaAsignacion"],
+            };
+        }
+
+        public async Task<bool> AsignarClase(AsigClaseAsignar value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("AsignarClaseAMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@MaestroId", value.IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@ClaseId", value.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@FechaAsignacion", value.FechaAsignacion));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> EliminarAsignacion(int AsgnId)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("EliminarAsigClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgClase", AsgnId));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+        #endregion
+
         #region "dispose"
         public void Dispose()
         {

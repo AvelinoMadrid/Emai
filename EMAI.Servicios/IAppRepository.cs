@@ -205,5 +205,16 @@ namespace EMAI.Servicios
 
         Task<bool> EliminarEvento(int IdEvento);
         #endregion
+
+        #region "AsinacionClase"
+
+        Task<List<AsigClaseModel>> GetAsigClase();
+
+        Task<AsigClaseId> GetAsigClaseId(int AsgnId);
+
+        Task<bool> AsignarClase(AsigClaseAsignar value);
+
+        Task<bool> EliminarAsignacion(int AsgnId);
+        #endregion
     }
 }

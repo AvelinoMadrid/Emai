@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\emai",
-    "\\emai\\Views",
-    "\\emai\\Views\\Horario"
+    ""
   ],
-  "SelectedNode": "\\emai\\Views\\Horario\\agregarhorario.cshtml",
+  "SelectedNode": "\\EMAI.API.sln",
   "PreviewInSolutionExplorer": false
 }

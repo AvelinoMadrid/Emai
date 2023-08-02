@@ -176,3 +176,26 @@ C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.LND\obj\Debug\net
 C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
 C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
 C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.deps.json
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
+C:\Users\Barco Usuario\Desktop\emai2julio\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll

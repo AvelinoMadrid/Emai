@@ -101,5 +101,10 @@ namespace EMAI.LND
         {
             return new EventosOperaciones();
         }
+
+        public static IAsignacionClaseOperaciones ObtenerAsignacionClaseOperaciones()
+        {
+            return new AsignacionClaseOperaciones();
+        }
     }
 }
