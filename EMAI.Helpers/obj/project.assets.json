@@ -633,11 +633,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+      "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
       "projectName": "EMAI.Helpers",
-      "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+      "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
       "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\obj\\",
+      "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

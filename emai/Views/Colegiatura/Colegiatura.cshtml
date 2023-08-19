@@ -33,7 +33,7 @@
                                     <tr>
 
                                         <td>@item.IdColegiatura</td>
-                                        <td>@item.Fecha</td>
+                                        <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
                                         <td>@item.NoPedido</td>
                                         <td>@item.Descripcion</td>
                                         <td>@item.Cantidad</td>
@@ -46,23 +46,10 @@
                                     </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
                         </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
-
-
             </div>
             <!-- /.col -->
         </div>

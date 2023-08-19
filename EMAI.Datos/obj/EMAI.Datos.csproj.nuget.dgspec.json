@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
         "projectName": "EMAI.Comun",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
         "projectName": "EMAI.Datos",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -93,17 +93,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               },
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
               },
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
               }
             }
           }
@@ -143,14 +143,14 @@
         }
       }
     },
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -203,14 +203,14 @@
         }
       }
     },
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "projectName": "EMAI.Helpers",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Helpers\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -277,14 +277,14 @@
         }
       }
     },
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
         "projectName": "EMAI.Servicios",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -306,11 +306,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               }
             }
           }

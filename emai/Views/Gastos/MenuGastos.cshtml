@@ -46,8 +46,8 @@
             <div class="small-box bg-success">
                 <div class="inner">
                     <img src="~/dist/svg/solid/book-open-reader.svg" width="20" />
-                    <a href="#">
-                        <p>Libros + Inscripciones + Coperaciones</p>
+                    <a href="@Url.Action("Cooperaciones", "Cooperaciones")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Cooperaciones" ? "active" : "") nav-link">
+                        <p>Inscripciones + Coperaciones</p>
                     </a>
 
                 </div>

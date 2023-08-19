@@ -101,5 +101,12 @@ namespace emai.Controllers
                 return NoContent();
         }
 
+        public async Task<List<HorarioVerano>> ObtenerTodos()
+        {
+            List<HorarioVerano> obte = await _ServicioHorarioVeranoApi.Lista();
+
+            return obte;
+        }
+
     }
 }

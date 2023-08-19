@@ -5,157 +5,164 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = emai
 build_property.RootNamespace = emai
-build_property.ProjectDir = C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\emai\
+build_property.ProjectDir = C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\emai\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\plant\OneDrive\Documentos\Programacion\Clon\Emai\emai
+build_property.MSBuildProjectDirectory = C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\emai
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Account/Login.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Clase/agregarclase.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/AsigClase/agregarasigclase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ0NsYXNlXGFncmVnYXJhc2lnY2xhc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/AsigClase/AsigClase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ0NsYXNlXEFzaWdDbGFzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Clase/agregarclase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcYWdyZWdhcmNsYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Clase/Clase.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Clase/Clase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcQ2xhc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Colegiatura/agregarcolegiatura.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Colegiatura/agregarcolegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcYWdyZWdhcmNvbGVnaWF0dXJhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcQ29sZWdpYXR1cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/DotacionDia/agregardotaciondia.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/DotacionDia/agregardotaciondia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG90YWNpb25EaWFcYWdyZWdhcmRvdGFjaW9uZGlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/DotacionDia/DotacionDia.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/DotacionDia/DotacionDia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG90YWNpb25EaWFcRG90YWNpb25EaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Evento/agregarevento.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Evento/agregarevento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXGFncmVnYXJldmVudG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Evento/Evento.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Evento/Evento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXEV2ZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/GastosDia/agregargastodia.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/GastosDia/agregargastodia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zRGlhXGFncmVnYXJnYXN0b2RpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/GastosDia/GastosDia.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/GastosDia/GastosDia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zRGlhXEdhc3Rvc0RpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Gastos/MenuGastos.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Gastos/MenuGastos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zXE1lbnVHYXN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Home/Index.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Home/Privacy.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Horarios/MenuHorarios.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Horarios/MenuHorarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcTWVudUhvcmFyaW9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/HorarioVerano/agregarhorarioVr.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/HorarioVerano/agregarhorarioVr.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1ZlcmFub1xhZ3JlZ2FyaG9yYXJpb1ZyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/HorarioVerano/HorarioVerano.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/HorarioVerano/HorarioVerano.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1ZlcmFub1xIb3JhcmlvVmVyYW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Horario/agregarhorario.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Horario/agregarhorario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xhZ3JlZ2FyaG9yYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Horario/Horario.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Horario/Horario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xIb3JhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Libro/agregarlibro.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Libro/agregarlibro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Libro/agregarlibro1.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Libro/agregarlibro1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Libro/agregarlibro2.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Libro/agregarlibro2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Libro/Libro.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Libro/Libro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cTGlicm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Maestro/agregarmaestro.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Maestro/agregarmaestro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xhZ3JlZ2FybWFlc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Maestro/Maestro.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Maestro/Maestro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xNYWVzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Nomina/agregarnomina.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Nomina/agregarnomina.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXGFncmVnYXJub21pbmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Nomina/Nomina.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Nomina/Nomina.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXE5vbWluYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Pago/agregarpago.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Pago/agregarpago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xhZ3JlZ2FycGFnby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Pago/Pago.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Pago/Pago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xQYWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Shared/Error.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Usuarios/agregarusuario1.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Usuarios/agregarusuario1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcYWdyZWdhcnVzdWFyaW8xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Usuarios/Usuario.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Usuarios/Usuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcVXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/_ViewImports.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/_ViewStart.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/plant/OneDrive/Documentos/Programacion/Clon/Emai/emai/Views/Shared/_Layout.cshtml]
+[C:/Users/Barco Usuario/Desktop/emai9Agto/Emai/emai/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-37ybrpbh2n

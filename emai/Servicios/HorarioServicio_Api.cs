@@ -117,6 +117,36 @@ namespace emai.Servicios
             return respuesa;
         }
 
+        public async Task<List<Horario>> ObtenerTodos()
+        {
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
+
+            List<Horario> lista = new List<Horario>();
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var response = await httpClient.GetAsync($"api/Clase/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+                    lista = JsonConvert.DeserializeObject<List<Horario>>(jsonRespuesta);
+                }
+                else
+                {
+                    // Manejar el caso cuando la respuesta no es exitosa
+                    // Puedes lanzar una excepción, registrar el error, etc.
+                    throw new Exception($"La solicitud GET no fue exitosa. Código de estado: {response.StatusCode}");
+                }
+            }
+
+            return lista;
+        }
+
 
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E6miISTtu2Mlh2Ekio2TptyijxKLUvz3QpMAbRO0WNvHSoiITXq12t9JiRKxjpi8bebk2uSNXW5Weq2kf9WA7w==",
+  "dgSpecHash": "2FEw4u+p2+8vO5QEPANXon93NZvUPl9RtzfWlVQPhxW7ywqjGMHdea4kIVQlVJEKBJbB2ThPVtDZac/crQ/P2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+  "projectFilePath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Barco Usuario\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Barco Usuario\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\emai\\emai.csproj": {}
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\emai\\emai.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\emai\\emai.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj",
         "projectName": "emai",
-        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\emai\\emai.csproj",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj",
         "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\emai\\obj\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.102.0, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
@@ -73,7 +77,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.16, )"
             },
             "Puya.Platform.Infrastructure.Data.SqlServer": {
               "target": "Package",
@@ -82,6 +86,10 @@
             "Reec.Inspection.SqlServer": {
               "target": "Package",
               "version": "[1.0.5, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

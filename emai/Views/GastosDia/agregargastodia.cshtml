@@ -18,7 +18,7 @@
 
             <div class="mb-2">
                 <label class="form-label">Fecha</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
             </div>
             <div class="mb-2">
                 <label class="form-label">NoPedido</label>
@@ -38,11 +38,11 @@
             </div>
             <div class="mb-2">
                 <label class="form-label">Subtotal</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" />
+                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" disabled />
             </div>
             <div class="mb-2">
                 <label class="form-label">Total</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Total" />
+                <input type="text" class="form-control form-control-sa" asp-for="Total" id="Total" disabled />
             </div>
 
             <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
@@ -58,3 +58,27 @@
 
     </div>
 </div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Manejador de eventos para el cambio en la cantidad
+            $("#Cantidad").change(function () {
+                calcularTotales();
+            });
+
+            // Función para calcular los totales
+            function calcularTotales() {
+                var cantidad = parseFloat($("#Cantidad").val());
+
+                var Subtotal = cantidad;
+                var Total = Subtotal * 16 / 100 + Subtotal;
+
+                $("#Subtotal").val(Subtotal.toFixed(2)); // Redondear a 2 decimales
+                $("#Total").val(Total.toFixed(2));
+            }
+
+            // Llamada inicial para calcular totales al cargar la página
+            calcularTotales();
+        });
+    </script>
+    }

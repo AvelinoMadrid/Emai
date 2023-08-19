@@ -6,8 +6,10 @@ using emai.Servicios;
 using emai.Models;
 //using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using ClosedXML.Excel;
 
-using emai.Servicios;
 
 namespace emai.Controllers
 {
@@ -24,6 +26,12 @@ namespace emai.Controllers
         public async Task<IActionResult> Colegiatura()
         {
             List<GastosColegiatura> Lista = await _ServicioColegiatura_Api.Lista();
+
+            foreach (var colegiatura in Lista)
+            {
+                colegiatura.Subtotal = colegiatura.Cantidad;
+                colegiatura.Total = colegiatura.Subtotal * 16m / 100m + colegiatura.Subtotal;
+            }
 
             return View(Lista);
         }
@@ -46,10 +54,16 @@ namespace emai.Controllers
         public async Task<IActionResult> GuardarCambios(GastosColegiatura ob_colegiatura)
         {
             bool respuesta;
+            
 
             if (ob_colegiatura.IdColegiatura == 0)
             {
+
+                ob_colegiatura.Subtotal = ob_colegiatura.Cantidad;
+                ob_colegiatura.Total = ob_colegiatura.Subtotal * 16m / 100m + ob_colegiatura.Subtotal;
+
                 respuesta = await _ServicioColegiatura_Api.Guardar(ob_colegiatura);
+                
             }
             else
             {
@@ -72,5 +86,6 @@ namespace emai.Controllers
             else
                 return NoContent();
         }
+
     }
 }

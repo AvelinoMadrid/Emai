@@ -23,6 +23,8 @@ namespace emai.Models
         //public string Suplente { get; set; }
         public decimal Pago { get; set; }
 
+        public string StatusSeleccionado { get; set; }
+
         public List<Maestro> Lista { get; set; }
     }
 }

@@ -47,6 +47,8 @@ namespace emai.Controllers
             {
                 modelo_maestro = await _ServicioMaestro_Api.Obtener(IdMaestro);
                 ViewBag.Action = "Editar Maestro";
+
+                modelo_maestro.StatusSeleccionado = modelo_maestro.Status ? "Base" : "Suplente";
             }
                 return View(modelo_maestro);
         }
@@ -58,6 +60,8 @@ namespace emai.Controllers
         public async Task<IActionResult> GuardarCambios(Maestro ob_maestro)
         {
             bool respuesta;
+
+            ob_maestro.Status = ob_maestro.StatusSeleccionado == "Base";
 
             if (ob_maestro.IdMaestro == 0)
             {

@@ -1,4 +1,5 @@
-﻿using emai.Models;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using emai.Models;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
@@ -106,7 +107,7 @@ namespace emai.Servicios
             var cole3 = new HttpClient();
             cole3.BaseAddress = new Uri(_baseurl);
 
-            var response = await cole3.DeleteAsync($"api/Colegiatura/{IdColegiatura}");
+            var response = await cole3.DeleteAsync($"api/Colegiatura/Eliminar/{IdColegiatura}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -115,5 +116,20 @@ namespace emai.Servicios
 
             return respuesta;
         }
+
+    //    public List<GastosColegiatura> GetDataForPDF()
+    //    {
+    //        // Aquí debes implementar la lógica para obtener los datos de alguna fuente
+    //        // Por ejemplo, desde una base de datos, una lista en memoria, etc.
+    //        List<GastosColegiatura> data = new List<GastosColegiatura>
+    //        {
+    //    new GastosColegiatura { IdColegiatura = 1, Fecha = DateTime.Now,NoPedido = "04",Descripcion = "pago colegiatura",Cantidad = 100.00M, Subtotal = 100.00M, Total = 150.00M },
+    //    new GastosColegiatura { IdColegiatura = 2, Fecha = DateTime.Now.AddDays(1),NoPedido = "04",Descripcion = "pago colegiatura2",Cantidad = 100.00M, Subtotal = 100.00M, Total = 150.00M }
+    //    // Agregar más datos aquí...
+    //};
+
+    //        return data;
+    //    }
+
     }
 }

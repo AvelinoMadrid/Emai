@@ -3662,11 +3662,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.API\\EMAI.API.csproj",
       "projectName": "EMAI.API",
-      "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.API\\EMAI.API.csproj",
       "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.API\\obj\\",
+      "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -3688,14 +3688,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+            "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
             },
-            "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
-              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.LND\\EMAI.LND.csproj"
+            "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
+              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.LND\\EMAI.LND.csproj"
             },
-            "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+            "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+              "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
             }
           }
         }

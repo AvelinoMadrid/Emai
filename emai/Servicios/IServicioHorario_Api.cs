@@ -13,5 +13,7 @@ namespace emai.Servicios
         Task<bool> Editar(Horario horario);
 
         Task<bool> Eliminar(int IdHorario);
+
+        Task<List<Horario>> ObtenerTodos();
     }
 }

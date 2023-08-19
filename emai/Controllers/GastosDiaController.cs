@@ -25,6 +25,12 @@ namespace emai.Controllers
         {
             List<GastosDia> Lista = await _ServicioGastosDia_Api.Lista();
 
+            foreach (var GastoDia in Lista)
+            {
+                GastoDia.Subtotal = GastoDia.Cantidad;
+                GastoDia.Total = GastoDia.Subtotal * 16m / 100m + GastoDia.Subtotal;
+            }
+
             return View(Lista);
         }
 
@@ -49,6 +55,9 @@ namespace emai.Controllers
 
             if (ob_gastodia.IdGastoDia == 0)
             {
+                ob_gastodia.Subtotal = ob_gastodia.Cantidad;
+                ob_gastodia.Total = ob_gastodia.Subtotal * 16m / 100m + ob_gastodia.Subtotal;
+
                 gas1 = await _ServicioGastosDia_Api.Guardar(ob_gastodia);
             }
             else

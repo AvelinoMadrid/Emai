@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7eP80H/3cgorbIO1x0l0u//CaKAjH2K0mEVsQ7H/t5Ql084NhTv1LV0x6jBDPcvSEhIBBAhH9EZ4lRPzVyqfA==",
+  "dgSpecHash": "Ep9Jrci4u83wzMoTUzQNcm9YxRiG6pUX/4h+K9xM90NkuRz9ZhZ+ZKNT8QrXCy5tU50vHpEViZn4c0dWGsYDxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Barco Usuario\\Desktop\\emai2julio\\Emai\\EMAI.API\\EMAI.API.csproj",
+  "projectFilePath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.API\\EMAI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Barco Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Barco Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
