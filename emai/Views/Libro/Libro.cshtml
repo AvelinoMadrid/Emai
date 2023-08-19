@@ -1,5 +1,16 @@
 ﻿@model List<Libro>
 
+@{
+    ViewBag.Title = "Tabla de Libros ";
+}
+
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -7,20 +18,22 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Libro</h3>
+                        <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Libro</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="0" class="btn btn-primary btn-sm">Nuevo Libro</a>
+                      
 
 
-                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" ">
+                        <table id="example1" class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
                                     <th>IdLibro</th>
                                     <th>Nombre</th>
                                     <th>Costo</th>
                                     <th>Status</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,9 +47,9 @@
                                         <td>$@item.costo</td>
                                         <td>@item.Status</td>
                                         <td>
-                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">EDITAR COSTO </a>
-                                            <a asp-action="agregarlibro1" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">ACTIVAR</a>
-                                            <a asp-action="agregarlibro2" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm">DESACTIVAR </a>
+                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR COSTO </a>
+                                            <a asp-action="agregarlibro1" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm" style="width:100%; margin-bottom:10px">ACTIVAR</a>
+                                            <a asp-action="agregarlibro2" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-danger btn-sm" style="width:100%">DESACTIVAR </a>
                                            
 
                                         </td>

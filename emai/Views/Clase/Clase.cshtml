@@ -1,5 +1,15 @@
 ﻿@model List<Clase>
 
+@{
+    ViewBag.Title = "Tabla de Clases ";
+}
+
+    <style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+    </style>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -11,11 +21,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-
-                      
-
-
-                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" ">
+                   <table id="example1" class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
                                     <th>ID Clase</th>
@@ -32,14 +38,13 @@
                                     <th>Clase Opcional</th>
                                     <th>Horario Opcional</th>
                                     <th>Día Opcional</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-
                                         <td>@item.idClase</td>
                                         <td>@item.Nombre</td>
                                         <td>@item.CNormal</td>
@@ -54,7 +59,6 @@
                                         <td>@item.ClaseOpc</td>
                                         <td>@item.DiaOpc</td>
                                         <td>@item.HorarioOpc</td>
-                                       
                                         <td>
                                             <a asp-action="agregarclase" asp-controller="Clase" asp-route-idClase="@item.idClase" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Clase" asp-route-idClase="@item.idClase" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
@@ -62,24 +66,12 @@
                                     </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
-                        </table>
+                            </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-
-
-            </div>
+             </div>
             <!-- /.col -->
         </div>
         <!-- /.row -->

@@ -1483,3 +1483,12 @@ C:\Users\Barco Usuario\Desktop\emai2julio\Emai\emai\obj\Debug\net6.0\refint\emai
 C:\Users\Barco Usuario\Desktop\emai2julio\Emai\emai\obj\Debug\net6.0\emai.pdb
 C:\Users\Barco Usuario\Desktop\emai2julio\Emai\emai\obj\Debug\net6.0\emai.genruntimeconfig.cache
 C:\Users\Barco Usuario\Desktop\emai2julio\Emai\emai\obj\Debug\net6.0\ref\emai.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\Irony.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\itextsharp.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\anubi\source\repos\AvelinoMadrid\Emai\emai\bin\Debug\net6.0\XLParser.dll

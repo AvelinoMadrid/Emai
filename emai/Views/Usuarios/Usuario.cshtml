@@ -1,5 +1,15 @@
 ﻿@model List<Usuarios>
 
+@{
+    ViewBag.Title = "Tabla de Usuarios ";
+}
+
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -11,11 +21,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-
-                      
-
-
-                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" ">
+                        <table id="example1" class="table table-bordered table-hover table-striped" >
                             <thead>
                                 <tr>
                                     <th>ID Usuario</th>
@@ -24,15 +30,13 @@
                                     <th>Correo</th>
                                     <th>Dirección</th>
                                     <th>Teléfono</th>
-                                    <th></th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-
                                         <td>@item.idUsuario</td>
                                         <td>@item.Usuario</td>
                                         <td>@item.Contraseña</td>
@@ -46,24 +50,12 @@
                                     </tr>
                                 }
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                    @*<th>idUsuario</th>
-                                    <th>Nombre</th>
-                                    <th>Contraseña</th>
-                                    <th>Correo</th>
-                                    <th>Dirección</th>
-                                    <th>Teléfono</th>
-                                    <th></th>*@
-                            </tr>
-                            </tfoot>
+                       
                         </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-
-
             </div>
             <!-- /.col -->
         </div>

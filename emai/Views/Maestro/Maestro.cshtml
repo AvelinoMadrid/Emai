@@ -1,5 +1,18 @@
 ﻿@model List<Maestro>
 
+@{
+    ViewBag.Title = "Tabla de Maestros ";
+}
+
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
+
+
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -15,7 +28,7 @@
 
 
 
-                        <table id="example2" class="table table-bordered table-hover table-striped table-bordered table-sm table-responsive" cellspacing="0" width="100%">
+                        <table id="example1" class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
                                     <th>ID Maestro</th>
@@ -32,6 +45,7 @@
                                    @* <th>Base</th>
                                     <th>Suplente</th>*@
                                     <th>Pago</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>

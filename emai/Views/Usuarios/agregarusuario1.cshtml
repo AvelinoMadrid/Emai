@@ -2,7 +2,7 @@
 
 
 @{
-    ViewData["Title"] = "agregarusuario1";
+    ViewData["Title"] = "Agregar Usuario";
     Layout = "~/Views/Shared/_Layout.cshtml";
   
 }
@@ -14,14 +14,14 @@
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post" class="was-validated">
+        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post" class="needs-validation" novalidate>
 
             <input asp-for="idUsuario" type="hidden" />
 
             <div class="row">
 
                 <div class="col-md-4 form-group">
-                    <label class="form-label">Nombre del Usuario</label>
+                    <label class="form-label" for="Usuario">Nombre del Usuario</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Usuario" name="Usuario" id="Usuario" required/>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -31,7 +31,7 @@
 
         
                 <div class="col-md-4 form-group">
-                    <label class="form-label">Email</label>
+                    <label class="form-label" for="email">Email</label>
                     <input type="email" class="form-control form-control-sa" asp-for="Email" id="email" name="email"  required  />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese un correo electrónico.</div>
@@ -39,7 +39,7 @@
 
 
                 <div class="col-md-4 form-group">
-                    <label class="form-label">Direccion</label>
+                    <label class="form-label" for="Direccion">Direccion</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Direccion" id="direccion" name="direccion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese una Dirección.</div>
@@ -48,16 +48,21 @@
 
 
                 <div class="col-md-4 form-group">
-                    <label class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control form-control-sa" asp-for="Telefono" id="telefono" name="telefono" required />
+                    <label class="form-label" for="Telefono">Teléfono</label>
+                    <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask  asp-for="Telefono" id="telefono" name="telefono" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese un numero Telefónico.</div>
                 </div>
 
 
                 <div class="col-md-4 form-group">
-                    <label class="form-label">Contraseña</label>
+                    <label class="form-label" for="contraseña">Contraseña</label>
+                    <div class="input-group">
                     <input type="password" class="form-control form-control-sa" asp-for="Contraseña" min="8"  id="contraseña" name="contraseña" required/>
+                    <div class="input-group-append">
+                        <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                    </div></div>
+
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">ingrese la contraseña.</div>
                 </div>

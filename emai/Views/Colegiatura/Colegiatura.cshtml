@@ -1,5 +1,10 @@
 ﻿@model List<GastosColegiatura>
 
+@{
+    ViewBag.Title = "Gastos de Colegiatura ";
+}
+
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -7,14 +12,15 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Gastos Colegiatura</h3>
+                        <a asp-action="agregarcolegiatura" asp-controller="Colegiatura" asp-route-IdColegiatura="0" class="btn btn-dark btn-sm" style="float: right !important">Nueva Colegiatura</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarcolegiatura" asp-controller="Colegiatura" asp-route-IdColegiatura="0" class="btn btn-primary btn-sm">Nueva Colegiatura</a>
+                      
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>IdColegiatura</th>
@@ -24,6 +30,7 @@
                                     <th>Cantidad</th>
                                     <th>Subtotal</th>
                                     <th>Total</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,8 +47,8 @@
                                         <td>@item.Subtotal</td>
                                         <td>@item.Total</td>
                                         <td>
-                                            <a asp-action="agregarcolegiatura" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarcolegiatura" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-danger btn-sm" style="width:100%">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }
