@@ -110,7 +110,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Usuario", "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Usuario" ? "active" : "") nav-link">
+                                    <a href="@Url.Action("Usuarios", "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Usuarios" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p > Usuarios </p>
                                        </a>
@@ -131,7 +131,7 @@
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("Alumnos", "Alumnos")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Alumnos" ? "active" : "")nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ver Alumnos</p>
                                     </a>

@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.102.0" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="fullcalendar" Version="3.9.0" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
@@ -21,10 +22,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     <PackageReference Include="Puya.Platform.Infrastructure.Data.SqlServer" Version="1.0.0.140" />
     <PackageReference Include="Reec.Inspection.SqlServer" Version="1.0.5" />
+    <PackageReference Include="Twilio" Version="6.14.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\Escolar\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

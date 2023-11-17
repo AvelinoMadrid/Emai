@@ -23,7 +23,7 @@ namespace emai.Models
         public string ClaseOpc { get; set; }
         public string HorarioOpc { get; set; }
         public string DiaOpc { get; set; }
-
+        public ICollection<Alumnos> Alumnos { get; set; }
         public List<Clase> Lista { get; set; }
     }
 }

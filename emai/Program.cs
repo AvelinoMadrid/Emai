@@ -20,7 +20,7 @@ builder.Services.AddScoped<IServicioEvento_Api, EventoServicio_Api>();
 builder.Services.AddScoped<IServicioAsigClase_Api, AsigClaseServicio_Api>();
 builder.Services.AddScoped<IServicioCooperaciones_Api, CooperacionesServicio_Api>();
 builder.Services.AddScoped<IServicioPlanEstudios_Api, PlanEstudiosServicio_Api>();
-
+builder.Services.AddScoped<IServicioAlumnos_Api, AlumnosServicio_Api>();
 
 var app = builder.Build();
 

@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EMAI.Servicios/1.0.0": {
+        "dependencies": {
+          "EMAI.Comun": "1.0.0",
+          "EMAI.Entidades": "1.0.0"
+        },
+        "runtime": {
+          "EMAI.Servicios.dll": {}
+        }
+      },
+      "EMAI.Comun/1.0.0": {
+        "runtime": {
+          "EMAI.Comun.dll": {}
+        }
+      },
+      "EMAI.Entidades/1.0.0": {
+        "runtime": {
+          "EMAI.Entidades.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EMAI.Servicios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMAI.Comun/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMAI.Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -44,10 +44,10 @@ namespace EMAI.LND
         }
 
         // ACTUALIZAR ALUMNO 
-        public async Task<bool> UpdateAlumnos(int IdAlumno, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
+        public async Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateAlumnos(IdAlumno, Tag, NoDiaClases, FechaInicioClaseGratis,FechaFinClaseGratis, Nombre,  ApellidoP,  ApellidoM,  Edad,  FechaNacimiento,  TelefonoCasa, Celular,  Facebook,  Email,  Enfermedades,  Discapacidad,  InstrumentoBase,  Dia,  Hora,  InstrumentoOpcional,  DiaOpcional,  HoraOpcional, CelularPapas,  EmailPapas, RecogerPapas, CelularTR, NumEmergencia);
+            var rsp = await db.UpdateAlumnos(IdAlumno, IdClase, Tag, NoDiaClases, FechaInicioClaseGratis,FechaFinClaseGratis, Nombre,  ApellidoP,  ApellidoM,  Edad,  FechaNacimiento,  TelefonoCasa, Celular,  Facebook,  Email,  Enfermedades,  Discapacidad,  InstrumentoBase,  Dia,  Hora,  InstrumentoOpcional,  DiaOpcional,  HoraOpcional, CelularPapas,  EmailPapas, RecogerPapas, CelularTR, NumEmergencia);
             return rsp;
         }
 

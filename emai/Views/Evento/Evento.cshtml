@@ -1,5 +1,10 @@
 ﻿@model List<Evento>
 
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5/dist/main.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/dist/main.js"></script>
+
+<div id="calendar" style="width: height: 600px; border: 1px solid #ccc; background-color: #fff;"></div>
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -69,3 +74,24 @@
     </div>
     <!-- /.container-fluid -->
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var events = @Html.Raw(Json.Serialize(Model));
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth', // Puedes cambiar a 'timeGridWeek', 'timeGridDay', etc.
+            events: events.map(function (event) {
+                return {
+                    title: event.NombreEvento,
+                    start: event.Fecha,
+                    allDay: true, // Esto asume eventos de día completo
+                };
+            })
+        });
+
+        calendar.render();
+    });
+</script>
+

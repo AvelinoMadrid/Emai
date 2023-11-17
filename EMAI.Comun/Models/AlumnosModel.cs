@@ -11,6 +11,7 @@ namespace EMAI.Comun.Models
     public class AlumnosModel
     {
         public int IdAlumno { get; set; }
+        public int IdClase { get; set; }
         public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; }
         public int NoClasesDia { get; set; }
@@ -34,49 +35,54 @@ namespace EMAI.Comun.Models
         public string DiaOpcional { get; set; }
         public string HoraOpcional { get; set; }
 
-        //public string Img { get; set; }
-        //// tabla Papàs
-        //public string NombrePapa { get; set; }
-        //public string TelefonoPapa { get; set; }
-        //public string FacebookPapa { get; set; }
-        //public string TutorRecoger { get; set; }
-        //public string CelularTR { get; set; }
-        //public string NumEmergencia { get; set; }
+        public string Img { get; set; }
+        // tabla Papàs
+        public string NombrePapa { get; set; }
+        public string TelefonoPapa { get; set; }
+        public string FacebookPapa { get; set; }
+        public string Emailpapas { get; set; }
+        public string TutorRecoger { get; set; }
+        public string CelularTR { get; set; }
+        public string NumEmergencia { get; set; }
 
-        //// tabla estudios 
-        //public bool Estudios { get; set; }
-        //public string GradoEstudios { get; set; }
-        //public string EscuelaActual { get; set; }
-        //public bool Trabajo { get; set; }
-        //public string LugarTrabajo { get; set; }
+        // tabla estudios 
+        public bool Estudios { get; set; }
+        public string GradoEstudios { get; set; }
+        public string EscuelaActual { get; set; }
+        public bool Trabajo { get; set; }
+        public string LugarTrabajo { get; set; }
 
-        //// tabla conociientos Musicales
-        //public string conActual { get; set; }
-        //public string instrumentoMusical { get; set; }
-        //public string NoInstrumentoMusical { get; set; }
-        //public string EntersteEsc { get; set; }
-        //public bool interesGnroMusical { get; set; }
-        //public string interesgros { get; set; }
-
-
-        //// tabla interes instrumento 
-        //public string interes { get; set; }
+        // tabla conociientos Musicales
+        public string conActual { get; set; }
+        public string instrumentoMusical { get; set; }
+        public bool InstrumentoCasa { get; set; }
+        public string NoInstrumentoMusical { get; set; }
+        public string EntersteEsc { get; set; }
+        public bool interesGnroMusical { get; set; }
+        public string interesgros { get; set; }
 
 
-        //// tabla personal 
-        //public bool classOpcional { get; set; }
-        //public bool Descuento { get; set; }
+        // tabla interes instrumento 
+        public string interes { get; set; }
 
-        //// tabla repecionista 
 
-        //public int IDRecepcionista { get; set; }
-        //public string NombreRecepcionista { get; set; }
+        // tabla personal 
+        public bool classOpcional { get; set; }
+        public bool Descuento { get; set; }
+        public bool Amable { get; set; }
+
+        // tabla repecionista 
+
+        public int IDRecepcionista { get; set; }
+
+        public string NombreRecepcionista { get; set; }
     }
 
     // buscar por id
     public class AlumnosbyIDModel
     {
         public int IdAlumno { get; set; }
+        public int IdClase { get; set; }
         public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; }
         public int NoClasesDia { get; set; }
@@ -160,6 +166,7 @@ namespace EMAI.Comun.Models
     {
 
         // tabla Alumnos 
+        public int IdClase { get; set; }
         public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; }
         public int NoDiaClases { get; set; }
@@ -231,6 +238,7 @@ namespace EMAI.Comun.Models
         // Tabla Alumnos
         public int IdAlumno { get; set; }
         //public DateTime FechaInscripcion { get; set; }
+        public int IdClase { get; set; }
         public string Tag { get; set; }
         public int NoDiaClases { get; set; }
         public DateTime FechaInicioClaseGratis { get; set; }
@@ -268,6 +276,7 @@ namespace EMAI.Comun.Models
     public class ObtenerAlumno
     {
         public int IDAlumno { get; set; }
+        public int IdClase { get; set; }
         public DateTime FechaInscripcion{get;set ;}
         public string Tag { get; set; } 
         public int NoDiaClases { get; set; }    

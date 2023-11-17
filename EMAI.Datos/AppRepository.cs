@@ -33,7 +33,8 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
+            //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
+            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -69,6 +70,7 @@ namespace EMAI.Datos
             {
 
                 IdAlumno = (int)reader["IdAlumno"],
+                IdClase = (int)reader["IdClase"],
                 FechaInscripcion = (DateTime)reader["FechaInscripcion"],
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
@@ -84,13 +86,54 @@ namespace EMAI.Datos
                 Facebook = reader["Facebook"].ToString(),
                 Email = reader["E-mail"].ToString(),
                 Enfermedades = reader["Enfermedades"].ToString(),
-                Discapacidad = (bool)reader["Discapacidad"],
+                Discapacidad = reader["Discapacidad"] == DBNull.Value ? false : (bool)reader["Discapacidad"],
                 InstrumentoBase = reader["InstrumentoBase"].ToString(),
                 Dia = reader["Dia"].ToString(),
                 Hora = reader["Hora"].ToString(),
                 InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
                 DiaOpcional = reader["DiaOpcio"].ToString(),
-                HoraOpcional = reader["HoraOpcio"].ToString()
+                HoraOpcional = reader["HoraOpcio"].ToString(),
+
+                // tabla papas
+                //IdPapas = (int)reader["IdPapas"],
+                NombrePapa = reader["NombrePapas"].ToString(),
+                TelefonoPapa = reader["CelularPapas"].ToString(),
+                FacebookPapa = reader["FacebookPapas"].ToString(),
+                Emailpapas = reader["E-mail"].ToString(),
+                TutorRecoger = reader["TutorRecoger"].ToString(),
+                CelularTR = reader["CelularTR"].ToString(),
+                NumEmergencia = reader["NumEmergencia"].ToString(),
+
+                // tabla estudios
+                //IdEstudios = (int)reader["IdEstudio"],
+                Estudios = reader["Estudios"] == DBNull.Value ? false : (bool)reader["Estudios"],
+                GradoEstudios = reader["GradoEstudios"].ToString(),
+                EscuelaActual = reader["EscuelaActual"].ToString(),
+                Trabajo = reader["Trabajas"] == DBNull.Value ? false : (bool)reader["Trabajas"],
+                LugarTrabajo = reader["LugarTrabajo"].ToString(),
+
+                // tabla conocimientos actuales
+                //IdConocimientoMusicales = (int)reader["ID"],
+                conActual = reader["ConActual"].ToString(),
+                instrumentoMusical = reader["Instrumento"].ToString(),
+                InstrumentoCasa = reader["InstrumentoCasa"] == DBNull.Value ? false : (bool)reader["Estudios"],
+                NoInstrumentoMusical = reader["NoInstrumento"].ToString(),
+                EntersteEsc = reader["EnterasteEsc"].ToString(),
+                interesGnroMusical = reader["InteresGnroMusical"] == DBNull.Value ? false : (bool)reader["Estudios"],
+                interesgros = reader["Cuales"].ToString(),
+                interes = reader["Otro"].ToString(), // verificar en la base de daatos 
+                classOpcional = reader["ClasOpcional"] == DBNull.Value ? false : (bool)reader["Estudios"],
+                Descuento = reader["DescuentoP"] == DBNull.Value ? false : (bool)reader["Estudios"],
+                Amable = reader["Amable"] == DBNull.Value ? false : (bool)reader["Estudios"],
+
+                //IdInteresInstrumento = (int)reader["IDInteres"], //
+                //otro = reader["Otro"].ToString(),
+                //Idpersonal = (int)reader["IDPersonal"],
+
+
+                //IDRecepcionista = (int)reader["IdRecepcionista"],
+                NombreRecepcionista = reader["NombreRecepcionista"].ToString()
+
             };
         }
 
@@ -153,6 +196,7 @@ namespace EMAI.Datos
             return new AlumnosbyIDModel()
             {
                 IdAlumno = (int)reader["IdAlumno"],
+                IdClase = (int)reader["IdClase"],
                 FechaInscripcion = (DateTime)reader["FechaInscripcion"],
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
@@ -228,6 +272,7 @@ namespace EMAI.Datos
 
                 // TABLA DE ALUMNO
                 IDAlumno = (int)reader["IdAlumno"], //1
+                IdClase = (int)reader["IdClase"],
                 FechaInscripcion = (DateTime)reader["FechaInscripcion"], //2
                 Tag = reader["Tag"].ToString(), //3
                 NoDiaClases = (int)reader["NoDiaClases"], //4
@@ -302,6 +347,7 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
                     cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", value.FechaInscripcion));
                     cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
                     cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.NoDiaClases));
@@ -389,7 +435,7 @@ namespace EMAI.Datos
 
         // Actualizar Alumno 
 
-        public async Task<bool> UpdateAlumnos(int IdAlumno, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
+        public async Task<bool> UpdateAlumnos(int IdAlumno,int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -397,6 +443,7 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdAlumno", IdAlumno));
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", IdClase));
                     cmd.Parameters.Add(new SqlParameter("Tag", Tag));
                     cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", FechaFinClaseGratis));
                     cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", FechaFinClaseGratis));
