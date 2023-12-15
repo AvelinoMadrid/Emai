@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\emai",
+    "\\EMAI.Datos",
+    "\\emai\\Views",
+    "\\emai\\Views\\Alumnos"
   ],
-  "SelectedNode": "\\EMAI.API.sln",
+  "SelectedNode": "\\emai\\Views\\Alumnos\\agregaralumnos.cshtml",
   "PreviewInSolutionExplorer": false
 }

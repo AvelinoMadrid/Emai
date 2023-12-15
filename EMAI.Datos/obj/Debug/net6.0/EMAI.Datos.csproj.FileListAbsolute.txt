@@ -49,27 +49,6 @@ C:\Users\USUARIO\Desktop\EMAI.API\EMAI.API\EMAI.Datos\obj\Debug\net6.0\EMAI.Dato
 C:\Users\USUARIO\Desktop\EMAI.API\EMAI.API\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\Users\USUARIO\Desktop\EMAI.API\EMAI.API\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\USUARIO\Desktop\EMAI.API\EMAI.API\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
-C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
 C:\Users\USUARIO\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
@@ -217,3 +196,24 @@ C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.D
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll

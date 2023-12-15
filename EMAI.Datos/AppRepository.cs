@@ -34,7 +34,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=LAPTOP-OM95FUOE\\SQLEXPRESS;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -70,7 +70,7 @@ namespace EMAI.Datos
             {
 
                 IdAlumno = (int)reader["IdAlumno"],
-                IdClase = (int)reader["IdClase"],
+                //IdClase = (int)reader["IdClase"],
                 FechaInscripcion = (DateTime)reader["FechaInscripcion"],
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
@@ -132,7 +132,8 @@ namespace EMAI.Datos
 
 
                 //IDRecepcionista = (int)reader["IdRecepcionista"],
-                NombreRecepcionista = reader["NombreRecepcionista"].ToString()
+                //NombreRecepcionista = reader["NombreRecepcionista"].ToString(); nora no modificar en el proyecto de angel
+                NombreRecepcionista = reader["Nombre"].ToString()
 
             };
         }
@@ -2476,7 +2477,7 @@ namespace EMAI.Datos
                 IdUsuario = (int)reader["IdUsuario"],
                 Usuario = (string)reader["Usuario"],
                 Contraseña = (string)reader["Contraseña"],
-                Email = (string)reader["Email"],
+                Email = (string)reader["E-mail"],
                 Direccion = (string)reader["Direccion"],
                 Telefono = (string)reader["Telefono"],
             };

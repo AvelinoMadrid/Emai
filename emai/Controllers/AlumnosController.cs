@@ -33,36 +33,36 @@ namespace emai.Controllers
         public async Task<IActionResult> agregaralumnos(int IdAlumno)
         {
 
-            Alumnos modelo_usuario = new Alumnos();
+            Alumnos modelo_Alumnos = new Alumnos();
 
             ViewBag.Accion = "Nuevo Alumno";
             if (IdAlumno != 0)
             {
-                modelo_usuario = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
+                modelo_Alumnos = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
                 ViewBag.Action = "Editar Alumno";
             }
-            return View(modelo_usuario);
+            return View(modelo_Alumnos);
         }
 
 
 
 
         [HttpPost]
-        public async Task<IActionResult> GuardarCambios(Alumnos ob_usuario)
+        public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)
         {
             bool respuesta;
 
-            if (ob_usuario.IdAlumno == 0)
+            if (ob_Alumno.IdAlumno == 0)
             {
-                respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_usuario);
+                respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_Alumno);
             }
             else
             {
-                respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_usuario);
+                respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_Alumno);
             }
 
             if (respuesta)
-                return RedirectToAction("Alumno");
+                return RedirectToAction("Alumnos");
             else
                 return NoContent();
         }
@@ -74,7 +74,7 @@ namespace emai.Controllers
             var respuesta = await _ServicioAlumnos_Api.EliminarAlu(IdAlumno);
 
             if (respuesta)
-                return RedirectToAction("Alumno");
+                return RedirectToAction("Alumnos");
             else
                 return NoContent();
         }

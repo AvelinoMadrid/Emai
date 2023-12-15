@@ -36,6 +36,7 @@ namespace emai.Models
         // Tabla papas
         public string NombrePapas { get; set; }
         public string CelularPapas { get; set; }
+        
         public string FacebookPapas { get; set; }
         public string EmailPapas { get; set; }
         public string TutorRecoger { get; set; }
