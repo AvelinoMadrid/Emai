@@ -28,17 +28,48 @@ namespace EMAI.API.Controllers
 
         // buscar ID /api/Adicional/Insertar
         [HttpGet("{id}")]
-        public async Task <ActionResult<AlumnosbyIDModel>> ObtenerAlumnosporID(int id)
+        public async Task<ActionResult<AlumnosbyIDModel>> ObtenerAlumnosporID(int id)
         {
             return await _repository.ObtenerAlumnosporID(id);
         }
 
-       
+
         [HttpPost]
         public async Task Post([FromBody] InsertAlumnoModel value)
         {
             await _repository.InsertarAlumno(value);
         }
+
+        [HttpPost("api/Alumnos/InsertarNuevaparte")]
+        public async Task Post([FromBody] AlumnosNuevo value)
+        {
+            await _repository.InsertarAlumnosParteI(value);
+        }
+
+        [HttpPost("api/Alumnos/InsertarPapas")]
+        public async Task Post([FromBody] PapasNuevo value)
+        {
+            await _repository.InsertarPapas(value);
+        }
+
+        [HttpPost("api/Alumnos/InsertarEstudios")]
+        public async Task Post([FromBody] EstudiosNuevo value)
+        {
+            await _repository.InsertarEstudios(value);
+        }
+
+        [HttpPost("api/Alumnos/InsertarConocimientosMusicales")]
+        public async Task Post([FromBody] ConocimientosMusicales value)
+        {
+            await _repository.InsertarConocimientosMusicales(value);
+        }
+
+        [HttpPost("api/Alumnos/InsertarHoobys")]
+        public async Task Post([FromBody] Hoobys value)
+        {
+            await _repository.InsertarHobbys(value);
+        }
+
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
@@ -59,9 +90,9 @@ namespace EMAI.API.Controllers
         }
 
 
+        //nuevos requirimientos 
 
-
-
+      
 
     }
 }

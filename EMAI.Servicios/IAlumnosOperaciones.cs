@@ -25,7 +25,15 @@ namespace EMAI.Servicios
         // prueba de obtener alumnos por id
         Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
 
+        Task<bool> InsertarAlumnosParteI(AlumnosNuevo value);
 
+        Task<bool> InsertarPapas(PapasNuevo value);
+
+        Task<bool> InsertarEstudios(EstudiosNuevo value);
+
+        Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value);
+
+        Task<bool> InsertarHobbys(Hoobys value);
 
     }
 }

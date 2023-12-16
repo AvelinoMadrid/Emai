@@ -481,6 +481,141 @@ namespace EMAI.Datos
             }
         }
 
+        // nuevos requirimientos 
+
+        // insert Alumno 
+
+        public async Task<bool> InsertarAlumnosParteI(AlumnosNuevo value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_AlumnoInsertarI", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion",value.FechaInsctipcion ));
+                    cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
+                    cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.Dias));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", value.FechaInicioClaseGratis));
+                    cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", value.InstrumentoBase));
+                    cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
+                    cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", value.InstrumentoOpcional));
+                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", value.DiaOpcional));
+                    cmd.Parameters.Add(new SqlParameter("@HoraOpcional", value.HoraOpcional));
+                    cmd.Parameters.Add(new SqlParameter("@NombreCompleto", value.NombreCompleto));
+                    cmd.Parameters.Add(new SqlParameter("@Edad", value.Edad));
+                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento",value.FechaNacimientoAlumno));
+                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", value.TelefonoCasa));
+                    cmd.Parameters.Add(new SqlParameter("@Celular", value.Celular));
+                    cmd.Parameters.Add(new SqlParameter("@Facebook", value.Facebook));
+                    cmd.Parameters.Add(new SqlParameter("@Email", value.Email));
+                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", value.Enfermedades));
+                   
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+
+
+        public async Task<bool> InsertarPapas(PapasNuevo value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_PapasInsertar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@Nombrepapa", value.NombrePapa));
+                    cmd.Parameters.Add(new SqlParameter("@Celular", value.CelularPapa));
+                    cmd.Parameters.Add(new SqlParameter("@FacebookPapa", value.FacebookPapas));
+                    cmd.Parameters.Add(new SqlParameter("@Email", value.Email));
+                    cmd.Parameters.Add(new SqlParameter("@NombredelTutorRecoger", value.NombreTutorRecoger));
+                    cmd.Parameters.Add(new SqlParameter("@CelularTutorRecoger", value.CelularTutorRecoger));
+                    cmd.Parameters.Add(new SqlParameter("@NumeroEmergencia", value.NumeroEmergencia));
+                    
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+         
+            }
+        }
+
+        public async Task<bool> InsertarEstudios(EstudiosNuevo value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_EstudiosInsertar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@Estudios", value.Estudios));
+                    cmd.Parameters.Add(new SqlParameter("@GradoEstudios", value.GradoEstuidos));
+                    cmd.Parameters.Add(new SqlParameter("@NombreEscuela", value.NombreEscuelaActual));
+                    cmd.Parameters.Add(new SqlParameter("@Trabajas", value.trabajas));
+                    cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", value.LugarTrabajo));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ConocimientosInsertar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@ConMusical", value.ConMusical));
+                    cmd.Parameters.Add(new SqlParameter("@Instrumento", value.InstrumentoMusicalConocimiento));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", value.IntrumentoCasa));
+                    cmd.Parameters.Add(new SqlParameter("@NoInstrumento", value.NombreInstrumentoCasa));
+                    cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", value.EnterasteEsc));
+                    cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", value.GeneroMusical));
+                    cmd.Parameters.Add(new SqlParameter("@Cuales", value.Cuales));
+                  
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> InsertarHobbys(Hoobys value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ConocimientosInsertar", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    // para tabla de alumnos 
+                    cmd.Parameters.Add(new SqlParameter("@Hobby", value.Hooby));
+                    cmd.Parameters.Add(new SqlParameter("@Otro", value.Otro));
+                    cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", value.ClaseOpcional));
+                    cmd.Parameters.Add(new SqlParameter("@DescuentoP", value.DescuentoP));
+                    cmd.Parameters.Add(new SqlParameter("Amable", value.Amable));
+                    cmd.Parameters.Add(new SqlParameter("NombreRecepcionista", value.NombreRecepcionista));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+
+
+
         #endregion
 
         #region "Secciones ---> Adicionales"

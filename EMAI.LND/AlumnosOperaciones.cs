@@ -63,7 +63,42 @@ namespace EMAI.LND
             
         }
 
+        // nuevos requirimintos
 
+        public async Task<bool> InsertarAlumnosParteI(AlumnosNuevo value)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.InsertarAlumnosParteI(value);
+            return rsp;
+        }
+
+        public async Task<bool> InsertarPapas(PapasNuevo value)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.InsertarPapas(value);
+            return rsp;
+        }
+
+        public async Task<bool> InsertarEstudios(EstudiosNuevo value)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.InsertarEstudios(value); 
+            return rsp;
+        }
+
+        public async Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.InsertarConocimientosMusicales(value);
+            return rsp;
+        }
+
+        public async Task<bool> InsertarHobbys(Hoobys value)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.InsertarHobbys( value);
+            return rsp;
+        }
 
     }
 }

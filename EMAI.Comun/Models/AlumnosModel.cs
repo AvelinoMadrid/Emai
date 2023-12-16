@@ -340,14 +340,74 @@ namespace EMAI.Comun.Models
 
         // TABLA RECEPCIONISTA 
         public string NombreRecepcionista { get; set; }
-
-
     }
 
+    // Nuevos Modelos para nuevos requirimientos 
+    public class AlumnosNuevo {
 
+        public DateTime FechaInsctipcion { get; set; }
+        public string Tag { get; set; }
+        public int Dias { get; set; }
+        public DateTime FechaInicioClaseGratis { get; set; }
+        public DateTime FechaFinClaseGratis { get; set; }
+        public string InstrumentoBase { get; set; }
+        public string Dia { get; set; }
+        public string Hora { get; set; }
+        public string InstrumentoOpcional { get; set; }
+        public string HoraOpcional { get; set; }
+        public string DiaOpcional { get; set; }
+        public string NombreCompleto { get; set; }
+        public int Edad { get; set; }
+        public DateTime FechaNacimientoAlumno { get; set; }
+        public string TelefonoCasa { get; set; }
+        public string Celular { get; set; }
+        public string Facebook { get; set; }
+        public string Email { get; set; }
+        public string Enfermedades { get; set; }
+    }
 
+    public class PapasNuevo
+    {
+        public string NombrePapa { get; set; }
+        public string CelularPapa { get; set; }
+        public string FacebookPapas { get; set; }
+        public string Email { get; set; }
+        public string NombreTutorRecoger { get; set; }
+        public string CelularTutorRecoger { get; set; }
+        public string NumeroEmergencia { get; set; } 
+    }
 
+    public class EstudiosNuevo
+    {
+        public bool Estudios { get; set; }
+        public string GradoEstuidos { get; set; }
+        public string NombreEscuelaActual { get; set; } 
+        public bool trabajas { get; set; }
+        public string LugarTrabajo { get; set; }
+    }
 
+    public class ConocimientosMusicales
+    {
+        public bool ConMusical { get; set; }
+        public string InstrumentoMusicalConocimiento { get; set; }
+        public bool IntrumentoCasa { get; set; }
+        public string NombreInstrumentoCasa { get; set; }
+        public string EnterasteEsc { get; set; }
+        public bool GeneroMusical { get; set; }
+
+        public string Cuales { get; set; }
+    }
+
+    public class Hoobys
+    {
+        public string Hooby { get; set; }
+        public string Otro { get; set; }
+        public bool ClaseOpcional { get; set; }
+        public bool DescuentoP { get; set; }
+        public bool Amable { get; set; }
+        public string NombreRecepcionista { get; set; }
+    }
+       
 
 
 

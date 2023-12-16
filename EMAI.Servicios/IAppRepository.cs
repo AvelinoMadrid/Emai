@@ -42,10 +42,12 @@ namespace EMAI.Servicios
         
          Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
 
-
-
-
-
+         // nuevos Alumnos con Requisitos
+         Task<bool> InsertarAlumnosParteI(AlumnosNuevo value);
+         Task<bool> InsertarPapas(PapasNuevo value);
+         Task<bool> InsertarEstudios(EstudiosNuevo value);
+         Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value);
+          Task<bool> InsertarHobbys(Hoobys value);
 
 
         #endregion
