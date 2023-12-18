@@ -44,7 +44,48 @@ namespace emai.Controllers
             return View(modelo_Alumnos);
         }
 
+        // pModal de Papás
+        public async Task<IActionResult> agregarpapas (int IdAlumno)
+        {
+            Alumnos modelo_Alumnos = new Alumnos();
+            //if (IdAlumno != 0)
+            //{
+            //    modelo_Alumnos = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
+            //    ViewBag.Action = "Editar Alumno";
+            //}
+            return View(modelo_Alumnos);
 
+        }
+
+        // Modal de Registrar Estudios
+        public async Task<IActionResult> agregarEstudios(int IdAlumno)
+        {
+            Alumnos modelo_Alumnos = new Alumnos();
+            //if (IdAlumno != 0)
+            //{
+            //    modelo_Alumnos = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
+            //    ViewBag.Action = "Editar Alumno";
+            //}
+            return View(modelo_Alumnos);
+        }
+
+        public async Task<IActionResult> agregarConocimientosMusicales()
+        {
+            Alumnos modelo_Alumnos = new Alumnos();
+            return View();  
+        }
+
+        // hoobys 
+        public async Task<IActionResult> agregarPasatiempos(int IdAlumno)
+        {
+            Alumnos modelo_Alumnos = new Alumnos();
+            //if (IdAlumno != 0)
+            //{
+            //    modelo_Alumnos = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
+            //    ViewBag.Action = "Editar Alumno";
+            //}
+            return View(modelo_Alumnos);
+        }
 
 
         [HttpPost]
@@ -67,7 +108,6 @@ namespace emai.Controllers
                 return NoContent();
         }
 
-
         [HttpGet]
         public async Task<IActionResult> Eliminar(int IdAlumno)
         {
@@ -78,5 +118,8 @@ namespace emai.Controllers
             else
                 return NoContent();
         }
+
+       
+
     }
 }

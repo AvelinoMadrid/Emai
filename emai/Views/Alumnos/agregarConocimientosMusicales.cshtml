@@ -1,0 +1,92 @@
+﻿@model Alumnos
+
+
+@{
+    ViewData["Title"] = "Agregar Alumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="IdClase" type="hidden" />
+
+
+            <div class="row">
+
+
+                @*Conocimientos Musicales*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="conocimientomusicales">¿Cúentas con algún conocimiento musical?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="ConActual" name="conocimientomusicales" id="conocimientosmusicales" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Instrumentos *@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="instrumentos">En que instrumentos ¿Tiene conocimiento?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Instrumento" id="instrumentos" name="instrumentos" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Instrumento Casa *@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="instrumentocasa">¿Cuentas con un Instrumento en Casa?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="InstrumentoCasa" id="instrumentocasa" name="instrumentocasa" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                </div>
+
+
+                @*Que instrumento tiene en casa*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="Instrumento">Que instrumento (s)</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="Instrumento" id="" name="instrumento" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                @*Enteraste Escuela*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="enterasteescuela">¿Cómo te enteraste de EMAI?</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="EnterasteEscuela" id="enterasteescuela" name="enterasteescuela" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                
+                
+                @*Interes musical*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="interesmusical">¿Tienes algun género en especial?</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="InteresGnroMusical" id="interesmusical" name="interesmusical" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                
+               
+                @*Botones de guardar*@
+                <div class="col-md-6 form-group">
+
+                    <a asp-action="agregarPasatiempos" asp-controller="Alumnos" class="btn btn-success" style="width:100% !important">Siguiente</a>
+                    .
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="agregarestudios" asp-controller="Alumnos" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                </div>
+            </div>
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@model Alumnos
+
+
+@{
+    ViewData["Title"] = "Agregar Alumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="IdClase" type="hidden" />
+
+
+            <div class="row">
+
+                @*interes Hobby *@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="InteresHobby">¿Cual es tu tema de interes?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="InteresGnroMusical" name="interesmusical" id="interesmusical" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Otro *@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="instrumentos">Algun otro interes musical</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Otro" id="Otro" name="Otro" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Clase Opcionales*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="claseopcional">¿La persona que lo atendio le menciono las clases opcionales?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="ClaseOpcional" id="claseopcional" name="claseopcional" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                </div>
+
+
+                @*Pago Puntual*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="descuento">Descuento</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="DescuentoP" id="descuento" name="descuento" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Amable*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="amable">La persona que le atendio ¿fue amable?</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="amable" id="amable" name="amable" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                @*Nombre recepcion*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="nombrerecepcionista">Quien la atendio</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="amable" id="amable" name="amable" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                
+                @*Botones de guardar*@
+                <div class="col-md-6 form-group">
+
+                    <a asp-action="" asp-controller="Alumnos" class="btn btn-success" style="width:100% !important">Siguiente</a>
+
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="" asp-controller="Alumnos" class="btn btn-warning btn-sm" style="width:100% !important">Cancelar</a>
+                </div>
+            </div>
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+    </div>
+</div>

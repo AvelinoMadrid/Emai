@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\emai",
-    "\\EMAI.Datos",
+    "\\EMAI.API",
+    "\\EMAI.API\\Controllers",
     "\\emai\\Views",
     "\\emai\\Views\\Alumnos"
   ],
-  "SelectedNode": "\\emai\\Views\\Alumnos\\agregaralumnos.cshtml",
+  "SelectedNode": "\\emai\\Views\\Alumnos\\agregarPasatiempos.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -116,6 +116,10 @@ namespace emai.Servicios
             return respuesta;
         }
 
+        public Task<bool> RegistrarAlumnos(Alumnos Alumno)
+        {
+            throw new NotImplementedException();
+        }
     }   
 }
 

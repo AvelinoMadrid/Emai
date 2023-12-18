@@ -14,6 +14,10 @@ namespace emai.Servicios
 
         Task<bool> EliminarAlu(int IdAlumno);
 
+
+        // Nuevas APIS
+        Task<bool> RegistrarAlumnos(Alumnos Alumno);
+
         
     }
 }

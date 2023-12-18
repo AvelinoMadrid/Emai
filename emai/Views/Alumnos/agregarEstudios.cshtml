@@ -1,0 +1,84 @@
+﻿@model Alumnos
+
+
+@{
+    ViewData["Title"] = "Agregar Alumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="IdClase" type="hidden" />
+
+            
+            <div class="row">
+
+
+                @*Estudios*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="Estudios">¿Actualmente estudias?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Estudios" name="estudios" id="estudios" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+              
+                @*Grado de Estudios*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="gradoEstudios">GradoEstudios</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="GradoEstudios" id="gradoestudios" name="gradoestudios" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                @*Nombre de la Escuela *@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="nombreEscuela">Nombre de la Escuela</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="EscuelaActuales" id="nombreescuela" name="nombreescuela" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                </div>
+
+
+                @*Trabajas*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="trabajas">¿Actualmente Trabajas?</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="Trabajas" id="trabajas" name="trabajas" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                @*Lugar de Trabajo*@
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="LugarTrabajo">Lugar de Trabajo</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="LugarTrabajo" id="LugarTrabajo" name="LugarTrabajo" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                
+                @*Botones de guardar*@
+                <div class="col-md-6 form-group">
+
+                     <a asp-action="agregarConocimientosMusicales" asp-controller="Alumnos" class="btn btn-success" style="width:100% !important">Regresar</a>
+
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="agregarpapas" asp-controller="Alumnos" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                </div>
+            </div>
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+    </div>
+</div>
