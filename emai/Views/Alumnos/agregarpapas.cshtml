@@ -14,7 +14,7 @@
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="was-validated" novalidate>
 
             <input asp-for="IdClase" type="hidden" />
 
@@ -23,7 +23,7 @@
 
 
                 @*Nombre del Papa o mama*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="NombrePapas">Nombre de mamá y/o papá</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NombrePapas" name="Nombrepapas" id="Nombrepapas" required />
                     <div class="valid-feedback">Válido.</div>
@@ -31,7 +31,7 @@
                 </div>
 
                 @*Celular del papa *@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="celular">Celular</label>
                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="CelularPapas" id="celular" name="celular" required />
                     <div class="valid-feedback">Válido.</div>
@@ -40,15 +40,15 @@
 
 
                 @*Facebook del papa*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="facebook">Facebook papa</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="facebook">Facebook papá o mamá</label>
                     <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="facebook" name="facebook" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
                 @*Email del papa *@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="email">Email</label>
                     <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="email" name="email" required />
                     <div class="valid-feedback">Válido.</div>
@@ -57,8 +57,8 @@
 
 
                 @*Fecha Inicio de Clase Gratis*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="FechaInicioClase">FechaInicioClaseGratis</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="FechaInicioClase">Fecha de inicio de clases gratis</label>
                     <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClaseGratis" id="FechaInicioClase" name="FechaInicioClaseGratis" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -66,15 +66,15 @@
 
 
                 @*Nombre del tutor a recoger*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="NombreTR">Nombre de la persona que recogerá al niño</label>
-                    <input type="date" class="form-control form-control-sa" asp-for="TutorRecoger" id="NombreTR" name="nombreTR" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="TutorRecoger" id="NombreTR" name="nombreTR" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
                 @*Celular del alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Celular">Celular persona que recoge al niño</label>
                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="CelularTR" id="CelularTR" name="CelularTR" required />
                     <div class="valid-feedback">Válido.</div>
@@ -83,8 +83,8 @@
 
 
                 @*Numero de Emergencia*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="NumEmergencia">Numero de Emergencia</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="NumEmergencia">Número de Emergencia</label>
                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="NumEmergencia" id="NumEmergencia" name="NumEmergencia" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="col-md-6 form-group">
-                    <a asp-action="Alumnos" asp-controller="Alumnos" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                    <a asp-action="Alumnos" asp-controller="Alumnos" class="btn btn-warning " style="width:100% !important">Regresar</a>
                 </div>
             </div>
         </form>

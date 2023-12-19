@@ -54180,3 +54180,14 @@ pre code {
 
 
 
+.radio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px 20px
+}
+
+
+
+input[type="radio"] {
+   padding:10px
+}

@@ -14,7 +14,7 @@
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+        <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="was-validated" novalidate>
 
             <input asp-for="IdClase" type="hidden" />
 
@@ -23,15 +23,15 @@
 
 
                 @*FechaInscripcion*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="FechaInscripcion">Fecha Inscripción</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="FechaInscripcion" name="FechaInscripcion" id="FechaInscripcion" required />
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaInscripcion" name="FechaInscripcion" id="FechaInscripcion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
                 @*Tag de Registro*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Tag">Tag de Registro</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Tag" id="tag" name="tag" required />
                     <div class="valid-feedback">Válido.</div>
@@ -39,7 +39,7 @@
                 </div>
 
                 @*Dia de Clases*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="NoDiaClases">No. de Dia de Clases</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NoDiaClases" id="NoDiaClases" name="No.DiaClases" required />
                     <div class="valid-feedback">Válido.</div>
@@ -48,8 +48,8 @@
 
 
                 @*Fecha Inicio de Clase Gratis*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="FechaInicioClase">FechaInicioClaseGratis</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="FechaInicioClase">Fecha de clase inicio</label>
                     <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClaseGratis" id="FechaInicioClase" name="FechaInicioClaseGratis" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -57,8 +57,8 @@
 
 
                 @*Fecha Fin de Clase Gratis*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="FechaInicioClase">FechaFinClaseGratis</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="FechaInicioClase">Fecha de clase final</label>
                     <input type="date" class="form-control form-control-sa" asp-for="FechaFinClaseGratis" id="FechaFinClase" name="FechaFinClaseGratis" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -66,7 +66,7 @@
 
 
                 @*Instumento Base*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="InstrumentoBase">Instrumento Base</label>
                     <input type="text" class="form-control form-control-sa" asp-for="InstrumentoBase" id="instrumento" name="instrumento" required />
                     <div class="valid-feedback">Válido.</div>
@@ -75,7 +75,7 @@
 
 
                 @*Dia de clase*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="dia">Dia de Clase</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="Dia" id="dia" name="dia" required />
@@ -87,7 +87,7 @@
 
 
                 @*Hora de clase*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="hora">Hora de Clase</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="horaOpcional" id="hora" name="hora" required />
@@ -98,7 +98,7 @@
                 </div>
 
                 @*Instrumento Opcional*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="instrumentoopcional">Instrumento Opcional</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="InstrumentoOpcional" id="instrumentoopcional" name="instrumentoopcional" required />
@@ -110,7 +110,7 @@
 
 
                 @*Dia Opcional*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="diaopcional">Dia Opcional</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="diaOpcional" id="diaopcional" name="diaopcional" required />
@@ -121,7 +121,7 @@
                 </div>
 
                 @*Hora Opcional*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="HoraOpcional">Hora Opcional</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="horaOpcional" id="HoraOpcional" name="HoraOpcional" required />
@@ -134,7 +134,7 @@
                
 
                 @*Nombre Completo*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="NombreCompleto">Nombre Completo del Alumno</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="Nombre" id="NombreCompleto" name="NombreCompleto" required />
@@ -144,7 +144,7 @@
                 </div>
 
                 @*Edad del Alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="NombreCompleto">Edad del Alumno</label>
                     <div class="input-group">
                         <input type="text" class="form-control form-control-sa" asp-for="Edad" id="Edad" name="Edad" required />
@@ -154,10 +154,10 @@
                 </div>
 
                 @*Fecha Nacimiento del Alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento del Alumno</label>
                     <div class="input-group">
-                        <input type="text" class="form-control form-control-sa" asp-for="FechaNacimiento" id="FechaNacimiento" name="NombreCompleto" required />
+                        <input type="date" class="form-control form-control-sa" asp-for="FechaNacimiento" id="FechaNacimiento" required />
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
@@ -165,7 +165,7 @@
 
 
                 @*Telefono del alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Telefono">Teléfono de Casa</label>
                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="telefono" id="telefono" name="telefono" required />
                     <div class="valid-feedback">Válido.</div>
@@ -173,7 +173,7 @@
                 </div>
 
                 @*Celular del alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Telefono">Celular</label>
                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="Celular" id="Celular" name="Celular" required />
                     <div class="valid-feedback">Válido.</div>
@@ -181,15 +181,15 @@
                 </div>
 
                 @*Facebook del Alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Facebook">Facebook</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="facebook" name="facebook" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="facebook" name="facebook" placeholder="URL o Nombre" required />
                     <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Ingrese Fecha Nacimiento.</div>
+                    <div class="invalid-feedback">Ingrese Facebook.</div>
                 </div>
 
                 @*Email del Alumno*@
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="Email">Email del Alumno</label>
                     <input type="email" class="form-control form-control-sa" asp-for="Email" id="email" name="email" required />
                     <div class="valid-feedback">Válido.</div>
@@ -197,17 +197,14 @@
                 </div>
 
                 @*Enfermedades*@
-                <div class="col-md-4 form-group">
-                    <label class="form-label" for="Enfermedades">Enfermedad</label>
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="Enfermedades">Enfermedad / Alergias discapacidad</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Enfermedades" id="enfermedad" name="enfermedad" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese Enfermedad.</div>
                 </div>
 
-                @*Enfermedades*@
-                <div class="col-md-4 form-group">
-                    
-                </div>
+          
                     
 
                   @*Botones de guardar*@
@@ -218,10 +215,33 @@
                     </div>
 
                     <div class="col-md-6 form-group">
-                        <a asp-action="Alumnos" asp-controller="Alumnos" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                        <a asp-action="Alumnos" asp-controller="Alumnos" class="btn btn-warning" style="width:100% !important">Regresar</a>
                     </div>
           </div>
         </form>
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict';
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation');
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms).forEach((form) => {
+                    form.addEventListener('', (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+        </script>
+
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
     </div>

@@ -15,7 +15,7 @@
                         <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Alumno </a>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body">
+                    <div class="card-body table-responsive">
                         <table class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
@@ -71,6 +71,7 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
+
                                         <td>@item.IdAlumno</td>
                                         <td>@item.FechaInscripcion</td>
                                         <td>@item.Tag</td>
