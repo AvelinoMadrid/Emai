@@ -6,15 +6,16 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Gastos Dia</h3>
+                        <h3 class="card-title">Gastos varios de escuela</h3>
+                        <a asp-action="agregargastodia" asp-controller="GastosDia" asp-route-IdGastoDia="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo gasto de escuela</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregargastodia" asp-controller="GastosDia" asp-route-IdGastoDia="0" class="btn btn-primary btn-sm">Nuevo Gasto Dia</a>
+                       
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>IdGastoDia</th>
@@ -25,6 +26,7 @@
                                     <th>Cantidad</th>
                                     <th>Subtotal</th>
                                     <th>Total</th>
+                                    <th>Editar/Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,8 +44,8 @@
                                         <td>@item.Subtotal</td>
                                         <td>@item.Total</td>
                                         <td>
-                                            <a asp-action="agregargastodia" asp-controller="GastosDia" asp-route-IdGastoDia="@item.IdGastoDia" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="GastosDia" asp-route-IdGastoDia="@item.IdGastoDia" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregargastodia" asp-controller="GastosDia" asp-route-IdGastoDia="@item.IdGastoDia" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="GastosDia" asp-route-IdGastoDia="@item.IdGastoDia" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }

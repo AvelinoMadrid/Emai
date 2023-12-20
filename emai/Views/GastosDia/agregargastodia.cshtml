@@ -12,43 +12,64 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="GastosDia" method="post">
+        <form asp-action="GuardarCambios" asp-controller="GastosDia" method="post" class="needs-validation" novalidate>
 
+            <div class="row">
             <input asp-for="IdGastoDia" type="hidden" />
 
-            <div class="mb-2">
+                <div class="col-md-4 form-group">
                 <label class="form-label">Fecha</label>
-                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
+                    <input type="date" class="form-control form-control-sa" asp-for="Fecha" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-4 form-group">
                 <label class="form-label">NoPedido</label>
-                <input type="text" class="form-control form-control-sa" asp-for="NoPedido" />
+                    <input type="text" class="form-control form-control-sa" asp-for="NoPedido" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-4 form-group">
                 <label class="form-label">Proveedor</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Proveedor" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Proveedor" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Descripcion</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Descripcion" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Descripcion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Cantidad</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Cantidad" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Cantidad" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Subtotal</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" disabled />
             </div>
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Total</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Total" id="Total" disabled />
             </div>
 
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
 
-            <a asp-action="GastosDia" asp-controller="GastosDia" class="btn btn-warning btn-sm">Volver a la vista </a>
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+            </div>
 
+
+                    <div class="col-md-6 form-group">
+                    <a asp-action="GastosDia" asp-controller="GastosDia" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+            </div>
+
+
+
+
+            </div>
         </form>
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
@@ -82,3 +103,23 @@
         });
     </script>
     }
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>

@@ -8,24 +8,26 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title"> Cooperaciones </h3>
+                        <a asp-action="agregarcooperaciones" asp-controller="Cooperaciones" asp-route-IdCooperacion="0" class="btn btn-dark btn-sm" style="float: right !important">Nueva Cooperacion</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarcooperaciones" asp-controller="Cooperaciones" asp-route-IdCooperacion="0" class="btn btn-primary btn-sm">Nueva Cooperacion</a>
+                      
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>IdCooperacion</th>
                                     <th>Fecha</th>
-                                    <th>NoPedido</th>
+                                    <th>NoPedido</th> 
                                     <th>Proveedor</th>
                                     <th>Descripcion</th>
                                     <th>Cantidad</th>
                                     <th>SubTotal</th>
                                     <th>Total</th>
+                                    <th>Editar/Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,22 +45,13 @@
                                         <td>@item.SubTotal</td>
                                         <td>@item.Total</td>
                                         <td>
-                                            <a asp-action="agregarcooperaciones" asp-controller="Cooperaciones" asp-route-IdCooperacion="@item.IdCooperacion" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Cooperaciones" asp-route-IdCooperacion="@item.IdCooperacion" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarcooperaciones" asp-controller="Cooperaciones" asp-route-IdCooperacion="@item.IdCooperacion" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Cooperaciones" asp-route-IdCooperacion="@item.IdCooperacion" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
+                           
                         </table>
                     </div>
                     <!-- /.card-body -->

@@ -6,15 +6,16 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tabla Nomina</h3>
+                        <h3 class="card-title">Tabla Nómina</h3>
+                        <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="0" class="btn btn-dark btn-sm" style="float: right !important">Nueva Nómina </a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="0" class="btn btn-primary btn-sm">Nueva Nomina </a>
+                       
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>IdNomina</th>
@@ -25,6 +26,7 @@
                                     <th>Cantidad</th>
                                     <th>Subtotal</th>
                                     <th>Total</th>
+                                    <th>Editar/Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,8 +44,8 @@
                                         <td>@item.Subtotal</td>
                                         <td>@item.Total</td>
                                         <td>
-                                            <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-danger btn-sm">ELIMINAR </a>
+                                            <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                         </td>
                                     </tr>
                                 }

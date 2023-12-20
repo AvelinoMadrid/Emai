@@ -12,14 +12,14 @@
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Clase" method="post" name="myForm" class="was-validated" novalidate>
+        <form asp-action="GuardarCambios" asp-controller="Clase" method="post" name="myForm" class="needs-validation" novalidate>
 
             <div class="row"> 
             <input asp-for="idClase" type="hidden" />
 
 
 
-                <div class="col-md-12 form-group">
+                <div class="col-md-4 form-group">
                 <label class="form-label">Nombre de la clase</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Nombre" ng-model="nombre" required />
                     <div class="valid-feedback">Válido.</div>
@@ -34,7 +34,7 @@
 
 
 
-                <div class="col-12 col-sm-6" >
+                <div class="col-md-4 form-group">
                     <div class="form-group" >
                         <label>Nombre del Curso</label>
                         <select class="form-control  select2-hidden-accessible" style="width: 100%;"  asp-for="CNormal" name="CNormal" id="CNormal" required>
@@ -49,13 +49,13 @@
                 </div>
 
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                 <label class="form-label">Clase de Verano</label>
-                <input type="text" class="form-control form-control-sa" asp-for="CVerano" />
+                <input type="text" class="form-control form-control-sa" asp-for="CVerano" placeholder="Opcional" />
             </div>
 
 
-                <div class="col-12 col-sm-6" >
+                <div class="col-md-2 form-group">
                     <div class="form-group" >
                         <label>Día</label>
                         <select class="form-control select2-hidden-accessible"  style="width: 100%;"  asp-for="Dia" name="Dia" id="Dia" required>
@@ -85,7 +85,7 @@
 
 
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-2 form-group">
                 <label class="form-label">Horario</label>
                     <input type="time" class="form-control form-control-sa" asp-for="Horario" name="Horario" id="Horario" required />
                     <div class="valid-feedback">Válido.</div>
@@ -94,7 +94,7 @@
 
 
 
-                <div class="col-12 col-sm-6" >
+                <div class="col-md-2 form-group">
                     <div class="form-group">
                         <label>Día 2</label>
                         <select class="form-control  select2-hidden-accessible" style="width: 100%;"  asp-for="Dia2" name="Dia2" id="Dia2" required>
@@ -121,7 +121,7 @@
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>*@
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-2 form-group">
                 <label class="form-label">Horario 2</label>
                     <input type="time" class="form-control form-control-sa" asp-for="Horario2" name="Horario2" id="Horario2" required />
                     <div class="valid-feedback">Válido.</div>
@@ -131,7 +131,7 @@
 
 
 
-                <div class="col-12 col-sm-6" >
+                <div class="col-md-2 form-group">
                     <div class="form-group" >
                         <label>Día 3</label>
                         <select class="form-control  select2-hidden-accessible"  style="width: 100%;"  asp-for="Dia3" name="Dia3" id="Dia3" required>
@@ -160,7 +160,7 @@
             </div>*@
 
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-2 form-group">
                 <label class="form-label">Horario 3</label>
                     <input type="time" class="form-control form-control-sa" asp-for="Horario3" name="Horario3" id="Horario3" required />
                     <div class="valid-feedback">Válido.</div>
@@ -170,7 +170,7 @@
 
 
 
-                <div class="col-md-12 form-group">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Costo</label>
                     <input type="number" class="form-control form-control-sa" asp-for="Costo" name="Costo" id="Costo" required value="$" />
                     <div class="valid-feedback">Válido.</div>
@@ -179,7 +179,7 @@
 
 
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Clase Opcional</label>
                     <input type="text" class="form-control form-control-sa" asp-for="ClaseOpc" name="ClaseOpc" id="ClaseOpc"  />
                     <div class="valid-feedback">Válido.</div>
@@ -188,7 +188,7 @@
 
 
 
-                <div class="col-12 col-sm-4" >
+                <div class="col-md-3 form-group">
                     <div class="form-group" >
                         <label>Día Opcional</label>
                         <select class="form-control  select2-hidden-accessible" style="width: 100%;"  asp-for="DiaOpc" name="DiaOpc" id="DiaOpc" >
@@ -209,7 +209,7 @@
 
 
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Horario Opcional</label>
                     <input type="time" class="form-control form-control-sa" asp-for="HorarioOpc" name="HorarioOpc" id="HorarioOpc" />
                     <div class="valid-feedback">Válido.</div>
@@ -254,3 +254,23 @@
 
 
 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
