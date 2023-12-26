@@ -14,7 +14,7 @@ namespace emai.Models
         public int IdClase { get; set; }
         public string Dia { get; set; }
         public DateTime Fecha { get; set; }
-        public DateTime HoraInicio { get; set; }
+        public string HoraInicio { get; set; }
         public DateTime HoraFin { get; set; }
         public List<Horario> Lista { get; set; }
 
@@ -25,3 +25,4 @@ namespace emai.Models
         public List<Clase> ClasesDisponibles { get; set; }
     }
 }
+ 

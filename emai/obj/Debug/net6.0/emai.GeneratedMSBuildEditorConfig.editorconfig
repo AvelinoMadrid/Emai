@@ -52,6 +52,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ0NsYXNlXEFzaWdDbGFzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/AsignacionMaestro/agregarasignacionmaestros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbk1hZXN0cm9cYWdyZWdhcmFzaWduYWNpb25tYWVzdHJvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/AsignacionMaestro/Asignacionmaestros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbk1hZXN0cm9cQXNpZ25hY2lvbm1hZXN0cm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Clase/agregarclase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcYWdyZWdhcmNsYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcQ29sZWdpYXR1cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Configuracion/Configuracionusuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvblxDb25maWd1cmFjaW9udXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Cooperaciones/agregarcooperaciones.cshtml]
@@ -172,8 +184,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xQYWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Perfil/Perfilusuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFBlcmZpbHVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/PlanEstudios/MostrarClasesHorario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbkVzdHVkaW9zXE1vc3RyYXJDbGFzZXNIb3JhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Reponerclase/agregarreponerclases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25lcmNsYXNlXGFncmVnYXJyZXBvbmVyY2xhc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Reponerclase/Reponerclases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25lcmNsYXNlXFJlcG9uZXJjbGFzZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Shared/Error.cshtml]

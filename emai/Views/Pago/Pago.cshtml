@@ -6,76 +6,122 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tabla Pagos</h3>
+                        <h3 class="card-title">Pagos</h3>
+                        @* <a asp-action="agregarpago" asp-controller="Pago" asp-route-IdPago="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Pago </a>*@
                     </div>
+
+                    
+
                     <!-- /.card-header -->
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <div class="form-group">
 
-                        <a asp-action="agregarpago" asp-controller="Pago" asp-route-IdPago="0" class="btn btn-primary btn-sm">Nuevo Pago </a>
+                                    <select class="form-control select2" style="width: 100%;" required>
+                                        <option selected disabled value="">Seleccionar por mes</option>
+                                        <option>Enero</option>
+                                        <option>Febrero</option>
+                                        <option>Marzo</option>
+                                        <option>Abril</option>
+                                        <option>Mayo</option>
+                                        <option>Junio</option>
+                                        <option>Julio</option>
+                                        <option>Agosto</option>
+                                        <option>Septiembre</option>
+                                        <option>Octubre</option>
+                                        <option>Noviembre</option>
+                                        <option>Diciembre</option>
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                                    </select>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4 form-group">
+                                <div class="form-group">
+
+                                    <select class="form-control select2" style="width: 100%;" required>
+                                        <option selected disabled value="">Seleccionar por alumno</option>
+                                        <option>Alumno1</option>
+                                        <option>Alumno1</option>
+                                        <option>Alumno1</option>
+                                        <option>Alumno1</option>
+                                        <option>Alumno1</option>
+                                        <option>Alumno1</option>
+
+
+                                    </select>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <a class="btn btn-dark btn-sm">Buscar </a>
+                            </div>
+
+                        </div>
+
+
+                        <table id="example1" class="table table-bordered table-hover table-responsive">
+
+
+
                             <thead>
                                 <tr>
                                     <th>IdPago</th>
-                                    <th>IdPromosiones</th>
-                                    <th>IdAdicionales</th>
-                                    <th>Fecha</th>
-                                    <th>Folio</th>
-                                    <th>FechaPago</th>
-                                    <th>SaldoPendiente</th>
-                                    <th>Mes</th>
-                                    <th>IdHorario</th>
-                                    <th>Dia</th>
+                                    <th>Nombre del Alumno</th>
                                     <th>IdClase</th>
+                                    <th>Clase</th>
+                                    <th>Fecha</th>
+                                    <th>Mes deudor</th>
+                                    <th>Horario</th>
+                                    <th>Día</th>
+                                    <th>Teléfono</th>
+                                    <th>Saldo pendiente</th>
                                     <th>IdRecepcionista</th>
-                                    <th>Costo</th>
                                     <th>Autorizacion</th>
+                                    <th>Costo</th>
                                     <th>Subtotal</th>
                                     <th>IVA</th>
                                     <th>Total</th>
+                                    <th>Pagar</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @foreach (var item in Model)
-                                {
-                                    <tr>
+                                <tr>
 
-                                        <td>@item.IdPago</td>
-                                        <td>@item.IdPromosiones</td>
-                                        <td>@item.IdAdicionales</td>
-                                        <td>@item.Fecha</td>
-                                        <td>@item.Folio</td>
-                                        <td>@item.FechaPago</td>
-                                        <td>@item.SaldoPendiente</td>
-                                        <td>@item.Mes</td>
-                                        <td>@item.IdHorario</td>
-                                        <td>@item.Dia</td>
-                                        <td>@item.IdClase</td>
-                                        <td>@item.IdRecepcionista</td>
-                                        <td>@item.Costo</td>
-                                        <td>@item.Autorizacion</td>
-                                        <td>@item.Subtotal</td>
-                                        <td>@item.Iva</td>
-                                        <td>@item.Total</td>
-                                        <td>
-                                            <a asp-action="agregarpago" asp-controller="Pago" asp-route-IdPago="@item.IdPago" class="btn btn-primary btn-sm">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Pago" asp-route-IdPago="@item.IdPago" class="btn btn-danger btn-sm">ELIMINAR </a>
-                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    <td> <a href="@Url.Action("agregarpago", "Pago")" class="btn btn-primary btn-sm">Pagar </a></td>
+                                      
+                                      
                                     </tr>
-                                }
+                                
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
+                      
                         </table>
                     </div>
                     <!-- /.card-body -->

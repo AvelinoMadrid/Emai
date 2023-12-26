@@ -6,24 +6,24 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tabla Horarios</h3>
+                        <h3 class="card-title">Horarios</h3>
+
+                        <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Horario </a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="0" class="btn btn-primary btn-sm">Nuevo Horario </a>
 
 
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>IdHorario</th>
-                                    <th>Maestro</th>
-                                    <th>Clase</th>
+
                                     <th>Dia</th>
-                                    <th>Fecha</th>
-                                    <th>Hora Inicio</th>
-                                    <th>Hora Fin</th>
+     
+                                    <th>Hora</th>
+                                    <th>Editar / Elminar</th>
+  
 
                                 </tr>
                             </thead>
@@ -33,13 +33,9 @@
                                 {
                                     <tr>
 
-                                        <td>@item.IdHorario</td>
-                                        <td>@item.NombreMaestro</td>
-                                        <td>@item.NombreClase</td>
                                         <td>@item.Dia</td>
-                                        <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
-                                        <td>@item.HoraInicio.ToString("hh:mm tt")</td>
-                                        <td>@item.HoraFin.ToString("hh:mm tt")</td>
+                                      
+                                        <td>@item.HoraInicio</td>
                                         <td>
                                             <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-primary btn-sm">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-danger btn-sm">ELIMINAR </a>

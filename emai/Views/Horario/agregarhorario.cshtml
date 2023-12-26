@@ -12,49 +12,58 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="Horario" method="post">
+        <form asp-action="GuardarCambios" asp-controller="Horario" method="post" class="needs-validation" novalidate>
 
             <input asp-for="IdHorario" type="hidden" />
 
-            <div class="mb-2">
-                <label class="form-label">Maestro</label>
-                <select class="form-control form-control-sa" asp-for="IdMaestro">
-                    <option value="">Seleccione un Maestro</option>
-                    @foreach (var maestro in Model.MaestrosDisponibles)
-                    {
-                        <option value="@maestro.IdMaestro">@maestro.Nombre</option>
-                    }
-                </select>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Clase</label>
-                <select class="form-control form-control-sa" asp-for="IdClase">
-                    <option value="">Seleccione una clase</option>
-                    @foreach (var clase in Model.ClasesDisponibles)
-                    {
-                        <option value="@clase.idClase">@clase.Nombre</option>
-                    }
-                </select>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Dia</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Fecha</label>
-                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Hora Inicio</label>
-                <input type="time" class="form-control form-control-sa" asp-for="HoraInicio" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Hora Fin</label>
-                <input type="time" class="form-control form-control-sa" asp-for="HoraFin" />
-            </div>
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+            <div class="row">
 
-            <a asp-action="Horario" asp-controller="Horario" class="btn btn-warning btn-sm">Volver a la vista </a>
+
+
+                <div class="col-md-6 form-group">
+                    <div class="form-group">
+                        <label class="form-label">Día</label>
+                        <select class="form-control select2" style="width: 100%;" required>
+                            <option selected disabled value="">Escoger el día</option>
+                            <option>Lunes</option>
+                            <option>Martes</option>
+                            <option>Miercoles</option>
+                            <option>Jueves</option>
+                            <option>Viernes</option>
+                            <option>Sábado</option>
+                            
+
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                    </div>
+                </div>
+
+
+
+
+                 <div class="col-md-6 form-group">
+                <label class="form-label">Hora</label>
+                    <input type="time" class="form-control form-control-sa" name="HoraInicio" id="HoraInicio" asp-for="HoraInicio" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+            </div>
+
+
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" style="width:100% !important">Guardar Cambios</button>
+                 </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="Horario" asp-controller="Horario" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+                 </div>
+            
+
+            
+
+
+            </div>
 
         </form>
 
@@ -62,3 +71,26 @@
 
     </div>
 </div>
+
+
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>

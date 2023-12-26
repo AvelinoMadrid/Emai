@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="~/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     
     <!-- Select2 -->
-@*    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">*@
+  <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
@@ -100,20 +100,20 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Perfil", "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString()== "Perfil" ? "active" : "")    nav-link ">
+                                    <a href="@Url.Action("Perfilusuario", "Perfil")" class=" @(ViewContext.RouteData.Values["Action"].ToString()== "Perfilusuario" ? "active" : "")    nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Editar Perfil</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Configuracion" , "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Configurar" ? "active" : "") nav-link">
+                                    <a href="@Url.Action("Configuracionusuario" , "Configuracion")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Configuracionusuario" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Configuración</p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Usuarios", "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Usuarios" ? "active" : "") nav-link">
+                                    <a href="@Url.Action("Usuario", "Usuarios")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Usuario" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p > Usuarios </p>
                                        </a>
@@ -134,7 +134,7 @@
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Alumnos", "Alumnos")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Alumnos" ? "active" : "")nav-link">
+                                    <a href="@Url.Action("Alumnos", "Alumnos")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Alumnos" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ver Alumnos</p>
                                     </a>
@@ -147,7 +147,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("Reponerclases", "Reponerclase")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Reponerclases" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Reposición de clases</p>
                                     </a>
@@ -165,7 +165,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("Asignacionmaestros", "AsignacionMaestro")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Asignacionmaestros" ? "active" : "") nav-link">
+
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Asignación de Maestros</p>
                                     </a>

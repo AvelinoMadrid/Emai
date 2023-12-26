@@ -1,0 +1,127 @@
+﻿@model Usuarios
+
+
+@{
+    ViewData["Title"] = "Agregar Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="card">
+    <div class="card-header">
+        Reponer Clases
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="Usuarios" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="idUsuario" type="hidden" />
+
+            <div class="row">
+
+                <div class="col-md-6 form-group">
+
+                    <div class="form-group">
+                        <label class="form-label">Nombre del maestro</label>
+                        <select class="form-control select2" style="width: 100%;" required>
+                            <option selected disabled value="">Escoger al maestro</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                            <option>Delaware</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Telefono">Horario</label>
+                    <input type="time" class="form-control form-control-sa" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese un horario.</div>
+                </div>
+
+
+
+
+                <div class="col-md-6 form-group">
+                    <div class="form-group">
+                        <label class="form-label">Día</label>
+                        <select class="form-control select2" style="width: 100%;" required>
+                            <option selected disabled value="">Escoger el día</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                            <option>Delaware</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                    <div class="form-group">
+                        <label class="form-label">Nombre de la clase</label>
+                        <select class="form-control select2" style="width: 100%;" required>
+                            <option selected disabled value="">Escoger la clase</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                            <option>Delaware</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                    </div>
+                </div>
+
+
+
+      
+                <div class="col-md-12 form-group">
+                    <label class="form-label" for="Telefono">Costo del maestro</label>
+                    <input type="number" class="form-control form-control-sa" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese un costo.</div>
+                </div>
+
+
+
+
+                <div class="col-md-12 form-group">
+
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+
+
+
+    </div>
+</div>
+

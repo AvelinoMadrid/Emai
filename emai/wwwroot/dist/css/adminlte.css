@@ -54191,3 +54191,37 @@ pre code {
 input[type="radio"] {
    padding:10px
 }
+
+.containerup {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-upload {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #e43b43;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center
+}
+
+.preview-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: calc(50vh - 50px);
+    background-color: #fafafa
+}
+
+    .preview-box img {
+        width: 100%;
+        max-width: 800px;
+        height: calc(50vh - 50px);
+    }
