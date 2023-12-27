@@ -233,7 +233,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("VerHistorial", "Historial")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "VerHistorial" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ver Historial</p>
                                     </a>
@@ -251,7 +251,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("VerComprobacion", "Comprobacion")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "VerComprobacion" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Comprobación</p>
                                     </a>
@@ -268,7 +268,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("VerBalance", "Balance")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "VerBalance" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Balance</p>
                                     </a>

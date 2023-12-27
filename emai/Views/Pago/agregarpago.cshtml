@@ -12,79 +12,117 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="Pago" method="post">
+        <form asp-action="GuardarCambios" asp-controller="Pago" method="post" class="needs-validation" novalidate>
 
             <input asp-for="IdPago" type="hidden" />
+            <div class="row">
 
-            <div class="mb-2">
+
+
+                <div class="col-md-6 form-group">
                 <label class="form-label">IdPromosiones</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdPromosiones" />
+                    <input type="text" class="form-control form-control-sa" asp-for="IdPromosiones" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">IdAdicionales</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdAdicionales" />
+                    <input type="text" class="form-control form-control-sa" asp-for="IdAdicionales" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Fecha</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Fecha" />
+                    <input type="date" class="form-control form-control-sa" asp-for="Fecha" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Folio</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Folio" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Folio" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">FechaPago</label>
-                <input type="text" class="form-control form-control-sa" asp-for="FechaPago" />
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaPago" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">SaldoPendiente</label>
-                <input type="text" class="form-control form-control-sa" asp-for="SaldoPendiente" />
+                    <input type="text" class="form-control form-control-sa" asp-for="SaldoPendiente" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Mes</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Mes" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Mes" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">IdHorario</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdHorario" />
+                    <input type="text" class="form-control form-control-sa" asp-for="IdHorario" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Dia</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Dia" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">IdClase</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdClase" />
+                    <input type="text" class="form-control form-control-sa" asp-for="IdClase" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">IdRecepcionista</label>
-                <input type="text" class="form-control form-control-sa" asp-for="IdRecepcionista" />
+                    <input type="text" class="form-control form-control-sa" asp-for="IdRecepcionista" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Costo</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Costo" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Costo" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Autorizacion</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Autorizacion" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Autorizacion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Subtotal</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" />
+                <input type="text" class="form-control form-control-sa" asp-for="Subtotal" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Iva</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Iva" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Iva" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group">
                 <label class="form-label">Total</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Total" />
+                    <input type="text" class="form-control form-control-sa" asp-for="Total" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
 
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+                <div class="col-md-12 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" style="width:100% !important">Guardar Cambios</button>
+            </div>
 
-            <a asp-action="Pago" asp-controller="Pago" class="btn btn-warning btn-sm">Volver a la vista </a>
+           
 
+            </div>
         </form>
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
@@ -92,3 +130,27 @@
     </div>
 </div>
 
+<script>
+    const handleChange = () => {
+        const fileUploader = document.querySelector('#input-file');
+        const getFile = fileUploader.files
+        if (getFile.length !== 0) {
+            const uploadedFile = getFile[0];
+            readFile(uploadedFile);
+        }
+    }
+
+    const readFile = (uploadedFile) => {
+        if (uploadedFile) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                const parent = document.querySelector('.preview-box');
+                parent.innerHTML = `<img class="preview-content" src=${reader.result} />`;
+            };
+
+            reader.readAsDataURL(uploadedFile);
+        }
+    };
+
+
+</script>

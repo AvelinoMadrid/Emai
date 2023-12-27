@@ -11,9 +11,9 @@ namespace emai.Models
         public int IdPago { get; set; }
         public int IdPromosiones { get; set; }
         public int IdAdicionales { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public string Folio { get; set; }
-        public DateTime FechaPago { get; set; }
+        public string FechaPago { get; set; }
         public decimal SaldoPendiente { get; set; }
         public string Mes { get; set; }
         public int IdHorario { get; set; }

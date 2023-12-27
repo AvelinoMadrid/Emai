@@ -9,7 +9,7 @@ namespace emai.Models
     public class DotacionDia
     {
         public int IdDotacion { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }

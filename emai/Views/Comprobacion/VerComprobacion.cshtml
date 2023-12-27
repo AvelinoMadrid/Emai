@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Ver Comprobación";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comprobación</h3>
+                        <a href="@Url.Action("agregarcomprobacion", "Comprobacion")" class="btn btn-dark btn-sm" style="float: right !important">Nuevo comprobación </a>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive">
+
+                        <div class="row">
+
+                            <div class="col-md-2 form-group">
+                                <label class="form-label">Buscar por Fecha:</label>
+                            </div>
+
+                            <div class="col-md-7 form-group">
+                                <div class="form-group">
+
+                                   
+                                    <input type="date" class="form-control form-control-sa"  required />
+                                
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="col-md-3 form-group">
+                                
+                                <a class="btn btn-dark btn-sm" style="width:100%">Buscar </a>
+                            </div>
+
+                        </div>
+
+
+                        <table id="example1" class="table table-bordered table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>ID </th>
+                                    <th>Tipo</th>
+                                    <th>Razon</th>
+                                    <th>Día</th>
+                                    <th>Costo</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  
+
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+

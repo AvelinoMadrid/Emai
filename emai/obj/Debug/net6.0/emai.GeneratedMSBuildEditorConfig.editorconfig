@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbk1hZXN0cm9cQXNpZ25hY2lvbm1hZXN0cm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Balance/VerBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxWZXJCYWxhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Clase/agregarclase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcYWdyZWdhcmNsYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +78,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcQ29sZWdpYXR1cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Comprobacion/agregarcomprobacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvYmFjaW9uXGFncmVnYXJjb21wcm9iYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Comprobacion/VerComprobacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvYmFjaW9uXFZlckNvbXByb2JhY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Configuracion/Configuracionusuario.cshtml]
@@ -114,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Gastos/MenuGastos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zXE1lbnVHYXN0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Historial/VerHistorial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFsXFZlckhpc3RvcmlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/anubi/source/repos/Proyecto emai/Emai/emai/Views/Home/Index.cshtml]

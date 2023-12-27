@@ -9,7 +9,7 @@ namespace emai.Models
     public class Cooperaciones
     {
             public int IdCooperacion { get; set; }
-            public DateTime Fecha { get; set; }
+            public string Fecha { get; set; }
             public string NoPedido { get; set; }
             public string Proveedor { get; set; }
             public string Descripcion { get; set; }
