@@ -9,6 +9,26 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\asistenciajs\\auth.js",
+      "PackagePath": "staticwebassets\\dist\\asistenciajs\\auth.js"
+    },
+    {
+      "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\asistenciajs\\credenciales.js",
+      "PackagePath": "staticwebassets\\dist\\asistenciajs\\credenciales.js"
+    },
+    {
+      "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\asistenciajs\\index.js",
+      "PackagePath": "staticwebassets\\dist\\asistenciajs\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\asistenciajs\\sheets.js",
+      "PackagePath": "staticwebassets\\dist\\asistenciajs\\sheets.js"
+    },
+    {
+      "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\asistenciajs\\turnos.js",
+      "PackagePath": "staticwebassets\\dist\\asistenciajs\\turnos.js"
+    },
+    {
       "Id": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\wwwroot\\dist\\css\\adminlte.css",
       "PackagePath": "staticwebassets\\dist\\css\\adminlte.css"
     },

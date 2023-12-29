@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="~/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    
+    <!--asistencia-->
+    <script src="~/dist/asistenciajs/credenciales.js"></script>
+    <script src="~/dist/asistenciajs/index.js" defer></script>
+    <script  src="https://apis.google.com/js/api.js" id="gapi"></script>
+    <script  src="https://accounts.google.com/gsi/client" id="gis"></script>
+    <script  src="~/dist/asistenciajs/sheets.js"></script>
     <!-- Select2 -->
   <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
     <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -169,6 +174,13 @@
 
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Asignación de Maestros</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Asistenciamaestros", "Asistencia")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Asistenciamaestros" ? "active" : "") nav-link">
+
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Asistencia de Maestros</p>
                                     </a>
                                 </li>
 
@@ -375,7 +387,8 @@
     </script>
     <!-- Bootstrap 4 -->
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <!--asistencia-->
+    <script src="~/dist/asistenciajs/auth.js"></script>
     <!-- ChartJS -->
     <script src="~/plugins/chart.js/Chart.min.js"></script>
     <!-- Sparkline -->

@@ -1,0 +1,52 @@
+﻿
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Asistencia de Maestros</h3>
+                        
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <main id="content">
+                            <div id="turnosContainer"></div>
+                            <div id="detalleContainer" class="escondido">
+                                <h2 id="personal">Nombre</h2>
+                                <p>Dia: <span id="dia"></span></p>
+                                <p>Mes: <span id="mes"></span></p>
+                                <div>
+                                    <label for="comentario">Confirmar asistencia </label>
+                                    <input name="comentario" id="asistencia"></input>
+                                </div>
+                                <button id="finalizar">Asistencia</button>
+                            </div>
+                        </main>
+
+
+                        <!--Add buttons to initiate auth sequence and sign out-->
+                        <div>
+                            <button id="authorize_button" onclick="handleAuthClick()">Iniciar sesión</button>
+                            <button id="signout_button" onclick="handleSignoutClick()">Cerrar sesión</button>
+                        </div>
+
+
+                    
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
