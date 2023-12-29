@@ -54211,7 +54211,7 @@ input[type="radio"] {
     text-align: center
 }
 
-.preview-box {
+.preview-box{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -54220,7 +54220,22 @@ input[type="radio"] {
     background-color: #fafafa
 }
 
-    .preview-box img {
+.preview-box2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: calc(50vh - 50px);
+    background-color: #fafafa
+}
+
+.preview-box img {
+    width: 100%;
+    max-width: 800px;
+    height: calc(50vh - 50px);
+}
+
+    .preview-box2 img {
         width: 100%;
         max-width: 800px;
         height: calc(50vh - 50px);

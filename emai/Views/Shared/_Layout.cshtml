@@ -196,6 +196,17 @@
                             </a>
                         </li>
 
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("TablaPrograma5s", "Programa")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "TablaPrograma5s" ? "active" : "") nav-link">
+                                <i class="nav-icon far fa-bookmark"></i>
+                                <p>
+                                    Programa 5S
+
+                                </p>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a href="@Url.Action("Evento", "Evento")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Evento" ? "active" : "") nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
