@@ -32,7 +32,7 @@ namespace EMAI.Comun.Models
 
     public class AsigClaseAsignar
     {
-        public int AsgnId { get; set; }
+        //public int AsgnId { get; set; }
         public int IdMaestro { get; set; }
         public int IdClase { get; set; }
         public DateTime FechaAsignacion { get; set; }
