@@ -30,6 +30,14 @@ namespace EMAI.API.Controllers
             return await _repository.GetUsuariosID(IdUsuario);
         }
 
+        //Loggeo
+        [HttpGet("{usuario}/{contraseña}")]
+        public async Task<ActionResult<UsuariosModel>> Loggeo(string usuario, string contraseña)
+        {
+            return await _repository.Loggeo(usuario, contraseña);
+        }
+
+
         //Insertar Usuario
 
         [HttpPost("/api/Usuario/Insertar")]

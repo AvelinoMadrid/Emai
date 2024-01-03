@@ -2618,6 +2618,33 @@ namespace EMAI.Datos
             };
         }
 
+        public async Task<UsuariosModel> Loggeo(string usuario, string contraseña)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("Loggeo", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Usuario", usuario));
+                    cmd.Parameters.Add(new SqlParameter("@Password", contraseña));
+                    UsuariosModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToUsuarios(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+
+
         public async Task<UsuariosIDModel> GetUsuariosID(int IdUsuario)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))

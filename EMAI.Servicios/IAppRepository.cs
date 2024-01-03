@@ -193,6 +193,10 @@ namespace EMAI.Servicios
         Task<bool> InsertarUsuario(UsuariosInsertarModel value);
         Task<bool> ActualizarUsuario(int IdUsuario, string Usuario, string Contraseña, string Email, string Direccion, string Telefono);
         Task<bool> EliminarUsuario(int IdUsuario);
+
+        Task<UsuariosModel> Loggeo(string usuario, string contraseña);
+
+
         #endregion
 
         #region "Eventos"

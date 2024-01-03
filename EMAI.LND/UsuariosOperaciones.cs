@@ -51,5 +51,12 @@ namespace EMAI.LND
             var rsp = await db.EliminarUsuario(IdUsuario);
             return rsp;
         }
+
+        public async  Task<UsuariosModel> Loggeo(string usuario, string contraseña)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.Loggeo(usuario, contraseña);
+            return rsp;
+        }
     }
 }
