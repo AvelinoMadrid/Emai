@@ -16,11 +16,11 @@
                
                
             </div>
-            <form class="inputs-container">
-                <input class="input" type="text" placeholder="Usuario">
-                <input class="input" type="text" placeholder="Contraseña">
+            <form class="inputs-container" action="@Url.Action("Login","Account")" method="post">
+                <input class="input" name="Usuario" type="text" placeholder="Usuario">
+                <input class="input" name="Contraseña" type="text" placeholder="Contraseña">
              
-                <button class="btn">login</button>
+                <button type="submit" class="btn">login</button>
               
             </form>
         </div>
