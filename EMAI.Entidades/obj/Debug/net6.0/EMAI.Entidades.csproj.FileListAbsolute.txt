@@ -121,3 +121,14 @@ C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\E
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.deps.json
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
