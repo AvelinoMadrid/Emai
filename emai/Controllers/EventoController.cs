@@ -29,7 +29,7 @@ namespace emai.Controllers
 
         public EventoController(IServicioEvento_Api servicioEvento_Api, IServicioAlumnos_Api alumnosServicio_Api)
         {
-            string baseurl = "http://127.0.0.1:7265";
+            string baseurl = "https://localhost:7265";
             _ServicioEvento_Api = servicioEvento_Api;
             _ServicioAlumnos_Api = alumnosServicio_Api;
             TwilioAccountSid = _configuration.GetSection("Twilio:AccountSid").Value;

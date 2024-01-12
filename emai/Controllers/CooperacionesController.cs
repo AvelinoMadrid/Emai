@@ -17,7 +17,7 @@ namespace emai.Controllers
 
         public CooperacionesController(IServicioCooperaciones_Api servicioCooperaciones_Api)
         {
-            string baseurl = "http://127.0.0.1:7265";
+            string baseurl = "https://localhost:7265";
             _ServicioCooperacionesApi = servicioCooperaciones_Api;
         }
 

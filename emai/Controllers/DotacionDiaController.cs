@@ -17,7 +17,7 @@ namespace emai.Controllers
 
         public DotacionDiaController(IServicioDotacionDia_Api servicioDotacion_Api)
         {
-            string baseurl = "http://127.0.0.1:7265";
+            string baseurl = "https://localhost:7265";
             _ServicioDotacionDia_Api = servicioDotacion_Api;
         }
 
