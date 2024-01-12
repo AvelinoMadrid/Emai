@@ -19,7 +19,7 @@ namespace emai.Controllers
 
         public ColegiaturaController(IServicioColegiatura_Api servicioColegiatura_Api)
         {
-            string baseurl = "https://localhost:7265";
+            string baseurl = "http://127.0.0.1:7265";
             _ServicioColegiatura_Api = servicioColegiatura_Api;
         }
 

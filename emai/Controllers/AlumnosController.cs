@@ -17,7 +17,7 @@ namespace emai.Controllers
 
         public AlumnosController(IServicioAlumnos_Api servicioUsuarios_Api)
         {
-            string baseurl = "https://localhost:7265";
+            string baseurl = "http://127.0.0.1:7265"; 
             _ServicioAlumnos_Api = servicioUsuarios_Api;
         }
 

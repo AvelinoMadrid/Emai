@@ -55,7 +55,7 @@
             </div>
 
 
-                <div class="col-md-2 form-group">
+             @*    <div class="col-md-2 form-group">
                     <div class="form-group" >
                         <label>Día</label>
                         <select class="form-control select2"  style="width: 100%;"  asp-for="Dia" name="Dia" id="Dia" required>
@@ -71,30 +71,30 @@
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
-                </div>
+                </div> *@
 
 
 
-            @*    <div class="col-md-6 form-group">
-                <label class="form-label">Dia</label>
+               <div class="col-md-4 form-group">
+                <label class="form-label">Día y hora</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Dia" name="Dia" id="Dia" required />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>*@
-
-
-
-
-                <div class="col-md-2 form-group">
-                <label class="form-label">Horario</label>
-                    <input type="time" class="form-control form-control-sa" asp-for="Horario" name="Horario" id="Horario" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
 
 
 
+@* 
                 <div class="col-md-2 form-group">
+                <label class="form-label">Horario</label>
+                    <input type="time" class="form-control form-control-sa" asp-for="Horario" name="Horario" id="Horario" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+            </div>
+ *@
+
+
+            @*     <div class="col-md-2 form-group">
                     <div class="form-group">
                         <label>Día 2</label>
                         <select class="form-control  select2" style="width: 100%;"  asp-for="Dia2" name="Dia2" id="Dia2" required>
@@ -111,26 +111,26 @@
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
                 </div>
+ *@
 
 
-@*
-                <div class="col-md-6 form-group">
-                <label class="form-label">Dia2</label>
+                <div class="col-md-4 form-group">
+                <label class="form-label">Día y hora 2</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Dia2" name="Dia2" id="Dia2" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>*@
-
+            </div>
+@* 
                 <div class="col-md-2 form-group">
                 <label class="form-label">Horario 2</label>
                     <input type="time" class="form-control form-control-sa" asp-for="Horario2" name="Horario2" id="Horario2" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
+ *@
 
 
-
-
+@* 
                 <div class="col-md-2 form-group">
                     <div class="form-group" >
                         <label>Día 3</label>
@@ -147,25 +147,25 @@
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
-                </div>
+                </div> *@
 
 
 
 
-         @*       <div class="col-md-6 form-group">
-                <label class="form-label">Dia3</label>
+               <div class="col-md-4 form-group">
+                <label class="form-label">Día y hora 3</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Dia3" name="Dia3" id="Dia3" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>*@
+            </div>
 
 
-                <div class="col-md-2 form-group">
+             @*    <div class="col-md-2 form-group">
                 <label class="form-label">Horario 3</label>
                     <input type="time" class="form-control form-control-sa" asp-for="Horario3" name="Horario3" id="Horario3" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+            </div> *@
 
 
 
@@ -187,7 +187,7 @@
             </div>
 
 
-
+@* 
                 <div class="col-md-3 form-group">
                     <div class="form-group" >
                         <label>Día Opcional</label>
@@ -206,26 +206,27 @@
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
                 </div>
+ *@
 
+                    <div class="col-md-4 form-group">
+                <label class="form-label">Día y hora Opcional</label>
+                <input type="text" class="form-control form-control-sa" asp-for="DiaOpc" name="DiaOpc" id="DiaOpc" />
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
 
-
-                <div class="col-md-3 form-group">
+           @*      <div class="col-md-3 form-group">
                 <label class="form-label">Horario Opcional</label>
                     <input type="time" class="form-control form-control-sa" asp-for="HorarioOpc" name="HorarioOpc" id="HorarioOpc" />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+            </div> *@
 
 
 
 
 
-           @*     <div class="col-md-4 form-group">
-                <label class="form-label">Día Opcional</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="DiaOpc" name="DiaOpc" id="DiaOpc" />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>*@
+           
 
 
 

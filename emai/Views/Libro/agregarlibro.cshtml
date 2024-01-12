@@ -17,7 +17,7 @@
 
             <input asp-for="IdLibro" type="hidden" />
 
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">NombreLibro</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NombreLibro" name="NombreLibro" id="NombreLibro" required />
                 <div class="valid-feedback">Válido.</div>
@@ -30,7 +30,7 @@
             </div>*@
 
 
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">Costo</label>
                 <input type="number" class="form-control form-control-sa" asp-for="costo" name="costo" id="costo" required value="$" />
                 <div class="valid-feedback">Válido.</div>
@@ -43,11 +43,18 @@
                 <input type="text" class="form-control form-control-sa" asp-for="Status" />
             </div>
 *@
+                <div class="col-md-3 form-group">
+                    <label class="form-label">Stock</label>
+                    <input type="number" class="form-control form-control-sa" id="stock" required value="$" />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
 
-            <div class="col-md-4 form-group">
+
+            <div class="col-md-3 form-group">
                 <div class="form-group">
                     <label>Status</label>
-                    <select class="form-control select2-hidden-accessible" style="width: 100%;" asp-for="Status" name="Status" id="Status" required>
+                    <select class="form-control select2" style="width: 100%;" asp-for="Status" name="Status" id="Status" required>
                         <option selected disabled value="">Escoger el Status</option>
                         <option value="Activo">Activo</option>
                         <option value="Desactivo">Desactivo</option>
@@ -58,6 +65,7 @@
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
             </div>
+
 
 
                 <div class="col-md-6 form-group">

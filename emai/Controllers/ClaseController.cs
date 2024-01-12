@@ -19,7 +19,7 @@ namespace emai.Controllers
 
         public ClaseController(IServicioClase_Api servicioClase_Api)
         {
-            string baseurl = "https://localhost:7265";
+            string baseurl = "http://127.0.0.1:7265";
             _ServicioClaseApi = servicioClase_Api;
         }
 

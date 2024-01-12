@@ -2,14 +2,14 @@
 
 
 @{
-    ViewData["Title"] = "Agregar Usuario";
+    ViewData["Title"] = "Asignación de maestros";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
 
 <div class="card">
     <div class="card-header">
-        Reponer Clases
+        Asignación de maestros 
     </div>
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
@@ -20,7 +20,7 @@
 
             <div class="row">
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
 
                     <div class="form-group">
                         <label class="form-label">Nombre del maestro</label>
@@ -41,29 +41,20 @@
                 </div>
 
 
-                <div class="col-md-6 form-group">
+             @*    <div class="col-md-6 form-group">
                     <label class="form-label" for="Telefono">Horario</label>
                     <input type="time" class="form-control form-control-sa" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese un horario.</div>
-                </div>
+                </div> *@
 
 
 
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                     <div class="form-group">
-                        <label class="form-label">Día</label>
-                        <select class="form-control select2" style="width: 100%;" required>
-                            <option selected disabled value="">Escoger el día</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-
-                        </select>
+                        <label class="form-label">Día y Hora </label>
+                        <input type="text" class="form-control form-control-sa" required />
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
 
@@ -71,7 +62,7 @@
                 </div>
 
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                     <div class="form-group">
                         <label class="form-label">Nombre de la clase</label>
                         <select class="form-control select2" style="width: 100%;" required>
@@ -93,13 +84,13 @@
 
 
       
-                <div class="col-md-12 form-group">
+             @*    <div class="col-md-12 form-group">
                     <label class="form-label" for="Telefono">Costo del maestro</label>
                     <input type="number" class="form-control form-control-sa" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Ingrese un costo.</div>
                 </div>
-
+ *@
 
 
 

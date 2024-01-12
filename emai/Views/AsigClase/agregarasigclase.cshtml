@@ -1,7 +1,7 @@
 ﻿@model AsigClase
 
 @{
-    ViewData["Title"] = "agregarasigclase";
+    ViewData["Title"] = "Asignar clase";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,39 +12,82 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="AsigClase" method="post">
+        <form asp-action="GuardarCambios" asp-controller="AsigClase" method="post" class="needs-validation" novalidate>
 
             <input asp-for="AsgnId" type="hidden" />
 
-            <div class="mb-2">
+
+            <div class="row">
+
+                <div class="col-md-6 form-group" >
                 <label class="form-label">Maestro</label>
-                <select class="form-control form-control-sa" asp-for="IdMaestro">
-                    <option value="">Seleccione un Maestro</option>
+                    <select class="form-control select2" asp-for="IdMaestro" required>
+                    <option selected disabled value="">Escoger un maestro</option>
                     @foreach (var maestro in Model.MaestrosDisponibles)
                     {
                         <option value="@maestro.IdMaestro">@maestro.Nombre</option>
                     }
                 </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+                <div class="col-md-6 form-group" >
                 <label class="form-label">Clase</label>
-                <select class="form-control form-control-sa" asp-for="IdClase">
-                    <option value="">Seleccione una clase</option>
+                    <select class="form-control select2" asp-for="IdClase" required>
+                    <option selected disabled value="">Escoger una clase</option>
                     @foreach (var clase in Model.ClasesDisponibles)
                     {
                         <option value="@clase.idClase">@clase.Nombre</option>
                     }
                 </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
+
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Maestro</label>
+                    <select class="form-control select2" asp-for="IdMaestro" required>
+                        <option selected disabled value="">Escoger un maestro</option>
+                        @foreach (var maestro in Model.MaestrosDisponibles)
+                        {
+                            <option value="@maestro.IdMaestro">@maestro.Nombre</option>
+                        }
+                    </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Clase opcional</label>
+                    <select class="form-control select2" asp-for="IdClase" required>
+                        <option selected disabled value="">Escoger una clase</option>
+                        @foreach (var clase in Model.ClasesDisponibles)
+                        {
+                            <option value="@clase.idClase">@clase.Nombre</option>
+                        }
+                    </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+
+            @*     <div class="col-md-4 form-group" >
                 <label class="form-label">Fecha Asignacion</label>
-                <input type="date" class="form-control form-control-sa" asp-for="FechaAsignacion" />
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaAsignacion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+            </div>
+ *@
+                <div class="col-md-6 form-group" >
+                    <button ype="submit" class="btn btn-success" style="width:100% !important">Asignar Clase</button>
             </div>
 
-            <button type="submit" class="btn btn-success btn-sm">Asignar Clase</button>
+                <div class="col-md-6 form-group" >
+                    <a asp-action="AsigClase" asp-controller="AsigClase" class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Volver a la vista </a>
+            </div>
 
-            <a asp-action="AsigClase" asp-controller="AsigClase" class="btn btn-warning btn-sm">Volver a la vista </a>
-
+            </div>
         </form>
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
@@ -55,3 +98,23 @@
     </div>
 </div>
 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
