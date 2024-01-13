@@ -222,5 +222,18 @@ namespace EMAI.Servicios
 
         Task<bool> EliminarAsignacion(int AsgnId);
         #endregion
+
+        #region "Programa5s"
+
+        Task<List<Programa5sModel>> GetPrograma5s();
+
+        Task<Programa5sIdModel> GetPrograma5sId(int Id);
+
+        Task<bool> InsertarPrograma5s(Programa5sInsertarModel value);
+
+        Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles);
+
+        #endregion
+
     }
 }

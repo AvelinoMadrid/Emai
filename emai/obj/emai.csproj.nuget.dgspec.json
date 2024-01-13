@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\emai.csproj": {}
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\emai.csproj": {
+    "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\emai.csproj",
+        "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj",
         "projectName": "emai",
-        "projectPath": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\emai.csproj",
-        "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anubi\\source\\repos\\Emai\\emai\\obj\\",
+        "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\emai.csproj",
+        "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\emai\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Barco Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

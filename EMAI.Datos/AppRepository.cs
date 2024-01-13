@@ -34,7 +34,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=LAPTOP-OM95FUOE\\SQLEXPRESS;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -3160,6 +3160,136 @@ namespace EMAI.Datos
                 }
             }
         }
+        #endregion
+
+        #region "Seccion ---> Clases"
+
+        public async Task<List<Programa5sModel>> GetPrograma5s()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerPrograma5s", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<Programa5sModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToPrograma5s(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private Programa5sModel MapToPrograma5s(SqlDataReader reader)
+        {
+            return new Programa5sModel()
+            {
+
+                Id = (int)reader["Id"],
+                Area = (string)reader["Area"],
+                Supervisor = (string)reader["Supervisor"],
+                FechaAntes = (DateTime)reader["FechaAntes"],
+                FechaInicio = (DateTime)reader["FechaInicio"],
+                ImagenAntes = (string)reader["ImagenAntes"],
+                ImagenDespues = (string)reader["ImagenDespues"],
+                Detalles = (string)reader["Detalles"]
+
+            };
+        }
+
+        public async Task<Programa5sIdModel> GetPrograma5sId(int Id)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("BuscarPorIDPrograma5s", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Id", Id));
+                    Programa5sIdModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToPrograma5sId(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private Programa5sIdModel MapToPrograma5sId(SqlDataReader reader)
+        {
+            return new Programa5sIdModel()
+            {
+
+                Id = (int)reader["Id"],
+                Area = (string)reader["Area"],
+                Supervisor = (string)reader["Supervisor"],
+                FechaAntes = (DateTime)reader["FechaAntes"],
+                FechaInicio = (DateTime)reader["FechaInicio"],
+                ImagenAntes = (string)reader["ImagenAntes"],
+                ImagenDespues = (string)reader["ImagenDespues"],
+                Detalles = (string)reader["Detalles"]
+
+            };
+        }
+
+        public async Task<bool> InsertarPrograma5s(Programa5sInsertarModel value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("InsertarPrograma5s", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Area", value.Area));
+                    cmd.Parameters.Add(new SqlParameter("@Supervisor", value.Supervisor));
+                    cmd.Parameters.Add(new SqlParameter("@FechaAntes", value.FechaAntes));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInicio", value.FechaInicio));
+                    string imagenAntes = value.ImagenAntes.Replace("'", "''"); // Escapar comillas simples
+                    cmd.Parameters.Add(new SqlParameter("@ImagenAntes", imagenAntes));
+                    string imagenDespues = value.ImagenDespues.Replace("'", "''"); // Escapar comillas simples
+                    cmd.Parameters.Add(new SqlParameter("@ImagenDespues", imagenDespues));
+                    cmd.Parameters.Add(new SqlParameter("@Detalles", value.Detalles));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("ActualizarPrograma5s", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Id", Id));
+                    cmd.Parameters.Add(new SqlParameter("@Area", Area));
+                    cmd.Parameters.Add(new SqlParameter("@Supervisor", Supervisor));
+                    cmd.Parameters.Add(new SqlParameter("@FechaAntes", FechaAntes));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInicio", FechaInicio));
+                    cmd.Parameters.Add(new SqlParameter("@Detalles", Detalles));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
         #endregion
 
         #region "dispose"

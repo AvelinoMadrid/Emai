@@ -8,25 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Horusvivo\\.nuget\\packages\\": {},
+    "C:\\Users\\Barco Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
       "projectName": "EMAI.Entidades",
-      "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-      "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
+      "projectPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+      "packagesPath": "C:\\Users\\Barco Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Barco Usuario\\Desktop\\emai9Agto\\Emai\\EMAI.Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Barco Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
