@@ -12,70 +12,71 @@ namespace EMAI.Comun.Models
     {
         public int IdAlumno { get; set; }
         public int IdClase { get; set; }
-        public DateTime FechaInscripcion { get; set; }
-        public string Tag { get; set; }
-        public int NoClasesDia { get; set; }
-        public DateTime FechaInicioClaseGratis { get; set; }
-        public DateTime FechaFinClaseGratis { get; set; }
-        public string Nombre { get; set; }
-        public string ApPaterno { get; set; }
-        public string ApMaterno { get; set; }
-        public int Edad { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Telefono { get; set; }
-        public string Celular { get; set; }
-        public string Facebook { get; set; }
-        public string Email { get; set; }
-        public string Enfermedades { get; set; }
-        public bool Discapacidad { get; set; }
-        public string InstrumentoBase { get; set; }
-        public string Dia { get; set; }
-        public string Hora { get; set; }
-        public string InstrumentoOpcional { get; set; }
-        public string DiaOpcional { get; set; }
-        public string HoraOpcional { get; set; }
+        public DateTime FechaInscripcion { get; set; } //1
+        public string Tag { get; set; }    //2
+        public int NoClasesDia { get; set; } // 3
+        public DateTime FechaInicioClaseGratis { get; set; } //4
+        /*public DateTime FechaFinClaseGratis { get; set; }*/  // sufren modificaciones de acuerdo a nuevos requirimientos 
+        public string Nombre { get; set; } //8
+        /*public string ApPaterno { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos
+        /*public string ApMaterno { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos
+        public int Edad { get; set; } //9
+        public DateTime FechaNacimiento { get; set; } //10
+        public string Telefono { get; set; } //11
+        public string Celular { get; set; } //12
+        public string Facebook { get; set; } //13
+        public string Email { get; set; } //14
+        public string Enfermedades { get; set; } // 15
+
+        //public bool Discapacidad { get; set; } // sufren modificaciones de acuerdo a nuevos requirimientos  
+        public string InstrumentoBase { get; set; } //5
+        public string Diayhora { get; set; }  // 6.-se va a trasladar como DiayHora
+        //public string Hora { get; set; } // sufren modificaciones de acuerdo a nuevos requirimientos 
+        public string InstrumentoOpcional { get; set; } //7
+        public string DiaOpcional { get; set; } // => se va a trasladar como DiayhoraOpcional
+       /* public string HoraOpcional { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos 
 
         public string Img { get; set; }
         // tabla Papàs
-        public string NombrePapa { get; set; }
-        public string TelefonoPapa { get; set; }
-        public string FacebookPapa { get; set; }
-        public string Emailpapas { get; set; }
-        public string TutorRecoger { get; set; }
-        public string CelularTR { get; set; }
-        public string NumEmergencia { get; set; }
+        public string NombrePapa { get; set; } // 16
+        public string TelefonoPapa { get; set; } //17
+        public string FacebookPapa { get; set; } // 18
+        public string Emailpapas { get; set; } // 19
+        public string TutorRecoger { get; set; } // 20
+        public string CelularTR { get; set; } // 21
+        public string NumEmergencia { get; set; } // 22
 
         // tabla estudios 
-        public bool Estudios { get; set; }
-        public string GradoEstudios { get; set; }
-        public string EscuelaActual { get; set; }
-        public bool Trabajo { get; set; }
-        public string LugarTrabajo { get; set; }
+        public bool Estudios { get; set; } // 23
+        public string GradoEstudios { get; set; } // 24
+        public string EscuelaActual { get; set; } // 25
+        public bool Trabajo { get; set; } // 26
+        public string LugarTrabajo { get; set; } // 27
 
         // tabla conociientos Musicales
-        public string conActual { get; set; }
-        public string instrumentoMusical { get; set; }
-        public bool InstrumentoCasa { get; set; }
-        public string NoInstrumentoMusical { get; set; }
-        public string EntersteEsc { get; set; }
-        public bool interesGnroMusical { get; set; }
-        public string interesgros { get; set; }
+        public string conActual { get; set; } // 28
+        public string instrumentoMusical { get; set; } // 29
+        public bool InstrumentoCasa { get; set; } // 30
+        public string NoInstrumentoMusical { get; set; } // 31
+        public string EntersteEsc { get; set; } // 32
+        public bool interesGnroMusical { get; set; } // 33
+        public string interesgros { get; set; } // 34
 
 
         // tabla interes instrumento 
-        public string interes { get; set; }
+        public string interes { get; set; } // 35
 
 
         // tabla personal 
-        public bool classOpcional { get; set; }
-        public bool Descuento { get; set; }
-        public bool Amable { get; set; }
+        public bool classOpcional { get; set; } // 36
+        public bool Descuento { get; set; } // 37
+        public bool Amable { get; set; } // 38
 
         // tabla repecionista 
 
-        public int IDRecepcionista { get; set; }
+        public int IDRecepcionista { get; set; } // 38
 
-        public string NombreRecepcionista { get; set; }
+        public string NombreRecepcionista { get; set; } // 39
     }
 
     // buscar por id
@@ -83,78 +84,80 @@ namespace EMAI.Comun.Models
     {
         public int IdAlumno { get; set; }
         public int IdClase { get; set; }
-        public DateTime FechaInscripcion { get; set; }
-        public string Tag { get; set; }
-        public int NoClasesDia { get; set; }
-        public DateTime FechaInicioClaseGratis { get; set; }
-        public DateTime FechaFinClaseGratis { get; set; }
-        public string Nombre { get; set; }
-        public string ApPaterno { get; set; }
-        public string ApMaterno { get; set; }
-        public int Edad { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Telefono { get; set; }   
-        public string Celular { get; set; }
-        public string Facebook { get; set; }
-        public string Email { get; set; }
-        public string Enfermedades { get; set; }
-        public bool Discapacidad { get; set; }
-        public string InstrumentoBase { get; set; }
-        public string Dia { get; set; }
-        public string Hora { get; set; }
-        public string InstrumentoOpcional { get; set; }
-        public string DiaOpcional { get; set; }
-        public string HoraOpcional { get; set; }
+        public DateTime FechaInscripcion { get; set; } //1
+        public string Tag { get; set; }    //2
+        public int NoClasesDia { get; set; } // 3
+        public DateTime FechaInicioClaseGratis { get; set; } //4
+        /*public DateTime FechaFinClaseGratis { get; set; }*/  // sufren modificaciones de acuerdo a nuevos requirimientos 
+        public string Nombre { get; set; } //8
+        /*public string ApPaterno { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos
+        /*public string ApMaterno { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos
+        public int Edad { get; set; } //9
+        public DateTime FechaNacimiento { get; set; } //10
+        public string Telefono { get; set; } //11
+        public string Celular { get; set; } //12
+        public string Facebook { get; set; } //13
+        public string Email { get; set; } //14
+        public string Enfermedades { get; set; } // 15
+
+        //public bool Discapacidad { get; set; } // sufren modificaciones de acuerdo a nuevos requirimientos  
+        public string InstrumentoBase { get; set; } //5
+        public string Diayhora { get; set; }  // 6.-se va a trasladar como DiayHora
+        //public string Hora { get; set; } // sufren modificaciones de acuerdo a nuevos requirimientos 
+        public string InstrumentoOpcional { get; set; } //7
+        public string DiaOpcional { get; set; } // => se va a trasladar como DiayhoraOpcional
+        /* public string HoraOpcional { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos 
 
         public string Img { get; set; }
+        
 
-        //// tabla Papà
+        // tabla Papàs
         public int IdPapas { get; set; }
-        public string NombrePapas { get; set; }
-        public string TelefonoPapa { get; set; }
-        public string FacebookPapa { get; set; }
-        public string TutorRecoger { get; set; }
-        public string CelularTR { get; set; }
-        public string NumEmergencia { get; set; }
-        public string EmailPapa { get; set; }
 
-        //// tabla estudios 
-        
+        public string NombrePapas { get; set; } // 16
+        public string TelefonoPapa { get; set; } //17
+        public string FacebookPapa { get; set; } // 18
+        public string EmailPapa { get; set; } // 19
+        public string TutorRecoger { get; set; } // 20
+        public string CelularTR { get; set; } // 21
+        public string NumEmergencia { get; set; } // 22
+
+        // tabla estudios 
         public int IdEstudios { get; set; }
-        public bool Estudios { get; set; }
-        public string GradoEstudios { get; set; }
-        public string EscuelaActual { get; set; }
-        public bool Trabajo { get; set; }
-        public string LugarTrabajo { get; set; }
+        public bool Estudios { get; set; } // 23
+        public string GradoEstudios { get; set; } // 24
+        public string EscuelaActual { get; set; } // 25
+        public bool Trabajo { get; set; } // 26
+        public string LugarTrabajo { get; set; } // 27
 
-        //// tabla conociientos Musicales
-        
+        // tabla conociientos Musicales
         public int IdConocimientoMusicales { get; set; }
-        public string conActual { get; set; }
-        public string instrumentoMusical { get; set; }
-        public string NoInstrumentoMusical { get; set; }
-        public string EntersteEsc { get; set; }
-        public bool interesGnroMusical { get; set; }
-        public string interesgros { get; set; }
-        public bool InstrumentoCasa { get; set; }
-       
-        //// tabla interes instrumento 
-        
+        public string conActual { get; set; } // 28
+        public string instrumentoMusical { get; set; } // 29
+        public bool InstrumentoCasa { get; set; } // 30
+        public string NoInstrumentoMusical { get; set; } // 31
+        public string EntersteEsc { get; set; } // 32
+        public bool interesGnroMusical { get; set; } // 33
+        public string interesgros { get; set; } // 34
+
+
+        // tabla interes instrumento 
         public int IdInteresInstrumento { get; set; }
-        public string interes { get; set; }
+        public string interes { get; set; } // 35
 
         public string otro { get; set; }
 
-        //// tabla personal 
-        
+        // tabla personal 
         public int Idpersonal { get; set; }
-        public bool classOpcional { get; set; }
-        public bool Descuento { get; set; }
-        public bool amable { get; set; }
+        public bool classOpcional { get; set; } // 36
+        public bool Descuento { get; set; } // 37
+        public bool amable { get; set; } // 38
 
-        //// tabla repecionista 
-        public int IDRecepcionista { get; set; }
-        public string NombreRecepcionista { get; set; }
+        // tabla repecionista 
+
+        public int IDRecepcionista { get; set; } // 38
+
+        public string NombreRecepcionista { get; set; } // 39
     }
 
 

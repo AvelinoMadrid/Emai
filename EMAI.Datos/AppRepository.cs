@@ -34,7 +34,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -75,10 +75,10 @@ namespace EMAI.Datos
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
                 FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
+                //FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
                 Nombre = reader["Nombre"].ToString(),
-                ApPaterno = reader["ApellidoP"].ToString(),
-                ApMaterno = reader["ApellidoM"].ToString(),
+                //ApPaterno = reader["ApellidoP"].ToString(),
+                //ApMaterno = reader["ApellidoM"].ToString(),
                 Edad = (int) reader["Edad"],
                 FechaNacimiento = (DateTime) reader["FechaNacimiento"],
                 Telefono = reader["TelCasa"].ToString(),
@@ -86,13 +86,13 @@ namespace EMAI.Datos
                 Facebook = reader["Facebook"].ToString(),
                 Email = reader["E-mail"].ToString(),
                 Enfermedades = reader["Enfermedades"].ToString(),
-                Discapacidad = reader["Discapacidad"] == DBNull.Value ? false : (bool)reader["Discapacidad"],
+                //Discapacidad = reader["Discapacidad"] == DBNull.Value ? false : (bool)reader["Discapacidad"],
                 InstrumentoBase = reader["InstrumentoBase"].ToString(),
-                Dia = reader["Dia"].ToString(),
-                Hora = reader["Hora"].ToString(),
+                Diayhora = reader["Dia"].ToString(),
+                //Hora = reader["Hora"].ToString(),
                 InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
                 DiaOpcional = reader["DiaOpcio"].ToString(),
-                HoraOpcional = reader["HoraOpcio"].ToString(),
+                //HoraOpcional = reader["HoraOpcio"].ToString(),
 
                 // tabla papas
                 //IdPapas = (int)reader["IdPapas"],
@@ -202,10 +202,10 @@ namespace EMAI.Datos
                 Tag = reader["Tag"].ToString(),
                 NoClasesDia = (int)reader["NoDiaClases"],
                 FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
+                //FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
                 Nombre = reader["Nombre"].ToString(),
-                ApPaterno = reader["ApellidoP"].ToString(),
-                ApMaterno = reader["ApellidoM"].ToString(),
+                //ApPaterno = reader["ApellidoP"].ToString(),
+                //ApMaterno = reader["ApellidoM"].ToString(),
                 Edad = (int)reader["Edad"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
                 Telefono = reader["TelCasa"].ToString(),
@@ -213,13 +213,13 @@ namespace EMAI.Datos
                 Facebook = reader["Facebook"].ToString(),
                 Email = reader["E-mail"].ToString(),
                 Enfermedades = reader["Enfermedades"].ToString(),
-                Discapacidad = (bool)reader["Discapacidad"],
+                //Discapacidad = (bool)reader["Discapacidad"],
                 InstrumentoBase = reader["InstrumentoBase"].ToString(),
-                Dia = reader["Dia"].ToString(),
-                Hora = reader["Hora"].ToString(),
+                Diayhora = reader["Dia"].ToString(),
+                //Hora = reader["Hora"].ToString(),
                 InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
                 DiaOpcional = reader["DiaOpcio"].ToString(),
-                HoraOpcional = reader["HoraOpcio"].ToString(),
+                //HoraOpcional = reader["HoraOpcio"].ToString(),
                 Img = reader["Imagen"].ToString(),
 
 
