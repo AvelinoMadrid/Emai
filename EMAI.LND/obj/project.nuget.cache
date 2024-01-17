@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lpNfSTK06tPGJATvSx3ERIKa/0EY2DLy9/7/AeNl5yy9hmVbBaQ1cIL/wgaaYkmS/NWG6XwslGzKOQlB9yImPQ==",
+  "dgSpecHash": "XUPzg3kITNM7jaqdXc1G161kMjyOXDBDjv1IRZROQjgzxHrwmsTm81QrotKvHRignbH0tx9+Vfyb3GhwV0vRYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj",
+  "projectFilePath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.LND\\EMAI.LND.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Horusvivo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Horusvivo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

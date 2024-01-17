@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {}
+    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\emai\\emai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {
+    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\emai\\emai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\emai\\emai.csproj",
         "projectName": "emai",
-        "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+        "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\emai\\emai.csproj",
         "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
+        "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\emai\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

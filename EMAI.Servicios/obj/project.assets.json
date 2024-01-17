@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+      "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Servicios\\EMAI.Servicios.csproj",
       "projectName": "EMAI.Servicios",
-      "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+      "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Servicios\\EMAI.Servicios.csproj",
       "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
+      "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Servicios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -76,11 +76,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+            "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Comun\\EMAI.Comun.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Comun\\EMAI.Comun.csproj"
             },
-            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+            "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj"
             }
           }
         }

@@ -34,7 +34,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAIDB;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 

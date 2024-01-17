@@ -245,3 +245,26 @@ C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.LND.deps.json
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
+C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll

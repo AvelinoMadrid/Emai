@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mwqp+wESQ3S57997aoojSmK4pdniDIsR59hB21jkYn5dR+UGnemlDCeOMtVlZ71eIb4vZn40DuQA5ier29yecQ==",
+  "dgSpecHash": "pTeQe25PQaP22mvDViF47YK3COTL1ZcsZ05X0bg9WjfiFRGkB0SrBjk+2KW1dIpktkzmUK8ePKEf5Z9IwHENZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
+  "projectFilePath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.API\\EMAI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Horusvivo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Horusvivo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
