@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj": {}
+    "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Entidades\\obj\\",
+        "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

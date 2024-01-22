@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Helpers\\EMAI.Helpers.csproj": {}
+    "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+    "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "projectName": "EMAI.Helpers",
-        "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectPath": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\AvelinoMadrid\\Emainuevo\\EMAI.Helpers\\obj\\",
+        "outputPath": "C:\\Users\\Horusvivo\\source\\repos\\emais nuevas version\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

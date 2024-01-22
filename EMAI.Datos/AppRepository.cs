@@ -34,7 +34,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAIDB;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -342,6 +342,12 @@ namespace EMAI.Datos
 
         public async Task<bool> InsertarAlumno(InsertAlumnoModel value)
         {
+            Random rnd = new Random();
+            long folio = rnd.NextInt64(100000000000, 1000000000000);
+            folio.ToString("D12");
+            DateTime fecha = DateTime.Now;
+
+
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
                 using (SqlCommand cmd = new SqlCommand("usp_usp_AlumnoInsertar", sql))
@@ -353,10 +359,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
                     cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.NoDiaClases));
                     cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", value.FechaInicioClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
+                    //cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
                     cmd.Parameters.Add(new SqlParameter("@Nombre", value.Nombre));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoP", value.ApPaterno));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoM", value.ApMaterno));
+                    //cmd.Parameters.Add(new SqlParameter("@ApellidoP", value.ApPaterno));
+                    //cmd.Parameters.Add(new SqlParameter("@ApellidoM", value.ApMaterno));
                     cmd.Parameters.Add(new SqlParameter("@Edad", value.Edad));
                     cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimiento));
                     cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", value.TelefonoCasa));
@@ -364,15 +370,15 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Facebook", value.Facebook));
                     cmd.Parameters.Add(new SqlParameter("@EmailAluno", value.Email));
                     cmd.Parameters.Add(new SqlParameter("@Enfermedades", value.Enfermedades));
-                    cmd.Parameters.Add(new SqlParameter("@Discapacidad", value.Discapacidad));
+
                     cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", value.InstrumentoBase));
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
                     cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", value.InstrumentoOpcional));
                     cmd.Parameters.Add(new SqlParameter("@DiaOpcional", value.DiaOpcio));
-                    cmd.Parameters.Add(new SqlParameter("@HoraDiaOpcional", value.HoraOpcio));
+                    //cmd.Parameters.Add(new SqlParameter("@HoraDiaOpcional", value.HoraOpcio));
 
                     // para tabla papas
-                    cmd.Parameters.Add(new SqlParameter("@NombrePapas",value.NombrePapa));
+                    cmd.Parameters.Add(new SqlParameter("@NombrePapas", value.NombrePapa));
                     cmd.Parameters.Add(new SqlParameter("@CelularPapas", value.CelularPapas));
                     cmd.Parameters.Add(new SqlParameter("@FacebookPapas", value.FacebookPapas));
                     cmd.Parameters.Add(new SqlParameter("@EmailPapas", value.EmailPapas));
@@ -386,10 +392,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@GradoEstudios", value.GradoEstudios));
                     cmd.Parameters.Add(new SqlParameter("@EscuelaActuales", value.EscuelaActuales));
                     cmd.Parameters.Add(new SqlParameter("@Trabajas", value.Trabajas));
-                    cmd.Parameters.Add(new SqlParameter("@LugarTrabajo",value.LugarTrabajo));
+                    cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", value.LugarTrabajo));
 
                     // conocimientos Actuales
-                    cmd.Parameters.Add(new SqlParameter("@ConActual",value.ConActual));
+                    cmd.Parameters.Add(new SqlParameter("@ConActual", value.ConActual));
                     cmd.Parameters.Add(new SqlParameter("@Instrumento", value.Instrumento));
                     cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", value.InstrumentoCasa));
                     cmd.Parameters.Add(new SqlParameter("@NoInstrumento", value.NoInstrumento));
@@ -402,11 +408,30 @@ namespace EMAI.Datos
 
                     // Tabla personal 
                     cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", value.ClaseOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DescuentoP",value.DescuentoP));
+                    cmd.Parameters.Add(new SqlParameter("@DescuentoP", value.DescuentoP));
                     cmd.Parameters.Add(new SqlParameter("@Amables", value.amable));
 
                     // tabla rececpcionista
                     cmd.Parameters.Add(new SqlParameter("@NombreRecepcionista", value.NombreRecepcionista));
+
+                    // tabla pagos
+                    cmd.Parameters.Add(new SqlParameter("@Folio", folio));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha", fecha));
+                    cmd.Parameters.Add(new SqlParameter("@Mes", value.Mes));
+                    cmd.Parameters.Add(new SqlParameter("@IdPromosion", value.IdPromosionales));
+                    cmd.Parameters.Add(new SqlParameter("@IdClasePago", value.IdClasePago));
+                    cmd.Parameters.Add(new SqlParameter("@IdHorario", value.IdHorario));
+                    cmd.Parameters.Add(new SqlParameter("@DiaAlumnoPago", value.DiaAlumnoPago));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoAlumnoPago", value.InstrumentoAlimnoPago));
+                    cmd.Parameters.Add(new SqlParameter("@CostoLibro", value.CostoLibro));
+                    cmd.Parameters.Add(new SqlParameter("@NombreLibro", value.NombreLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Atendio", value.Atendio));
+                    cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
+                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
+                    cmd.Parameters.Add(new SqlParameter("@IVA", value.IVA));
+                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+
+
 
 
                     await sql.OpenAsync();
@@ -415,6 +440,7 @@ namespace EMAI.Datos
                 }
             }
         }
+
 
         // eliminar Alumno 
 
