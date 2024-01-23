@@ -943,16 +943,16 @@ namespace EMAI.Datos
                 Nombre = (string)reader["Nombre"],
                 CNormal = (string)reader["CNormal"],
                 CVerano = (string)reader["CVerano"],
-                Dia = (string)reader["Dia"],
-                Horario = (string)reader["Horario"],
-                Dia2 = (string)reader["Dia2"],
-                Horario2 = (string)reader["Horario2"],
-                Dia3 = (string)reader["Dia3"],
-                Horario3 = (string)reader["Horario3"],
+                DiaHorario = (string)reader["Dia"],
+                
+                Diahorario2 = (string)reader["Dia2"],
+                /*Horario2 = (string)reader["Horario2"]*/
+                DiaHorario3 = (string)reader["Dia3"],
+                //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
                 ClaseOpc = (string)reader["ClaseOpc"].ToString(),
                 HorarioOpc = (string)reader["HorarioOpc"].ToString(),
-                DiaOpc = (string)reader["DiaOpc"].ToString(),
+                //DiaOpc = (string)reader["DiaOpc"].ToString(),
 
             };
         }
@@ -986,21 +986,20 @@ namespace EMAI.Datos
             return new ClasesIdModel()
             {
 
-                IdClase = (int)reader["IdClase"],
+                idClase = (int)reader["IdClase"],
                 Nombre = (string)reader["Nombre"],
                 CNormal = (string)reader["CNormal"],
                 CVerano = (string)reader["CVerano"],
-                Dia = (string)reader["Dia"],
-                Horario = (string)reader["Horario"],
-                Dia2 = (string)reader["Dia2"],
-                Horario2 = (string)reader["Horario2"],
-                Dia3 = (string)reader["Dia3"],
-                Horario3 = (string)reader["Horario3"],
+                DiaHorario = (string)reader["Dia"],
+
+                Diahorario2 = (string)reader["Dia2"],
+                /*Horario2 = (string)reader["Horario2"]*/
+                DiaHorario3 = (string)reader["Dia3"],
+                //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
                 ClaseOpc = (string)reader["ClaseOpc"].ToString(),
                 HorarioOpc = (string)reader["HorarioOpc"].ToString(),
-                DiaOpc = (string)reader["DiaOpc"].ToString(),
-
+                //DiaOpc = (string)reader["DiaOpc"].ToString(),
             };
         }
 
@@ -1015,15 +1014,15 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@CNormal", value.CNormal));
                     cmd.Parameters.Add(new SqlParameter("@Cverano", value.CVerano));
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Horario", value.Horario));
+                    
                     cmd.Parameters.Add(new SqlParameter("@Dia2", value.Dia2));
-                    cmd.Parameters.Add(new SqlParameter("@Horario2", value.Horario2));
+                   
                     cmd.Parameters.Add(new SqlParameter("@Dia3", value.Dia3));
-                    cmd.Parameters.Add(new SqlParameter("@Horario3", value.Horario3));
+                    
                     cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
                     cmd.Parameters.Add(new SqlParameter("@ClaseOpc", value.ClaseOpc));
                     cmd.Parameters.Add(new SqlParameter("@HorarioOpc", value.HorarioOpc));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpc", value.DiaOpc));
+                   
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1032,7 +1031,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Horario, string Dia2, string Horario2, string Dia3, string Horario3, decimal Costo, string ClaseOpc, string HorarioOpc, string DiaOpc)
+        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOpc)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1044,15 +1043,15 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@CNormal", CNormal));
                     cmd.Parameters.Add(new SqlParameter("@Cverano", CVerano));
                     cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Horario", Horario));
-                    cmd.Parameters.Add(new SqlParameter("@Dia2", Dia2));
-                    cmd.Parameters.Add(new SqlParameter("@Horario2", Horario2));
+                    
+                    cmd.Parameters.Add(new SqlParameter("@Horario2", Dia2));
+                    
                     cmd.Parameters.Add(new SqlParameter("@Dia3", Dia3));
-                    cmd.Parameters.Add(new SqlParameter("@Horario3", Horario3));
+                   
                     cmd.Parameters.Add(new SqlParameter("@Costo", Costo));
                     cmd.Parameters.Add(new SqlParameter("@ClaseOpc", ClaseOpc));
-                    cmd.Parameters.Add(new SqlParameter("@HorarioOpc", HorarioOpc));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpc", DiaOpc));
+                    cmd.Parameters.Add(new SqlParameter("@Horario", HorarioOpc));
+                    
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1067,7 +1066,7 @@ namespace EMAI.Datos
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
                 using (SqlCommand cmd = new SqlCommand("EliminarClase", sql))
-                {
+                { 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("IdClase", IdClase));
                     await sql.OpenAsync();

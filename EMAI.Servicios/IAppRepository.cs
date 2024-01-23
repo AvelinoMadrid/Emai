@@ -86,7 +86,7 @@ namespace EMAI.Servicios
         Task<List<ClasesModel>> GetClases();
         Task<ClasesIdModel> GetClasesId(int IdClase);
         Task<bool> InsertarClase(ClasesModelInsertar value);
-        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Horario, string Dia2, string Horario2, string Dia3, string Horario3, decimal Costo, string ClaseOpc, string HorarioOpc, string DiaOpc);
+        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOp);
         Task<bool> EliminarClase(int IdClase);
 
         #endregion

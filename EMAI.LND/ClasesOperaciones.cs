@@ -37,10 +37,10 @@ namespace EMAI.LND
 
         //Actualizar Clase
 
-        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Horario, string Dia2, string Horario2, string Dia3, string Horario3, decimal Costo, string ClaseOpc, string HorarioOpc, string DiaOpc)
+        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOpc)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarClase(IdClase, Nombre, CNormal, CVerano, Dia, Horario, Dia2, Horario2, Dia3, Horario3, Costo, ClaseOpc, HorarioOpc, DiaOpc);
+            var rsp = await db.ActualizarClase(IdClase, Nombre, CNormal, CVerano, Dia, Dia2, Dia3, Costo, ClaseOpc, HorarioOpc);
             return rsp;
         }
 

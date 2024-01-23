@@ -1295,18 +1295,6 @@ C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.API\obj\Debug\net6.
 C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.API\obj\Debug\net6.0\EMAI.API.pdb
 C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.API\obj\Debug\net6.0\EMAI.API.genruntimeconfig.cache
 C:\Users\Horusvivo\source\repos\AvelinoMadrid\Emainuevo\EMAI.API\obj\Debug\net6.0\ref\EMAI.API.dll
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.AssemblyReference.cache
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.Properties.Resources.resources
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.GenerateResource.cache
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.AssemblyInfoInputs.cache
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.AssemblyInfo.cs
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.CoreCompileInputs.cache
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.dll
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\refint\EMAI.API.dll
-C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.pdb
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\appsettings.json
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.API.exe
@@ -1395,6 +1383,15 @@ C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.Entidades.pdb
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.AssemblyReference.cache
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.Properties.Resources.resources
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.GenerateResource.cache
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.AssemblyInfoInputs.cache
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.AssemblyInfo.cs
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.CoreCompileInputs.cache
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets\msbuild.EMAI.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets\msbuild.build.EMAI.API.props
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EMAI.API.props
@@ -1404,5 +1401,8 @@ C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\scopedcss\bundle\EMAI.API.styles.css
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.CopyComplete
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.dll
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\refint\EMAI.API.dll
+C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.pdb
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.genruntimeconfig.cache
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\ref\EMAI.API.dll
