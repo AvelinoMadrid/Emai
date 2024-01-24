@@ -1242,7 +1242,7 @@ namespace EMAI.Datos
             return new ColegiaturaModel()
             {
 
-                IdColegiatura = (int)reader["IdColegiatura"],
+                IdColegiatura = (int)reader["IdColegiiatura"],
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedido = (string)reader["NoPedido"],
                 Descripcion = (string)reader["Descripcion"],
@@ -1281,7 +1281,7 @@ namespace EMAI.Datos
             return new ColegiaturaIDModel()
             {
 
-                IdColegiatura = (int)reader["IdColegiatura"],
+                IdColegiatura = (int)reader["IdColegiiatura"],
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedido = (string)reader["NoPedido"],
                 Descripcion = (string)reader["Descripcion"],
