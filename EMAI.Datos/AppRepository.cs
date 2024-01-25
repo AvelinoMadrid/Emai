@@ -2797,22 +2797,21 @@ namespace EMAI.Datos
             {
 
                 IdPago = (int)reader["IdPago"],
-                IdPromosiones = (int)reader["IdPromosiones"],
-                IdAdicionales = (int)reader["IdAdicionales"],
-                Fecha = (DateTime)reader["Fecha"],
                 Folio = (string)reader["Folio"],
-                FechaPago = (DateTime)reader["FechaPago"],
-                SaldoPendiente = (decimal)reader["SaldoPendiente"],
+                //FechaPago = (DateTime)reader["FechaPago"],
+                IdPromosionales = (int)reader["IdPromosiones"],
                 Mes = (string)reader["Mes"],
+                IdClasePago = (int)reader["IdAdicionales"],
                 IdHorario = (int)reader["IdHorario"],
-                Dia = (string)reader["Dia"],
-                IdClase = (int)reader["IdClase"],
-                IdRecepcionista = (int)reader["IdRecepcionista"],
+                DiaAlumnoPago = (string)reader["Dia"],
+                InstrumentoAlimnoPago = (string)reader["Instrumento"],
+                CostoLibro = (decimal)reader["CostoLibro"],
+                NombreLibro = (string)reader["NombreLibro"],
                 Costo = (decimal)reader["Costo"],
-                Autorizacion = (string)reader["Autorizacion"],
                 Subtotal = (decimal)reader["Subtotal"],
-                Iva = (decimal)reader["IVA"],
+                IVA = (decimal)reader["IVA"],
                 Total = (decimal)reader["Total"],
+                IdAlumno = (int)reader["IdAlumno"]
 
             };
         }
