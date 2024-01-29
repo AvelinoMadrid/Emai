@@ -41,14 +41,14 @@ namespace EMAI.API.Controllers
             await _repository.InsertarPagos(value);
         }
 
-        //Actualizar Gastos
-        [HttpPut("/api/Gasto/Actualizar")]
-        public async Task Put([FromBody] PagosActualizarModel value)
-        {
-            await _repository.ActualizarPagos(value.IdPago, value.IdPromosiones, value.IdAdicionales, value.Fecha, value.Folio, value.FechaPago,
-            value.SaldoPendiente, value.Mes, value.IdHorario, value.Dia, value.IdClase, value.IdRecepcionista, value.Costo, value.Autorizacion,
-            value.Subtotal, value.Iva, value.Total);
-        }
+        ////Actualizar Gastos
+        //[HttpPut("/api/Gasto/Actualizar")]
+        //public async Task Put([FromBody] PagosActualizarModel value)
+        //{
+        //    await _repository.ActualizarPagos(value.IdPago, value.IdPromosiones, value.IdAdicionales, value.Fecha, value.Folio, value.FechaPago,
+        //    value.SaldoPendiente, value.Mes, value.IdHorario, value.Dia, value.IdClase, value.IdRecepcionista, value.Costo, value.Autorizacion,
+        //    value.Subtotal, value.Iva, value.Total);
+        //}
 
         //Eliminar Gastos
         [HttpDelete("Eliminar/{IdPago}")]

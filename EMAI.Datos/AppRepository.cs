@@ -2788,7 +2788,6 @@ namespace EMAI.Datos
                             response.Add(MapToPagos(reader));//2
                         }
                     }
-
                     return response;
                 }
             }
@@ -2798,25 +2797,22 @@ namespace EMAI.Datos
         {
             return new PagosModel()
             {
-
                 IdPago = (int)reader["IdPago"],
-                IdPromosiones = (int)reader["IdPromosiones"],
-                IdAdicionales = (int)reader["IdAdicionales"],
-                Fecha = (DateTime)reader["Fecha"],
                 Folio = (string)reader["Folio"],
-                FechaPago = (DateTime)reader["FechaPago"],
-                SaldoPendiente = (decimal)reader["SaldoPendiente"],
+                //FechaPago = (DateTime)reader["FechaPago"],
+                IdPromosionales = (int)reader["IdPromosiones"],
                 Mes = (string)reader["Mes"],
+                IdClasePago = (int)reader["IdClase"],
                 IdHorario = (int)reader["IdHorario"],
-                Dia = (string)reader["Dia"],
-                IdClase = (int)reader["IdClase"],
-                IdRecepcionista = (int)reader["IdRecepcionista"],
+                DiaAlumnoPago = (string)reader["Dia"],
+                InstrumentoAlimnoPago = (string)reader["Instrumento"],
+                CostoLibro = (decimal)reader["CostoLibro"],
+                NombreLibro = (string)reader["NombreLibro"],
                 Costo = (decimal)reader["Costo"],
-                Autorizacion = (string)reader["Autorizacion"],
                 Subtotal = (decimal)reader["Subtotal"],
-                Iva = (decimal)reader["IVA"],
+                IVA = (decimal)reader["IVA"],
                 Total = (decimal)reader["Total"],
-
+                IdAlumno = (int)reader["IdAlumno"]
             };
         }
 
@@ -2848,50 +2844,51 @@ namespace EMAI.Datos
         {
             return new PagosIDModel()
             {
-
                 IdPago = (int)reader["IdPago"],
-                IdPromosiones = (int)reader["IdPromosiones"],
-                IdAdicionales = (int)reader["IdAdicionales"],
-                Fecha = (DateTime)reader["Fecha"],
                 Folio = (string)reader["Folio"],
-                FechaPago = (DateTime)reader["FechaPago"],
-                SaldoPendiente = (decimal)reader["SaldoPendiente"],
+                //FechaPago = (DateTime)reader["FechaPago"],
+                IdPromosionales = (int)reader["IdPromosiones"],
                 Mes = (string)reader["Mes"],
+                IdClasePago = (int)reader["IdClase"],
                 IdHorario = (int)reader["IdHorario"],
-                Dia = (string)reader["Dia"],
-                IdClase = (int)reader["IdClase"],
-                IdRecepcionista = (int)reader["IdRecepcionista"],
+                DiaAlumnoPago = (string)reader["Dia"],
+                InstrumentoAlimnoPago = (string)reader["Instrumento"],
+                CostoLibro = (decimal)reader["CostoLibro"],
+                NombreLibro = (string)reader["NombreLibro"],
                 Costo = (decimal)reader["Costo"],
-                Autorizacion = (string)reader["Autorizacion"],
                 Subtotal = (decimal)reader["Subtotal"],
-                Iva = (decimal)reader["IVA"],
+                IVA = (decimal)reader["IVA"],
                 Total = (decimal)reader["Total"],
+                IdAlumno = (int)reader["IdAlumno"]
             };
         }
 
         public async Task<bool> InsertarPagos(PagosInsertarModel value)
         {
+            Random rnd = new Random();
+            long folio = rnd.NextInt64(100000000000, 1000000000000);
+            folio.ToString("D12");
+
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
                 using (SqlCommand cmd = new SqlCommand("InsertarPago", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdPromosiones", value.IdPromosiones));
-                    cmd.Parameters.Add(new SqlParameter("@IdAdicionales", value.IdAdicionales));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@Folio", value.Folio));
-                    cmd.Parameters.Add(new SqlParameter("@FechaPago", value.FechaPago));
-                    cmd.Parameters.Add(new SqlParameter("@SaldoPendiente", value.SaldoPendiente));
+                    cmd.Parameters.Add(new SqlParameter("@Folio", folio));
+                    cmd.Parameters.Add(new SqlParameter("@IdPromosionales", value.IdPromosionales));
                     cmd.Parameters.Add(new SqlParameter("@Mes", value.Mes));
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClasePago));   
                     cmd.Parameters.Add(new SqlParameter("@IdHorario", value.IdHorario));
-                    cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
-                    cmd.Parameters.Add(new SqlParameter("@IdRecepcionista", value.IdRecepcionista));
+                    cmd.Parameters.Add(new SqlParameter("@Dia", value.DiaAlumnoPago));
+                    cmd.Parameters.Add(new SqlParameter("@Instrumento", value.InstrumentoAlimnoPago));
+                    cmd.Parameters.Add(new SqlParameter("@CostoLibro", value.CostoLibro));
+                    cmd.Parameters.Add(new SqlParameter("@NombreLibro", value.NombreLibro));
                     cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
-                    cmd.Parameters.Add(new SqlParameter("@Autorizacion", value.Autorizacion));
                     cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@IVA", value.Iva));
+                    cmd.Parameters.Add(new SqlParameter("@IVA", value.IVA));
                     cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
