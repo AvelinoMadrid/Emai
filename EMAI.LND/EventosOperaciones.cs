@@ -7,10 +7,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static EMAI.Comun.Models.EventosIDModel;
 
 namespace EMAI.LND
 {
-    public class EventosOperaciones : IEventosOperaciones
+    public class EventosOperaciones : IEventosOperaciones 
     {
         //Mostrar todo
         public async Task<List<EventosModel>> GetEventos()
@@ -37,10 +38,10 @@ namespace EMAI.LND
         }
 
         //Actualizar Evento
-        public async Task<bool> ActualizarEvento(int IdEvento, string NombreEvento, DateTime Fecha, DateTime Hora, int IdAlumno, int IdClase)
+        public async Task<bool> ActualizarEvento(int IdEvento, string NombreEvento, string Fecha, int IdHora, int IdAlumno, int IdClase)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarEvento(IdEvento, NombreEvento, Fecha,Hora, IdAlumno, IdClase);
+            var rsp = await db.ActualizarEvento(IdEvento, NombreEvento, Fecha,IdHora, IdAlumno, IdClase);
             return rsp;
         }
 
@@ -52,5 +53,7 @@ namespace EMAI.LND
             var rsp = await db.EliminarEvento(IdEvento);
             return rsp;
         }
+
+  
     }
 }

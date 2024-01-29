@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using EMAI.Comun;
 using EMAI.Comun.Models;
+using static EMAI.Comun.Models.EventosIDModel;
 
 namespace EMAI.API.Controllers
 {
@@ -42,7 +43,7 @@ namespace EMAI.API.Controllers
         [HttpPut("/api/Evento/Actualizar")]
         public async Task Put([FromBody] EventosActualizarModel value)
         {
-            await _repository.ActualizarEvento(value.IdEvento, value.NombreEvento, value.Fecha, value.Hora, value.IdAlumno, value.IdClase);
+            await _repository.ActualizarEvento(value.IdEvento, value.NombreEvento, value.Fecha, value.IdHora, value.IdAlumno, value.IdClase);
         }
 
         //Eliminar Gastos

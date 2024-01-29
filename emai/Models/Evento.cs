@@ -9,10 +9,11 @@ namespace emai.Models
     public class Evento
     {
         public int IdEvento { get; set; }
-        public string NombreEvento { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; }
         public int IdAlumno { get; set; }
         public int IdClase { get; set; }
+        public int IdHora { get; set; }
+        public string NameHora { get; set; }
+        public string Fecha { get; set; }
+        public string NombreEvento { get; set; }
     }
 }

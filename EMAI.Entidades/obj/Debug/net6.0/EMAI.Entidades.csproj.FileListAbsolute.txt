@@ -154,3 +154,27 @@ C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.Ent
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
 C:\Users\Horusvivo\source\repos\emais nuevas version\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
+C:\repos\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.deps.json
+C:\repos\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\repos\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.sourcelink.json
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
+C:\repos\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.deps.json
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.sourcelink.json
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\jiren\OneDrive\Música\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll

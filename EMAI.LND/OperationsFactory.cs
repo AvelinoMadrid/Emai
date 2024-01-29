@@ -101,6 +101,10 @@ namespace EMAI.LND
         {
             return new EventosOperaciones();
         }
+        public static IHorasOperaciones ObtenerHorasOperaciones()
+        {
+            return new HorasOperaciones();
+        }
 
         public static IAsignacionClaseOperaciones ObtenerAsignacionClaseOperaciones()
         {

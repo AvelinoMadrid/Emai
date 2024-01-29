@@ -56,6 +56,7 @@ builder.Services.AddScoped(typeof(IHorariosVeranoOperaciones), f => OperationsFa
 builder.Services.AddScoped(typeof(IEventosOperaciones), f => OperationsFactory.ObtenerEventosOperaciones());
 builder.Services.AddScoped(typeof(IAsignacionClaseOperaciones), f => OperationsFactory.ObtenerAsignacionClaseOperaciones());
 builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
+builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());
 
 
 var app = builder.Build();

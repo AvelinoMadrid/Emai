@@ -126,7 +126,7 @@ namespace emai.Controllers
             var mensaje = MessageResource.Create(
                 to: numeroDestino,
                 from: new PhoneNumber(TwilioPhoneNumber), // Número de Twilio
-                body: $"¡Hola {alumno.Nombre}! Te invitamos al evento '{evento.NombreEvento}' el {evento.Fecha.ToShortDateString()} a las {evento.Hora.ToShortTimeString()}. Confirma tu asistencia. ¡Esperamos verte allí!"
+                body: $"¡Hola {alumno.Nombre}! Te invitamos al evento '{evento.NombreEvento}' el {evento.Fecha} a las {evento.NameHora}. Confirma tu asistencia. ¡Esperamos verte allí!"
             );
 
             // Maneja la respuesta de la creación del mensaje si lo deseas.

@@ -7,6 +7,7 @@ using System.Text;
 
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
+using static EMAI.Comun.Models.EventosIDModel;
 
 
 
@@ -199,6 +200,14 @@ namespace EMAI.Servicios
 
         #endregion
 
+        #region "Horas"
+
+        Task<List<HorasModel>>GetHoras();
+        Task<bool>InsertarHoras(HorasInsertarModel value);
+
+        #endregion
+
+
         #region "Eventos"
 
         Task<List<EventosModel>> GetEventos();
@@ -207,7 +216,7 @@ namespace EMAI.Servicios
 
         Task<bool> InsertarEvento(EventoInsertarModel value);
 
-        Task<bool> ActualizarEvento(int IdEvento, string NombreEvento, DateTime Fecha,DateTime Hora, int IdAlumno, int IdClase);
+        Task<bool> ActualizarEvento(int IdEvento, string NombreEvento, string Fecha,int IdHora, int IdAlumno, int IdClase);
 
         Task<bool> EliminarEvento(int IdEvento);
         #endregion
