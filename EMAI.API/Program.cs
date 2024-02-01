@@ -5,6 +5,7 @@ using System.Text;
 using EMAI.Servicios;
 using EMAI.Comun;
 using EMAI.LND;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ builder.Services.AddCors(options =>
 });
 
 
+
+
 ConfigurationManager configuration = builder.Configuration;
 IWebHostEnvironment enviroment = builder.Environment;
 
@@ -32,7 +35,10 @@ builder.Services.AddHttpContextAccessor();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "/swagger/v1/swagger.json", Version = "v1" });
+});
 
 
 // aca van las operaciones
@@ -59,15 +65,20 @@ builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactor
 builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());
 
 
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseDeveloperExceptionPage();
+//}
 
+app.UseDeveloperExceptionPage();
 
 // Enable middleware to serve generated Swagger as a JSON endpoint.
 app.UseSwagger(c =>
@@ -99,5 +110,10 @@ app.UseEndpoints(endpoints =>
 
 });
 app.MapControllers();
+
+
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+app.UseStaticFiles();
 
 app.Run();

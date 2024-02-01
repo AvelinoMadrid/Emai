@@ -191,3 +191,15 @@ C:\Users\jiren\OneDrive\Música\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.dll
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.deps.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfoInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfo.cs
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.CoreCompileInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.sourcelink.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll

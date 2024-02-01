@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebec0741a3eb521fb0a1cdb5f90de609b24a42eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

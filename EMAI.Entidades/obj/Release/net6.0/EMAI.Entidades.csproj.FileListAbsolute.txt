@@ -1,0 +1,12 @@
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\bin\Release\net6.0\EMAI.Entidades.deps.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\bin\Release\net6.0\EMAI.Entidades.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\bin\Release\net6.0\EMAI.Entidades.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.sourcelink.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\refint\EMAI.Entidades.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\EMAI.Entidades.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Entidades\obj\Release\net6.0\ref\EMAI.Entidades.dll
