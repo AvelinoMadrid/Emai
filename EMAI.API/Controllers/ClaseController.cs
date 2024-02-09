@@ -30,6 +30,15 @@ namespace EMAI.API.Controllers
             return await _repository.GetClasesId(IdClase);
         }
 
+        // Obtener nombre clases 
+        [HttpGet("/api/Clases/ObtenerNombres")]
+        public async Task<ActionResult<IEnumerable<ListaClases>>> GetNombreClases()
+        {
+            return await _repository.GetNombreClases();
+        }
+
+
+
         //Insertar clase 
 
         [HttpPost("/api/Clases/Insertar")]

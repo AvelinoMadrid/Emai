@@ -26,6 +26,14 @@ namespace EMAI.LND
             return rsp;
         }
 
+        // Mostrar clase nombre
+        public async Task<List<ListaClases>> GetNombreClases()
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.GetNombreClases();
+            return rsp;
+        }
+
         //Insertar clase
 
         public async Task<bool> InsertarClase(ClasesModelInsertar value)

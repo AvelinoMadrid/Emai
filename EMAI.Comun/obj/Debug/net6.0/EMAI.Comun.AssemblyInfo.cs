@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.Comun")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55d2fdb8354ef77ebfa2051db83880fda5b436cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03fc89e371f3d50474dcf6ce9cf7eba1453bf31f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.Comun")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.Comun")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

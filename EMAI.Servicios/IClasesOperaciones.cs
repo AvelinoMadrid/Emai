@@ -13,6 +13,9 @@ namespace EMAI.Servicios
         //Obtener todos los datos
         Task<List<ClasesModel>> GetClases();
 
+        // Mostrar Clases
+        Task<List<ListaClases>> GetNombreClases();
+
         Task<ClasesIdModel> GetClasesId(int IdClase);
 
         Task<bool> InsertarClase(ClasesModelInsertar value);

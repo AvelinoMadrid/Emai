@@ -77,6 +77,10 @@ namespace EMAI.Servicios
 
         #region "Colegiatura"
         Task<List<ColegiaturaModel>> GetColegiatura();
+
+        // Mostrar Clases
+        Task<List<ListaClases>> GetNombreClases();
+
         Task<ColegiaturaIDModel> GetColegiaturaID(int IdColegiatura);
         Task<bool> InsertarColegiatura(ColegiaturaInsertarModel value);
         Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha, string NoPedido, string Descripcion, decimal Cantidad, decimal Subtotal, decimal Total);

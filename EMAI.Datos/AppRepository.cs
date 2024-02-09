@@ -936,6 +936,40 @@ namespace EMAI.Datos
             }
         }
 
+        private ListaClases MapToClasesNombre(SqlDataReader reader)
+        {
+            return new ListaClases()
+            {
+                NombreClase = (string)reader["Nombre"]
+
+            };
+        }
+
+        public async Task<List<ListaClases>> GetNombreClases()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerClasesNombre", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<ListaClases>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToClasesNombre(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+
+
         private ClasesModel MapToClases(SqlDataReader reader)
         {
             return new ClasesModel()
@@ -1246,7 +1280,6 @@ namespace EMAI.Datos
 
                 IdColegiatura = (int)reader["IdColegiiatura"],
                 Fecha = (DateTime)reader["Fecha"],
-                NoPedido = (string)reader["NoPedido"],
                 Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
                 Subtotal = (decimal)reader["Subtotal"],
@@ -1285,7 +1318,6 @@ namespace EMAI.Datos
 
                 IdColegiatura = (int)reader["IdColegiiatura"],
                 Fecha = (DateTime)reader["Fecha"],
-                NoPedido = (string)reader["NoPedido"],
                 Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
                 Subtotal = (decimal)reader["Subtotal"],
@@ -1297,11 +1329,10 @@ namespace EMAI.Datos
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("InsertarColegiatura", sql))
+                using (SqlCommand cmd = new SqlCommand("usp_InsertarColegiatura", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@NoPedido", value.NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
                     cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));

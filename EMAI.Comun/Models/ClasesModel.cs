@@ -113,4 +113,12 @@ namespace EMAI.Comun.Models
         public string DiaOpc { get; set; }
     }
 
+    public class ListaClases
+    {
+        public string NombreClase { get; set; }
+    }
+
+
+
+
 }

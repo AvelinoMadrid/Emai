@@ -10,18 +10,17 @@ namespace EMAI.Comun.Models
     {
         public int IdColegiatura { get; set; }
         public DateTime Fecha { get; set; }
-        public string NoPedido { get; set; }
+        //public string NoPedido { get; set; }
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }  
+        public decimal Total { get; set; }
     }
 
     public class ColegiaturaIDModel
     {
         public int IdColegiatura { get; set; }
         public DateTime Fecha { get; set; }
-        public string NoPedido { get; set; }
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Subtotal { get; set; }
@@ -31,7 +30,7 @@ namespace EMAI.Comun.Models
     public class ColegiaturaInsertarModel
     {
         public DateTime Fecha { get; set; }
-        public string NoPedido { get; set; }
+
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Subtotal { get; set; }
