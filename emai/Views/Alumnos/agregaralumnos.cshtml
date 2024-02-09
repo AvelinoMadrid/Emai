@@ -692,9 +692,25 @@
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Inscripción</label>
+                                    <input type="text" class="form-control form-control-sa" required id="Inscripcion"/>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Mensualidad</label>
+                                    <input type="text" class="form-control form-control-sa" required id="Mensualidad"/>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
+
+
+
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Costo</label>
-                                    <input type="text" class="form-control form-control-sa"  required />
+                                    <input type="text" class="form-control form-control-sa"  required id="Costo" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -709,14 +725,14 @@
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Iva</label>
-                                    <input type="text" class="form-control form-control-sa" required />
+                                    <input type="text" class="form-control form-control-sa" required id="IVA" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Total</label>
-                                    <input type="text" class="form-control form-control-sa" required />
+                                    <input type="text" class="form-control form-control-sa" required id="Total" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -753,6 +769,53 @@
         <!-- /.card -->
     </div>
 
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // asignacion de la casilla 
+            $("#Costo").keyup(function () {
+                calcularTotales();
+            });
+
+            // obtenciom de la inscripcion 
+            $("#Inscripcion").keyup(function () {
+                calcularTotales();
+            });
+
+            // obtension de mensualidad
+            $("#Mensualidad").keyup(function () {
+                calcularTotales();
+            });
+
+            // obtension de IVA
+            $("#IVA").keyup(function () {
+                calcularTotales();
+            });
+
+
+
+            // Funcion para calcular 
+            function calcularTotales() {
+                
+                var inscripcion = parseFloat($("#Inscripcion").val());
+                var mensualidad = parseFloat($("#Mensualidad").val());
+                var IVA = parseFloat($("#IVA").val());
+
+
+                var Subtotal = inscripcion + mensualidad;
+                var total = Subtotal * IVA / 100 + Subtotal;
+
+                $("#Costo").val(Subtotal.toFixed(2));
+                $("#Total").val(total.toFixed(2));
+            }
+
+            // Initial call to calculate totals on page load
+            calcularTotales();
+        });
+    </script>
+}
 
 
 

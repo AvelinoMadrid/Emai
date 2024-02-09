@@ -3,9 +3,10 @@
     "",
     "\\emai",
     "\\EMAI.API",
+    "\\EMAI.API\\Controllers",
     "\\emai\\Views",
     "\\emai\\Views\\Colegiatura"
   ],
-  "SelectedNode": "\\emai\\Views\\Colegiatura\\agregarcolegiatura.cshtml",
+  "SelectedNode": "\\EMAI.API\\Controllers\\ClaseController.cs",
   "PreviewInSolutionExplorer": false
 }
