@@ -346,3 +346,25 @@ C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Dat
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.sourcelink.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll

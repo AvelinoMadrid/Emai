@@ -203,3 +203,15 @@ C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Com
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
 C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.deps.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfoInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.AssemblyInfo.cs
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.csproj.CoreCompileInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.sourcelink.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\refint\EMAI.Comun.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Comun\obj\Debug\net6.0\ref\EMAI.Comun.dll

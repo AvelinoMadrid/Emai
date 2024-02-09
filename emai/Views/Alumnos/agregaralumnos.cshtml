@@ -502,24 +502,21 @@
                         <div id="interes-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                          <div class="row">
                                 @*interes Hobby *@
-                                <div class="col-md-12 form-group ">
+                                <div class="col-md-12 form-group">
                                     <label class="form-label" for="InteresHobby">Selecciona: ¿Cuál es tu interés en aprender un instrumento musical?</label>
-                                    @* <input type="text" class="form-control form-control-sa" asp-for="InteresGnroMusical" name="interesmusical" id="interesmusical" required />*@
                                     <br /><br />
                                     <div class="radio-container">
-                                        <label><input type="radio" name="column1"> Hobby</label>
-                                        <label><input type="radio" name="column2"> Formar un grupo musical</label>
-                                        <label><input type="radio" name="column3"> Ser profesional</label>
-                                        <label><input type="radio" name="column4"> Inquietud</label>
-                                        <label><input type="radio" name="column4"> Porque tus papás quieren mejorar técnica</label>
-                                        <label><input type="radio" name="column4"> Pasar el rato</label>
-                                        <label><input type="radio" name="column4"> Otro</label>
+                                        <label for="hobby"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Hobby" id="hobby"> Hobby</label>
+                                        <label for="formarGrupo"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Formar un grupo musical" id="formarGrupo"> Formar un grupo musical</label>
+                                        <label for="serProfesional"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Ser profesional" id="serProfesional"> Ser profesional</label>
+                                        <label for="inquietud"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Inquietud" id="inquietud"> Inquietud</label>
+                                        <label for="mejoraTecnica"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Porque tus papás quieren mejorar técnica" id="mejoraTecnica"> Porque tus papás quieren mejorar técnica</label>
+                                        <label for="pasarRato"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Pasar el rato" id="pasarRato"> Pasar el rato</label>
+                                        <label for="otro"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Otro" id="otro"> Otro</label>
                                     </div>
-
-
-
                                 </div>
 
+                                
                                 @*Otro *@
                                 <div class="col-md-12 form-group">
                                     <label class="form-label" for="instrumentos">¿Algun otro interés musical?</label>
@@ -531,36 +528,35 @@
                                 @*Clase Opcionales*@
                                 <div class="col-md-12 form-group">
                                     <label class="form-label" for="claseopcional">¿La persona que lo atendió le mencionó las clases opcionales?</label>
-                                    @*<input type="text" class="form-control form-control-sa" asp-for="ClaseOpcional" id="claseopcional" name="claseopcional" required />*@
-
                                     <br /><br />
                                     <div class="radio-container">
-                                        <label><input type="radio" name="column1"> Sí</label>
-                                        <label><input type="radio" name="column2"> No</label>
-
-                                    </div>
-
-
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
-
-
-                                @*Pago Puntual*@
-                                <div class="col-md-12 form-group">
-                                    <label class="form-label" for="descuento">¿La persona que lo atendió te mencionó sobre el descuento en pago puntual </label>
-                                    @*<input type="date" class="form-control form-control-sa" asp-for="DescuentoP" id="descuento" name="descuento" required />*@
-
-                                    <br /><br />
-                                    <div class="radio-container">
-                                        <label><input type="radio" name="column1"> Sí</label>
-                                        <label><input type="radio" name="column2"> No</label>
-
+                                        <label for="opcionSi">
+                                            <input type="radio" name="opcionClase" asp-for="ClaseOpcional" value="Sí" id="opcionSi" required> Sí
+                                        </label>
+                                        <label for="opcionNo">
+                                            <input type="radio" name="opcionClase" asp-for="ClaseOpcional" value="No" id="opcionNo" required> No
+                                        </label>
                                     </div>
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+
+
+
+                                @*Pago Puntual*@
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label" for="descuento">¿La persona que lo atendió te mencionó sobre el descuento en pago puntual?</label>
+                                    <br /><br />
+                                    <div class="radio-container">
+                                        <label><input type="radio" name="opcionDescuento" asp-for="DescuentoP" value="Sí" required> Sí</label>
+                                        <label><input type="radio" name="opcionDescuento" asp-for="DescuentoP" value="No"> No</label>
+                                    </div>
+
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+
 
                                 @*Amable*@
                                 <div class="col-md-12 form-group">
@@ -569,7 +565,7 @@
                                     <br /><br />
                                     <div class="radio-container">
                                         <label><input type="radio" name="column1"> Sí</label>
-                                        <label><input type="radio" name="column2"> No</label>
+                                        <label><input type="radio" name="column1"> No</label>
 
                                     </div>
                                     <div class="valid-feedback">Válido.</div>
