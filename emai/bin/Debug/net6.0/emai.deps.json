@@ -10,7 +10,8 @@
         "dependencies": {
           "ClosedXML": "0.102.0",
           "EntityFramework": "6.4.4",
-          "Google.Apis.Sheets.v4": "1.65.0.3148",
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.AspNet.Mvc": "5.2.9",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.EntityFrameworkCore": "7.0.8",
@@ -130,54 +131,50 @@
           "jQuery": "2.0.0"
         }
       },
-      "Google.Apis/1.65.0": {
+      "Google.Apis/1.66.0": {
         "dependencies": {
-          "Google.Apis.Core": "1.65.0"
+          "Google.Apis.Core": "1.66.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "assemblyVersion": "1.65.0.0",
-            "fileVersion": "1.65.0.0"
+          "lib/net6.0/Google.Apis.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
           }
         }
       },
-      "Google.Apis.Auth/1.65.0": {
+      "Google.Apis.Auth/1.66.0": {
         "dependencies": {
-          "Google.Apis": "1.65.0",
-          "Google.Apis.Core": "1.65.0",
+          "Google.Apis": "1.66.0",
+          "Google.Apis.Core": "1.66.0",
           "System.Management": "7.0.2"
         },
         "runtime": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {
-            "assemblyVersion": "1.65.0.0",
-            "fileVersion": "1.65.0.0"
-          },
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "assemblyVersion": "1.65.0.0",
-            "fileVersion": "1.65.0.0"
+          "lib/net6.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
           }
         }
       },
-      "Google.Apis.Core/1.65.0": {
+      "Google.Apis.Core/1.66.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "assemblyVersion": "1.65.0.0",
-            "fileVersion": "1.65.0.0"
+          "lib/net6.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
           }
         }
       },
-      "Google.Apis.Sheets.v4/1.65.0.3148": {
+      "Google.Apis.Sheets.v4/1.66.0.3148": {
         "dependencies": {
-          "Google.Apis": "1.65.0",
-          "Google.Apis.Auth": "1.65.0"
+          "Google.Apis": "1.66.0",
+          "Google.Apis.Auth": "1.66.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Google.Apis.Sheets.v4.dll": {
-            "assemblyVersion": "1.65.0.3148",
-            "fileVersion": "1.65.0.3148"
+          "lib/net6.0/Google.Apis.Sheets.v4.dll": {
+            "assemblyVersion": "1.66.0.3148",
+            "fileVersion": "1.66.0.3148"
           }
         }
       },
@@ -3309,33 +3306,33 @@
       "path": "fullcalendar/3.9.0",
       "hashPath": "fullcalendar.3.9.0.nupkg.sha512"
     },
-    "Google.Apis/1.65.0": {
+    "Google.Apis/1.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TTnTAuRL236ikkpXdAFtkrZoZTSstuO4JQohWAko1cxOpN3Y1DeBC5Y4f7nXyD6wCQwa+tpE1Au8eqx14Hr+yA==",
-      "path": "google.apis/1.65.0",
-      "hashPath": "google.apis.1.65.0.nupkg.sha512"
+      "sha512": "sha512-ZNvwU3MaqRW6/FIpWK8S0KutaEQ20mdpUuV8TEGO4pZoxQPnakbwqTo103x+LEPW8BMTtXXHpSSCCojDIVF4Yg==",
+      "path": "google.apis/1.66.0",
+      "hashPath": "google.apis.1.66.0.nupkg.sha512"
     },
-    "Google.Apis.Auth/1.65.0": {
+    "Google.Apis.Auth/1.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6yDd5sT6RkY6GH6gLvpdK5Fmp4jS+Bnxmospt/kRos7DyUoAvJNiRVEmpWMYOLwKLk0dq1ZTLoehtSH1b+sBdQ==",
-      "path": "google.apis.auth/1.65.0",
-      "hashPath": "google.apis.auth.1.65.0.nupkg.sha512"
+      "sha512": "sha512-q3ipLhn13U6f4RoAU/C7QJP8v9NTe0yZumy8hEmdR23LVZX70XwU8BDEbkexzc92uY7F1lbzp7mn/L15IAk52Q==",
+      "path": "google.apis.auth/1.66.0",
+      "hashPath": "google.apis.auth.1.66.0.nupkg.sha512"
     },
-    "Google.Apis.Core/1.65.0": {
+    "Google.Apis.Core/1.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qxOBkSZxqk9Ei6PElvyut4aOJBBwK438LO/n50gBxqsVjuJCJNZcSAli0sf0AX22bY/RqdzKK47rPGoEfRba/w==",
-      "path": "google.apis.core/1.65.0",
-      "hashPath": "google.apis.core.1.65.0.nupkg.sha512"
+      "sha512": "sha512-QBUHjWbizj30donU51SsrDSFoL8rEmut+5El4GVPoMPDQwejJalaEWswrThc9EwZ6BcCGfxPbGE1iFR1FXiWWA==",
+      "path": "google.apis.core/1.66.0",
+      "hashPath": "google.apis.core.1.66.0.nupkg.sha512"
     },
-    "Google.Apis.Sheets.v4/1.65.0.3148": {
+    "Google.Apis.Sheets.v4/1.66.0.3148": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-S9SrxkwnDda6juVoIxp0GlICBDv/EqljJc1s0hyOV1Xmvi6YnO7ENIHtN8AUulp6OEwWKrO5ZtjnzDr88g7kzw==",
-      "path": "google.apis.sheets.v4/1.65.0.3148",
-      "hashPath": "google.apis.sheets.v4.1.65.0.3148.nupkg.sha512"
+      "sha512": "sha512-wEXasGG6wiy6e+hmVGbBy2fsOTx3q8essUVVzfAG4k1gTPES4sF/eAM4DhTg2zlOKmxHGeog93lXbslX16A7cA==",
+      "path": "google.apis.sheets.v4/1.66.0.3148",
+      "hashPath": "google.apis.sheets.v4.1.66.0.3148.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

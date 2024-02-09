@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {}
+    "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+    "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "projectName": "EMAI.Helpers",
-        "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
-        "packagesPath": "C:\\Users\\taller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
+        "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\taller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +45,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.66.0, )"
+            },
+            "Google.Apis.Sheets.v4": {
+              "target": "Package",
+              "version": "[1.66.0.3148, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )"

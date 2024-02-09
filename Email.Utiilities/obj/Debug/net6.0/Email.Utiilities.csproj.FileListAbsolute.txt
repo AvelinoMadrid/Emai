@@ -1,0 +1,12 @@
+C:\repos\Emai\Email.Utiilities\bin\Debug\net6.0\Email.Utiilities.deps.json
+C:\repos\Emai\Email.Utiilities\bin\Debug\net6.0\Email.Utiilities.dll
+C:\repos\Emai\Email.Utiilities\bin\Debug\net6.0\Email.Utiilities.pdb
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.AssemblyInfoInputs.cache
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.AssemblyInfo.cs
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.csproj.CoreCompileInputs.cache
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.sourcelink.json
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.dll
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\refint\Email.Utiilities.dll
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\Email.Utiilities.pdb
+C:\repos\Emai\Email.Utiilities\obj\Debug\net6.0\ref\Email.Utiilities.dll

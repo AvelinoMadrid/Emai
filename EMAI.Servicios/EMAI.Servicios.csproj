@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.66.0.3148" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EMAI.Comun\EMAI.Comun.csproj" />
     <ProjectReference Include="..\EMAI.Entidades\EMAI.Entidades.csproj" />
   </ItemGroup>

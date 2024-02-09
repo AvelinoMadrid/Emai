@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {}
+    "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {
+    "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+        "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
         "projectName": "emai",
-        "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
-        "packagesPath": "C:\\Users\\taller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
+        "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\taller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,9 +53,13 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.66.0, )"
+            },
             "Google.Apis.Sheets.v4": {
               "target": "Package",
-              "version": "[1.65.0.3148, )"
+              "version": "[1.66.0.3148, )"
             },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",

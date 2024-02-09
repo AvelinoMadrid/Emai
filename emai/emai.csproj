@@ -10,7 +10,8 @@
     <PackageReference Include="ClosedXML" Version="0.102.0" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="fullcalendar" Version="3.9.0" />
-    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.65.0.3148" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.66.0.3148" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />

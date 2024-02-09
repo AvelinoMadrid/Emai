@@ -13,6 +13,8 @@
           "EMAI.Comun": "1.0.0",
           "EMAI.LND": "1.0.0",
           "EMAI.Servicios": "1.0.0",
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
@@ -77,6 +79,53 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.7.0.0",
             "fileVersion": "1.700.22.46903"
+          }
+        }
+      },
+      "Google.Apis/1.66.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.66.0"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.66.0": {
+        "dependencies": {
+          "Google.Apis": "1.66.0",
+          "Google.Apis.Core": "1.66.0",
+          "System.Management": "7.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
+          }
+        }
+      },
+      "Google.Apis.Core/1.66.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.66.0.0",
+            "fileVersion": "1.66.0.0"
+          }
+        }
+      },
+      "Google.Apis.Sheets.v4/1.66.0.3148": {
+        "dependencies": {
+          "Google.Apis": "1.66.0",
+          "Google.Apis.Auth": "1.66.0"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Sheets.v4.dll": {
+            "assemblyVersion": "1.66.0.3148",
+            "fileVersion": "1.66.0.3148"
           }
         }
       },
@@ -552,7 +601,7 @@
       },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
-          "System.CodeDom": "4.4.0"
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
@@ -607,11 +656,11 @@
           }
         }
       },
-      "System.CodeDom/4.4.0": {
+      "System.CodeDom/7.0.0": {
         "runtime": {
-          "lib/netstandard2.0/System.CodeDom.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.25519.3"
+          "lib/net6.0/System.CodeDom.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -667,6 +716,25 @@
           "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "6.24.0.0",
             "fileVersion": "6.24.0.31013"
+          }
+        }
+      },
+      "System.Management/7.0.2": {
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Management.dll": {
+            "assemblyVersion": "7.0.0.2",
+            "fileVersion": "7.0.723.27404"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.2",
+            "fileVersion": "7.0.723.27404"
           }
         }
       },
@@ -809,6 +877,10 @@
         }
       },
       "EMAI.Comun/1.0.0": {
+        "dependencies": {
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148"
+        },
         "runtime": {
           "EMAI.Comun.dll": {}
         }
@@ -819,6 +891,8 @@
           "EMAI.Entidades": "1.0.0",
           "EMAI.Helpers": "1.0.0",
           "EMAI.Servicios": "1.0.0",
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.Data.SqlClient": "5.1.1"
         },
         "runtime": {
@@ -826,12 +900,18 @@
         }
       },
       "EMAI.Entidades/1.0.0": {
+        "dependencies": {
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148"
+        },
         "runtime": {
           "EMAI.Entidades.dll": {}
         }
       },
       "EMAI.Helpers/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
           "Microsoft.Extensions.Configuration.Json": "7.0.0"
@@ -843,7 +923,10 @@
       "EMAI.LND/1.0.0": {
         "dependencies": {
           "EMAI.Datos": "1.0.0",
-          "EMAI.Servicios": "1.0.0"
+          "EMAI.Servicios": "1.0.0",
+          "Emai.Utilities": "1.0.0",
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148"
         },
         "runtime": {
           "EMAI.LND.dll": {}
@@ -852,10 +935,17 @@
       "EMAI.Servicios/1.0.0": {
         "dependencies": {
           "EMAI.Comun": "1.0.0",
-          "EMAI.Entidades": "1.0.0"
+          "EMAI.Entidades": "1.0.0",
+          "Google.Apis.Auth": "1.66.0",
+          "Google.Apis.Sheets.v4": "1.66.0.3148"
         },
         "runtime": {
           "EMAI.Servicios.dll": {}
+        }
+      },
+      "Emai.Utilities/1.0.0": {
+        "runtime": {
+          "Emai.Utilities.dll": {}
         }
       }
     }
@@ -893,6 +983,34 @@
       "sha512": "sha512-eHEiCO/8+MfNc9nH5dVew/+FvxdaGrkRL4OMNwIz0W79+wtJyEoeRlXJ3SrXhoy9XR58geBYKmzMR83VO7bcAw==",
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
+    },
+    "Google.Apis/1.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZNvwU3MaqRW6/FIpWK8S0KutaEQ20mdpUuV8TEGO4pZoxQPnakbwqTo103x+LEPW8BMTtXXHpSSCCojDIVF4Yg==",
+      "path": "google.apis/1.66.0",
+      "hashPath": "google.apis.1.66.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q3ipLhn13U6f4RoAU/C7QJP8v9NTe0yZumy8hEmdR23LVZX70XwU8BDEbkexzc92uY7F1lbzp7mn/L15IAk52Q==",
+      "path": "google.apis.auth/1.66.0",
+      "hashPath": "google.apis.auth.1.66.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QBUHjWbizj30donU51SsrDSFoL8rEmut+5El4GVPoMPDQwejJalaEWswrThc9EwZ6BcCGfxPbGE1iFR1FXiWWA==",
+      "path": "google.apis.core/1.66.0",
+      "hashPath": "google.apis.core.1.66.0.nupkg.sha512"
+    },
+    "Google.Apis.Sheets.v4/1.66.0.3148": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wEXasGG6wiy6e+hmVGbBy2fsOTx3q8essUVVzfAG4k1gTPES4sF/eAM4DhTg2zlOKmxHGeog93lXbslX16A7cA==",
+      "path": "google.apis.sheets.v4/1.66.0.3148",
+      "hashPath": "google.apis.sheets.v4.1.66.0.3148.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1237,12 +1355,12 @@
       "path": "swashbuckle.aspnetcore.swaggerui/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
     },
-    "System.CodeDom/4.4.0": {
+    "System.CodeDom/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
-      "path": "system.codedom/4.4.0",
-      "hashPath": "system.codedom.4.4.0.nupkg.sha512"
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/6.0.1": {
       "type": "package",
@@ -1278,6 +1396,13 @@
       "sha512": "sha512-Qibsj9MPWq8S/C0FgvmsLfIlHLE7ay0MJIaAmK94ivN3VyDdglqReed5qMvdQhSL0BzK6v0Z1wB/sD88zVu6Jw==",
       "path": "system.identitymodel.tokens.jwt/6.24.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512"
+    },
+    "System.Management/7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/qEUN91mP/MUQmJnM5y5BdT7ZoPuVrtxnFlbJ8a3kBJGhe2wCzBfnPFtK2wTtEEcf3DMGR9J00GZZfg6HRI6yA==",
+      "path": "system.management/7.0.2",
+      "hashPath": "system.management.7.0.2.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",
@@ -1424,6 +1549,11 @@
       "sha512": ""
     },
     "EMAI.Servicios/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Emai.Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

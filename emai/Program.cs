@@ -22,6 +22,9 @@ builder.Services.AddScoped<IServicioCooperaciones_Api, CooperacionesServicio_Api
 builder.Services.AddScoped<IServicioPlanEstudios_Api, PlanEstudiosServicio_Api>();
 builder.Services.AddScoped<IServicioAlumnos_Api, AlumnosServicio_Api>();
 
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

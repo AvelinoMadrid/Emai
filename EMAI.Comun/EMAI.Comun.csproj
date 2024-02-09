@@ -14,4 +14,9 @@
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.66.0.3148" />
+  </ItemGroup>
+
 </Project>
