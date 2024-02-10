@@ -13395,23 +13395,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jiren\\.nuget\\packages\\": {},
+    "C:\\Users\\taller\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+      "projectUniqueName": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
       "projectName": "emai",
-      "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
-      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
+      "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+      "packagesPath": "C:\\Users\\taller\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\taller\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

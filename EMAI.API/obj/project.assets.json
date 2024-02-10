@@ -3908,23 +3908,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jiren\\.nuget\\packages\\": {},
+    "C:\\Users\\taller\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "projectUniqueName": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
       "projectName": "EMAI.API",
-      "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
-      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.API\\obj\\",
+      "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "packagesPath": "C:\\Users\\taller\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\taller\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3940,14 +3940,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-              "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+            "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+              "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
             },
-            "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
-              "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj"
+            "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
+              "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj"
             },
-            "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-              "projectPath": "C:\\Users\\jiren\\source\\repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+            "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+              "projectPath": "C:\\Users\\taller\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
             }
           }
         }

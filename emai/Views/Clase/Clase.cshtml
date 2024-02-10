@@ -4,12 +4,12 @@
     ViewBag.Title = "Tabla de Clases ";
 }
 
-    <style>
+<style>
     div.dt-buttons {
         position: initial;
         display: none !important;
     }
-    </style>
+</style>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -21,7 +21,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                   <table id="example1" class="table table-bordered table-hover table-striped">
+                        <table id="example1" class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
                                     <th>ID Clase</th>
@@ -29,15 +29,12 @@
                                     <th>Clases</th>
                                     <th>CVerano</th>
                                     <th>Día</th>
-                                    <th>Horario</th>
-                                    <th>Dia 2</th>
-                                    <th>Horario 2</th>
-                                    <th>Dia 3</th>
-                                    <th>Horario 3</th>
+                                    <th>Dia Horario Normal</th>
+                                    <th>Dia Horario Secundario</th>
+                                    <th>Dia Horario Tercero </th>
                                     <th>Costo</th>
                                     <th>Clase Opcional</th>
                                     <th>Horario Opcional</th>
-                                    <th>Día Opcional</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -49,15 +46,11 @@
                                         <td>@item.Nombre</td>
                                         <td>@item.CNormal</td>
                                         <td>@item.CVerano</td>
-                                        <td>@item.Dia</td>
-                                        <td>@item.Horario</td>
-                                        <td>@item.Dia2</td>
-                                        <td>@item.Horario2</td>
-                                        <td>@item.Dia3</td>
-                                        <td>@item.Horario3</td>
+                                        <td>@item.DiaHorario</td>
+                                        <td>@item.Diahorario2</td>
+                                        <td>@item.DiaHorario3</td>
                                         <td>$ @item.Costo</td>
                                         <td>@item.ClaseOpc</td>
-                                        <td>@item.DiaOpc</td>
                                         <td>@item.HorarioOpc</td>
                                         <td>
                                             <a asp-action="agregarclase" asp-controller="Clase" asp-route-idClase="@item.idClase" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
@@ -66,12 +59,12 @@
                                     </tr>
                                 }
                             </tbody>
-                            </table>
+                        </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-             </div>
+            </div>
             <!-- /.col -->
         </div>
         <!-- /.row -->

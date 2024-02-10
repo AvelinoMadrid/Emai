@@ -10,3 +10,15 @@ C:\Users\jiren\source\repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\E
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.deps.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfoInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfo.cs
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.sourcelink.json
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
