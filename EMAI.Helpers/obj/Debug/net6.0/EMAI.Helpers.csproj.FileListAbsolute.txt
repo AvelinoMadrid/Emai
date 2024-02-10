@@ -231,3 +231,16 @@ C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Helpers\obj\Debug\net6.0\EM
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Helpers\obj\Debug\net6.0\refint\EMAI.Helpers.dll
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.pdb
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.Helpers\obj\Debug\net6.0\ref\EMAI.Helpers.dll
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.deps.json
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.csproj.AssemblyReference.cache
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.AssemblyInfoInputs.cache
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.AssemblyInfo.cs
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.sourcelink.json
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\refint\EMAI.Helpers.dll
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\jiren\Source\Repos\Emai\EMAI.Helpers\obj\Debug\net6.0\ref\EMAI.Helpers.dll

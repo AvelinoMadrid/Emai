@@ -15,12 +15,13 @@ namespace EMAI.LND
         string accederGoogle = StaticVariable.SHEETUSERID;
         string securitySecrety = StaticVariable.SECURITYCLAVE;
         string[] scopes = { SheetsService.Scope.Spreadsheets };
+        
 
-        public GoogleSheetOperaciones(IAutentificacionSheet autentificacionShee)
+        public GoogleSheetOperaciones(IAutentificacionSheet autentificacionSheet)
         {
-            _autentificacionSheet = autentificacionShee;
-            
+            this._autentificacionSheet = autentificacionSheet;
         }
+
         public async Task<List<dataSourceId>> GetDataSorceTittle(string nameSpreadIdentity)
         {
 
@@ -28,17 +29,16 @@ namespace EMAI.LND
             {
                 UserCredential credencial;
 
-                using(var strem = new FileStream("AccesoData.json", FileMode.Open))
+                using (var stream = new FileStream("DataAccess.json", FileMode.Open, FileAccess.ReadWrite))
                 {
-                    string creadPath = "token.json";
+                    string creadPath = "accessTokens.json";
 
                     credencial = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                        GoogleClientSecrets.Load(strem).Secrets,
+                        GoogleClientSecrets.Load(stream).Secrets,
                         scopes,
                         "user",
                         CancellationToken.None,
                         new FileDataStore(creadPath, true)).Result;
-                        
                 }
 
                 var service = new SheetsService(new Google.Apis.Services.BaseClientService.Initializer()
@@ -55,20 +55,21 @@ namespace EMAI.LND
 
                 foreach (var sheet in response.Sheets)
                 {
-                    data.Add(new dataSourceId {
-                        SheetId= sheet.Properties.SheetId,
+                    data.Add(new dataSourceId
+                    {
+                        SheetId = sheet.Properties.SheetId,
                         IdName = sheet.Properties.Title
-                    
+
                     });
                 }
 
                 return data;
             }
-              
-            catch(Exception ex)
+
+            catch (Exception ex)
             {
                 //falara la estructura de error 
-                throw new Exception("No se realizara"+ex.Message);
+                throw new Exception("No se realizara" + ex.Message);
             }
         }
 

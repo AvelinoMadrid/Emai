@@ -22,3 +22,15 @@ C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.deps.json
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.dll
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfoInputs.cache
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfo.cs
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.sourcelink.json
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.dll
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\jiren\Source\Repos\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
