@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qhR+R4FgBEaQ5DJRS4rrwoWqrH8lc6kVINT0fWWDqRavMX5WqioVfrw1U/CV5jcSIL3FqS8hxDw0gKfO92a9HA==",
+  "dgSpecHash": "aNbmC6aZ05Y6Gwg4vG/gvBgrUb9LzEmaCjqaIOJ6DjDBVLriPindPDk7ElGzNRBj0u47tgcl1l8OI/hW6uYIbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+  "projectFilePath": "C:\\Users\\jiren\\source\\repos\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jiren\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",

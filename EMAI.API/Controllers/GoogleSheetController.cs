@@ -18,13 +18,21 @@ namespace EMAI.API.Controllers
             this._googleSheetOperaciones = googleSheetOperaciones;
         }
 
-        //falta retorna la estructura de la respuesta y guardar ese archivo de entrada en appseting
-        [HttpGet("{nameIndentityId}")]
-        public async Task<ActionResult<List<dataSourceId>>> GetWorksheets(string nameIndentityId)
+        [HttpGet]
+        public async Task<ActionResult<bool>>BindingRepuestOfGoogleSheet(){
+
+            var result = await _googleSheetOperaciones.ConnectGoogleSheet();
+
+            return Ok(result);
+
+        }
+
+        [HttpGet("GoogleSheetListData")]
+        public async Task<ActionResult<List<dataSourceId>>> GetWorksheets()
         {
             try
             {
-                var result = await _googleSheetOperaciones.GetDataSorceTittle(nameIndentityId);
+                var result = await _googleSheetOperaciones.GetDataSorceTittle();
                 return Ok(result);
             }
             catch (Exception ex)
@@ -32,6 +40,13 @@ namespace EMAI.API.Controllers
                 return StatusCode(500, "Se presento no baja " + ex.Message);
             }
         }
+        [HttpGet("{HojaIdShhet}")]
+        public async Task<ActionResult<List<GoogleSheetModel>>> GetDataHojaSheet(int HojaIdShhet)
+        {
+            var result = await _googleSheetOperaciones.ReadDataSheet(HojaIdShhet);
+            return Ok(result);
+        }
+    
         //retorna la lista de tabla de shheId 
         //retoan la lista de tabla de sheeId en update medio de row
 

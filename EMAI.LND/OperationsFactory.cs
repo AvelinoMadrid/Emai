@@ -115,14 +115,10 @@ namespace EMAI.LND
         {
             return new Programa5sOperaciones();
         }
-        public static IAutentificacionSheet ObtenerAutentifacionOperaciones()
-        {
-            return new AutentificacionSheetOperaciones();
-        }
         public static IGoogleSheetOperaciones ObtenerGoogleSheetOperaciones()
         {
 
-            return new GoogleSheetOperaciones(new AutentificacionSheetOperaciones());
+            return new GoogleSheetOperaciones();
         }
     }
 }

@@ -63,7 +63,6 @@ builder.Services.AddScoped(typeof(IEventosOperaciones), f => OperationsFactory.O
 builder.Services.AddScoped(typeof(IAsignacionClaseOperaciones), f => OperationsFactory.ObtenerAsignacionClaseOperaciones());
 builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
 builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());
-builder.Services.AddScoped(typeof(IAutentificacionSheet), f => OperationsFactory.ObtenerAutentifacionOperaciones());
 builder.Services.AddScoped(typeof(IGoogleSheetOperaciones), f => OperationsFactory.ObtenerGoogleSheetOperaciones());
 
 

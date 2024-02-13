@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\emai.csproj": {}
+    "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\emai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\emai.csproj": {
+    "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\emai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\emai.csproj",
+        "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\emai.csproj",
         "projectName": "emai",
-        "projectPath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\emai.csproj",
+        "projectPath": "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\emai.csproj",
         "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\obj\\",
+        "outputPath": "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

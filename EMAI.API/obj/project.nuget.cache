@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZW9lKMAHxNq9obKiLKGRp3bQ1oNm0saVlXU4LH5eUCKHqungRGoixOtRG3eSyYf/SsHlvKyDvGaIUV+FxyPPNg==",
+  "dgSpecHash": "k52xuM8dUvIX0Wef06KkX9BY/y/KZw8m1IAhJ0z1DlhRxx98wQgJ6iCR33Im0HkKLGlYqIMBRnI549cPp+Ie1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\EMAI.API\\EMAI.API.csproj",
+  "projectFilePath": "C:\\Users\\jiren\\source\\repos\\Emai\\EMAI.API\\EMAI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jiren\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

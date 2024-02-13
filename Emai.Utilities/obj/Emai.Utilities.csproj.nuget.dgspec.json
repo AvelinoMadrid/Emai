@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jiren\\Source\\Repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {}
+    "C:\\Users\\jiren\\source\\repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jiren\\Source\\Repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {
+    "C:\\Users\\jiren\\source\\repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jiren\\Source\\Repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\jiren\\source\\repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
         "projectName": "Emai.Utilities",
-        "projectPath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
+        "projectPath": "C:\\Users\\jiren\\source\\repos\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
         "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\Emai.Utilities\\obj\\",
+        "outputPath": "C:\\Users\\jiren\\source\\repos\\Emai\\Emai.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

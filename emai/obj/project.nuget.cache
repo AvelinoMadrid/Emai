@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "krq95OVGNGs/QQRgN3rnDotjjrguYidLle42raHlKZjR5hzCdSDQq7tnCqWYdFwIbVFr9gwXnh01GSwy+g6v/g==",
+  "dgSpecHash": "IyCvGzIUjhI3EoSrFLg7czl0Lh917YePGiPOga5UZv8MI5ZZu6OWEth4y3jNzTCxqOitqPl/D59eQZM0EOYTmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jiren\\Source\\Repos\\Emai\\emai\\emai.csproj",
+  "projectFilePath": "C:\\Users\\jiren\\source\\repos\\Emai\\emai\\emai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jiren\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
