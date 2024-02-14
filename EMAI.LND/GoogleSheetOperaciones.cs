@@ -12,7 +12,8 @@ namespace EMAI.LND
     {
         public async Task<bool> ConnectGoogleSheet()
         {
-            string[] scopes = { SheetsService.Scope.Spreadsheets };
+            //acceso solo lectura debemos cambiarlo
+            string[] scopes = { SheetsService.Scope.Spreadsheets};
             try
             {
                 UserCredential credencial;
@@ -34,29 +35,25 @@ namespace EMAI.LND
                     HttpClientInitializer = credencial,
                     ApplicationName = StaticVariable.nameApplication
                 });
-
-                //mandarlo en una capusila de repuesta, estoy va cambiar modo dinamico para idShhetDocuemtn
-                //lo voy a mandar a appsetting global 
                 var request = service.Spreadsheets.Get("1FdU9bBgC0QQeFN20d7C0ac0-8IQp0zTNheHBXt2cWJ8");
                 var response = await request.ExecuteAsync();
-                //me falta mandarlo en contendor de mensaje para tener estilos, pureba V1
+                
                 var result = response != null || response.Sheets != null || response.Sheets.Any() ? true : false;
                 return result;
             }
 
             catch (Exception ex)
-            {
-                //falara la estructura de error igual la de arriba
+            { 
                 throw new Exception("No se Puede Vincular A Google Sheet" + ex.Message);
             }
 
         }
+
         private static SheetsService GetService()
         {
             string[] scopes = { SheetsService.Scope.Spreadsheets}; 
             try
             {
-                //convertir a 
                 UserCredential credencial;
 
                 using (var stream = new FileStream("DataAccess.json", FileMode.Open, FileAccess.ReadWrite))
@@ -70,14 +67,12 @@ namespace EMAI.LND
                         CancellationToken.None,
                         new FileDataStore(creadPath, true)).Result;
                 }
-
+                // Create Google Sheets API service.
                 var service = new SheetsService(new Google.Apis.Services.BaseClientService.Initializer()
                 {
                     HttpClientInitializer = credencial,
                     ApplicationName = StaticVariable.nameApplication
                 });
-
-               
                 return service;
             }
 
@@ -87,29 +82,22 @@ namespace EMAI.LND
                // throw new Exception("No se Puede Vincular A Google Sheet" + ex.Message);
                 return null; 
             }
-
-
         }
-
-        public async Task<(int rowCount, int columnCount)> GetRowAndColumnHojas(string sheetName)
+        public async Task<(int rowCount, int columnCount)>GetRowAndColumnHojas(string sheetName)
         {
             try
             {
-                int row = 0;
                 //var dataSheet = await GetDataSorceTittle();
                 var request = GetService().Spreadsheets.Get("1FdU9bBgC0QQeFN20d7C0ac0-8IQp0zTNheHBXt2cWJ8");
                 var response = await request.ExecuteAsync();
-
                 var sheetData = response.Sheets.FirstOrDefault(s => s.Properties.Title == sheetName);
 
                 if (sheetData != null)
                 {
                     int rowCount = sheetData.Properties.GridProperties.RowCount != null ? sheetData.Properties.GridProperties.RowCount.Value : 0;
-
                     int ColumnCount = sheetData.Properties.GridProperties.RowCount != null ? sheetData.Properties.GridProperties.ColumnCount.Value : 0;
 
                     return (rowCount, ColumnCount);
-
                 }
                 else
                 {
@@ -120,9 +108,7 @@ namespace EMAI.LND
             {
                 return (0, 0);
             }
-
         }
-
         public async Task<List<dataSourceId>> GetDataSorceTittle()
         {
             try
@@ -145,7 +131,6 @@ namespace EMAI.LND
 
                 return data;
             }
-      
             catch (Exception ex)
             {
                 //falara la estructura de error 
@@ -153,59 +138,60 @@ namespace EMAI.LND
             }
         }
         public async Task<GoogleSheetModel> ReadDataSheet(int dataSheeId)
-        {
-            
+        {  
             try
             {
                 //verificar si existe la bendita hoja
                 var retornDataSheetNew = await GetDataSorceTittle();
                 var result = retornDataSheetNew.FirstOrDefault(m => m.SheetId == dataSheeId);
-                if (result!=null)
+                if (result != null)
                 {
-                    string nameHoja = result.IdName;//obtenemos el nombre
+                    string nameHoja = result?.IdName;//obtenemos el nombre
                     var resultData = await GetRowAndColumnHojas(nameHoja);//Aqui tengo filas y columnas
-                    //var d = resultData.rowCount
+                    
                     var request = GetService().Spreadsheets.Values.Get("1FdU9bBgC0QQeFN20d7C0ac0-8IQp0zTNheHBXt2cWJ8", $"{nameHoja}!A1:{GetColumnName(resultData.columnCount)}");
 
-                    request.MajorDimension = SpreadsheetsResource.ValuesResource.GetRequest.MajorDimensionEnum.ROWS;
+                    request.MajorDimension = SpreadsheetsResource.ValuesResource.GetRequest.MajorDimensionEnum.DIMENSIONUNSPECIFIED;
                     request.ValueRenderOption = SpreadsheetsResource.ValuesResource.GetRequest.ValueRenderOptionEnum.FORMATTEDVALUE;
-                    request.DateTimeRenderOption = SpreadsheetsResource.ValuesResource.GetRequest.DateTimeRenderOptionEnum.FORMATTEDSTRING;
+                    request.DateTimeRenderOption = SpreadsheetsResource.ValuesResource.GetRequest.DateTimeRenderOptionEnum.SERIALNUMBER;
 
 
                     var response = await request.ExecuteAsync();
                     var data = response.Values;
-                    GoogleSheetModel instanciaModel = new GoogleSheetModel();
 
-                    if (data != null || data.Count > 0) {
-                        instanciaModel.CountRow = resultData.rowCount;
-                        instanciaModel.CountColumn = resultData.columnCount;
-                        instanciaModel.DataSheetHoja = new string[data.Count][];
-                        for (int i = 0; i <data.Count; i++)
+                    if (data!=null && data.Count > 0) {
+
+                        var instanciaModel = new GoogleSheetModel
                         {
-                            instanciaModel.DataSheetHoja[i] = new string[data[i].Count];
+                            CountRow = data.Count,
+                            CountColumn= resultData.columnCount,
+                            DataSheetHoja = new List<Dictionary<int, List<string>>>()
+                        };
+
+                        for (int i = 0; i < data.Count; i++)
+                        {
+                            var rowData = new Dictionary<int, List<string>>();
+                            rowData[i + 1] = new List<string>(); 
+
                             for (int j = 0; j < data[i].Count; j++)
                             {
-
-                                if (data.Count > i && data[i].Count > j)
-                                {
-                                    instanciaModel.DataSheetHoja[i][j] = Convert.ToString(data[i][j]);
-                                }
-                                else
-                                {
-                                    //estabvlcer vacia  
-                                    instanciaModel.DataSheetHoja[i][j] = "";
-                                }
+                                rowData[i + 1].Add(Convert.ToString(data[i][j]));
                             }
+                            instanciaModel.DataSheetHoja.Add(rowData);
                         }
-
-                        instanciaModel.isPermisoAccess = true;
+                        return instanciaModel;
                     }
-                    return instanciaModel;
+                    else
+                    {
+                        //una vacia 
+                        return new GoogleSheetModel();
+                    }
                 }
                 else
                 {
                     throw new Exception("Retornamos la data que va crear");
-                }
+                }      
+      
             }
 
             catch (Exception ex)
@@ -214,7 +200,6 @@ namespace EMAI.LND
                 throw new Exception("No se realizara" + ex.Message);
             }
         }
-        //Nos pemrite generar las lletras de las columnas 
         private static string GetColumnName(int columnCount)
         {
             //instancia 
@@ -227,10 +212,12 @@ namespace EMAI.LND
                 columnCount = (columnCount-1)/26;
             }
             return columnName.ToString();
-
         }
-
-
+       public async Task<Object> UpdateDataSheet(int dataSheetId, IList<IList<Object>> values)
+        {
+            //BatchUpdate checar esta funcione de 
+            return await UpdateDataSheet(dataSheetId, values);
+        }
     }
 }
 
