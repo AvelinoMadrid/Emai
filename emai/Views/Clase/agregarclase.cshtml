@@ -12,7 +12,7 @@
     <!-- /.card-header -->
     <div class="card-body" ng-controller="myCtrl">
 
-        <form asp-action="GuardarCambios" asp-controller="Clase" method="post" name="myForm" class="needs-validation" novalidate>
+        <form asp-action="GuardarCambios" asp-controller="Clase" method="post" class="needs-validation" novalidate>
 
             <div class="row"> 
             <input asp-for="idClase" type="hidden" />
@@ -21,23 +21,23 @@
 
                 <div class="col-md-4 form-group">
                 <label class="form-label">Nombre de la clase</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="Nombre" ng-model="nombre" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Nombre" ng-model="nombre" name="Nombre" id="Nombre" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
 
-             @*   <div class="col-md-6 form-group">
+          @*     <div class="col-md-6 form-group">
                 <label class="form-label">Clase Normal</label>
                 <input type="text" class="form-control form-control-sa" asp-for="CNormal"  />
-                <
-            </div>*@
+                
+            </div> 
+ *@
 
 
-
-                <div class="col-md-4 form-group">
+               <div class="col-md-4 form-group">
                     <div class="form-group" >
                         <label>Nombre del Curso</label>
-                        <select class="form-control  select2" style="width: 100%;"  asp-for="CNormal" name="CNormal" id="CNormal" required>
+                        <select class="form-control  select2" style="width: 100%;"  asp-for="CNormal" ng-model="CNormal" name="CNormal" id="CNormal" required>
                             <option  selected disabled value="">Escoger nombre del curso</option>
                             <option value="Normal" >Normal</option>
                             <option value="Verano" >Verano</option>
@@ -46,133 +46,50 @@
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
-                </div>
+                </div> 
 
 
                 <div class="col-md-4 form-group">
                 <label class="form-label">Clase de Verano</label>
-                <input type="text" class="form-control form-control-sa" asp-for="CVerano" placeholder="Opcional" />
+                    <input type="text" class="form-control form-control-sa" asp-for="CVerano" ng-model="CVerano" name="CVerano" id="CVerano" placeholder="Opcional" />
             </div>
 
-
-             @*    <div class="col-md-2 form-group">
-                    <div class="form-group" >
-                        <label>Día</label>
-                        <select class="form-control select2"  style="width: 100%;"  asp-for="Dia" name="Dia" id="Dia" required>
-                            <option selected disabled value="">Escoger el día</option>
-                            <option value="Lunes">Lunes</option>
-                            <option value="Martes">Martes</option>
-                            <option value="Miercoles">Miercoles</option>
-                            <option value="Jueves">Jueves</option>
-                            <option value="Viernes">Viernes</option>
-                            <option value="Sabado">Sábado</option>
-
-                        </select>
-                        <div class="valid-feedback">Válido.</div>
-                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                    </div>
-                </div> *@
 
 
 
                <div class="col-md-4 form-group">
                 <label class="form-label">Día y hora</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="DiaHorario" name="Dia" id="Dia" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Dia" ng-model="Dia" name="Dia" id="Dia" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
 
 
-
-@* 
-                <div class="col-md-2 form-group">
-                <label class="form-label">Horario</label>
-                    <input type="time" class="form-control form-control-sa" asp-for="Horario" name="Horario" id="Horario" required />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
- *@
-
-
-            @*     <div class="col-md-2 form-group">
-                    <div class="form-group">
-                        <label>Día 2</label>
-                        <select class="form-control  select2" style="width: 100%;"  asp-for="Dia2" name="Dia2" id="Dia2" required>
-                            <option selected disabled value="">Escoger el día</option>
-                            <option value="Lunes">Lunes</option>
-                            <option value="Martes">Martes</option>
-                            <option value="Miercoles">Miercoles</option>
-                            <option value="Jueves">Jueves</option>
-                            <option value="Viernes">Viernes</option>
-                            <option value="Sabado">Sábado</option>
-
-                        </select>
-                        <div class="valid-feedback">Válido.</div>
-                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                    </div>
-                </div>
- *@
 
 
                 <div class="col-md-4 form-group">
                 <label class="form-label">Día y hora 2</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="Diahorario2" name="Dia2" id="Dia2" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Dia2" name="Dia2" id="Dia2" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-@* 
-                <div class="col-md-2 form-group">
-                <label class="form-label">Horario 2</label>
-                    <input type="time" class="form-control form-control-sa" asp-for="Horario2" name="Horario2" id="Horario2" required />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
- *@
-
-
-@* 
-                <div class="col-md-2 form-group">
-                    <div class="form-group" >
-                        <label>Día 3</label>
-                        <select class="form-control  select2"  style="width: 100%;"  asp-for="Dia3" name="Dia3" id="Dia3" required>
-                            <option selected disabled value="">Escoger el día</option>
-                            <option value="Lunes">Lunes</option>
-                            <option value="Martes">Martes</option>
-                            <option value="Miercoles">Miercoles</option>
-                            <option value="Jueves">Jueves</option>
-                            <option value="Viernes">Viernes</option>
-                            <option value="Sabado">Sábado</option>
-
-                        </select>
-                        <div class="valid-feedback">Válido.</div>
-                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                    </div>
-                </div> *@
 
 
 
 
                <div class="col-md-4 form-group">
                 <label class="form-label">Día y hora 3</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="DiaHorario3" name="Dia3" id="Dia3" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Dia3" name="Dia3" id="Dia3" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-
-
-             @*    <div class="col-md-2 form-group">
-                <label class="form-label">Horario 3</label>
-                    <input type="time" class="form-control form-control-sa" asp-for="Horario3" name="Horario3" id="Horario3" required />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div> *@
 
 
 
 
                 <div class="col-md-3 form-group">
                 <label class="form-label">Costo</label>
-                    <input type="number" class="form-control form-control-sa" asp-for="Costo" name="Costo" id="Costo" required value="$" />
+                    <input type="number" class="form-control form-control-sa" asp-for="Costo" name="Costo" id="Costo" required  />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
@@ -187,46 +104,12 @@
             </div>
 
 
-@* 
-                <div class="col-md-3 form-group">
-                    <div class="form-group" >
-                        <label>Día Opcional</label>
-                        <select class="form-control  select2" style="width: 100%;"  asp-for="DiaOpc" name="DiaOpc" id="DiaOpc" >
-                            <option selected disabled value="">Escoger el día</option>
-                            <option value="Lunes">Lunes</option>
-                            <option value="Martes">Martes</option>
-                            <option value="Miercoles">Miercoles</option>
-                            <option value="Jueves">Jueves</option>
-                            <option value="Viernes">Viernes</option>
-                            <option value="Sabado">Sábado</option>
-                            <option value="No hay Opcional">No hay Opcional</option>
-
-                        </select>
-                        <div class="valid-feedback">Válido.</div>
-                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                    </div>
-                </div>
- *@
-
                     <div class="col-md-4 form-group">
                 <label class="form-label">Día y hora Opcional</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="ClaseOpc" name="DiaOpc" id="DiaOpc" />
+                    <input type="text" class="form-control form-control-sa" asp-for="HorarioOpc" name="horarioOpc" id="horarioOpc" />
                 <div class="valid-feedback">Válido.</div>
                 <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
-
-           @*      <div class="col-md-3 form-group">
-                <label class="form-label">Horario Opcional</label>
-                    <input type="time" class="form-control form-control-sa" asp-for="HorarioOpc" name="HorarioOpc" id="HorarioOpc" />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div> *@
-
-
-
-
-
-           
 
 
 
@@ -238,40 +121,11 @@
                     <a asp-action="Clase" asp-controller="Clase" class="btn btn-warning btn-sm" style="width:100% !important">Regresar </a>
                 </div>
 
-                <script>
-                    angular.module('myApp', [])
-                        .controller('myCtrl', function ($scope) {
-                            // Lógica adicional del controlador si es necesario
-                        });
-                </script>
-
             </div>
         </form>
-
-        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
 
     </div>
 </div>
 
 
 
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (() => {
-        'use strict';
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation');
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms).forEach((form) => {
-            form.addEventListener('submit', (event) => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    })();
-</script>

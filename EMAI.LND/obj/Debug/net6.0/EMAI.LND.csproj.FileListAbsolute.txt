@@ -339,30 +339,6 @@ C:\Users\jiren\OneDrive\Música\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
 C:\Users\jiren\OneDrive\Música\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.deps.json
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.sourcelink.json
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
-C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jiren\source\repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
@@ -441,3 +417,29 @@ C:\Users\jiren\Source\Repos\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
 C:\Users\jiren\Source\Repos\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
 C:\Users\jiren\Source\Repos\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
 C:\Users\jiren\Source\Repos\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.deps.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\Emai.Utilities.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.sourcelink.json
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
+C:\Users\anubi\source\repos\Emai nuevo\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll

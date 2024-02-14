@@ -979,11 +979,11 @@ namespace EMAI.Datos
                 Nombre = (string)reader["Nombre"],
                 CNormal = (string)reader["CNormal"],
                 CVerano = (string)reader["CVerano"],
-                DiaHorario = (string)reader["Dia"],
-                
-                Diahorario2 = (string)reader["Dia2"],
+                Dia = (string)reader["Dia"],
+
+                Dia2 = (string)reader["Dia2"],
                 /*Horario2 = (string)reader["Horario2"]*/
-                DiaHorario3 = (string)reader["Dia3"],
+                Dia3 = (string)reader["Dia3"],
                 //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
                 ClaseOpc = (string)reader["ClaseOpc"].ToString(),
@@ -1026,11 +1026,11 @@ namespace EMAI.Datos
                 Nombre = (string)reader["Nombre"],
                 CNormal = (string)reader["CNormal"],
                 CVerano = (string)reader["CVerano"],
-                DiaHorario = (string)reader["Dia"],
+                Dia = (string)reader["Dia"],
 
-                Diahorario2 = (string)reader["Dia2"],
+                Dia2 = (string)reader["Dia2"],
                 /*Horario2 = (string)reader["Horario2"]*/
-                DiaHorario3 = (string)reader["Dia3"],
+                Dia3 = (string)reader["Dia3"],
                 //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
                 ClaseOpc = (string)reader["ClaseOpc"].ToString(),
