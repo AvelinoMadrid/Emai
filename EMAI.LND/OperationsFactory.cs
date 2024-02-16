@@ -120,5 +120,9 @@ namespace EMAI.LND
 
             return new GoogleSheetOperaciones();
         }
+        public static IRepClaseOperaciones ObtenerRepClaseOperaciones()
+        {
+            return new RepClaseOperaciones();
+        }
     }
 }

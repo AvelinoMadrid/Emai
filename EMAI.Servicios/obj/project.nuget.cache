@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "SuvIt+sHYv02qPelnRwJHx63rCN8YJakmV+Sem1vF1WjyP5FMroMNyjewKDdZKU05DxwwK3OmO0TeJQqJiSFAg==",
+  "dgSpecHash": "bjb9LRUVyxQ6YQ5tAR7dir2LT7un+eoXynGj0+iInFrBlJfMj9YlmWxBmBEMeJCNCzjQaVJphpJsiifVwnQzdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jiren\\source\\repos\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+  "projectFilePath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+    "C:\\Users\\amyma\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\amyma\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
