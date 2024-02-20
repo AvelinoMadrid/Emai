@@ -39,10 +39,10 @@ namespace EMAI.LND
 
         //Actualizar Horario
 
-        public async Task<bool> ActualizarHorario(int IdHorario, int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin)
+        public async Task<bool> ActualizarHorario(int IdHorario,string dia, string hora)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarHorario(IdHorario,IdMaestro,IdClase,Dia,Fecha,HoraInicio,HoraFin);
+            var rsp = await db.ActualizarHorario(IdHorario,dia,hora);
             return rsp;
         }
 

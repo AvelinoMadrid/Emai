@@ -20,11 +20,8 @@
                                 <tr>
 
                                     <th>Dia</th>
-     
                                     <th>Hora</th>
                                     <th>Editar / Elminar</th>
-  
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,7 +32,7 @@
 
                                         <td>@item.Dia</td>
                                       
-                                        <td>@item.HoraInicio</td>
+                                        <td>@item.Hora</td>
                                         <td>
                                             <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-primary btn-sm">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-danger btn-sm">ELIMINAR </a>

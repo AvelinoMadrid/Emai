@@ -15,42 +15,34 @@
 
             <input asp-for="IdHorarioVerano" type="hidden" />
 
-            <div class="mb-2">
-                <label class="form-label">Maestro</label>
-                <select class="form-control form-control-sa" asp-for="IdMaestro">
-                    <option value="">Seleccione un Maestro</option>
-                    @foreach (var maestro in Model.MaestrosDisponibles)
-                    {
-                        <option value="@maestro.IdMaestro">@maestro.Nombre</option>
-                    }
-                </select>
+            @* Dia *@ 
+            <div class="col-md-6 form-group">
+                <div class="form-group">
+                    <label class="form-label">Día</label>
+                    <select class="form-control select2" style="width: 100%;" name="Dia" id="Dia" asp-for="Dia" required>
+                        <option selected disabled value="">Escoger el día</option>
+                        <option>Lunes</option>
+                        <option>Martes</option>
+                        <option>Miercoles</option>
+                        <option>Jueves</option>
+                        <option>Viernes</option>
+                        <option>Sábado</option>
+
+
+                    </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                </div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">Clase</label>
-                <select class="form-control form-control-sa" asp-for="IdClase">
-                    <option value="">Seleccione una clase</option>
-                    @foreach (var clase in Model.ClasesDisponibles)
-                    {
-                        <option value="@clase.idClase">@clase.Nombre</option>
-                    }
-                </select>
+
+            <div class="col-md-6 form-group">
+                <label class="form-label">Hora</label>
+                <input type="time" class="form-control form-control-sa" name="Hora" id="Hora" asp-for="Hora" required />
+                <div class="valid-feedback">Válido.</div>
+                <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="mb-2">
-                <label class="form-label">Dia</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Dia" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Fecha</label>
-                <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Hora Inicio</label>
-                <input type="time" class="form-control form-control-sa" asp-for="HoraInicio" />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Hora Fin</label>
-                <input type="time" class="form-control form-control-sa" asp-for="HoraFin" />
-            </div>
+   
             <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
 
             <a asp-action="HorarioVerano" asp-controller="HorarioVerano" class="btn btn-warning btn-sm">Volver a la vista </a>

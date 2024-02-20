@@ -17,13 +17,10 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>IdHorarioVerano</th>
-                                    <th>IdMaestro</th>
-                                    <th>IdClase</th>
+                                    <th>Codigo</th>
                                     <th>Dia</th>
-                                    <th>Fecha</th>
-                                    <th>HoraInicio</th>
-                                    <th>HoraFin</th>
+                                    <th>Hora</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,14 +28,10 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-
                                         <td>@item.IdHorarioVerano</td>
-                                        <td>@item.NombreMaestro</td>
-                                        <td>@item.NombreClase</td>
                                         <td>@item.Dia</td>
-                                        <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
-                                        <td>@item.HoraInicio.ToString("hh:mm tt")</td>
-                                        <td>@item.HoraFin.ToString("hh:mm tt")</td>
+                                        <td>@item.Hora</td>
+                                        
                                         <td>
                                             <a asp-action="agregarhorarioVr" asp-controller="HorarioVerano" asp-route-IdHorarioVerano="@item.IdHorarioVerano" class="btn btn-primary btn-sm">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="HorarioVerano" asp-route-IdHorarioVerano="@item.IdHorarioVerano" class="btn btn-danger btn-sm">ELIMINAR </a>

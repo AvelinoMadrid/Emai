@@ -34,10 +34,10 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task<bool> UpdateHorarioVerano(int IdHorarioVerano,int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin)
+        public async Task<bool> UpdateHorarioVerano(int IdHorario, string Dia, string Hora)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateHorarioVerano(IdHorarioVerano,IdMaestro,IdClase, Dia, Fecha, HoraInicio, HoraFin);
+            var rsp = await db.UpdateHorarioVerano(IdHorario, Dia,Hora);
             return rsp;
         }
 

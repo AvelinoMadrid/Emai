@@ -91,7 +91,7 @@ namespace emai.Servicios
             var horarioVr2 = new HttpClient();
             horarioVr2.BaseAddress = new Uri(_baseurl);
             var content = new StringContent(JsonConvert.SerializeObject(horarioVerano), Encoding.UTF8, "application/json");
-            var response = await horarioVr2.PutAsync($"api/HorarioVerano/", content);
+            var response = await horarioVr2.PutAsync($"/api/HorarioVerano/Actualizar/", content);
 
             if (response.IsSuccessStatusCode)
             {

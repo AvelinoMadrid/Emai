@@ -129,7 +129,7 @@ namespace EMAI.Servicios
         Task<List<HorariosModel>> GetHorarios();
         Task<HorariosIDModel> GetHorariosID(int IdHorario);
         Task<bool> InsertarHorario(HorariosInsertarModel value);
-        Task<bool> ActualizarHorario(int IdHorario, int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin);
+        Task<bool> ActualizarHorario(int IdHorario, string dia,string hora);
         Task<bool> EliminarHorario(int IdHorario);
         #endregion
 
@@ -137,7 +137,7 @@ namespace EMAI.Servicios
         Task<List<HorariosVeranoModel>> GetAllHorariosVerano();
         Task<HorariosVeranoModel> GetHorariosVeranoById(int Id);
         Task<bool> InsertHorarioVerano(HorariosVeranoInsertModel value);
-        Task<bool> UpdateHorarioVerano(int IdHorario, int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin);
+        Task<bool> UpdateHorarioVerano(int IdHorario,string Dia,string Hora);
         Task<bool> DeleteHorarioVerano(int Id);
 
         #endregion
@@ -157,7 +157,7 @@ namespace EMAI.Servicios
         Task<MaestrosIDModel> GetMaestrosID(int IdMaestro);
         Task<bool> InsertarMaestro(MaestrosInsertarModel value);
 
-        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, bool Status,  decimal Pago);
+        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status,  decimal Pago);
 
         Task<bool> EliminarMaestro(int IdMaestro);
         #endregion

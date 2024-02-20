@@ -67,8 +67,8 @@ namespace emai.Controllers
                 ViewBag.Action = "Editar Horario";
             }
 
-            modelo_horario.MaestrosDisponibles = await _ServicioMaestroApi.ObtenerTodos();
-            modelo_horario.ClasesDisponibles = await _ServicioClaseApi.ObtenerTodos();
+            //modelo_horario.MaestrosDisponibles = await _ServicioMaestroApi.ObtenerTodos();
+            //modelo_horario.ClasesDisponibles = await _ServicioClaseApi.ObtenerTodos();
 
             return View(modelo_horario);
         }

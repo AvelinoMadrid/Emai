@@ -43,7 +43,7 @@ namespace EMAI.API.Controllers
         [HttpPut("/api/Horarios/Actualizar")]
         public async Task Put([FromBody] HorariosActualizarModel value)
         {
-            await _repository.ActualizarHorario(value.IdHorario,value.IdMaestro, value.IdClase, value.Dia, value.Fecha, value.HoraInicio, value.HoraFin);
+            await _repository.ActualizarHorario(value.idHorario,value.Dia,value.Hora);
         }
 
         //Eliminar Horarios

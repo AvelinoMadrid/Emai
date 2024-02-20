@@ -73,7 +73,7 @@ namespace emai.Servicios
             var horario1 = new HttpClient();
             horario1.BaseAddress = new Uri(_baseurl);
             var content = new StringContent(JsonConvert.SerializeObject(horario), Encoding.UTF8, "application/json");
-            var response = await horario1.PostAsync($"api/Horario/Insertar/", content);
+            var response = await horario1.PostAsync($"/api/Horario/Insertar/", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -129,7 +129,8 @@ namespace emai.Servicios
             using (var httpClient = new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(_baseurl);
-                var response = await httpClient.GetAsync($"api/Clase/");
+                var response = await httpClient.GetAsync($"api/Horarios/");
+                //var response = await httpClient.GetAsync($"api/Clase/");
 
                 if (response.IsSuccessStatusCode)
                 {

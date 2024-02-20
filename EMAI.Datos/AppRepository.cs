@@ -36,7 +36,7 @@ namespace EMAI.Datos
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -1841,20 +1841,14 @@ namespace EMAI.Datos
             }
         }
 
-        #endregion
 
         private HorariosModel MapToHorarios(SqlDataReader reader)
         {
             return new HorariosModel()
             {
-
                 IdHorario = (int)reader["IdHorario"],
-                IdMaestro = (int)reader["IdMaestro"],
-                IdClase = (int)reader["IdClase"],
                 Dia = (string)reader["Dia"],
-                Fecha = (DateTime)reader["Fecha"],
-                HoraInicio = (DateTime)reader["HoraInicio"],
-                HoraFin = (DateTime)reader["HoraFin"]
+                Hora = (string)reader["Hora"],
 
             };
         }
@@ -1887,14 +1881,9 @@ namespace EMAI.Datos
         {
             return new HorariosIDModel()
             {
-
                 IdHorario = (int)reader["IdHorario"],
-                IdMaestro = (int)reader["IdMaestro"],
-                IdClase = (int)reader["IdClase"],
                 Dia = (string)reader["Dia"],
-                Fecha = (DateTime)reader["Fecha"],
-                HoraInicio = (DateTime)reader["HoraInicio"],
-                HoraFin = (DateTime)reader["HoraFin"],
+                Hora = (string)reader["Hora"],
             };
         }
 
@@ -1905,13 +1894,10 @@ namespace EMAI.Datos
                 using (SqlCommand cmd = new SqlCommand("InsertarHorarios", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", value.IdMaestro));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
+                    //cmd.Parameters.Add(new SqlParameter("@IdHorario", value.idHorario));
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@HoraInicio", value.HoraInicio));
-                    cmd.Parameters.Add(new SqlParameter("@HoraFin", value.HoraFin));
-
+                    cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
+            
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
@@ -1919,7 +1905,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarHorario(int IdHorario,int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin)
+        public async Task<bool> ActualizarHorario(int IdHorario,string Dia, string Hora)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1927,12 +1913,9 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdHorario", IdHorario));
-                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", IdMaestro));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", IdClase));
                     cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@HoraInicio", HoraInicio));
-                    cmd.Parameters.Add(new SqlParameter("@HoraFin", HoraFin));
+                    cmd.Parameters.Add(new SqlParameter("@Hora", Hora));
+                   
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1956,7 +1939,8 @@ namespace EMAI.Datos
             }
         }
 
-    
+        #endregion
+
 
         #region "Seccion ---> HorariosVerano"
         public async Task<List<HorariosVeranoModel>> GetAllHorariosVerano()
@@ -2012,12 +1996,9 @@ namespace EMAI.Datos
             return new HorariosVeranoModel()
             {
                 IdHorarioVerano = (int)reader["IdHorarioVerano"],
-                IdMaestro = (int)reader["IdMaestro"],
-                IdClase = (int)reader["IdClase"],
                 Dia = reader["Dia"].ToString(),
-                Fecha = (DateTime)reader["Fecha"],
-                HoraInicio = (DateTime)reader["HoraInicio"],
-                HoraFin = (DateTime)reader["HoraFin"]
+                Hora = reader["Hora"].ToString(),
+                
             };
         }
 
@@ -2029,12 +2010,10 @@ namespace EMAI.Datos
                 using (SqlCommand cmd = new SqlCommand("usp_HorarioVeranoInsertar", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", value.IdMaestro));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
+                   
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@HoraInicio", value.HoraInicio));
-                    cmd.Parameters.Add(new SqlParameter("@HoraFin", value.HoraFin));
+                    
+                    cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2043,7 +2022,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> UpdateHorarioVerano(int IdHorarioVerano,int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin)
+        public async Task<bool> UpdateHorarioVerano(int IdHorarioVerano,string Dia, string Hora)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2051,12 +2030,10 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdHorarioVerano", IdHorarioVerano));
-                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", IdMaestro));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", IdClase));
+                
                     cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@HoraInicio", HoraInicio));
-                    cmd.Parameters.Add(new SqlParameter("@HoraFin", HoraFin));
+                    
+                    cmd.Parameters.Add(new SqlParameter("@Hora", Hora));
 
 
                     await sql.OpenAsync();
@@ -2257,7 +2234,7 @@ namespace EMAI.Datos
                 Telefono = (string)reader["Telefono"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
           
-                Status = (bool)reader["Status"],
+                Estatus = (string)reader["Estatus"],
               
                 Pago = (decimal)reader["Pago"],
 
@@ -2301,7 +2278,7 @@ namespace EMAI.Datos
                 Telefono = (string)reader["Telefono"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
          
-                Status = (bool)reader["Status"],
+                Estatus = (string)reader["Estatus"],
               
                 
                 Pago = (decimal)reader["Pago"],
@@ -2323,7 +2300,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Telefono", value.Telefono));
                     cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimiento));
                
-                    cmd.Parameters.Add(new SqlParameter("@Status", value.Status));
+                    cmd.Parameters.Add(new SqlParameter("@Status", value.Estatus));
                  
                     cmd.Parameters.Add(new SqlParameter("@Pago", value.Pago));
 
@@ -2334,7 +2311,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, bool Status, decimal Pago)
+        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento,string Status, decimal Pago)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {

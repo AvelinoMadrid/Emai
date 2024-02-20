@@ -12,7 +12,7 @@ namespace EMAI.Servicios
         Task<List<HorariosModel>> GetHorarios();
         Task<HorariosIDModel> GetHorariosID(int IdHorario);
         Task<bool> InsertarHorario(HorariosInsertarModel value);
-        Task<bool> ActualizarHorario(int IdHorario,int IdMaestro, int IdClase, string Dia, DateTime Fecha, DateTime HoraInicio, DateTime HoraFin);
+        Task<bool> ActualizarHorario(int IdHorario, string dia, string hora);
         Task<bool> EliminarHorario(int IdHorario);
     }
 }
