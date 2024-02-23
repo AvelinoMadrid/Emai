@@ -448,11 +448,13 @@ C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.dll
+C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.DTOS.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\Emai.Utilities.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Datos.pdb
+C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.DTOS.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Servicios.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\Emai.Utilities.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb

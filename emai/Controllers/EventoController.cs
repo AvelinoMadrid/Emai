@@ -32,7 +32,7 @@ namespace emai.Controllers
             string baseurl = "https://localhost:7265";
             _ServicioEvento_Api = servicioEvento_Api;
             _ServicioAlumnos_Api = alumnosServicio_Api;
-            TwilioAccountSid = _configuration.GetSection("Twilio:AccountSid").Value;
+            TwilioAccountSid = _configuration.GetSection("Twilio:AccountSid").Value;                    
             TwilioAuthToken = _configuration.GetSection("Twilio:AuthToken").Value;
             TwilioPhoneNumber = _configuration.GetSection("Twilio:PhoneNumber").Value;
         }

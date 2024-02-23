@@ -899,6 +899,11 @@
           "EMAI.Datos.dll": {}
         }
       },
+      "EMAI.DTOS/1.0.0": {
+        "runtime": {
+          "EMAI.DTOS.dll": {}
+        }
+      },
       "EMAI.Entidades/1.0.0": {
         "dependencies": {
           "Google.Apis.Auth": "1.66.0",
@@ -922,11 +927,13 @@
       },
       "EMAI.LND/1.0.0": {
         "dependencies": {
+          "EMAI.DTOS": "1.0.0",
           "EMAI.Datos": "1.0.0",
           "EMAI.Servicios": "1.0.0",
           "Emai.Utilities": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "System.Security.Cryptography.Cng": "5.0.0"
         },
         "runtime": {
           "EMAI.LND.dll": {}
@@ -935,6 +942,7 @@
       "EMAI.Servicios/1.0.0": {
         "dependencies": {
           "EMAI.Comun": "1.0.0",
+          "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148"
@@ -1529,6 +1537,11 @@
       "sha512": ""
     },
     "EMAI.Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMAI.DTOS/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -9,10 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.66.0.3148" />
+    <PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EMAI.Datos\EMAI.Datos.csproj" />
+    <ProjectReference Include="..\EMAI.DTOS\EMAI.DTOS.csproj" />
     <ProjectReference Include="..\EMAI.Servicios\EMAI.Servicios.csproj" />
     <ProjectReference Include="..\Emai.Utilities\Emai.Utilities.csproj" />
   </ItemGroup>

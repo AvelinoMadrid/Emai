@@ -1033,6 +1033,16 @@
           "bin/placeholder/EMAI.Comun.dll": {}
         }
       },
+      "EMAI.DTOS/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EMAI.DTOS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EMAI.DTOS.dll": {}
+        }
+      },
       "EMAI.Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1069,6 +1079,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "EMAI.Comun": "1.0.0",
+          "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148"
@@ -2839,6 +2850,11 @@
       "type": "project",
       "path": "../EMAI.Comun/EMAI.Comun.csproj",
       "msbuildProject": "../EMAI.Comun/EMAI.Comun.csproj"
+    },
+    "EMAI.DTOS/1.0.0": {
+      "type": "project",
+      "path": "../EMAI.DTOS/EMAI.DTOS.csproj",
+      "msbuildProject": "../EMAI.DTOS/EMAI.DTOS.csproj"
     },
     "EMAI.Entidades/1.0.0": {
       "type": "project",

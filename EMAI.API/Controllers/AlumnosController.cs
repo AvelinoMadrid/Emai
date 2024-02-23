@@ -39,6 +39,12 @@ namespace EMAI.API.Controllers
         {
             await _repository.InsertarAlumno(value);
         }
+        [HttpPost("RegistarAlumno")]
+        public async Task<IActionResult> RegisterAlumno([FromBody] InsertarAlumnoModelTwo request)
+        {
+            var response = await _repository.RegisterAlumno(request);
+            return Ok(response);
+        }
 
         [HttpPost("api/Alumnos/InsertarNuevaparte")]
         public async Task Post([FromBody] AlumnosNuevo value)

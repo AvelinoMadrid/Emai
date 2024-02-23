@@ -633,6 +633,11 @@
           "EMAI.Comun.dll": {}
         }
       },
+      "EMAI.DTOS/1.0.0": {
+        "runtime": {
+          "EMAI.DTOS.dll": {}
+        }
+      },
       "EMAI.Entidades/1.0.0": {
         "dependencies": {
           "Google.Apis.Auth": "1.66.0",
@@ -657,6 +662,7 @@
       "EMAI.Servicios/1.0.0": {
         "dependencies": {
           "EMAI.Comun": "1.0.0",
+          "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148"
@@ -1066,6 +1072,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "EMAI.Comun/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMAI.DTOS/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

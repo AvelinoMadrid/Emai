@@ -19,6 +19,7 @@ namespace EMAI.LND
             var rsp = await db.GetHorarios();
             return rsp;
         }
+        
 
         //Buscar por ID
         public async Task<HorariosIDModel> GetHorariosID(int IdHorario)

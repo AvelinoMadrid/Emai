@@ -1,11 +1,9 @@
 ﻿using EMAI.Comun.Models;
 using EMAI.Datos;
+using EMAI.DTOS.Dtos.Base;
 using EMAI.Servicios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Email.Utiilities.Static;
+using System.Security.Cryptography;
 
 namespace EMAI.LND
 {
@@ -99,6 +97,68 @@ namespace EMAI.LND
             var rsp = await db.InsertarHobbys( value);
             return rsp;
         }
+
+        public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)
+        {
+            var response = new BaseResponse<bool>();
+            
+            using var db = AppRepositoryFactory.GetAppRepository();
+            response.Data= await db.InsertarAlumnoTwo(request);
+
+            if (response.Data)
+            {
+                response.IsSuccess= true;
+                response.Message = StaticVariable.MESSAGE_SAVE;
+
+            }
+            else
+            {
+                response.IsSuccess= false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+            }
+            return response;
+        }
+        private static string random_alphanumeric_strings(int countCharacters)
+        {
+            const string prefijo = "EMAI-";
+            const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            using (var crpto= new RNGCryptoServiceProvider())
+            {
+                try
+                {
+                    var byteSize = countCharacters;
+                    var bytesArray = new byte[byteSize];
+                    crpto.GetBytes(bytesArray);
+
+                    var result = new char[countCharacters];
+                    var validCharCount = validChars.Length;
+
+                    for (int i = 0; i < countCharacters; i++)
+                    {
+                        var indice = bytesArray[i] % validCharCount;
+                        result[i] = validChars[indice];
+                    }
+                    return prefijo + new string(result);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Se presento problema en la generacion del Folio", ex);
+                }
+
+                //var bits = (15 * 6);
+                //var byte_size = ((bits + 7) / 8);
+                //var bytesarray = new byte[byte_size];
+                //crpto.GetBytes(bytesarray);
+                //var result = Convert.ToBase64String(bytesarray);
+                //return result;
+            }
+        }
+        public bool checkExistFolio(string caracter)
+        {
+            return true;
+        }
+
 
     }
 }

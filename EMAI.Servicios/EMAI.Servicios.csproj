@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EMAI.Comun\EMAI.Comun.csproj" />
+    <ProjectReference Include="..\EMAI.DTOS\EMAI.DTOS.csproj" />
     <ProjectReference Include="..\EMAI.Entidades\EMAI.Entidades.csproj" />
   </ItemGroup>
 

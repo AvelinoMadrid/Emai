@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Base;
 using EMAI.Entidades;
 using EMAI.Servicios;
 namespace EMAI.Servicios
@@ -15,6 +16,7 @@ namespace EMAI.Servicios
         Task<List<AlumnosModel>> GetAlumnos();
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
+        Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request);
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> UpdateAlumnos(int IdAlumno, int IdClase,string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
             int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,

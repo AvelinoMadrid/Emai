@@ -43,7 +43,6 @@ namespace emai.Servicios
                     throw new Exception($"La solicitud GET no fue exitosa. Código de estado: {response.StatusCode}");
                 }
             }
-
             return lista;
         }
 

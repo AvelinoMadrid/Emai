@@ -37,6 +37,8 @@ namespace EMAI.Comun.Models
        /* public string HoraOpcional { get; set; }*/ // sufren modificaciones de acuerdo a nuevos requirimientos 
 
         public string Img { get; set; }
+
+
         // tabla Papàs
         public string NombrePapa { get; set; } // 16
         public string TelefonoPapa { get; set; } //17
@@ -45,6 +47,8 @@ namespace EMAI.Comun.Models
         public string TutorRecoger { get; set; } // 20
         public string CelularTR { get; set; } // 21
         public string NumEmergencia { get; set; } // 22
+
+
 
         // tabla estudios 
         public bool Estudios { get; set; } // 23
@@ -160,7 +164,75 @@ namespace EMAI.Comun.Models
         public string NombreRecepcionista { get; set; } // 39
     }
 
+    public class InsertarAlumnoModelV1
+    {
+        public DateTime FechaInscripcion {  get; set; }
+        public string Tag { get; set; }
+        public int NoDiaClases { get; set; }
+        public string FechaInicioClase { get; set;}
+        public string NombreCompleto { get; set; }
+        public int Edad { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public string TelefonoCasa { get; set; }
+        public string Celular { get; set; }
+        public string @Facebook { get; set; }
+        public string Email { get; set; }
+        public string Enfermedades { get; set; }
+        public int SeleccionarClase1 { get; set; }
+        public string DiaAndHoraClase { get; set; }
+        public int SeleccionarClase2 { get; set; }
+        public string DiaAndHoraClaseOpcional { get; set; }
+        public bool Activo { get; set; }
 
+        public string NombrePapas { get; set; }
+        public string CelularPapas { get; set; }
+        public string FacebookPapas { get; set; }
+        public string EmailPapas { get; set; }
+        public string TutorRecoger { get; set; }
+        public string CelularTR { get; set; }
+        public string NumEmergencia { get; set; }
+
+        public bool Estudios { get; set; }
+        public string Instrumento { get; set; }
+        public bool InstrumentoCasa { get; set; }
+        public string InstrumentotTwo { get; set; }
+        public string EnterasteEsc { get; set; }
+        public bool InteresGnroMusical { get; set; }
+        public string CualesMusicales { get; set; }
+
+        public string CualesMusicales { get; set; }
+        public string CualesMusicales { get; set; }
+
+        public string CualesMusicales { get; set; }
+        public string CualesMusicales { get; set; }
+        public string CualesMusicales { get; set; }
+        public string CualesMusicales { get; set; }
+
+    }
+
+
+    public class InsertarAlumnoModelTwo
+    {
+        public int IdClase { get; set; }
+        public DateTime FechaInscripcion { get; set; } // 1
+        public string Tag { get; set; } // 2
+        public int NoDiaClases { get; set; } // 3
+        public DateTime FechaInicioClaseGratis { get; set; } //4
+        public string Nombre { get; set; } // 8
+        public string ApPaterno { get; set; }
+        public string ApMaterno { get; set; }
+        public int Edad { get; set; } //9
+        public DateTime FechaNacimiento { get; set; } //9
+        public string TelefonoCasa { get; set; } // 10
+        public string Celular { get; set; } // 11
+        public string Facebook { get; set; } // 12
+        public string Email { get; set; } // 13
+        public string Enfermedades { get; set; } // 14 
+        public string InstrumentoBase { get; set; } //5
+        public string Dia { get; set; }  // 6
+        public string InstrumentoOpcional { get; set; } // 7
+        public string DiaOpcio { get; set; }
+    }
 
 
 

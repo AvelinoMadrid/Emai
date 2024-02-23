@@ -416,6 +416,7 @@ C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
+C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.DTOS.dll
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
@@ -423,6 +424,7 @@ C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
+C:\repos\Residencia\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.DTOS.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache

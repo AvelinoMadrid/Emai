@@ -17,6 +17,7 @@ using EMAI.Comun.Models;
 using Microsoft.Data.SqlClient;
 using System.Diagnostics.Metrics;
 using static EMAI.Comun.Models.EventosIDModel;
+using Newtonsoft.Json.Linq;
 
 namespace EMAI.Datos
 {
@@ -70,7 +71,6 @@ namespace EMAI.Datos
         {
             return new AlumnosModel()
             {
-
                 IdAlumno = (int)reader["IdAlumno"],
                 //IdClase = (int)reader["IdClase"],
                 FechaInscripcion = (DateTime)reader["FechaInscripcion"],
@@ -266,6 +266,40 @@ namespace EMAI.Datos
                 NombreRecepcionista = reader["NombreRecepcionista"].ToString()
             };
         }
+        public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelTwo request)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("AlumnoInsertarv2", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", request.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
+                    cmd.Parameters.Add(new SqlParameter("@Tag", request.Tag));
+                    cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", request.FechaInicioClaseGratis));
+                    //cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre", request.Nombre));
+                    cmd.Parameters.Add(new SqlParameter("@ApellidoP", request.ApPaterno));
+                    cmd.Parameters.Add(new SqlParameter("@ApellidoM", request.ApMaterno));
+                    cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
+                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
+                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", request.TelefonoCasa));
+                    cmd.Parameters.Add(new SqlParameter("@Celular", request.Celular));
+                    cmd.Parameters.Add(new SqlParameter("@Facebook", request.Facebook));
+                    cmd.Parameters.Add(new SqlParameter("@Email", request.Email));
+                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", request.Enfermedades));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", request.InstrumentoBase));
+                    cmd.Parameters.Add(new SqlParameter("@Dia", request.Dia));
+                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", request.InstrumentoOpcional));
+                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", request.DiaOpcio));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
 
         private ObtenerAlumno MapToAlumnosTodo (SqlDataReader reader)
         {
@@ -3401,6 +3435,8 @@ namespace EMAI.Datos
         {
             GC.Collect();
         }
+
+      
         #endregion
 
     }

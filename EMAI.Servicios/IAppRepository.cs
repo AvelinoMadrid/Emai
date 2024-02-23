@@ -34,13 +34,11 @@ namespace EMAI.Servicios
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
 
+        Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelTwo request);
         Task<bool> DeleteByIdAlumno(int Id);
-
         Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
            int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,
-           string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia);
-
-        
+           string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia); 
          Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
 
          // nuevos Alumnos con Requisitos

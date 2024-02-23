@@ -44,6 +44,8 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="interfaces\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Views\" />
   </ItemGroup>
