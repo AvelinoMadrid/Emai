@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Net;
@@ -14,13 +13,15 @@ namespace emai.Controllers
 {
     public class ClaseController : Controller
     {
-      
-        private readonly IServicioClase_Api _ServicioClaseApi;
 
-        public ClaseController(IServicioClase_Api servicioClase_Api)
+        private readonly IServicioClase_Api _ServicioClaseApi;
+        private readonly IServicioHorario_Api _ServicioHorarioApi;
+
+        public ClaseController(IServicioClase_Api servicioClase_Api, IServicioHorario_Api servicioHorario_Api)
         {
             string baseurl = "https://localhost:7265";
             _ServicioClaseApi = servicioClase_Api;
+            _ServicioHorarioApi = servicioHorario_Api;
         }
 
         public async Task<List<Clase>> ObtenerTodos()
@@ -33,6 +34,19 @@ namespace emai.Controllers
         public async Task<IActionResult> Clase()
         {
             List<Clase> Lista = await _ServicioClaseApi.Lista();
+            var HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
+
+            foreach (var horario in Lista)
+            {
+                // Buscar el maestro correspondiente en la lista de MaestrosDisponibles por su ID
+                var horarios = HorarioDisponibles.FirstOrDefault(m => m.IdHorario == horario.idHorario);
+                if (horarios != null)
+                {
+                    horario.NombreHorario = horarios.Dia;
+                }
+
+
+            }
 
             return View(Lista);
         }
@@ -47,6 +61,9 @@ namespace emai.Controllers
                 modelo_clase = await _ServicioClaseApi.Obtener(idClase);
                 ViewBag.Action = "Editar Clase";
             }
+
+
+            modelo_clase.HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
 
             return View(modelo_clase);
         }

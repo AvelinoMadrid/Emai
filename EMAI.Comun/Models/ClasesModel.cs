@@ -9,6 +9,7 @@ namespace EMAI.Comun.Models
     public class ClasesModel
     {
         public int idClase { get; set; }
+        public int IdHorario { get; set; }
         public string Nombre { get; set; }
         public string CNormal { get; set; }
         public string CVerano { get; set; }
@@ -30,19 +31,20 @@ namespace EMAI.Comun.Models
         // dia opcional 
         public string HorarioOpc { get; set; }
 
-       // public string DiaOpc { get; set; sufre modificaciones
+        // public string DiaOpc { get; set; sufre modificaciones
     }
 
     // Clases Insert
     public class ClasesIdModel
     {
         public int idClase { get; set; }
+        public int IdHorario { get; set; }
         public string Nombre { get; set; }
         public string CNormal { get; set; }
         public string CVerano { get; set; }
         // dia normal de clase 
         public string Dia { get; set; }
-       
+
 
         // segundo dia
         public string Dia2 { get; set; }
@@ -63,24 +65,26 @@ namespace EMAI.Comun.Models
 
     public class ClasesModelInsertar
     {
+        public int IdHorario { get; set; }
         public string Nombre { get; set; }
         public string CNormal { get; set; }
         public string CVerano { get; set; }
         public string Dia { get; set; }
-     
+
         public string Dia2 { get; set; }
-        
+
         public string Dia3 { get; set; }
-      
+
         public decimal Costo { get; set; }
         public string ClaseOpc { get; set; }
         public string HorarioOpc { get; set; }
-       
+
     }
 
     public class ClasesModelActualizar
     {
         public int IdClase { get; set; }
+        public int IdHorario { get; set; }
         public string Nombre { get; set; }
         public string CNormal { get; set; }
         public string CVerano { get; set; }
@@ -98,6 +102,7 @@ namespace EMAI.Comun.Models
     public class ClasesModelEliminar
     {
         public int IdClase { get; set; }
+        public int IdHorario { get; set; }
         public string Nombre { get; set; }
         public string CNormal { get; set; }
         public string CVerano { get; set; }
@@ -119,6 +124,10 @@ namespace EMAI.Comun.Models
     }
 
 
+    public class ListaHorario
+    {
+        public string NombreHorario { get; set; }
+    }
 
 
 }

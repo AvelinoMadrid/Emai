@@ -44,7 +44,7 @@ namespace EMAI.API.Controllers
         {
             await _repository.ActualizarMaestro(value.IdMaestro, value.Nombre, value.ApellidoP, value.ApellidoM,
                 value.Direccion, value.Telefono, value.FechaNacimiento,
-                value.Estatus, value.Pago);
+                value.Estatus, value.Pago, value.PagoSemanal, value.PagoHora);
         }
 
         //Eliminar Maestros
@@ -53,7 +53,7 @@ namespace EMAI.API.Controllers
         {
             await _repository.EliminarMaestro(IdMaestro);
         }
-           
-       
+
+
     }
 }

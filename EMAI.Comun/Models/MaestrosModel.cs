@@ -10,18 +10,19 @@ namespace EMAI.Comun.Models
     {
         public int IdMaestro { get; set; }
         public string Nombre { get; set; }
-        public  string ApellidoP { get; set; }
-        public string ApellidoM { get; set;}
+        public string ApellidoP { get; set; }
+        public string ApellidoM { get; set; }
         public string Direccion { get; set; }
-        public string Telefono { get; set; }    
+        public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        //public int IdClase { get; set; }
-        //public int IdHorario { get; set; }
-        //public int IdsAlumno { get; set; }
+
         public string Estatus { get; set; }
-        //public bool Base { get; set; }
-        //public string Suplente { get; set; }   
+
         public decimal Pago { get; set; }
+        public decimal PagoSemanal { get; set; }
+        public decimal PagoHora { get; set; }
+
+
 
     }
 
@@ -34,13 +35,14 @@ namespace EMAI.Comun.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        //public int IdClase { get; set; }
-        //public int IdHorario { get; set; }
-        //public int IdAlumno { get; set; }
+
         public string Estatus { get; set; }
-        //public bool Base { get; set; }
-        //public string Suplente { get; set; }
+
         public decimal Pago { get; set; }
+
+        public decimal PagoSemanal { get; set; }
+
+        public decimal PagoHora { get; set; }
 
     }
 
@@ -52,13 +54,14 @@ namespace EMAI.Comun.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        //public int IdClase { get; set; }
-        //public int IdHorario { get; set; }
-        //public int IdAlumno { get; set; }
-        public  string Estatus { get; set; }
-        //public bool Base { get; set; }
-        //public string Suplente { get; set; }
+
+        public string Estatus { get; set; }
+
         public decimal Pago { get; set; }
+
+        public decimal PagoSemanal { get; set; }
+
+        public decimal PagoHora { get; set; }
 
     }
 
@@ -71,13 +74,14 @@ namespace EMAI.Comun.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        //public int IdClase { get; set; }
-        //public int IdHorario { get; set; }
-        //public int IdAlumno { get; set; }
+
         public string Estatus { get; set; }
-        //public bool Base { get; set; }
-        //public string Suplente { get; set; }
+
         public decimal Pago { get; set; }
+        public decimal PagoSemanal { get; set; }
+
+        public decimal PagoHora { get; set; }
+
 
     }
 
@@ -90,13 +94,13 @@ namespace EMAI.Comun.Models
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        //public int IdClase { get; set; }
-        //public int IdHorario { get; set; }
-        //public int IdAlumno { get; set; }
+
         public string Estatus { get; set; }
-        //public bool Base { get; set; }
-        //public string Suplente { get; set; }
+
         public decimal Pago { get; set; }
+        public decimal PagoSemanal { get; set; }
+
+        public decimal PagoHora { get; set; }
 
     }
 }

@@ -18,22 +18,11 @@
 
             <div class="row">
 
-
-
-                <div class="col-md-6 form-group">
+                <div class="col-md-12 form-group">
                     <div class="form-group">
                         <label class="form-label">Día</label>
-                        <select class="form-control select2" style="width: 100%;" name="Dia" id="Dia" asp-for="Dia" required>
-                            <option selected disabled value="">Escoger el día</option>
-                            <option>Lunes</option>
-                            <option>Martes</option>
-                            <option>Miercoles</option>
-                            <option>Jueves</option>
-                            <option>Viernes</option>
-                            <option>Sábado</option>
-                            
+                        <input type="text" class="form-control form-control-sa" style="width: 100%;" name="Dia" id="Dia" asp-for="Dia" required>
 
-                        </select>
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
 
@@ -41,37 +30,20 @@
                 </div>
 
 
-
-
-                 <div class="col-md-6 form-group">
-                <label class="form-label">Hora</label>
-                    <input type="time" class="form-control form-control-sa" name="Hora" id="Hora" asp-for="Hora" required />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
-
-
                 <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-success btn-sm" style="width:100% !important">Guardar Cambios</button>
-                 </div>
+                </div>
 
                 <div class="col-md-6 form-group">
                     <a asp-action="Horario" asp-controller="Horario" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
-                 </div>
-            
-
-            
-
+                </div>
 
             </div>
 
         </form>
 
-        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
-
     </div>
 </div>
-
 
 
 <script>

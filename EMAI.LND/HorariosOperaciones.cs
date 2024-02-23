@@ -19,7 +19,6 @@ namespace EMAI.LND
             var rsp = await db.GetHorarios();
             return rsp;
         }
-        
 
         //Buscar por ID
         public async Task<HorariosIDModel> GetHorariosID(int IdHorario)
@@ -40,12 +39,12 @@ namespace EMAI.LND
 
         //Actualizar Horario
 
-        public async Task<bool> ActualizarHorario(int IdHorario,string dia, string hora)
-        {
-            using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarHorario(IdHorario,dia,hora);
-            return rsp;
-        }
+        //public async Task<bool> ActualizarHorario(int IdHorario,string dia)
+        //{
+        //    using var db = AppRepositoryFactory.GetAppRepository();
+        //    var rsp = await db.ActualizarHorario(IdHorario,dia);
+        //    return rsp;
+        //}
 
         //Eliminar Horario
         public async Task<bool> EliminarHorario(int IdHorario)
@@ -54,5 +53,17 @@ namespace EMAI.LND
             var rsp = await db.EliminarHorario(IdHorario);
             return rsp;
         }
+
+        public async Task<bool> ActualizarHorario(int IdHorario, string dia)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.ActualizarHorario(IdHorario, dia);
+            return rsp;
+        }
+
+        //public Task<bool> ActualizarHorario(int IdHorario, string dia)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

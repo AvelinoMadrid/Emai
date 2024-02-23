@@ -13,14 +13,11 @@
                     <!-- /.card-header -->
                     <div class="card-body">
 
-
-
                         <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
 
-                                    <th>Dia</th>
-                                    <th>Hora</th>
+                                    <th>Dia y Hora</th>
                                     <th>Editar / Elminar</th>
                                 </tr>
                             </thead>
@@ -31,8 +28,7 @@
                                     <tr>
 
                                         <td>@item.Dia</td>
-                                      
-                                        <td>@item.Hora</td>
+
                                         <td>
                                             <a asp-action="agregarhorario" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-primary btn-sm">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Horario" asp-route-IdHorario="@item.IdHorario" class="btn btn-danger btn-sm">ELIMINAR </a>
@@ -40,22 +36,11 @@
                                     </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
+
                         </table>
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
-
 
             </div>
             <!-- /.col -->

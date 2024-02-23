@@ -16,16 +16,16 @@
 
 
             <div class="row">
-                  
-         
-            <input asp-for="IdMaestro" type="hidden" />
+
+
+                <input asp-for="IdMaestro" type="hidden" />
 
                 <div class="col-md-3 form-group">
                     <label class="form-label" for="Nombre">Nombre</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Nombre" name="Nombre" id="Nombre" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
                 <div class="col-md-3 form-group">
@@ -33,7 +33,7 @@
                     <input type="text" class="form-control form-control-sa" asp-for="ApellidoP" name="ApellidoP" id="ApellidoP" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
                 <div class="col-md-3 form-group">
@@ -41,7 +41,7 @@
                     <input type="text" class="form-control form-control-sa" asp-for="ApellidoM" name="ApellidoM" id="ApellidoM" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
                 <div class="col-md-3 form-group">
@@ -49,7 +49,7 @@
                     <input type="text" class="form-control form-control-sa" asp-for="Direccion" name="Direccion" id="Direccion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
 
@@ -58,22 +58,22 @@
                     <input type="text" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="Telefono" name="Telefono" id="Telefono" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
 
-        @*         <div class="col-md-3 form-group">
+                <div class="col-md-3 form-group">
                     <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="text" class="form-control form-control-sa" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask asp-for="FechaNacimiento" name="FechaNacimiento" id="FechaNacimiento" required />
+                    <input type="date" class="form-control form-control-sa" data-mask asp-for="FechaNacimiento" name="FechaNacimiento" id="FechaNacimiento" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div> *@
-            
+                </div>
+
 
                 <div class="col-md-3 form-group">
                     <div class="form-group">
                         <label for="StatusSeleccionado">Status</label>
-                        <select class="form-control  select2" style="width: 100%;" asp-for="Estatus" name="StatusSeleccionado" id="Status" required>
+                        <select class="form-control  select2" style="width: 100%;" asp-for="Estatus" name="Estatus" id="Status" required>
                             <option selected disabled value="">Escoger el Status</option>
                             <option value="Base">Base</option>
                             <option value="Suplente">Suplente</option>
@@ -81,23 +81,32 @@
                         <div class="valid-feedback">Válido.</div>
                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                     </div>
-                    
+
                 </div>
 
 
 
                 <div class="col-md-3 form-group">
                     <label class="form-label" for="Pago">Pago</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Pago" />
-            </div>
+                    <input type="text" class="form-control form-control-sa" asp-for="Pago" />
+                </div>
 
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Pago">Pago semanal</label>
+                    <input type="text" class="form-control form-control-sa" id="Pagosemanal" asp-for="PagoSemanal" />
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Pago">Pago por Hora</label>
+                    <input type="text" class="form-control form-control-sa" id="Pagohora" asp-for="PagoHora" />
+                </div>
 
                 <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
                 </div>
 
                 <div class="col-md-6 form-group">
-                <a asp-action="Maestro" asp-controller="Maestro" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+                    <a asp-action="Maestro" asp-controller="Maestro" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
                 </div>
 
             </div>

@@ -11,7 +11,7 @@ namespace EMAI.API.Controllers
     {
         private readonly IClasesOperaciones _repository;
 
-        public ClaseController (IClasesOperaciones repository)
+        public ClaseController(IClasesOperaciones repository)
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
@@ -52,7 +52,7 @@ namespace EMAI.API.Controllers
         public async Task Put([FromBody] ClasesModelActualizar value)
         {
             await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
-                value.Dia, value.Dia2, value.Dia3, 
+                value.Dia, value.Dia2, value.Dia3,
                 value.Costo, value.ClaseOpc, value.HorarioOpc);
         }
 

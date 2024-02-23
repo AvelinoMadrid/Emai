@@ -38,13 +38,12 @@
                                     <th>Direccion</th>
                                     <th>Telefono</th>
                                     <th>FechaNacimiento</th>
-                                    @*<th>ID Clase</th>
-                                    <th>ID Horario</th>
-                                    <th>ID Alumno</th>*@
+
                                     <th>Status</th>
-                                   @* <th>Base</th>
-                                    <th>Suplente</th>*@
+
                                     <th>Pago</th>
+                                    <th>Pago Semanal</th>
+                                    <th>Pago Hora</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -52,41 +51,29 @@
 
                                 @foreach (var item in Model)
                                 {
-                                    <tr>
+                                        <tr>
 
-                                        <td>@item.IdMaestro</td>
-                                        <td>@item.Nombre</td>
-                                        <td>@item.ApellidoP</td>
-                                        <td>@item.ApellidoM</td>
-                                        <td>@item.Direccion</td>
-                                        <td>@item.Telefono</td>
-                                        <td>@item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
-                                       @* <td>@item.IdClase</td>
-                                        <td>@item.IdHorario</td>
-                                        <td>@item.IdAlumno</td>*@
-                                        <td>
-                                           @item.Estatus 
-                                        </td>
-                                       @* <td>@item.Base</td>
-                                        <td>@item.Suplente</td>*@
-                                        <td>@item.Pago</td>
-                                        <td>
-                                            <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
-                                        </td>
-                                    </tr>
+                                            <td>@item.IdMaestro</td>
+                                            <td>@item.Nombre</td>
+                                            <td>@item.ApellidoP</td>
+                                            <td>@item.ApellidoM</td>
+                                            <td>@item.Direccion</td>
+                                            <td>@item.Telefono</td>
+                                            <td>@item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
+
+                                            <td>
+                                            @item.Estatus 
+                                            </td>
+                                            <td>@item.Pago</td>
+                                            <td>@item.PagoSemanal</td>
+                                            <td>@item.PagoHora</td>
+                                            <td>
+                                                <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                                <a asp-action="Eliminar" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
+                                            </td>
+                                        </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            </tr>
-                            </tfoot>*@
                         </table>
                     </div>
                     <!-- /.card-body -->

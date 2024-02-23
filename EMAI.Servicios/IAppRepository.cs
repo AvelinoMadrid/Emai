@@ -127,7 +127,7 @@ namespace EMAI.Servicios
         Task<List<HorariosModel>> GetHorarios();
         Task<HorariosIDModel> GetHorariosID(int IdHorario);
         Task<bool> InsertarHorario(HorariosInsertarModel value);
-        Task<bool> ActualizarHorario(int IdHorario, string dia,string hora);
+        Task<bool> ActualizarHorario(int IdHorario, string dia);
         Task<bool> EliminarHorario(int IdHorario);
         #endregion
 
@@ -155,7 +155,7 @@ namespace EMAI.Servicios
         Task<MaestrosIDModel> GetMaestrosID(int IdMaestro);
         Task<bool> InsertarMaestro(MaestrosInsertarModel value);
 
-        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status,  decimal Pago);
+        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora);
 
         Task<bool> EliminarMaestro(int IdMaestro);
         #endregion

@@ -11,6 +11,7 @@ namespace EMAI.Comun.Models
         public int AsgnId { get; set; }
         public int IdMaestro { get; set; }
         public int IdClase { get; set; }
+        public int IdClaseOpc { get; set; }
         public DateTime FechaAsignacion { get; set; }
     }
 
@@ -19,6 +20,7 @@ namespace EMAI.Comun.Models
         public int AsgnId { get; set; }
         public int IdMaestro { get; set; }
         public int IdClase { get; set; }
+        public int IdClaseOpc { get; set; }
         public DateTime FechaAsignacion { get; set; }
     }
 
@@ -27,6 +29,7 @@ namespace EMAI.Comun.Models
         public int AsgnId { get; set; }
         public int IdMaestro { get; set; }
         public int IdClase { get; set; }
+        public int IdClaseOpc { get; set; }
         public DateTime FechaAsignacion { get; set; }
     }
 
@@ -36,5 +39,6 @@ namespace EMAI.Comun.Models
         public int IdMaestro { get; set; }
         public int IdClase { get; set; }
         public DateTime FechaAsignacion { get; set; }
+        public int IdClaseOpc { get; set; }
     }
 }

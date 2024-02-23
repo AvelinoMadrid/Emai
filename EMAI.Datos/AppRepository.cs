@@ -1084,15 +1084,15 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@CNormal", value.CNormal));
                     cmd.Parameters.Add(new SqlParameter("@Cverano", value.CVerano));
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    
+
                     cmd.Parameters.Add(new SqlParameter("@Dia2", value.Dia2));
-                   
+
                     cmd.Parameters.Add(new SqlParameter("@Dia3", value.Dia3));
-                    
+
                     cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
                     cmd.Parameters.Add(new SqlParameter("@ClaseOpc", value.ClaseOpc));
                     cmd.Parameters.Add(new SqlParameter("@HorarioOpc", value.HorarioOpc));
-                   
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1113,15 +1113,15 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@CNormal", CNormal));
                     cmd.Parameters.Add(new SqlParameter("@Cverano", CVerano));
                     cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    
+
                     cmd.Parameters.Add(new SqlParameter("@Horario2", Dia2));
-                    
+
                     cmd.Parameters.Add(new SqlParameter("@Dia3", Dia3));
-                   
+
                     cmd.Parameters.Add(new SqlParameter("@Costo", Costo));
                     cmd.Parameters.Add(new SqlParameter("@ClaseOpc", ClaseOpc));
                     cmd.Parameters.Add(new SqlParameter("@Horario", HorarioOpc));
-                    
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1136,7 +1136,7 @@ namespace EMAI.Datos
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
                 using (SqlCommand cmd = new SqlCommand("EliminarClase", sql))
-                { 
+                {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("IdClase", IdClase));
                     await sql.OpenAsync();
@@ -1151,6 +1151,7 @@ namespace EMAI.Datos
 
 
         #endregion
+
 
         #region "Seccion --> Cooperacion"
 
@@ -1882,7 +1883,7 @@ namespace EMAI.Datos
             {
                 IdHorario = (int)reader["IdHorario"],
                 Dia = (string)reader["Dia"],
-                Hora = (string)reader["Hora"],
+                //Hora = (string)reader["Hora"],
 
             };
         }
@@ -1917,7 +1918,7 @@ namespace EMAI.Datos
             {
                 IdHorario = (int)reader["IdHorario"],
                 Dia = (string)reader["Dia"],
-                Hora = (string)reader["Hora"],
+                //Hora = (string)reader["Hora"],
             };
         }
 
@@ -1930,8 +1931,8 @@ namespace EMAI.Datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     //cmd.Parameters.Add(new SqlParameter("@IdHorario", value.idHorario));
                     cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
-            
+                    //cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
@@ -1939,7 +1940,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarHorario(int IdHorario,string Dia, string Hora)
+        public async Task<bool> ActualizarHorario(int IdHorario, string Dia)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1948,8 +1949,8 @@ namespace EMAI.Datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdHorario", IdHorario));
                     cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Hora", Hora));
-                   
+                    //cmd.Parameters.Add(new SqlParameter("@Hora", Hora));
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2267,10 +2268,13 @@ namespace EMAI.Datos
                 Direccion = (string)reader["Direccion"],
                 Telefono = (string)reader["Telefono"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-          
+
                 Estatus = (string)reader["Estatus"],
-              
+
+
                 Pago = (decimal)reader["Pago"],
+                PagoSemanal = (decimal)reader["PagoSemanal"],
+                PagoHora = (decimal)reader["PagoHora"]
 
             };
         }
@@ -2311,11 +2315,13 @@ namespace EMAI.Datos
                 Direccion = (string)reader["Direccion"],
                 Telefono = (string)reader["Telefono"],
                 FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-         
+
                 Estatus = (string)reader["Estatus"],
-              
-                
+
+
                 Pago = (decimal)reader["Pago"],
+                PagoSemanal = (decimal)reader["PagoSemanal"],
+                PagoHora = (decimal)reader["PagoHora"]
 
             };
         }
@@ -2333,10 +2339,13 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Direccion", value.Direccion));
                     cmd.Parameters.Add(new SqlParameter("@Telefono", value.Telefono));
                     cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimiento));
-               
+
                     cmd.Parameters.Add(new SqlParameter("@Status", value.Estatus));
-                 
+
                     cmd.Parameters.Add(new SqlParameter("@Pago", value.Pago));
+                    cmd.Parameters.Add(new SqlParameter("@PagoSemanal", value.PagoSemanal));
+                    cmd.Parameters.Add(new SqlParameter("@PagoHora", value.PagoHora));
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2345,7 +2354,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento,string Status, decimal Pago)
+        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2359,10 +2368,12 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Direccion", Direccion));
                     cmd.Parameters.Add(new SqlParameter("@Telefono", Telefono));
                     cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", FechaNacimiento));
-                
+
                     cmd.Parameters.Add(new SqlParameter("@Status", Status));
-                
+
                     cmd.Parameters.Add(new SqlParameter("@Pago", Pago));
+                    cmd.Parameters.Add(new SqlParameter("@PagoSemanal", PagoSemanal));
+                    cmd.Parameters.Add(new SqlParameter("@PagoHora", PagoHora));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2385,6 +2396,7 @@ namespace EMAI.Datos
                 }
             }
         }
+
 
         #endregion
 
@@ -3226,6 +3238,7 @@ namespace EMAI.Datos
                 AsgnId = (int)reader["AsgnId"],
                 IdMaestro = (int)reader["IdMaestro"],
                 IdClase = (int)reader["IdClase"],
+                IdClaseOpc = (int)reader["IdClaseOpc"],
                 FechaAsignacion = (DateTime)reader["FechaAsignacion"],
             };
         }
@@ -3262,6 +3275,7 @@ namespace EMAI.Datos
                 AsgnId = (int)reader["AsgnId"],
                 IdMaestro = (int)reader["IdMaestro"],
                 IdClase = (int)reader["IdClase"],
+                IdClaseOpc = (int)reader["IdClaseOpc"],
                 FechaAsignacion = (DateTime)reader["FechaAsignacion"],
             };
         }
@@ -3275,7 +3289,9 @@ namespace EMAI.Datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@MaestroId", value.IdMaestro));
                     cmd.Parameters.Add(new SqlParameter("@ClaseId", value.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@ClaseIdOpc", value.IdClaseOpc));
                     cmd.Parameters.Add(new SqlParameter("@FechaAsignacion", value.FechaAsignacion));
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();

@@ -16,6 +16,8 @@ namespace emai.Models
         public string NombreClase { get; set; }
         public DateTime FechaAsignacion { get; set; }
 
+        public int IdClaseOpc { get; set; }
+
         public List<AsigClase> Lista { get; set; }
 
         public List<Maestro> MaestrosDisponibles { get; set; }

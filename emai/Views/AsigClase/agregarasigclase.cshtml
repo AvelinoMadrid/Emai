@@ -19,30 +19,30 @@
 
             <div class="row">
 
-                <div class="col-md-6 form-group" >
-                <label class="form-label">Maestro</label>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Maestro</label>
                     <select class="form-control select2" asp-for="IdMaestro" required>
-                    <option selected disabled value="">Escoger un maestro</option>
-                    @foreach (var maestro in Model.MaestrosDisponibles)
-                    {
-                        <option value="@maestro.IdMaestro">@maestro.Nombre</option>
-                    }
-                </select>
+                        <option selected disabled value="">Escoger un maestro</option>
+                        @foreach (var maestro in Model.MaestrosDisponibles)
+                        {
+                            <option value="@maestro.IdMaestro">@maestro.Nombre</option>
+                        }
+                    </select>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
-                <div class="col-md-6 form-group" >
-                <label class="form-label">Clase</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Clase</label>
                     <select class="form-control select2" asp-for="IdClase" required>
-                    <option selected disabled value="">Escoger una clase</option>
-                    @foreach (var clase in Model.ClasesDisponibles)
-                    {
-                        <option value="@clase.idClase">@clase.Nombre</option>
-                    }
-                </select>
+                        <option selected disabled value="">Escoger una clase</option>
+                        @foreach (var clase in Model.ClasesDisponibles)
+                        {
+                            <option value="@clase.idClase">@clase.Nombre</option>
+                        }
+                    </select>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                </div>
 
 
                 <div class="col-md-6 form-group">
@@ -72,20 +72,20 @@
 
 
 
-            @*     <div class="col-md-4 form-group" >
-                <label class="form-label">Fecha Asignacion</label>
+                <div class="col-md-12 form-group">
+                    <label class="form-label">Fecha Asignacion</label>
                     <input type="date" class="form-control form-control-sa" asp-for="FechaAsignacion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
- *@
-                <div class="col-md-6 form-group" >
-                    <button ype="submit" class="btn btn-success" style="width:100% !important">Asignar Clase</button>
-            </div>
+                </div>
 
-                <div class="col-md-6 form-group" >
+                <div class="col-md-6 form-group">
+                    <button ype="submit" class="btn btn-success" style="width:100% !important">Asignar Clase</button>
+                </div>
+
+                <div class="col-md-6 form-group">
                     <a asp-action="AsigClase" asp-controller="AsigClase" class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Volver a la vista </a>
-            </div>
+                </div>
 
             </div>
         </form>
