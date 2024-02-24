@@ -98,32 +98,16 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)
+        public Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value)
         {
-            var response = new BaseResponse<bool>();
-            
-            using var db = AppRepositoryFactory.GetAppRepository();
-            response.Data= await db.InsertarAlumnoTwo(request);
-
-            if (response.Data)
-            {
-                response.IsSuccess= true;
-                response.Message = StaticVariable.MESSAGE_SAVE;
-
-            }
-            else
-            {
-                response.IsSuccess= false;
-                response.Message = StaticVariable.MESSAGE_FALLED;
-            }
-            return response;
+            throw new NotImplementedException();
         }
-        private static string random_alphanumeric_strings(int countCharacters)
+        private static string randomAlphanumericStrings(int countCharacters)
         {
             const string prefijo = "EMAI-";
             const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-            using (var crpto= new RNGCryptoServiceProvider())
+            using (var crpto = new RNGCryptoServiceProvider())
             {
                 try
                 {
@@ -145,20 +129,54 @@ namespace EMAI.LND
                 {
                     throw new Exception("Se presento problema en la generacion del Folio", ex);
                 }
-
-                //var bits = (15 * 6);
-                //var byte_size = ((bits + 7) / 8);
-                //var bytesarray = new byte[byte_size];
-                //crpto.GetBytes(bytesarray);
-                //var result = Convert.ToBase64String(bytesarray);
-                //return result;
             }
         }
-        public bool checkExistFolio(string caracter)
+
+        public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request)
         {
-            return true;
+            var response = new BaseResponse<bool>();
+
+            using var db = AppRepositoryFactory.GetAppRepository();
+            response.Data = await db.InsertarAlumnoTwo(request);
+
+            if (response.Data)
+            {
+                response.IsSuccess = true;
+                response.Message = StaticVariable.MESSAGE_SAVE;
+
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+            }
+            return response;
+
         }
 
 
+        //public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)
+        //{
+        //    var response = new BaseResponse<bool>();
+
+        //    using var db = AppRepositoryFactory.GetAppRepository();
+        //    response.Data= await db.InsertarAlumnoTwo(request);
+
+        //    if (response.Data)
+        //    {
+        //        response.IsSuccess= true;
+        //        response.Message = StaticVariable.MESSAGE_SAVE;
+
+        //    }
+        //    else
+        //    {
+        //        response.IsSuccess= false;
+        //        response.Message = StaticVariable.MESSAGE_FALLED;
+        //    }
+        //    return response;
     }
-}
+
+    }
+
+
+

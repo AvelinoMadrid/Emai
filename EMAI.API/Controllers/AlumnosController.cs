@@ -32,15 +32,13 @@ namespace EMAI.API.Controllers
         {
             return await _repository.ObtenerAlumnosporID(id);
         }
-
-
-        [HttpPost]
-        public async Task Post([FromBody] InsertAlumnoModel value)
-        {
-            await _repository.InsertarAlumno(value);
-        }
-        [HttpPost("RegistarAlumno")]
-        public async Task<IActionResult> RegisterAlumno([FromBody] InsertarAlumnoModelTwo request)
+        //[HttpPost]
+        //public async Task Post([FromBody] InsertAlumnoModel value)
+        //{
+        //    await _repository.InsertarAlumno(value);
+        //}
+        [HttpPost("RegistarAlumnoV1")]
+        public async Task<IActionResult> RegisterAlumno([FromBody] InsertarAlumnoModelV1 request)
         {
             var response = await _repository.RegisterAlumno(request);
             return Ok(response);

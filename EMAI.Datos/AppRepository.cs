@@ -266,37 +266,95 @@ namespace EMAI.Datos
                 NombreRecepcionista = reader["NombreRecepcionista"].ToString()
             };
         }
-        public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelTwo request)
+        public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request)
         {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+           try
             {
-                using (SqlCommand cmd = new SqlCommand("AlumnoInsertarv2", sql))
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", request.IdClase));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
-                    cmd.Parameters.Add(new SqlParameter("@Tag", request.Tag));
-                    cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", request.FechaInicioClaseGratis));
-                    //cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@Nombre", request.Nombre));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoP", request.ApPaterno));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoM", request.ApMaterno));
-                    cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
-                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
-                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", request.TelefonoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@Celular", request.Celular));
-                    cmd.Parameters.Add(new SqlParameter("@Facebook", request.Facebook));
-                    cmd.Parameters.Add(new SqlParameter("@Email", request.Email));
-                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", request.Enfermedades));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", request.InstrumentoBase));
-                    cmd.Parameters.Add(new SqlParameter("@Dia", request.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", request.InstrumentoOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", request.DiaOpcio));
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
+                    using (SqlCommand cmd = new SqlCommand("RegistroTotalAlumno", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        //cmd.Parameters.Add(new SqlParameter("@IdAlumno", 0));
+                        cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
+                        cmd.Parameters.Add(new SqlParameter("@@Tag", request.Tag));
+                        cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
+                        cmd.Parameters.Add(new SqlParameter("@FechaInicioClase", request.FechaInicioClase));
+                        cmd.Parameters.Add(new SqlParameter("@NombreCompleto", request.FechaInicioClase));
+
+                        cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
+                        cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
+                        cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", request.TelefonoCasa));
+                        cmd.Parameters.Add(new SqlParameter("@Celular", request.Celular));
+                        cmd.Parameters.Add(new SqlParameter("@Facebook", request.Facebook));
+
+                        cmd.Parameters.Add(new SqlParameter("@Email", request.Email));
+                        cmd.Parameters.Add(new SqlParameter("@Enfermedades", request.Enfermedades));
+                        cmd.Parameters.Add(new SqlParameter("@SeleccionarClase1", request.SeleccionarClase1));
+                        cmd.Parameters.Add(new SqlParameter("@DiaAndHoraClase", request.DiaAndHoraClase));
+                        cmd.Parameters.Add(new SqlParameter("@SeleccionarClase2", request.SeleccionarClase2));
+                        cmd.Parameters.Add(new SqlParameter("@DiaAndHoraClaseOpcional", request.DiaAndHoraClaseOpcional));
+                        cmd.Parameters.Add(new SqlParameter("@Activo", request.Activo));
+
+                        cmd.Parameters.Add(new SqlParameter("@NombrePapas", request.NombrePapas));
+                        cmd.Parameters.Add(new SqlParameter("@CelularPapas", request.Celular));
+                        cmd.Parameters.Add(new SqlParameter("@FacebookPapas", request.FacebookPapas));
+                        cmd.Parameters.Add(new SqlParameter("@EmailPapas", request.EmailPapas));
+                        cmd.Parameters.Add(new SqlParameter("@TutorRecoger", request.TutorRecoger));
+                        cmd.Parameters.Add(new SqlParameter("@CelularTR", request.CelularTR));
+                        cmd.Parameters.Add(new SqlParameter("@NumEmergencia", request.NumEmergencia));
+
+                        cmd.Parameters.Add(new SqlParameter("@Estudios", request.Estudios));
+                        cmd.Parameters.Add(new SqlParameter("@GradoEstudios", request.GradoEstudios));
+                        cmd.Parameters.Add(new SqlParameter("@EscuelaActuales", request.EscuelaActuales));
+                        cmd.Parameters.Add(new SqlParameter("@Trabajas", request.Trabajas));
+                        cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", request.LugarTrabajo));
+
+
+                        cmd.Parameters.Add(new SqlParameter("@ConConocimiento", request.ConConocimiento));
+                        cmd.Parameters.Add(new SqlParameter("@Instrumento", request.Instrumento));
+                        cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", request.InstrumentoCasa));
+                        cmd.Parameters.Add(new SqlParameter("@InstrumentotTwo", request.InstrumentotTwo));
+                        cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", request.EnterasteEsc));
+                        cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", request.InteresGnroMusical));
+                        cmd.Parameters.Add(new SqlParameter("@CualesMusicales", request.CualesMusicales));
+
+
+                        cmd.Parameters.Add(new SqlParameter("@TipoInteres", request.TipoInteres));
+                        cmd.Parameters.Add(new SqlParameter("@OtroOpcional", request.OtroOpcional));
+                        cmd.Parameters.Add(new SqlParameter("@MusicalInteres", request.MusicalInteres));
+                        cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", request.ClaseOpcional));
+                        cmd.Parameters.Add(new SqlParameter("@DescuentoP", request.DescuentoP));
+                        cmd.Parameters.Add(new SqlParameter("@Amables", request.Amables));
+                        cmd.Parameters.Add(new SqlParameter("@NombreRecepcionista", request.NombreRecepcionista));
+
+
+                        cmd.Parameters.Add(new SqlParameter("@Folio", request.Folio));
+                        cmd.Parameters.Add(new SqlParameter("@IdPromosion", request.IdPromosion));
+                        cmd.Parameters.Add(new SqlParameter("@IdMes", request.IdMes));
+                        cmd.Parameters.Add(new SqlParameter("@FechaPago", request.FechaPago));
+                        cmd.Parameters.Add(new SqlParameter("@CostoLibro", request.CostoLibro));
+                        cmd.Parameters.Add(new SqlParameter("@NombreLibro", request.NombreLibro));
+                        cmd.Parameters.Add(new SqlParameter("@Atendio", request.Atendio));
+                        cmd.Parameters.Add(new SqlParameter("@Costo", request.Costo));
+                        cmd.Parameters.Add(new SqlParameter("@Subtotal", request.Subtotal));
+                        cmd.Parameters.Add(new SqlParameter("@IVA", request.IVA));
+                        cmd.Parameters.Add(new SqlParameter("@Total", request.Total));
+                        cmd.Parameters.Add(new SqlParameter("@Inscripcion", request.Inscripcion));
+                        cmd.Parameters.Add(new SqlParameter("@Mensualidad", request.Mensualidad));
+
+                        await sql.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al Registrar AlumnoNuevo {ex.Message}");
+                return false;
             }
         }
 

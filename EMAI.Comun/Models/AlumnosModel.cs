@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -193,19 +194,27 @@ namespace EMAI.Comun.Models
         public string NumEmergencia { get; set; } = null!;
 
         public bool Estudios { get; set; }
-        public string Instrumento { get; set; } = null!;
+        public string GradoEstudios { get; set; } = null!;
+        public string EscuelaActuales { get; set; } = null!;
+        public bool Trabajas { get; set; }
+        public string LugarTrabajo { get; set; } = null!;
+ 
+
+        public bool ConConocimiento { get; set; } 
+        public string Instrumento    { get; set; } = null!;
         public bool InstrumentoCasa { get; set; }
         public string InstrumentotTwo { get; set; } = null!;
-        public string EnterasteEsc { get; set; } = null!;
+        public string EnterasteEsc { get; set; } = null!;   
         public bool InteresGnroMusical { get; set; }
         public string CualesMusicales { get; set; } = null!;
 
-        public string TipoInteres { get; set; } = null!;
+
+        public string TipoInteres    { get; set; } = null!;
         public string OtroOpcional { get; set; } = null!;
         public string MusicalInteres { get; set; } = null!;
         public bool ClaseOpcional { get; set; }
         public bool DescuentoP { get; set; }
-        public bool Amables { get; set; }
+        public bool Amables { get; set; } 
         public string NombreRecepcionista { get; set; } = null!;
 
         public string Folio { get; set; } = null!;
