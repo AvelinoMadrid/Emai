@@ -2235,3 +2235,12 @@ C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\refint\EMAI.API.
 C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.pdb
 C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.genruntimeconfig.cache
 C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.API\obj\Debug\net6.0\ref\EMAI.API.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\DataAccess.json
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Google.Apis.Sheets.v4.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\System.Management.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Emai.Utilities.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.API\bin\Debug\net6.0\Emai.Utilities.pdb

@@ -20,7 +20,7 @@ namespace EMAI.Servicios
 
         Task<bool> InsertarClase(ClasesModelInsertar value);
 
-        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOpc);
+        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo);
 
         Task<bool> EliminarClase(int IdClase);
 

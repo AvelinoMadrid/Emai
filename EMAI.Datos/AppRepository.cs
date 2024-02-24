@@ -38,7 +38,7 @@ namespace EMAI.Datos
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAIYAMAPRUEBA;Integrated Security=True;TrustServerCertificate=True;";
         }
 
 
@@ -988,8 +988,8 @@ namespace EMAI.Datos
                 Dia3 = (string)reader["Dia3"],
                 //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
-                ClaseOpc = (string)reader["ClaseOpc"].ToString(),
-                HorarioOpc = (string)reader["HorarioOpc"].ToString(),
+              
+              
                 //DiaOpc = (string)reader["DiaOpc"].ToString(),
 
             };
@@ -1035,8 +1035,7 @@ namespace EMAI.Datos
                 Dia3 = (string)reader["Dia3"],
                 //Horario3 = (string)reader["Horario3"],
                 Costo = (decimal)reader["Costo"],
-                ClaseOpc = (string)reader["ClaseOpc"].ToString(),
-                HorarioOpc = (string)reader["HorarioOpc"].ToString(),
+              
                 //DiaOpc = (string)reader["DiaOpc"].ToString(),
             };
         }
@@ -1058,8 +1057,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Dia3", value.Dia3));
                     
                     cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
-                    cmd.Parameters.Add(new SqlParameter("@ClaseOpc", value.ClaseOpc));
-                    cmd.Parameters.Add(new SqlParameter("@HorarioOpc", value.HorarioOpc));
+                   
                    
 
                     await sql.OpenAsync();
@@ -1069,7 +1067,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOpc)
+        public async Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1087,8 +1085,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Dia3", Dia3));
                    
                     cmd.Parameters.Add(new SqlParameter("@Costo", Costo));
-                    cmd.Parameters.Add(new SqlParameter("@ClaseOpc", ClaseOpc));
-                    cmd.Parameters.Add(new SqlParameter("@Horario", HorarioOpc));
+                   
                     
 
                     await sql.OpenAsync();

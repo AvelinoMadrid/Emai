@@ -53,7 +53,7 @@ namespace EMAI.API.Controllers
         {
             await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
                 value.Dia, value.Dia2, value.Dia3, 
-                value.Costo, value.ClaseOpc, value.HorarioOpc);
+                value.Costo);
         }
 
         //Eliminar Clase

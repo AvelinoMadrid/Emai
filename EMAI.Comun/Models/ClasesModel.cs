@@ -26,9 +26,6 @@ namespace EMAI.Comun.Models
         public decimal Costo { get; set; }
 
 
-        public string ClaseOpc { get; set; }
-        // dia opcional 
-        public string HorarioOpc { get; set; }
 
        // public string DiaOpc { get; set; sufre modificaciones
     }
@@ -54,10 +51,7 @@ namespace EMAI.Comun.Models
         public decimal Costo { get; set; }
 
 
-        public string ClaseOpc { get; set; }
-        // dia opcional 
-        public string HorarioOpc { get; set; }
-
+     
         // public string DiaOpc { get; set; sufre modificaciones
     }
 
@@ -73,8 +67,7 @@ namespace EMAI.Comun.Models
         public string Dia3 { get; set; }
       
         public decimal Costo { get; set; }
-        public string ClaseOpc { get; set; }
-        public string HorarioOpc { get; set; }
+        
        
     }
 
@@ -91,8 +84,7 @@ namespace EMAI.Comun.Models
         public string Dia3 { get; set; }
 
         public decimal Costo { get; set; }
-        public string ClaseOpc { get; set; }
-        public string HorarioOpc { get; set; }
+     
     }
 
     public class ClasesModelEliminar
@@ -109,8 +101,7 @@ namespace EMAI.Comun.Models
         public string Horario3 { get; set; }
         public decimal Costo { get; set; }
         public string ClaseOpc { get; set; }
-        public string HorarioOpc { get; set; }
-        public string DiaOpc { get; set; }
+  
     }
 
     public class ListaClases

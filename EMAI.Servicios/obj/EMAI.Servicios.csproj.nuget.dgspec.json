@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {}
+    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
         "projectName": "EMAI.Comun",
-        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
-        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\obj\\",
+        "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +27,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,24 +70,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
+        "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,7 +97,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -140,24 +140,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+    "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
         "projectName": "EMAI.Servicios",
-        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
-        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
+        "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -166,18 +167,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               }
             }
           }
@@ -217,7 +217,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
