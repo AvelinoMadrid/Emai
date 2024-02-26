@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SPtyU8DkLIl1PU8R+H4SuZ+MkGgBDS2dGQ99+N7RVJ3+ep44lO5/LkqQ6okyksc6vaMpNsoFZfBXPeoK87kZ+A==",
+  "dgSpecHash": "D0GqOfYT05GpSSFfXIPdEnZO2zUcX07IeOWMjGc3msUxXt4Wt4wnXlae2fhgFwyCxzf2m5b35NNdIKrcLmsARw==",
   "success": true,
   "projectFilePath": "C:\\repos\\Residencia\\Emai\\emai\\emai.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jiren\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",

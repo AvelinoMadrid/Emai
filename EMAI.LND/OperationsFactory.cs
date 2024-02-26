@@ -76,12 +76,6 @@ namespace EMAI.LND
             return new NominaOperaciones();
         }
 
-        public static IPromosionesOperaciones ObtenerPromocionesOperaciones()
-        {
-            return new PromosionesOperaciones();
-        }
-
-
         public static IUsuariosOperaciones ObtenerUsuariosOperaciones()
         {
             return new UsuariosOperaciones();

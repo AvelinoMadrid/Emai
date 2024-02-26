@@ -443,12 +443,6 @@ C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.L
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.pdb
 C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\EMAI.LND\obj\Debug\net6.0\ref\EMAI.LND.dll
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
-C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.sourcelink.json
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.deps.json
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.dll
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.LND.pdb
@@ -466,6 +460,12 @@ C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\Emai.Utilities.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Comun.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Entidades.pdb
 C:\repos\Residencia\Emai\EMAI.LND\bin\Debug\net6.0\EMAI.Helpers.pdb
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.AssemblyReference.cache
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfoInputs.cache
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.AssemblyInfo.cs
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CoreCompileInputs.cache
+C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.sourcelink.json
 C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.csproj.CopyComplete
 C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\EMAI.LND.dll
 C:\repos\Residencia\Emai\EMAI.LND\obj\Debug\net6.0\refint\EMAI.LND.dll

@@ -49,6 +49,7 @@ C:\Users\taller\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\
 C:\repos\Residencia\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.deps.json
 C:\repos\Residencia\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.dll
 C:\repos\Residencia\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.pdb
+C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.csproj.AssemblyReference.cache
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.GeneratedMSBuildEditorConfig.editorconfig
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfoInputs.cache
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfo.cs

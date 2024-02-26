@@ -5275,6 +5275,8 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.deps.json
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.runtimeconfig.json
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.pdb
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AutoMapper.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Azure.Core.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Azure.Identity.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\BouncyCastle.Crypto.dll

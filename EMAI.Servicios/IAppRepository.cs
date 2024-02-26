@@ -7,6 +7,7 @@ using System.Text;
 
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Request;
 using static EMAI.Comun.Models.EventosIDModel;
 
 
@@ -33,7 +34,6 @@ namespace EMAI.Servicios
 
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
-
         Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request);
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
@@ -187,6 +187,9 @@ namespace EMAI.Servicios
         Task<bool> InsertarPromosiones(PromosionesInsertarModel value);
         Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha);
         Task<bool> EliminarPromosiones(int IdPromosiones);
+        Task<bool> InsertarPromocionesV1(PromocionesModel request);
+
+
         #endregion
 
         #region "Usuarios"

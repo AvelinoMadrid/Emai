@@ -18,6 +18,7 @@ using Microsoft.Data.SqlClient;
 using System.Diagnostics.Metrics;
 using static EMAI.Comun.Models.EventosIDModel;
 using Newtonsoft.Json.Linq;
+using EMAI.DTOS.Dtos.Request;
 
 namespace EMAI.Datos
 {
@@ -268,6 +269,9 @@ namespace EMAI.Datos
         }
         public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request)
         {
+           
+            bool success = false;
+
            try
             {
                 using (SqlConnection sql = new SqlConnection(EMAIConnection))
@@ -2059,6 +2063,7 @@ namespace EMAI.Datos
             }
         }
 
+
         public async Task<HorariosVeranoModel> GetHorariosVeranoById(int Id)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
@@ -2615,6 +2620,60 @@ namespace EMAI.Datos
                     return response;
                 }
             }
+        }
+        public async Task<bool> InsertarPromocionesV1(PromocionesModel request)
+        {
+            bool success = false;
+            int Valor_Retornado = 0;
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    await sql.OpenAsync();
+
+                   using (SqlTransaction trasasaccion = sql.BeginTransaction(System.Data.IsolationLevel.Serializable))
+                   {
+                        try
+                        {
+                            using (SqlCommand cmd = new SqlCommand("PromocionesInsertarV1",sql, trasasaccion))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.Add(new SqlParameter("@NombrePromocion", request.NombrePromocion));
+                                cmd.Parameters.Add(new SqlParameter("@Porcentaje", request.Porcentaje));
+                                cmd.Parameters.Add(new SqlParameter("@Activo", request.Activo));
+
+                                SqlParameter ValorRetorno = new SqlParameter("@IntResult", SqlDbType.Int);
+
+                                ValorRetorno.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(ValorRetorno);
+
+                                await cmd.ExecuteNonQueryAsync();
+                                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+
+                                if (Valor_Retornado == 1)
+                                {
+                                    success = true;
+                                }
+                                trasasaccion.Commit();
+                               
+
+                            }
+                        }
+                        catch (Exception ex) {
+
+                            trasasaccion.Rollback();
+                            return success = false;
+                        }
+
+                    } 
+                }
+
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+            return success;
         }
 
         private PromosionesModel MapToPromosiones(SqlDataReader reader)
@@ -3510,7 +3569,9 @@ namespace EMAI.Datos
             GC.Collect();
         }
 
-      
+
+
+
         #endregion
 
     }

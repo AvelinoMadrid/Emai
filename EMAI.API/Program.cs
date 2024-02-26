@@ -1,4 +1,4 @@
-using EMAI.API.MappingProfiles;
+        using EMAI.API.MappingProfiles;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.Extensions.Options;
 using System.Text;
@@ -6,9 +6,13 @@ using EMAI.Servicios;
 using EMAI.Comun;
 using EMAI.LND;
 using Microsoft.OpenApi.Models;
+using EMAI.LND.Extensions;
+using EMAI.DTOS.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuraction = builder.Configuration;
 
+builder.Services.AddInjectionLdn(configuraction);
 
 
 builder.Services.AddCors(options =>
@@ -35,6 +39,7 @@ builder.Services.AddHttpContextAccessor();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddAutoMapper(typeof(PromocionMappingProfile));
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "/swagger/v1/swagger.json", Version = "v1" });
@@ -51,7 +56,7 @@ builder.Services.AddScoped(typeof(INominaOperaciones), f => OperationsFactory.Ob
 builder.Services.AddScoped(typeof(ICooperacionesOperaciones), f => OperationsFactory.ObtenerCooperacionesOperaciones());
 builder.Services.AddScoped(typeof(IDotacionDiaOperaciones), f => OperationsFactory.ObtenerDotacionDiaOperaciones());
 builder.Services.AddScoped(typeof(IUsuariosOperaciones), f => OperationsFactory.ObtenerUsuariosOperaciones());
-builder.Services.AddScoped(typeof(IPromosionesOperaciones), f => OperationsFactory.ObtenerPromocionesOperaciones());
+//builder.Services.AddScoped(typeof(IPromosionesOperaciones), f => OperationsFactory.ObtenerPromocionesOperaciones());
 builder.Services.AddScoped(typeof(IPagosOperaciones), f => OperationsFactory.ObtenerPagosOperaciones());
 builder.Services.AddScoped(typeof(IGastosOperaciones), f => OperationsFactory.ObtenerGastosOperaciones());
 builder.Services.AddScoped(typeof(IGastosDiaOperaciones), f => OperationsFactory.ObtenerGastosDiaOperaciones());
