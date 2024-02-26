@@ -51,6 +51,8 @@
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
+    
+
 
                 <div class="col-md-4 form-group">
                     <div class="form-group">
@@ -69,8 +71,9 @@
 
                 <div class="col-md-4 form-group">
                     <label class="form-label">Clase de Verano</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="CVerano" ng-model="CVerano" name="CVerano" id="CVerano" placeholder="Opcional" />
+                    <input type="text" class="form-control form-control-sa" asp-for="CVerano"  name="CVerano" id="CVerano" placeholder="Opcional" />
                 </div>
+
 
                 <div class="col-md-4 form-group" data-select2-id="43">
                     <label class="form-label">Día y Hora</label>
@@ -88,9 +91,11 @@
                 </div>
 
 
+
+
                 <div class="col-md-4 form-group">
                     <label class="form-label">Día y Hora 2</label>
-                    <select class="form-control select" asp-for="idHorario" required>
+                    <select class="form-control select" asp-for="Dia2" >
                         <option selected disabled value="">Escoger un Dia y Hora</option>
                         @foreach (var horarios in Model.HorarioDisponibles)
                         {
@@ -102,9 +107,10 @@
                 </div>
 
 
+
                 <div class="col-md-4 form-group">
                     <label class="form-label">Día y Hora 3</label>
-                    <select class="form-control select" asp-for="idHorario" required>
+                    <select class="form-control select" asp-for="Dia3" >
                         <option selected disabled value="">Escoger un Dia y Hora</option>
                         @foreach (var horarios in Model.HorarioDisponibles)
                         {
@@ -123,6 +129,7 @@
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
+
 
 
                 <div class="col-md-6 form-group">
