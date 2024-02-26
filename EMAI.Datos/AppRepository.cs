@@ -2655,8 +2655,7 @@ namespace EMAI.Datos
                                     success = true;
                                 }
                                 trasasaccion.Commit();
-                               
-
+                      
                             }
                         }
                         catch (Exception ex) {
@@ -2675,6 +2674,34 @@ namespace EMAI.Datos
             }
             return success;
         }
+        public async Task<List<PromocionesModel>> GetAllPromociones()
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("MostrarPromocionesV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        var response = new List<PromocionesModel>(); //1
+                        await sql.OpenAsync();
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToPromocionesV1(reader));//2
+                            }
+                        }
+
+                        return response;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+        }
 
         private PromosionesModel MapToPromosiones(SqlDataReader reader)
         {
@@ -2685,6 +2712,16 @@ namespace EMAI.Datos
                 IdAlumno = (int)reader["IdAlumno"],
                 Porcentaje = (int)reader["Porcentaje"],
                 Fecha = (DateTime)reader["Fecha"],
+            };
+        }
+        private PromocionesModel MapToPromocionesV1(SqlDataReader reader)
+        {
+            return new PromocionesModel()
+            {
+                IdPromociones = (int)reader["IdPromociones"],
+                NombrePromocion = (string)reader["NombrePromocion"],
+                Porcentaje = Convert.ToDecimal((float)reader["Porcentaje"]),
+                Activo = (bool)reader["Activo"],
             };
         }
 
@@ -3568,6 +3605,8 @@ namespace EMAI.Datos
         {
             GC.Collect();
         }
+
+    
 
 
 

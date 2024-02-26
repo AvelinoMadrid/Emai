@@ -10,6 +10,7 @@ namespace EMAI.DTOS.Mappers
         {
             CreateMap<PromocionesRequest, PromocionesModel>().ReverseMap();
 
+
         }
     }
 }

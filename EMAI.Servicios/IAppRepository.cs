@@ -188,6 +188,7 @@ namespace EMAI.Servicios
         Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha);
         Task<bool> EliminarPromosiones(int IdPromosiones);
         Task<bool> InsertarPromocionesV1(PromocionesModel request);
+        Task<List<PromocionesModel>> GetAllPromociones();
 
 
         #endregion

@@ -1,6 +1,7 @@
 ﻿using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Base;
 using EMAI.DTOS.Dtos.Request;
+using EMAI.DTOS.Dtos.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,11 @@ namespace EMAI.Servicios
         //Task<PromosionesIDModel> GetPromosionesID(int IdPromosiones);
         //Task<bool> InsertarPromosiones(PromosionesInsertarModel value);
         Task<BaseResponse<bool>> InsertarPromocionesV1(PromocionesRequest request);
+        Task<BaseResponse<List<PromocionesResponseV1>>> ListAllPromociones();
+
         //Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha);
         //Task<bool> EliminarPromosiones(int IdPromosiones);
-       
+
 
     }
 }

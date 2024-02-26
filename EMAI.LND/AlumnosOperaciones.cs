@@ -113,6 +113,7 @@ namespace EMAI.LND
                 {
                     var byteSize = countCharacters;
                     var bytesArray = new byte[byteSize];
+
                     crpto.GetBytes(bytesArray);
 
                     var result = new char[countCharacters];

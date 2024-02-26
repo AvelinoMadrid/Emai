@@ -3,6 +3,7 @@ using EMAI.Comun.Models;
 using EMAI.Datos;
 using EMAI.DTOS.Dtos.Base;
 using EMAI.DTOS.Dtos.Request;
+using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
 using Email.Utiilities.Static;
 using System;
@@ -29,7 +30,7 @@ namespace EMAI.LND
             var response = new BaseResponse<bool>();
             using var db = AppRepositoryFactory.GetAppRepository();//cxhecar y mandarlo a inyeccion
             
-            var newPromocion = _mapper.Map<PromocionesModel>(request);
+            var newPromocion = _mapper.Map<PromocionesModel>(request);///mapearlo 
             response.Data = await db.InsertarPromocionesV1(newPromocion);
             //response.Data = await db.InsertarPromocionesV1(newPromocion);
 
@@ -48,6 +49,28 @@ namespace EMAI.LND
             return response;
 
 
+
+        }
+
+        public Task<BaseResponse<List<PromocionesResponseV1>>> ListAllPromociones()
+        {
+            var response = new BaseResponse<List<PromocionesResponseV1>>();
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var listPromociones=db.GetAllPromociones();
+
+            if(listPromociones is not null)
+            {
+                response.IsSuccess= true;
+                response.Data = _mapper.Map<List<PromocionesResponseV1>>(listPromociones);
+                response.Message= StaticVariable.MESSAGE_QUERY;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+
+            }
+            return response;
 
         }
         //Mostrar todo
