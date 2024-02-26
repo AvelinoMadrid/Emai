@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2qeXvqTaAMDk7rdCuPP30lDSQY82Xrj5btPNkyzO1+rRb6rH806YllbSLwRA0VoGMkQMyhJhZ+j52SujUnIMPw==",
   "success": true,
   "projectFilePath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
@@ -18,6 +19,19 @@
     "C:\\Users\\jiren\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+=======
+  "dgSpecHash": "vhzAlntcswJXE/EugKxRnx49MjiAl++m0BEOzikJU2E/swFDZyF6Xv4v3oBolvC3+7Zs1hMSnaJVEVKZRWai6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+>>>>>>> main
   ],
   "logs": []
 }

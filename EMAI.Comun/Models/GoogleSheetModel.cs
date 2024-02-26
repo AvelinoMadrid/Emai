@@ -10,10 +10,9 @@ namespace EMAI.Comun.Models
     {
         public int CountRow { get; set; }
         public int CountColumn { get; set; }
-        public string [][] DataSheetHoja { get; set; }
+        public List<Dictionary<int, List<string>>>? DataSheetHoja { get; set; }
+        public List<List<Object>>? GetValues {  get; set; }
         public bool isPermisoAccess { get; set; }
-        public int posicionRow { get; set; }    
-        public char posicionColumn { get; set; }
         //public string MayorDimensión { get; set; }
         //public string valueRenderOption { get; set; }
         //public string dateTimeRenderOption { get; set; }

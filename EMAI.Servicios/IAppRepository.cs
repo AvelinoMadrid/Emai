@@ -10,6 +10,7 @@ using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Request;
 using static EMAI.Comun.Models.EventosIDModel;
 
+using static EMAI.Comun.Models.RepClaseModel;
 
 
 namespace EMAI.Servicios
@@ -89,7 +90,7 @@ namespace EMAI.Servicios
         Task<List<ClasesModel>> GetClases();
         Task<ClasesIdModel> GetClasesId(int IdClase);
         Task<bool> InsertarClase(ClasesModelInsertar value);
-        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo, string ClaseOpc, string HorarioOp);
+        Task<bool> ActualizarClase(int IdClase, string Nombre, string CNormal, string CVerano, string Dia, string Dia2, string Dia3, decimal Costo);
         Task<bool> EliminarClase(int IdClase);
 
         #endregion
@@ -213,7 +214,6 @@ namespace EMAI.Servicios
 
         #endregion
 
-
         #region "Eventos"
 
         Task<List<EventosModel>> GetEventos();
@@ -248,6 +248,15 @@ namespace EMAI.Servicios
 
         Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles);
 
+        #endregion
+
+        #region "RepClase"
+
+        Task<List<RepClaseModel>> GetRepClase();
+        Task<RepClaseIDModel> GetRepClaseID(int IdRepClase);
+        Task<bool> InsertarRepClase(RepClaseInsertarModel value);
+        Task<bool> ActualizarRepClase(int IdRepClase, int IdClase, int IdMaestro,int IdAlumno, string DiaRep);
+        Task<bool> EliminarRepClase(int IdRepClase);
         #endregion
 
     }

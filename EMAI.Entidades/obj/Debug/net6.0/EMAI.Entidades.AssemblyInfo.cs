@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.Entidades")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49007639da98c5946a773477254eb5fa30343c9e")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+>>>>>>> main
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.Entidades")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.Entidades")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

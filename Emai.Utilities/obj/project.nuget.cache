@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "iuDra274Vyn264GWf0FM4ukOCze72gspoyO6wD3cX3eTcAe51AvB5EPhIKTel+OWIuZSTLZqfFbr1yA8EKtMXg==",
   "success": true,
   "projectFilePath": "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
@@ -12,5 +13,11 @@
     "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "0Wac0+P9PcT5mvFwDrJWRImXjpuNje1qQEVxVg5BpUM5kq8vbyc9CBky+AWYtsvBFwr4zE8qmqz3cP83TCglhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> main
   "logs": []
 }

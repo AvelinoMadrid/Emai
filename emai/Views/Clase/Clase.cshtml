@@ -32,6 +32,11 @@
                                     <th>Dia Horario Secundario</th>
                                     <th>Dia Horario Tercero </th>
                                     <th>Costo</th>
+<<<<<<< HEAD
+=======
+                                    @* <th>Clase Opcional</th>
+                                    <th> Día y hora Opcional </th> *@
+>>>>>>> main
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -47,6 +52,11 @@
                                         <td>@item.Dia2</td>
                                         <td>@item.Dia3</td>
                                         <td>$ @item.Costo</td>
+<<<<<<< HEAD
+=======
+                                        @* <td>@item.ClaseOpc</td>
+                                        <td>@item.HorarioOpc</td> *@
+>>>>>>> main
                                         <td>
                                             <a asp-action="agregarclase" asp-controller="Clase" asp-route-idClase="@item.idClase" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Clase" asp-route-idClase="@item.idClase" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>

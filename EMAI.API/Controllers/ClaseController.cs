@@ -52,8 +52,13 @@ namespace EMAI.API.Controllers
         public async Task Put([FromBody] ClasesModelActualizar value)
         {
             await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
+<<<<<<< HEAD
                 value.Dia, value.Dia2, value.Dia3,
                 value.Costo, value.ClaseOpc, value.HorarioOpc);
+=======
+                value.Dia, value.Dia2, value.Dia3, 
+                value.Costo);
+>>>>>>> main
         }
 
         //Eliminar Clase

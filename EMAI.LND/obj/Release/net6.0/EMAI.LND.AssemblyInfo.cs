@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.LND")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4788526f81430899466d70b18f432c7066f9326f")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+>>>>>>> main
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.LND")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.LND")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
