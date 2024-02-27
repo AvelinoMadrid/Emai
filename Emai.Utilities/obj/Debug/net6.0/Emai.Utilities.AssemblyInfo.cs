@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emai.Utilities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03535d283bb4ef7eadc052c5a963190827aa7e32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+426818a8984ef13453c0ca0a81a4b35abba469aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emai.Utilities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emai.Utilities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -243,3 +243,16 @@ C:\repos\Residencia\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
 C:\repos\Residencia\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
 C:\repos\Residencia\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
 C:\repos\Residencia\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.deps.json
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\bin\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.AssemblyReference.cache
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfoInputs.cache
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.AssemblyInfo.cs
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.sourcelink.json
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.dll
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\refint\EMAI.Entidades.dll
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\EMAI.Entidades.pdb
+C:\Users\amyma\Git\AvelinoMadrid\Emai\EMAI.Entidades\obj\Debug\net6.0\ref\EMAI.Entidades.dll

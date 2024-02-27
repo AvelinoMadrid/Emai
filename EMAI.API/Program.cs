@@ -66,7 +66,7 @@ builder.Services.AddScoped(typeof(IAsignacionClaseOperaciones), f => OperationsF
 builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
 builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());
 builder.Services.AddScoped(typeof(IGoogleSheetOperaciones), f => OperationsFactory.ObtenerGoogleSheetOperaciones());
-
+builder.Services.AddScoped(typeof(IRepClaseOperaciones), f => OperationsFactory.ObtenerRepClaseOperaciones());
 
 
 builder.Services.AddEndpointsApiExplorer();

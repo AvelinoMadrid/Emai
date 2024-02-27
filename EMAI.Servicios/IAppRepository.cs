@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Request;
 using static EMAI.Comun.Models.EventosIDModel;
+using static EMAI.Comun.Models.RepClaseModel;
 
 
 
@@ -251,6 +252,15 @@ namespace EMAI.Servicios
         #endregion
         #region "Meses"
         Task<List<MesesModelV1>> GetSelectMeses();
+        #endregion
+
+        #region "RepClase"
+
+        Task<List<RepClaseModel>> GetRepClase();
+        Task<RepClaseIDModel> GetRepClaseID(int IdRepClase);
+        Task<bool> InsertarRepClase(RepClaseInsertarModel value);
+        Task<bool> ActualizarRepClase(int IdRepClase, int IdClase, int IdMaestro, /*int IdAlumno,*/ string DiaRep);
+        Task<bool> EliminarRepClase(int IdRepClase);
         #endregion
 
     }
