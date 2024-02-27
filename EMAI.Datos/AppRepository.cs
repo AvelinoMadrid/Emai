@@ -19,6 +19,7 @@ using System.Diagnostics.Metrics;
 using static EMAI.Comun.Models.EventosIDModel;
 using Newtonsoft.Json.Linq;
 using EMAI.DTOS.Dtos.Request;
+using static EMAI.Comun.Models.RepClaseModel;
 
 namespace EMAI.Datos
 {
@@ -37,8 +38,10 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAIFEB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            //EMAIConnection = "Data Source=.;Initial Catalog=EMAIFEB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
             //EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+
         }
 
 
@@ -3556,6 +3559,138 @@ namespace EMAI.Datos
             }
         }
 
+        #endregion
+
+        #region "Seccion ---> ReposicionClase"
+        public async Task<List<RepClaseModel>> GetRepClase()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerRepClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<RepClaseModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToRepClase(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private RepClaseModel MapToRepClase(SqlDataReader reader)
+        {
+            return new RepClaseModel()
+            {
+
+                IdRepClase = (int)reader["IdRepClase"],
+                IdAlumno = (int)reader["IdAlumno"],
+                IdClase = (int)reader["IdClase"],
+                IdMaestro = (int)reader["IdMaestro"],
+                DiaRep = (string)reader["DiaRep"].ToString(),
+
+            };
+        }
+
+        public async Task<RepClaseIDModel> GetRepClaseID(int IdRepClase)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_RepClaseObtenerByID", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdRepClase", IdRepClase));
+                    RepClaseIDModel response = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToRepClaseId(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private RepClaseIDModel MapToRepClaseId(SqlDataReader reader)
+        {
+            return new RepClaseIDModel()
+            {
+
+                IdRepClase = (int)reader["IdRepClase"],
+                IdAlumno = (int)reader["IdAlumno"],
+                IdClase = (int)reader["IdClase"],
+                IdMaestro = (int)reader["IdMaestro"],
+                DiaRep = (string)reader["DiaRep"].ToString(),
+
+            };
+        }
+
+        public async Task<bool> InsertarRepClase(RepClaseInsertarModel value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("InsertarRepClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
+                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@IdMaestro", value.IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@DiaRep", value.DiaRep));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+        public async Task<bool> ActualizarRepClase(int IdRepClase, int IdClase, int IdMaestro, string DiaRep)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("ActualizarRepClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("IdRepClase", IdRepClase));
+                    //cmd.Parameters.Add(new SqlParameter("IdAlumno", IdAlumno));
+                    cmd.Parameters.Add(new SqlParameter("IdClase", IdClase));
+                    cmd.Parameters.Add(new SqlParameter("IdMaestro", IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@DiaRep", DiaRep));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+
+
+        public async Task<bool> EliminarRepClase(int IdRepClase)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("EliminarRepClase", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("IdRepClase", IdRepClase));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
         #endregion
 
         #region "dispose"

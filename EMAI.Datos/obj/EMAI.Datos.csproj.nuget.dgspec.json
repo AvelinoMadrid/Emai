@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {}
   },
   "projects": {
-    "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
         "projectName": "EMAI.Comun",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -82,20 +82,20 @@
         }
       }
     },
-    "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
         "projectName": "EMAI.Datos",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Datos\\EMAI.Datos.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,20 +111,20 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
               }
             }
           }
@@ -180,20 +180,20 @@
         }
       }
     },
-    "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
         "projectName": "EMAI.DTOS",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -209,8 +209,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               }
             }
           }
@@ -254,20 +254,20 @@
         }
       }
     },
-    "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
         "projectName": "EMAI.Entidades",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -332,20 +332,20 @@
         }
       }
     },
-    "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
         "projectName": "EMAI.Helpers",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -422,20 +422,20 @@
         }
       }
     },
-    "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+    "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
         "projectName": "EMAI.Servicios",
-        "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
-        "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\obj\\",
+        "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+        "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -451,14 +451,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
               },
-              "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
-                "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
+              "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj": {
+                "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj"
               }
             }
           }
