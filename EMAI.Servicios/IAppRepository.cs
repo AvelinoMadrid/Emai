@@ -182,13 +182,14 @@ namespace EMAI.Servicios
         #endregion
 
         #region "Promosiones"
-        Task<List<PromosionesModel>> GetPromosiones();
-        Task<PromosionesIDModel> GetPromosionesID(int IdPromosiones);
-        Task<bool> InsertarPromosiones(PromosionesInsertarModel value);
-        Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha);
-        Task<bool> EliminarPromosiones(int IdPromosiones);
-        Task<bool> InsertarPromocionesV1(PromocionesModel request);
 
+        //Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha);
+        Task<bool> EliminarPromocionesV1(int IdPromocion);
+        Task<bool> InsertarPromocionesV1(PromocionesModelV1 request);
+        Task<List<PromocionesModelV1>> GetPromocionesV1();
+        Task<List<PromocionesModelV1>> GetSelectPromocionesV1();
+        Task<PromocionesModelV1> GetPromocionById(int IdPromocion);
+        Task<bool> UpdatePromocionesV1(PromocionesModelV1 request);
 
         #endregion
 
@@ -247,6 +248,9 @@ namespace EMAI.Servicios
 
         Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles);
 
+        #endregion
+        #region "Meses"
+        Task<List<MesesModelV1>> GetSelectMeses();
         #endregion
 
     }

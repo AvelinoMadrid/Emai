@@ -2,7 +2,9 @@ C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\EMAI.DTOS.deps.json
 C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\EMAI.DTOS.dll
 C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\EMAI.DTOS.pdb
 C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\EMAI.Comun.dll
+C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\Emai.Utilities.dll
 C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\EMAI.Comun.pdb
+C:\repos\Residencia\Emai\EMAI.DTOS\bin\Debug\net6.0\Emai.Utilities.pdb
 C:\repos\Residencia\Emai\EMAI.DTOS\obj\Debug\net6.0\EMAI.DTOS.csproj.AssemblyReference.cache
 C:\repos\Residencia\Emai\EMAI.DTOS\obj\Debug\net6.0\EMAI.DTOS.GeneratedMSBuildEditorConfig.editorconfig
 C:\repos\Residencia\Emai\EMAI.DTOS\obj\Debug\net6.0\EMAI.DTOS.AssemblyInfoInputs.cache

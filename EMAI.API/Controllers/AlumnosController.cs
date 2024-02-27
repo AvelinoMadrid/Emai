@@ -1,7 +1,6 @@
-﻿using EMAI.Servicios;
+﻿using EMAI.Comun.Models;
+using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
 
 namespace EMAI.API.Controllers
 {
@@ -87,7 +86,7 @@ namespace EMAI.API.Controllers
         [HttpPut("[action]")]
         public async Task Put([FromBody] AlumnosUpdateModel value)
         {
-            await _repository.UpdateAlumnos(value.IdAlumno,value.IdClase, value.Tag, value.NoDiaClases, value.FechaInicioClaseGratis,
+            await _repository.UpdateAlumnos(value.IdAlumno, value.IdClase, value.Tag, value.NoDiaClases, value.FechaInicioClaseGratis,
             value.FechaFinClaseGratis, value.Nombre, value.ApellidoP, value.ApellidoM, value.Edad, value.FechaNacimiento,
             value.TelefonoCasa, value.Celular, value.Facebook, value.Email, value.Enfermedades, value.Discapacidad, value.InstrumentoBase, value.Dia,
             value.Hora, value.InstrumentoOpcional, value.DiaOpcional, value.HoraOpcional, value.CelularPapas, value.EmailPapas, value.RecogerPapas, value.CelularTR, value.NumEmergencia);
@@ -96,7 +95,7 @@ namespace EMAI.API.Controllers
 
         //nuevos requirimientos 
 
-      
+
 
     }
 }

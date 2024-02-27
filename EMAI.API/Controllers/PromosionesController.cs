@@ -1,8 +1,7 @@
-﻿using EMAI.Servicios;
-using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
+﻿using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Request;
+using EMAI.Servicios;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EMAI.API.Controllers
 {
@@ -28,6 +27,39 @@ namespace EMAI.API.Controllers
             var response = await _repository.InsertarPromocionesV1(request);
             return Ok(response); // Aquí se usa OK correctamente
 
+        }
+        [HttpGet("GetAllPromociones")]
+        public async Task<ActionResult<List<PromocionesModelV1>>> GetAllPromociones()
+        {
+            var response = await _repository.ListPromocionesV1();
+            return Ok(response);
+
+        }
+        [HttpGet("GetSelectPromociones")]
+        public async Task<ActionResult<List<PromocionesModelV1>>> GetSelectPromociones()
+        {
+            var response = await _repository.ListSelectPromocionesV1();
+            return Ok(response);
+        }
+        [HttpGet("{IdPromocion}")]
+
+        public async Task<ActionResult> GetPromosionesById(int IdPromocion)
+        {
+            var response = await _repository.PromocionById(IdPromocion);
+            return Ok(response);
+        }
+        [HttpDelete("Delete/{IdPromocion}")]
+
+        public async Task<ActionResult> DeletePromocion(int IdPromocion)
+        {
+            var response =await _repository.DeletePromocion(IdPromocion);
+            return Ok(response);
+        }
+        [HttpPut("Update/{IdPromocion}")]
+        public async Task<IActionResult> UpdatePromocion(int IdPromocion,PromocionesRequest request)
+        {
+            var response = await _repository.UpdatePromocion(IdPromocion, request);
+            return Ok(response);    
         }
 
         //// GET api/values

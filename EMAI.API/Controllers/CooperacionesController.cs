@@ -48,7 +48,7 @@ namespace EMAI.API.Controllers
             await _repository.UpdateCooperaciones(value.IdCooperacion, value.Fecha, value.NoPedido, value.Proveedor, value.Descripcion, value.Cantidad, value.SubTotal, value.Total);
         }
 
-       
+
 
 
     }

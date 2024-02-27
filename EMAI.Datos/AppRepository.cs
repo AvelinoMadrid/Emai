@@ -37,7 +37,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAIFEB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
             //EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
         }
 
@@ -2594,29 +2594,29 @@ namespace EMAI.Datos
         #endregion
 
         #region "Secciones ---> Promosiones"
-        public async Task<List<PromosionesModel>> GetPromosiones()
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_ObtenerPromosiones", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromosionesModel>(); //1
-                    await sql.OpenAsync();
+        //public async Task<List<PromosionesModel>> GetPromosiones()
+        //{
+        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("usp_ObtenerPromosiones", sql))
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //            var response = new List<PromosionesModel>(); //1
+        //            await sql.OpenAsync();
 
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response.Add(MapToPromosiones(reader));//2
-                        }
-                    }
+        //            using (var reader = await cmd.ExecuteReaderAsync())
+        //            {
+        //                while (await reader.ReadAsync())
+        //                {
+        //                    response.Add(MapToPromosiones(reader));//2
+        //                }
+        //            }
 
-                    return response;
-                }
-            }
-        }
-        public async Task<bool> InsertarPromocionesV1(PromocionesModel request)
+        //            return response;
+        //        }
+        //    }
+        //}
+        public async Task<bool> InsertarPromocionesV1(PromocionesModelV1 request)
         {
             bool success = false;
             int Valor_Retornado = 0;
@@ -2637,15 +2637,16 @@ namespace EMAI.Datos
                                 cmd.Parameters.Add(new SqlParameter("@Porcentaje", request.Porcentaje));
                                 cmd.Parameters.Add(new SqlParameter("@Activo", request.Activo));
 
-                                SqlParameter ValorRetorno = new SqlParameter("@IntResult", SqlDbType.Int);
+                                SqlParameter paramSalida = new SqlParameter("@IntResult", SqlDbType.Int);
+                                paramSalida.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(paramSalida);
 
-                                ValorRetorno.Direction = ParameterDirection.Output;
-                                cmd.Parameters.Add(ValorRetorno);
 
                                 await cmd.ExecuteNonQueryAsync();
-                                Valor_Retornado = Convert.ToInt32(ValorRetorno.Value);
+                                int valorDevuelto = (int)paramSalida.Value;
 
-                                if (Valor_Retornado == 1)
+
+                                if (valorDevuelto==1)
                                 {
                                     success = true;
                                 }
@@ -2670,107 +2671,286 @@ namespace EMAI.Datos
             }
             return success;
         }
-
-        private PromosionesModel MapToPromosiones(SqlDataReader reader)
+        public async Task<bool> UpdatePromocionesV1(PromocionesModelV1 request)
         {
-            return new PromosionesModel()
-            {
+            bool success = false;
 
-                IdPromosion = (int)reader["IdPromosion"],
-                IdAlumno = (int)reader["IdAlumno"],
-                Porcentaje = (int)reader["Porcentaje"],
-                Fecha = (DateTime)reader["Fecha"],
-            };
-        }
-
-        public async Task<PromosionesIDModel> GetPromosionesID(int IdColegiatura)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("BuscarPorIDPromosiones", sql))
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdPromosiones", IdColegiatura));
-                    PromosionesIDModel response = null;//3
                     await sql.OpenAsync();
 
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (SqlTransaction transaction = sql.BeginTransaction(System.Data.IsolationLevel.Serializable))
                     {
-                        while (await reader.ReadAsync())
+                        try
                         {
-                            response = MapToPromosionesId(reader);//3
+                            using (SqlCommand cmd = new SqlCommand("UpdatePromocionesv1", sql, transaction))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new SqlParameter("@NombrePromocion", request.NombrePromocion));
+                                cmd.Parameters.Add(new SqlParameter("@Porcentaje", request.Porcentaje));
+                                cmd.Parameters.Add(new SqlParameter("@Activo", request.Activo));
+                                cmd.Parameters.Add(new SqlParameter("@IdPromociones", request.IdPromociones));
+
+                                SqlParameter salidaInt = new SqlParameter("@IntResult", SqlDbType.Int);
+
+                                salidaInt.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(salidaInt);
+                                cmd.Parameters.Add("@IntResult",SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                                await cmd.ExecuteNonQueryAsync();
+
+                            
+                                if (Convert.ToInt32(salidaInt.Value) == 1)
+                                {
+                                    success = true;
+                                }
+
+                                transaction.Commit();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            throw new Exception("Error al ejecutar el procedimiento almacenado", ex);
                         }
                     }
-
-                    return response;
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presentó un problema de conexión con la base de datos", ex);
+            }
+
+            return success;
+        }
+
+
+        public async Task<bool> EliminarPromocionesV1(int IdPromocion)
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("EliminarPromocionesV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@IdPromociones", IdPromocion));
+                        await sql.OpenAsync();
+                        await cmd.ExecuteNonQueryAsync();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
             }
         }
 
-        private PromosionesIDModel MapToPromosionesId(SqlDataReader reader)
-        {
-            return new PromosionesIDModel()
-            {
+        //private PromosionesModel MapToPromosiones(SqlDataReader reader)
+        //{
+        //    return new PromosionesModel()
+        //    {
 
-                IdPromosion = (int)reader["IdPromosion"],
-                IdAlumno = (int)reader["IdAlumno"],
-                Porcentaje = (int)reader["Porcentaje"],
-                Fecha = (DateTime)reader["Fecha"],
+        //        IdPromosion = (int)reader["IdPromosion"],
+        //        IdAlumno = (int)reader["IdAlumno"],
+        //        Porcentaje = (int)reader["Porcentaje"],
+        //        Fecha = (DateTime)reader["Fecha"],
+        //    };
+        //}
+        private PromocionesModelV1 MapToPromocionV1(SqlDataReader reader)
+        {
+            return new PromocionesModelV1()
+            {
+                IdPromociones = (int)reader["IdPromociones"],
+                NombrePromocion = (string)reader["NombrePromocion"],
+                Porcentaje = Convert.ToDecimal((double)reader["Porcentaje"]),
+                Activo = reader.GetBoolean(reader.GetOrdinal("Activo")),
             };
         }
-
-        public async Task<bool> InsertarPromosiones(PromosionesInsertarModel value)
+        public async Task<List<PromocionesModelV1>> GetSelectPromocionesV1()
         {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("InsertarPromosiones", sql))
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
-                    cmd.Parameters.Add(new SqlParameter("@Porcentaje", value.Porcentaje));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
+                    using (SqlCommand cmd = new SqlCommand("MostrarPromocionesV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        var response = new List<PromocionesModelV1>(); //1
+                        await sql.OpenAsync();
 
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToPromocionV1(reader));//2
+                            }
+                        }
+                        return response;
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+        }
+  
+        public async Task<List<PromocionesModelV1>> GetPromocionesV1()
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("MostrarPromocionesV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        var response = new List<PromocionesModelV1>(); //1
+                        await sql.OpenAsync();
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToPromocionV1(reader));//2
+                            }
+                        }
+                        return response;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+        }
+        public async Task<PromocionesModelV1> GetPromocionById(int IdPromocion)
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SelectByIdPromocionesV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@IdPromociones ", IdPromocion));
+                        PromocionesModelV1 response = null;//3
+                        await sql.OpenAsync();
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response = MapToPromocionV1(reader);//3
+                            }
+                        }   
+                        return response!;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+
             }
         }
 
-        public async Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("ActualizarPromosiones", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
-                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", IdAlumno));
-                    cmd.Parameters.Add(new SqlParameter("@Porcentaje", Porcentaje));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
 
 
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
+        //public async Task<PromosionesIDModel> GetPromosionesID(int IdColegiatura)
+        //{
+        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("BuscarPorIDPromosiones", sql))
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //            cmd.Parameters.Add(new SqlParameter("@IdPromosiones", IdColegiatura));
+        //            PromosionesIDModel response = null;//3
+        //            await sql.OpenAsync();
 
-        public async Task<bool> EliminarPromosiones(int IdPromosion)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("EliminarPromosiones", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
+        //            using (var reader = await cmd.ExecuteReaderAsync())
+        //            {
+        //                while (await reader.ReadAsync())
+        //                {
+        //                    response = MapToPromosionesId(reader);//3
+        //                }
+        //            }
+
+        //            return response;
+        //        }
+        //    }
+        //}
+
+        //private PromosionesIDModel MapToPromosionesId(SqlDataReader reader)
+        //{
+        //    return new PromosionesIDModel()
+        //    {
+
+        //        IdPromosion = (int)reader["IdPromosion"],
+        //        IdAlumno = (int)reader["IdAlumno"],
+        //        Porcentaje = (int)reader["Porcentaje"],
+        //        Fecha = (DateTime)reader["Fecha"],
+        //    };
+        //}
+
+        //public async Task<bool> InsertarPromosiones(PromosionesInsertarModel value)
+        //{
+        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("InsertarPromosiones", sql))
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //            cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
+        //            cmd.Parameters.Add(new SqlParameter("@Porcentaje", value.Porcentaje));
+        //            cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
+
+        //            await sql.OpenAsync();
+        //            await cmd.ExecuteNonQueryAsync();
+        //            return true;
+        //        }
+        //    }
+        //}
+
+        //public async Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha)
+        //{
+        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("ActualizarPromosiones", sql))
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //            cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
+        //            cmd.Parameters.Add(new SqlParameter("@IdAlumno", IdAlumno));
+        //            cmd.Parameters.Add(new SqlParameter("@Porcentaje", Porcentaje));
+        //            cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
+
+
+        //            await sql.OpenAsync();
+        //            await cmd.ExecuteNonQueryAsync();
+        //            return true;
+        //        }
+        //    }
+        //}
+
+        //public async Task<bool> EliminarPromosiones(int IdPromosion)
+        //{
+        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand("EliminarPromosiones", sql))
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //            cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
+        //            await sql.OpenAsync();
+        //            await cmd.ExecuteNonQueryAsync();
+        //            return true;
+        //        }
+        //    }
+        //}
 
 
         #endregion
@@ -2933,6 +3113,39 @@ namespace EMAI.Datos
                     return true;
                 }
             }
+        }
+
+        #endregion
+
+        #region "Seccion ---> MostrarMeses"
+        public async Task<List<MesesModelV1>> GetSelectMeses()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("MostrarMeses", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<MesesModelV1>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToMeses(reader));//2
+                        }
+                    }
+                    return response;
+                }
+            }
+        }
+        private MesesModelV1 MapToMeses(SqlDataReader reader)
+        {
+            return new MesesModelV1()
+            {
+                IdMeses = (int)reader["IdMeses"],
+                NombreMes = (string)reader["NombreMes"],
+            };
         }
 
         #endregion
@@ -3567,7 +3780,21 @@ namespace EMAI.Datos
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
+
+  
 
     }
 }

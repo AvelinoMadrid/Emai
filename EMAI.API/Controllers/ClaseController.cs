@@ -1,7 +1,6 @@
-﻿using EMAI.Servicios;
+﻿using EMAI.Comun.Models;
+using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
 
 namespace EMAI.API.Controllers
 {
@@ -48,12 +47,13 @@ namespace EMAI.API.Controllers
         }
 
         //Actualizar clase
-        [HttpPut("/api/Clases/Actualizar")]
-        public async Task Put([FromBody] ClasesModelActualizar value)
-        {
-            await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
-                value.Dia, value.Dia2, value.Dia3, value.Costo);
-        }
+        //[HttpPut("/api/Clases/Actualizar")]
+        //public async Task Put([FromBody] ClasesModelActualizar value)
+        //{
+        //    await _repository.ActualizarClase(value.IdClase, value.Nombre, value.CNormal, value.CVerano,
+        //        value.Dia, value.Dia2, value.Dia3,
+        //        value.Costo, value.ClaseOpc, value.HorarioOpc);
+        //}
 
         //Eliminar Clase
         [HttpDelete("Eliminar/{IdClase}")]

@@ -251,7 +251,8 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "EMAI.Comun": "1.0.0"
+          "EMAI.Comun": "1.0.0",
+          "Emai.Utilities": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EMAI.DTOS.dll": {}
@@ -274,6 +275,20 @@
         },
         "runtime": {
           "bin/placeholder/EMAI.Entidades.dll": {}
+        }
+      },
+      "Emai.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Emai.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Emai.Utilities.dll": {}
         }
       }
     }
@@ -660,6 +675,11 @@
       "type": "project",
       "path": "../EMAI.Entidades/EMAI.Entidades.csproj",
       "msbuildProject": "../EMAI.Entidades/EMAI.Entidades.csproj"
+    },
+    "Emai.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Emai.Utilities/Emai.Utilities.csproj",
+      "msbuildProject": "../Emai.Utilities/Emai.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -31,42 +31,42 @@ namespace emai.Controllers
             return obte;
         }
 
-        public async Task<IActionResult> Clase()
-        {
-            List<Clase> Lista = await _ServicioClaseApi.Lista();
-            var HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
+        //public async Task<IActionResult> Clase()
+        //{
+        //    List<Clase> Lista = await _ServicioClaseApi.Lista();
+        //    var HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
 
-            foreach (var horario in Lista)
-            {
-                // Buscar el maestro correspondiente en la lista de MaestrosDisponibles por su ID
-                var horarios = HorarioDisponibles.FirstOrDefault(m => m.IdHorario == horario.idHorario);
-                if (horarios != null)
-                {
-                    horario.NombreHorario = horarios.Dia;
-                }
-
-
-            }
-
-            return View(Lista);
-        }
-
-        public async Task<IActionResult> agregarclase(int idClase)
-        {
-            Clase modelo_clase = new Clase();
-
-            ViewBag.Accion = "Nueva Clase";
-            if (idClase != 0)
-            {
-                modelo_clase = await _ServicioClaseApi.Obtener(idClase);
-                ViewBag.Action = "Editar Clase";
-            }
+        //    foreach (var horario in Lista)
+        //    {
+        //        // Buscar el maestro correspondiente en la lista de MaestrosDisponibles por su ID
+        //        var horarios = HorarioDisponibles.FirstOrDefault(m => m.IdHorario == horario.idHorario);
+        //        if (horarios != null)
+        //        {
+        //            horario.NombreHorario = horarios.Dia;
+        //        }
 
 
-            modelo_clase.HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
+        //    }
 
-            return View(modelo_clase);
-        }
+        //    return View(Lista);
+        //}
+
+        //public async Task<IActionResult> agregarclase(int idClase)
+        //{
+        //    Clase modelo_clase = new Clase();
+
+        //    ViewBag.Accion = "Nueva Clase";
+        //    if (idClase != 0)
+        //    {
+        //        modelo_clase = await _ServicioClaseApi.Obtener(idClase);
+        //        ViewBag.Action = "Editar Clase";
+        //    }
+
+
+        //    modelo_clase.HorarioDisponibles = await _ServicioHorarioApi.ObtenerTodos();
+
+        //    return View(modelo_clase);
+        //}
 
 
         [HttpPost]

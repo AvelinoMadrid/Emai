@@ -7,7 +7,7 @@ namespace EMAI.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class NominaController:ControllerBase
+    public class NominaController : ControllerBase
     {
         private readonly INominaOperaciones _repository;
 
@@ -48,7 +48,7 @@ namespace EMAI.API.Controllers
         [HttpPut("[action]")]
         public async Task Put([FromBody] UpdateNominaModel value)
         {
-            await _repository.ActualizarNomina(value.IdNomina,value.Fecha,value.NoPedido,value.Proveedor,value.Descripcion,value.Cantidad,value.Subtotal,value.Total);
+            await _repository.ActualizarNomina(value.IdNomina, value.Fecha, value.NoPedido, value.Proveedor, value.Descripcion, value.Cantidad, value.Subtotal, value.Total);
         }
 
 

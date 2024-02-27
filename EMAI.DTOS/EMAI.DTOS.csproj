@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EMAI.Comun\EMAI.Comun.csproj" />
+    <ProjectReference Include="..\Emai.Utilities\Emai.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

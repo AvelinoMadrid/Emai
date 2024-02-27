@@ -1,8 +1,6 @@
-﻿using EMAI.Servicios;
+﻿using EMAI.Comun.Models;
+using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
-using System.Security.Cryptography;
 
 namespace EMAI.API.Controllers
 {

@@ -1,13 +1,12 @@
-﻿using EMAI.Servicios;
+﻿using EMAI.Comun.Models;
+using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
 
 namespace EMAI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Programa5sController 
+    public class Programa5sController
     {
         private readonly IPrograma5sOperaciones _repository;
 

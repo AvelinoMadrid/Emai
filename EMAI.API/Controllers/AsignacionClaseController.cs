@@ -1,7 +1,6 @@
-﻿using EMAI.Servicios;
+﻿using EMAI.Comun.Models;
+using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using EMAI.Comun;
-using EMAI.Comun.Models;
 
 
 namespace EMAI.API.Controllers

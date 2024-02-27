@@ -173,7 +173,8 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "EMAI.Comun": "1.0.0"
+          "EMAI.Comun": "1.0.0",
+          "Emai.Utilities": "1.0.0"
         },
         "runtime": {
           "EMAI.DTOS.dll": {}
@@ -188,6 +189,15 @@
         },
         "runtime": {
           "EMAI.Entidades.dll": {}
+        }
+      },
+      "Emai.Utilities/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+        },
+        "runtime": {
+          "Emai.Utilities.dll": {}
         }
       }
     }
@@ -307,6 +317,11 @@
       "sha512": ""
     },
     "EMAI.Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Emai.Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

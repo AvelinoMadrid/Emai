@@ -1,9 +1,5 @@
 ﻿using EMAI.Comun.Models;
-using EMAI.LND;
 using EMAI.Servicios;
-using Email.Utiilities.Static;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Sheets.v4;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMAI.API.Controllers
@@ -19,7 +15,8 @@ namespace EMAI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<bool>>BindingRepuestOfGoogleSheet(){
+        public async Task<ActionResult<bool>> BindingRepuestOfGoogleSheet()
+        {
 
             var result = await _googleSheetOperaciones.ConnectGoogleSheet();
 
@@ -46,7 +43,7 @@ namespace EMAI.API.Controllers
             var result = await _googleSheetOperaciones.ReadDataSheet(HojaIdShhet);
             return Ok(result);
         }
-    
+
         //retorna la lista de tabla de shheId 
         //retoan la lista de tabla de sheeId en update medio de row
 

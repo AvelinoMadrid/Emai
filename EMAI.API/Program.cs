@@ -1,13 +1,10 @@
-        using EMAI.API.MappingProfiles;
-using Microsoft.AspNetCore.Cors.Infrastructure;
-using Microsoft.Extensions.Options;
-using System.Text;
-using EMAI.Servicios;
-using EMAI.Comun;
-using EMAI.LND;
-using Microsoft.OpenApi.Models;
-using EMAI.LND.Extensions;
+using EMAI.API.MappingProfiles;
 using EMAI.DTOS.Mappers;
+using EMAI.LND;
+using EMAI.LND.Extensions;
+using EMAI.Servicios;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuraction = builder.Configuration;
@@ -49,7 +46,7 @@ builder.Services.AddSwaggerGen(c =>
 // aca van las operaciones
 builder.Services.AddScoped(typeof(IAlumnosOperaciones), f => OperationsFactory.ObtenerAlumnosOperaciones());
 builder.Services.AddScoped(typeof(IClasesOperaciones), f => OperationsFactory.ObtenerClasesOperaciones());
-builder.Services.AddScoped(typeof(IAsistenciaOperaciones),f=> OperationsFactory.ObtenerAsistenciaOperaciones());
+builder.Services.AddScoped(typeof(IAsistenciaOperaciones), f => OperationsFactory.ObtenerAsistenciaOperaciones());
 builder.Services.AddScoped(typeof(IMaestrosOperaciones), f => OperationsFactory.ObtenerMaestrosOperaciones());
 builder.Services.AddScoped(typeof(IHorariosOperaciones), f => OperationsFactory.ObtenerHorariosOperaciones());
 builder.Services.AddScoped(typeof(INominaOperaciones), f => OperationsFactory.ObtenerNominaOperaciones());
