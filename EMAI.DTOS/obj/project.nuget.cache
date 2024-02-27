@@ -1,27 +1,23 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "989UL/xn5FyElEcCAiJJL161YKzsBrnidrt06yyCt3y6BQok95ihW8100wybyNShY9IE1PtkDJZb1+BX3m6rnQ==",
-=======
-  "dgSpecHash": "/+HnIwIBHIGTQKDk/yp4CkTx+Tw+YAmhJw2VCWxemQ1MaiDo5bo6c3INT8iJX9R+mCnLjAD/HcO53Uzq7v3lJQ==",
->>>>>>> fb841def6fe98ccb0fece2fbbba8f3d48185936d
   "success": true,
-  "projectFilePath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
+  "projectFilePath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\amyma\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
-    "C:\\Users\\amyma\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\jiren\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

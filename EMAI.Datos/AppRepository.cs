@@ -37,13 +37,6 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            //EMAIConnection = "Data Source=baseemai.cdljyong6xcl.us-east-1.rds.amazonaws.com;Initial Catalog=EMAI;TrustServerCertificate=True;User ID=admin;Password=admin007";
-<<<<<<< HEAD
-            EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
-=======
-            //EMAIConnection = "Data Source=.;Initial Catalog=EMAIFEB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
->>>>>>> fb841def6fe98ccb0fece2fbbba8f3d48185936d
-            //EMAIConnection = "Data Source=MIGUELANGEL;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
             EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
 
         }

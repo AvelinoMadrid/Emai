@@ -1139,23 +1139,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\amyma\\.nuget\\packages\\": {},
+    "C:\\Users\\jiren\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+      "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
       "projectName": "EMAI.Helpers",
-      "projectPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
-      "packagesPath": "C:\\Users\\amyma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amyma\\Git\\AvelinoMadrid\\Emai\\EMAI.Helpers\\obj\\",
+      "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\EMAI.Helpers.csproj",
+      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Helpers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\amyma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
