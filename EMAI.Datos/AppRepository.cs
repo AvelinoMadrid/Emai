@@ -37,7 +37,8 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -1203,7 +1204,6 @@ namespace EMAI.Datos
                 }
             }
         }
-
 
 
 
@@ -3909,6 +3909,8 @@ namespace EMAI.Datos
             GC.Collect();
         }
 
+        
+
 
 
 
@@ -3926,7 +3928,7 @@ namespace EMAI.Datos
 
         #endregion
 
-  
+
 
     }
 }
