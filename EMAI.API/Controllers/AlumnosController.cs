@@ -1,4 +1,5 @@
 ﻿using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,13 @@ namespace EMAI.API.Controllers
         public async Task<ActionResult<IEnumerable<AlumnosModel>>> Get()
         {
             return await _repository.GetAlumnos();
+        }
+        [HttpGet("Folio/GenerarFolio")]
+        public async Task<ActionResult<ListFolioResponse>> GenerarFolio()
+        {
+            var folio = await _repository.FolioGenerate();
+            return Ok(folio);
+   
         }
 
 

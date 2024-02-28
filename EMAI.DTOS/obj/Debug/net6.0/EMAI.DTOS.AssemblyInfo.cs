@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.DTOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+457f60e46a4e70782699d5aaf7081e9ce587dd02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8213723261984f11143d10b8328f917553c1973")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.DTOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.DTOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

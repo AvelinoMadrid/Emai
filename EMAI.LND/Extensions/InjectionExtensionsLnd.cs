@@ -19,6 +19,7 @@ namespace EMAI.LND.Extensions
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddTransient<IPromosionesOperaciones, PromosionesOperaciones>();
+            services.AddTransient<IAlumnosOperaciones, AlumnosOperaciones>();
             services.AddTransient<IMesesOperaciones, MesesOperaciones>();
             return services;
 

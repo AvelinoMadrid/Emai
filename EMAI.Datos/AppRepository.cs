@@ -20,6 +20,7 @@ using static EMAI.Comun.Models.EventosIDModel;
 using Newtonsoft.Json.Linq;
 using EMAI.DTOS.Dtos.Request;
 using static EMAI.Comun.Models.RepClaseModel;
+using EMAI.DTOS.Dtos.Response;
 
 namespace EMAI.Datos
 {
@@ -38,7 +39,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -68,7 +69,8 @@ namespace EMAI.Datos
             }
         }
 
-         
+
+
         private AlumnosModel MapToAlumnos(SqlDataReader reader)
         {
             return new AlumnosModel()
@@ -192,6 +194,42 @@ namespace EMAI.Datos
 
                     return response;
                 }
+            }
+        }
+
+        public async Task<ListFolioResponse[]> GetListFolio()
+        {
+            try
+            {
+                //List<string> res = new List<string>()
+                //https://es.stackoverflow.com/questions/47992/convertir-sqldatareader-en-lista-generica
+                List<ListFolioResponse> FolioArray = new List<ListFolioResponse>();
+                ListFolioResponse objData = new ListFolioResponse();
+
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("ListFolio", sql))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        
+                        await sql.OpenAsync();
+
+                        SqlDataReader reader = await cmd.ExecuteReaderAsync();
+
+                        while (await reader.ReadAsync())
+                        {
+                            //tomar el valor de fila 
+                            string valueFila = reader["Folio"].ToString();
+                            objData.Folio = valueFila;
+                            FolioArray.Add(objData);
+                        }
+                    }
+                }
+                return FolioArray.ToArray();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
             }
         }
 
@@ -3909,7 +3947,11 @@ namespace EMAI.Datos
             GC.Collect();
         }
 
-        
+
+
+
+
+
 
 
 

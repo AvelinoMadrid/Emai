@@ -1,14 +1,22 @@
 ﻿using EMAI.Comun.Models;
 using EMAI.Datos;
 using EMAI.DTOS.Dtos.Base;
+using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
 using Email.Utiilities.Static;
+using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
 
 namespace EMAI.LND
 {
     public class AlumnosOperaciones : IAlumnosOperaciones
     {
+        private readonly IConfiguration _config;
+
+        public AlumnosOperaciones(IConfiguration config)
+        {
+            _config = config;
+        }
 
         //MOSTRAR
         public async Task<List<AlumnosModel>> GetAlumnos()
@@ -22,8 +30,7 @@ namespace EMAI.LND
         {
             using var db = AppRepositoryFactory.GetAppRepository();
             var rsp = await db.GetAlumnosbyID(id);
-            return rsp;
-        
+            return rsp; 
         }
 
         public async Task<bool> InsertarAlumno(InsertAlumnoModel value)
@@ -102,35 +109,7 @@ namespace EMAI.LND
         {
             throw new NotImplementedException();
         }
-        private static string randomAlphanumericStrings(int countCharacters)
-        {
-            const string prefijo = "EMAI-";
-            const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-            using (var crpto = new RNGCryptoServiceProvider())
-            {
-                try
-                {
-                    var byteSize = countCharacters;
-                    var bytesArray = new byte[byteSize];
-                    crpto.GetBytes(bytesArray);
-
-                    var result = new char[countCharacters];
-                    var validCharCount = validChars.Length;
-
-                    for (int i = 0; i < countCharacters; i++)
-                    {
-                        var indice = bytesArray[i] % validCharCount;
-                        result[i] = validChars[indice];
-                    }
-                    return prefijo + new string(result);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Se presento problema en la generacion del Folio", ex);
-                }
-            }
-        }
 
         public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request)
         {
@@ -151,7 +130,56 @@ namespace EMAI.LND
                 response.Message = StaticVariable.MESSAGE_FALLED;
             }
             return response;
+        }
 
+            public async Task<bool> verificarExistFolio(string folio)
+            {
+                bool response = false;
+                using var db = AppRepositoryFactory.GetAppRepository();
+                //recorrer el array
+                var lista = await db.GetListFolio();
+                int countList= lista.Length;
+                for (int i = 0; i < countList; i++)
+                {
+                    if (lista[i].Folio.Equals(folio))
+                        response=true;
+                        break;
+                }
+                return response;
+            }
+
+        public async Task<ListFolioResponse> FolioGenerate()
+        {
+            var response = new ListFolioResponse();
+            const string prefijo = "EMAI-";
+            const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            using (var crpto = new RNGCryptoServiceProvider())
+            {
+                try
+                {
+                    var countChars = _config.GetValue<int>("StringFolio:CountString");
+                    var bytesArray = new byte[countChars];
+                    crpto.GetBytes(bytesArray);
+
+                    var result = new char[countChars];
+                    var validCharCount = validChars.Length;
+
+                    for (int i = 0; i < countChars; i++)
+                    {
+                        var indice = bytesArray[i] % validCharCount;
+                        result[i] = validChars[indice];
+                    }
+                    
+                     response.Folio=prefijo + new string(result);
+                    return response;
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Hubo Problema en el Folio", ex);
+                }
+            }
         }
 
 

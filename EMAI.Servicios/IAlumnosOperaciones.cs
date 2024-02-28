@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Base;
+using EMAI.DTOS.Dtos.Response;
 using EMAI.Entidades;
 using EMAI.Servicios;
 namespace EMAI.Servicios
@@ -14,6 +15,8 @@ namespace EMAI.Servicios
     {
         // obtener todos los datos 
         Task<List<AlumnosModel>> GetAlumnos();
+        Task<bool> verificarExistFolio(string folio);
+        Task<ListFolioResponse> FolioGenerate();
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value);
         Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request);

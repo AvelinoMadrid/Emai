@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Request;
+using EMAI.DTOS.Dtos.Response;
 using static EMAI.Comun.Models.EventosIDModel;
 using static EMAI.Comun.Models.RepClaseModel;
 
@@ -36,6 +37,7 @@ namespace EMAI.Servicios
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<bool> InsertarAlumno(InsertAlumnoModel value);
         Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request);
+        Task<ListFolioResponse[]> GetListFolio();
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
            int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,

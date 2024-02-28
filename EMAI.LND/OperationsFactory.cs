@@ -11,10 +11,10 @@ namespace EMAI.LND
     public  class OperationsFactory
     {
 
-        public static IAlumnosOperaciones ObtenerAlumnosOperaciones()
-        {
-            return new AlumnosOperaciones();
-        }
+        //public static IAlumnosOperaciones ObtenerAlumnosOperaciones()
+        //{
+        //    return new AlumnosOperaciones();
+        //}
 
         public static IAdicionalesOperaciones ObtenerAdicionalesOperaciones()
         {

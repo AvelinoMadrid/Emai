@@ -44,7 +44,7 @@ builder.Services.AddSwaggerGen(c =>
 
 
 // aca van las operaciones
-builder.Services.AddScoped(typeof(IAlumnosOperaciones), f => OperationsFactory.ObtenerAlumnosOperaciones());
+//builder.Services.AddScoped(typeof(IAlumnosOperaciones), f => OperationsFactory.ObtenerAlumnosOperaciones());
 builder.Services.AddScoped(typeof(IClasesOperaciones), f => OperationsFactory.ObtenerClasesOperaciones());
 builder.Services.AddScoped(typeof(IAsistenciaOperaciones), f => OperationsFactory.ObtenerAsistenciaOperaciones());
 builder.Services.AddScoped(typeof(IMaestrosOperaciones), f => OperationsFactory.ObtenerMaestrosOperaciones());
