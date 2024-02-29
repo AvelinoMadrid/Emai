@@ -56,7 +56,18 @@ namespace EMAI.API.Controllers
             var response = await _repository.RegisterAlumno(request);
             return Ok(response);
         }
-
+        [HttpGet("ListarById/{IdAlumno}")]
+        public async Task<ActionResult<AlumnoResponseV1>> GetAlumnoById(int IdAlumno)
+        {
+           var response = await _repository.GetAlumnosByIdV1(IdAlumno);
+           return Ok(response);
+        }
+        [HttpDelete("DeleteAlumno/{IdAlumno}")]
+        public async Task<IActionResult> DeleteAlumno(int IdAlumno)
+        {
+            var response = await _repository.DeleteByIdAlumnoV1(IdAlumno);
+            return Ok(response);
+        }
 
 
         [HttpPost("api/Alumnos/InsertarNuevaparte")]

@@ -208,6 +208,59 @@ namespace EMAI.LND
             return response;
         }
 
+        public async Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno)
+        {
+              var response = new BaseResponse<bool>();
+              using var db = AppRepositoryFactory.GetAppRepository();
+            
+              var alumnoById = await GetAlumnosByIdV1(IdAlumno);
+
+            if (alumnoById != null)
+            {
+                response.Data = await db.DeleteByIdAlumnoV1(IdAlumno);
+
+                if (response.Data)
+                {
+                    response.IsSuccess = true;
+                    response.Message= StaticVariable.MESSAGE_DELETE;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message= StaticVariable.MESSAGE_FALLED;
+                }
+
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+            }
+            return response;
+        }
+
+        public async Task<BaseResponse<AlumnoResponseV1>> GetAlumnosByIdV1(int IdAlumno)
+        {
+            var response = new BaseResponse<AlumnoResponseV1>();
+
+            using var db = AppRepositoryFactory.GetAppRepository();
+
+            var AlumnoById = await db.GetListAlumnoByIdV1(IdAlumno);
+
+            if (AlumnoById != null)
+            {
+                response.IsSuccess = true;
+                response.Data = _mapper.Map<AlumnoResponseV1>(AlumnoById);
+                response.Message = StaticVariable.MESSAGE_QUERY;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_QUERY_EMPATY;
+            }
+            return response;
+        }
+
 
         //public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)
         //{

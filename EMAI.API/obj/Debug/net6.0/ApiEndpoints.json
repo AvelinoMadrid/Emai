@@ -291,6 +291,22 @@
   },
   {
     "ContainingType": "EMAI.API.Controllers.AlumnosController",
+    "Method": "DeleteAlumno",
+    "RelativePath": "api/Alumnos/DeleteAlumno/{IdAlumno}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdAlumno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMAI.API.Controllers.AlumnosController",
     "Method": "GenerarFolio",
     "RelativePath": "api/Alumnos/Folio/GenerarFolio",
     "HttpMethod": "GET",
@@ -320,6 +336,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[EMAI.DTOS.Dtos.Response.AlumnoResponseV1, EMAI.DTOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EMAI.API.Controllers.AlumnosController",
+    "Method": "GetAlumnoById",
+    "RelativePath": "api/Alumnos/ListarById/{IdAlumno}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdAlumno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EMAI.DTOS.Dtos.Response.AlumnoResponseV1",
         "MediaTypes": [
           "text/plain",
           "application/json",

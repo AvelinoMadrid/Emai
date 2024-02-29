@@ -18,9 +18,11 @@ namespace EMAI.Servicios
         Task<bool> verificarExistFolio(string folio);
         Task<ListFolioResponse> FolioGenerate();
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
+        Task<BaseResponse<AlumnoResponseV1>> GetAlumnosByIdV1(int IdAlumno);
         Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value);
         Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request);
         Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1();
+        Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno);
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
             int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,
