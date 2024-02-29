@@ -1,0 +1,81 @@
+﻿@model List<Promosiones>
+
+@{
+    ViewBag.Title = "Tabla de Promociones ";
+}
+
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
+
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tabla Promociones</h3>
+
+                        <a asp-action="agregarpromociones" asp-controller="Promociones" asp-route-IdMaestro="0" class="btn btn-dark btn-sm" style="float:right !important">Nuevo Promociones</a>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+
+                        <table id="example1" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID Maestro</th>
+                                    <th>Nombre Promoción</th>
+                                    <th>Porcentaje</th>
+                                    <th>Activo</th>
+  
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdPromociones</td>
+                                        <td>@item.NombrePromocion</td>
+                                        <td>@item.Porcentaje</td>
+                                        <td>@item.Activo</td>
+
+                                        <td>
+                                            <a asp-action="agregarpromociones" asp-controller="Promociones" asp-route-IdMaestro="@item.IdPromociones" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                            <a asp-action="Eliminar" asp-controller="Promociones" asp-route-IdMaestro="@item.IdPromociones" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#example2').DataTable({
+            "scrollX": true
+        });
+        $('.dataTables_length').addClass('bs-select');
+    });
+</script>

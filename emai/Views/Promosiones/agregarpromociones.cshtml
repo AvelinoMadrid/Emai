@@ -1,0 +1,78 @@
+﻿@model Promosiones
+
+@{
+    ViewData["Title"] = "Agreagar Clase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Promosiones" method="post" class="needs-validation" novalidate>
+
+
+            <div class="row">
+
+
+                <input asp-for="IdPromociones" type="hidden" />
+
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="Nombre">Nombre</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="NombrePromocion" name="NombrePromocion" id="NombrePromocion" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="ApellidoP">Apellido Paterno</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Porcentaje" name="Porcentaje" id="Porcentaje" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="ApellidoM">Apellido Materno</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Activo" name="Activo" id="Activo" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+            </div>
+
+        </form>
+
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict';
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation');
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms).forEach((form) => {
+                    form.addEventListener('submit', (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+        </script>
+
+
+    </div>
+</div>
+
+

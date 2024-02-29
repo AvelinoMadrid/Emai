@@ -18,38 +18,38 @@
             <div class="row">
             <input asp-for="IdDotacion" type="hidden" />
 
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">Fecha</label>
                     <input type="date" class="form-control form-control-sa" asp-for="Fecha" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">N° Pedido</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NoPedido" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">Descripción</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Descripcion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label class="form-label">Cantidad</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Cantidad" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
             </div>
-            <div class="col-md-4 form-group">
+        @*     <div class="col-md-4 form-group">
                 <label class="form-label">Subtotal</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" disabled />
             </div>
             <div class="col-md-4 form-group">
                 <label class="form-label">Total</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Total" id="Total" disabled />
-            </div>
+            </div> *@
 
                 <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>

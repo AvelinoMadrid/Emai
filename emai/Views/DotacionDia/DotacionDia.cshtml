@@ -23,8 +23,7 @@
                                     <th>NoPedido</th>
                                     <th>Descripcion</th>
                                     <th>Cantidad</th>
-                                    <th>Subtotal</th>
-                                    <th>Total</th>
+
                                     <th>Editar/Eliminar</th>
                                 </tr>
                             </thead>
@@ -39,8 +38,7 @@
                                         <td>@item.NoPedido</td>
                                         <td>@item.Descripcion</td>
                                         <td>@item.Cantidad</td>
-                                        <td>@item.Subtotal</td>
-                                        <td>@item.Total</td>
+
                                         <td>
                                             <a asp-action="agregardotaciondia" asp-controller="DotacionDia" asp-route-IdDotacion="@item.IdDotacion" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="DotacionDia" asp-route-IdDotacion="@item.IdDotacion" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>

@@ -72,7 +72,7 @@ namespace EMAI.Servicios
 
         Task<bool> InsertarCooperaciones(InsertCooperacionModel value);
         Task<bool> DeleteCooperacionesbyId(int id);
-        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion, decimal cantidad, decimal Subtotal, decimal Total);
+        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, decimal cantidad);
 
         #endregion
 
@@ -84,7 +84,7 @@ namespace EMAI.Servicios
 
         Task<ColegiaturaIDModel> GetColegiaturaID(int IdColegiatura);
         Task<bool> InsertarColegiatura(ColegiaturaInsertarModel value);
-        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha, string NoPedido, string Descripcion, decimal Cantidad, decimal Subtotal, decimal Total);
+        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad);
         Task<bool> EliminarColegiatura(int IdColegiatura);
         #endregion
 
@@ -120,8 +120,8 @@ namespace EMAI.Servicios
         Task<List<GastosDiaModel>> GetGastosDia();
         Task<GastosDiaIDModel> GetGastosDiaID(int IdGastoDia);
         Task<bool> InsertarGastosDia(GastosDiaInsertarModel value);
-        Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion,
-            decimal Cantidad, decimal Subtotal, decimal Total);
+        Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor,
+            decimal Cantidad);
         Task<bool> EliminarGastosDia(int IdGastoDia);
 
         #endregion
@@ -168,7 +168,7 @@ namespace EMAI.Servicios
         Task<NominaModel> GetByIDNomina(int id);
 
         Task<bool> InsertarNomina(InsertNominaModel value);
-        Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion, decimal Cantidad, decimal Subtotal, decimal Total);
+        Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad);
 
         Task<bool> EliminarNomina(int id);
 

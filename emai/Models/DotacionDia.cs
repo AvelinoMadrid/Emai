@@ -13,8 +13,8 @@ namespace emai.Models
         public string NoPedido { get; set; }
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
         public List<DotacionDia> Lista { get; set; }
     }
 }

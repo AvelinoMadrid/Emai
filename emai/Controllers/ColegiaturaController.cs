@@ -29,8 +29,8 @@ namespace emai.Controllers
 
             foreach (var colegiatura in Lista)
             {
-                colegiatura.Subtotal = colegiatura.Cantidad;
-                colegiatura.Total = colegiatura.Subtotal * 16m / 100m + colegiatura.Subtotal;
+                //colegiatura.Subtotal = colegiatura.Cantidad;
+                //colegiatura.Total = colegiatura.Subtotal * 16m / 100m + colegiatura.Subtotal;
             }
 
             return View(Lista);
@@ -59,8 +59,8 @@ namespace emai.Controllers
             if (ob_colegiatura.IdColegiatura == 0)
             {
 
-                ob_colegiatura.Subtotal = ob_colegiatura.Cantidad;
-                ob_colegiatura.Total = ob_colegiatura.Subtotal * 16m / 100m + ob_colegiatura.Subtotal;
+                //ob_colegiatura.Subtotal = ob_colegiatura.Cantidad;
+                //ob_colegiatura.Total = ob_colegiatura.Subtotal * 16m / 100m + ob_colegiatura.Subtotal;
 
                 respuesta = await _ServicioColegiatura_Api.Guardar(ob_colegiatura);
                 

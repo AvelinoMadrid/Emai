@@ -13,7 +13,7 @@ namespace EMAI.Servicios
         Task<CooperacionesModel> GetCooperacionesByID(int id);
         Task<bool> InsertarCooperaciones(InsertCooperacionModel value);
         Task<bool> DeleteCooperacionesbyId(int id);
-        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion, decimal cantidad, decimal Subtotal, decimal Total);
+        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor,  decimal cantidad);
 
 
     }

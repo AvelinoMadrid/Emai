@@ -28,8 +28,8 @@ namespace emai.Controllers
 
             foreach (var Dotacion in Lista)
             {
-                Dotacion.Subtotal = Dotacion.Cantidad;
-                Dotacion.Total = Dotacion.Subtotal * 16m / 100m + Dotacion.Subtotal;
+                //Dotacion.Subtotal = Dotacion.Cantidad;
+                //Dotacion.Total = Dotacion.Subtotal * 16m / 100m + Dotacion.Subtotal;
             }
 
             return View(Lista);
@@ -56,8 +56,8 @@ namespace emai.Controllers
 
             if (ob_dotacion.IdDotacion == 0)
             {
-                ob_dotacion.Subtotal = ob_dotacion.Cantidad;
-                ob_dotacion.Total = ob_dotacion.Subtotal * 16m / 100m + ob_dotacion.Subtotal;
+                //ob_dotacion.Subtotal = ob_dotacion.Cantidad;
+                //ob_dotacion.Total = ob_dotacion.Subtotal * 16m / 100m + ob_dotacion.Subtotal;
 
                 respuesta = await _ServicioDotacionDia_Api.Guardar(ob_dotacion);
             }

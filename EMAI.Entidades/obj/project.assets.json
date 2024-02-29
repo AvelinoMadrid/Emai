@@ -609,24 +609,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jiren\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\anubi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\anubi\\source\\repos\\emaifuncionando\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
       "projectName": "EMAI.Entidades",
-      "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
-      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.Entidades\\obj\\",
+      "projectPath": "C:\\Users\\anubi\\source\\repos\\emaifuncionando\\Emai\\EMAI.Entidades\\EMAI.Entidades.csproj",
+      "packagesPath": "C:\\Users\\anubi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anubi\\source\\repos\\emaifuncionando\\Emai\\EMAI.Entidades\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\anubi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -634,7 +629,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

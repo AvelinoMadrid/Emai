@@ -32,11 +32,11 @@ namespace emai.Controllers
         {
             List<Cooperaciones> Lista = await _ServicioCooperacionesApi.Lista();
 
-            foreach (var Dotacion in Lista)
-            {
-                Dotacion.SubTotal = Dotacion.Cantidad;
-                Dotacion.Total = Dotacion.SubTotal * 16m / 100m + Dotacion.SubTotal;
-            }
+            //foreach (var Dotacion in Lista)
+            //{
+            //    Dotacion.SubTotal = Dotacion.Cantidad;
+            //    Dotacion.Total = Dotacion.SubTotal * 16m / 100m + Dotacion.SubTotal;
+            //}
 
             return View(Lista);
         }
@@ -63,8 +63,8 @@ namespace emai.Controllers
 
             if (ob_cooperacion.IdCooperacion == 0)
             {
-                ob_cooperacion.SubTotal = ob_cooperacion.Cantidad;
-                ob_cooperacion.Total = ob_cooperacion.SubTotal * 16m / 100m + ob_cooperacion.SubTotal;
+                //ob_cooperacion.SubTotal = ob_cooperacion.Cantidad;
+                //ob_cooperacion.Total = ob_cooperacion.SubTotal * 16m / 100m + ob_cooperacion.SubTotal;
 
                 respuesta = await _ServicioCooperacionesApi.Guardar(ob_cooperacion);
             }

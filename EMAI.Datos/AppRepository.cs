@@ -39,7 +39,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -1307,10 +1307,10 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"], 
                 NoPedido = reader["NoPedido"].ToString(), 
                 Proveedor = reader["Proveedor"].ToString(), 
-                Descripcion = reader["Descripcion"].ToString(), 
+                //Descripcion = reader["Descripcion"].ToString(), 
                 Cantidad = (decimal)reader["Cantidad"], 
-                SubTotal = (decimal)reader["SubTotal"], 
-                Total = (decimal)reader["Total"]
+                //SubTotal = (decimal)reader["SubTotal"], 
+                //Total = (decimal)reader["Total"]
             };
         }
 
@@ -1324,10 +1324,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", value.NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", value.Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1352,7 +1352,7 @@ namespace EMAI.Datos
         }
 
 
-        public async Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion, decimal cantidad, decimal Subtotal, decimal Total)
+        public async Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor,  decimal cantidad)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1363,10 +1363,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", Proveedor));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", NoPedido));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", Total));
                     
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1412,8 +1412,8 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"],
                 Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
-                Subtotal = (decimal)reader["Subtotal"],
-                Total = (decimal)reader["Total"]
+                //Subtotal = (decimal)reader["Subtotal"],
+                //Total = (decimal)reader["Total"]
             };
         }
 
@@ -1450,8 +1450,8 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"],
                 Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
-                Subtotal = (decimal)reader["Subtotal"],
-                Total = (decimal)reader["Total"]
+                //Subtotal = (decimal)reader["Subtotal"],
+                //Total = (decimal)reader["Total"]
             };
         }
 
@@ -1465,8 +1465,8 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
                     cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1475,7 +1475,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha, string NoPedido, string Descripcion, decimal Cantidad, decimal Subtotal, decimal Total)
+        public async Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha, string Descripcion, decimal Cantidad)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1484,11 +1484,11 @@ namespace EMAI.Datos
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdColegiatura", IdColegiatura));
                     cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@NoPedido", NoPedido));
+                    //cmd.Parameters.Add(new SqlParameter("@NoPedido", NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", Total));
 
 
                     await sql.OpenAsync();
@@ -1837,10 +1837,10 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedido = (string)reader["NoPedido"],
                 Proveedor = (string)reader["Proveedor"],
-                Descripcion = (string)reader["Descripcion"],
+                //Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
-                Subtotal = (decimal)reader["Subtotal"],
-                Total = (decimal)reader["Total"],
+                //Subtotal = (decimal)reader["Subtotal"],
+                //Total = (decimal)reader["Total"],
             };
         }
 
@@ -1877,10 +1877,10 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedido = (string)reader["NoPedido"],
                 Proveedor = (string)reader["Proveedor"],
-                Descripcion = (string)reader["Descripcion"],
+                //Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
-                Subtotal = (decimal)reader["Subtotal"],
-                Total = (decimal)reader["Total"],
+                //Subtotal = (decimal)reader["Subtotal"],
+                //Total = (decimal)reader["Total"],
             };
         }
 
@@ -1894,10 +1894,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", value.NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", value.Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1906,8 +1906,8 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedro, string Descripcion,
-            decimal Cantidad, decimal Subtotal, decimal Total)
+        public async Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedro,
+            decimal Cantidad)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1918,10 +1918,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", Proveedro));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", Total));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2557,10 +2557,10 @@ namespace EMAI.Datos
                 Fecha = (DateTime)reader["Fecha"], 
                 NoPedido = reader["NoPedido"].ToString(),
                 Proveedor = reader["Proveedor"].ToString(),
-                Descripcion = reader["Descripcion"].ToString(),
+                //Descripcion = reader["Descripcion"].ToString(),
                 Cantidad = (decimal)reader["Cantidad"], 
-                Subtotal = (decimal)reader["Subtotal"], 
-                Total = (decimal)reader["Total"]
+                //Subtotal = (decimal)reader["Subtotal"], 
+                //Total = (decimal)reader["Total"]
                
             };
         }
@@ -2576,10 +2576,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", value.NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", value.Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2590,7 +2590,7 @@ namespace EMAI.Datos
 
         // ACTUALIZAR 
 
-        public async Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion, decimal Cantidad, decimal Subtotal, decimal Total)
+        public async Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2601,10 +2601,10 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedido", NoPedido));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
+                    //cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@Total", Total));
+                    //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
+                    //cmd.Parameters.Add(new SqlParameter("@Total", Total));
               
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();

@@ -27,8 +27,8 @@ namespace emai.Controllers
 
             foreach (var Nomina in Lista)
             {
-                Nomina.Subtotal = Nomina.Cantidad;
-                Nomina.Total = Nomina.Subtotal * 16m / 100m + Nomina.Subtotal;
+                //Nomina.Subtotal = Nomina.Cantidad;
+                //Nomina.Total = Nomina.Subtotal * 16m / 100m + Nomina.Subtotal;
             }
 
             return View(Lista);
@@ -55,8 +55,8 @@ namespace emai.Controllers
 
             if (ob_Nomina.IdNomina == 0)
             {
-                ob_Nomina.Subtotal = ob_Nomina.Cantidad;
-                ob_Nomina.Total = ob_Nomina.Subtotal * 16m / 100m + ob_Nomina.Subtotal;
+                //ob_Nomina.Subtotal = ob_Nomina.Cantidad;
+                //ob_Nomina.Total = ob_Nomina.Subtotal * 16m / 100m + ob_Nomina.Subtotal;
 
                 nom = await _ServicioNominaApi.Guardar(ob_Nomina);
             }

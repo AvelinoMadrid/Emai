@@ -210,6 +210,17 @@
 
 
                         <li class="nav-item">
+                            <a href="@Url.Action("Promociones", "Promosiones")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Promociones" ? "active" : "") nav-link">
+                                <i class="nav-icon far fa-bookmark"></i>
+                                <p>
+                                   Promociones
+
+                                </p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
                             <a href="@Url.Action("TablaPrograma5s", "Programa")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "TablaPrograma5s" ? "active" : "") nav-link">
                                 <i class="nav-icon far fa-bookmark"></i>
                                 <p>

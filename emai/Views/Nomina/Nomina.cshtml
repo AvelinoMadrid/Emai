@@ -21,11 +21,11 @@
                                     <th>IdNomina</th>
                                     <th>Fecha</th>
                                     <th>NoPedido</th>
-                                    <th>Proveedor</th>
-                                    <th>Descripcion</th>
+                                    <th>Proveedor / Descripción </th>
+                                   @*  <th>Descripcion</th> *@
                                     <th>Cantidad</th>
-                                    <th>Subtotal</th>
-                                    <th>Total</th>
+                                @*     <th>Subtotal</th>
+                                    <th>Total</th> *@
                                     <th>Editar/Eliminar</th>
                                 </tr>
                             </thead>
@@ -39,10 +39,10 @@
                                         <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
                                         <td>@item.NoPedido</td>
                                         <td>@item.Proveedor</td>
-                                        <td>@item.Descripcion</td>
+                                     @*    <td>@item.Descripcion</td> *@
                                         <td>@item.Cantidad</td>
-                                        <td>@item.Subtotal</td>
-                                        <td>@item.Total</td>
+                                     @*    <td>@item.Subtotal</td>
+                                        <td>@item.Total</td> *@
                                         <td>
                                             <a asp-action="agregarnomina" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Nomina" asp-route-IdNomina="@item.IdNomina" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>

@@ -13,10 +13,10 @@ namespace emai.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
 
         public List<GastosDia> Lista { get; set; }
 

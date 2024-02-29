@@ -41,8 +41,8 @@ namespace EMAI.API.Controllers
         [HttpPut("/api/Colegiatura/Actualizar")]
         public async Task Put([FromBody] ColegiaturaActualizarModel value)
         {
-            await _repository.ActualizarColegiatura(value.IdColegiatura, value.Fecha, value.NoPedido, value.Descripcion,
-                value.Cantidad, value.Subtotal, value.Total);
+            await _repository.ActualizarColegiatura(value.IdColegiatura, value.Fecha,  value.Descripcion,
+                value.Cantidad);
         }
 
 

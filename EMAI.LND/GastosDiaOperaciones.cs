@@ -37,12 +37,12 @@ namespace EMAI.LND
         }
 
         //Actualizar GastoDia
-        public async Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor, string Descripcion,
-            decimal Cantidad, decimal Subtotal, decimal Total)
+        public async Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor, 
+            decimal Cantidad)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarGastosDia(IdGastoDia,Fecha,NoPedido, Proveedor, Descripcion,
-            Cantidad,Subtotal,Total);
+            var rsp = await db.ActualizarGastosDia(IdGastoDia,Fecha,NoPedido, Proveedor, 
+            Cantidad);
             return rsp;
         }
 

@@ -12,35 +12,37 @@
     <div class="card-body">
 
         <form asp-action="GuardarCambios" asp-controller="Colegiatura" method="post">
-
+            <div class="row">
             <input asp-for="IdColegiatura" type="hidden" />
 
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Fecha</label>
                 <input type="date" class="form-control form-control-sa" asp-for="Fecha" />
             </div>
 
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Descripcion</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Descripcion" />
             </div>
-            <div class="mb-2">
+                <div class="col-md-3 form-group">
                 <label class="form-label">Cantidad</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Cantidad" id="Cantidad" />
             </div>
-            <div class="mb-2">
+          @*   <div class="mb-2">
                 <label class="form-label">Subtotal</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" disabled />
             </div>
             <div class="mb-2">
                 <label class="form-label">Total</label>
                 <input type="text" class="form-control form-control-sa" asp-for="Total" id="Total" disabled />
+            </div> *@
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" style="width:100% !important">Guardar Cambios</button>
             </div>
-
-            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
-
-            <a asp-action="Colegiatura" asp-controller="Colegiatura" class="btn btn-warning btn-sm">Volver a la vista </a>
-
+                <div class="col-md-6 form-group">
+                    <a asp-action="Colegiatura" asp-controller="Colegiatura" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+            </div>
+            </div>
         </form>
 
         @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@

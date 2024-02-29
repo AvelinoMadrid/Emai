@@ -12,10 +12,10 @@ namespace EMAI.Comun.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
     }
 
     public class GastosDiaIDModel
@@ -24,10 +24,10 @@ namespace EMAI.Comun.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
     }
 
     public class GastosDiaInsertarModel
@@ -35,10 +35,10 @@ namespace EMAI.Comun.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
     }
 
     public class GastosDiaActualizarModel
@@ -47,10 +47,10 @@ namespace EMAI.Comun.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
     }
 
     public class GastosDiaEliminarModel
@@ -59,9 +59,9 @@ namespace EMAI.Comun.Models
         public DateTime Fecha { get; set; }
         public string NoPedido { get; set; }
         public string Proveedor { get; set; }
-        public string Descripcion { get; set; }
+        //public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal Total { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal Total { get; set; }
     }
 }

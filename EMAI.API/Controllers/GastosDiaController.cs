@@ -41,8 +41,7 @@ namespace EMAI.API.Controllers
         [HttpPut("/api/GastosDia/Actualizar")]
         public async Task Put([FromBody] GastosDiaActualizarModel value)
         {
-            await _repository.ActualizarGastosDia(value.IdGastoDia, value.Fecha, value.NoPedido, value.Proveedor, value.Descripcion,
-            value.Cantidad, value.Subtotal, value.Total);
+            await _repository.ActualizarGastosDia(value.IdGastoDia, value.Fecha, value.NoPedido, value.Proveedor, value.Cantidad);
         }
 
         //Eliminar GastoDIa
