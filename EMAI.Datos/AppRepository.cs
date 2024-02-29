@@ -49,7 +49,7 @@ namespace EMAI.Datos
         //MOSTAR TODO
         public async Task<List<AlumnosModel>> GetAlumnos()
         {
-            using (SqlConnection  sql = new SqlConnection(EMAIConnection))
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
                 using (SqlCommand cmd = new SqlCommand("usp_ObtenerAlumnos", sql))
                 {
@@ -85,8 +85,8 @@ namespace EMAI.Datos
                 Nombre = reader["Nombre"].ToString(),
                 //ApPaterno = reader["ApellidoP"].ToString(),
                 //ApMaterno = reader["ApellidoM"].ToString(),
-                Edad = (int) reader["Edad"],
-                FechaNacimiento = (DateTime) reader["FechaNacimiento"],
+                Edad = (int)reader["Edad"],
+                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
                 Telefono = reader["TelCasa"].ToString(),
                 Celular = reader["Celular"].ToString(),
                 Facebook = reader["Facebook"].ToString(),
@@ -168,6 +168,84 @@ namespace EMAI.Datos
                 }
             }
         }
+        private InsertarAlumnoModelV1 MapToAlumnoTotalV1(SqlDataReader reader)
+        {
+            return new InsertarAlumnoModelV1()
+            {
+                IdAlumno = (int)reader["codigoAlumno"],
+                Tag = (string)reader["Tag"],
+                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
+                NoDiaClases = (int)reader["NoDiaClases"],
+                FechaInicioClase = (DateTime)reader["FechaInicioClase"],
+                NombreCompleto = (string)reader["NombreCompleto"],
+                Edad = (int)reader["Edad"],
+                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
+                TelefonoCasa = (string)reader["TelCasa"],
+                Celular = (string)reader["Celular"],
+                Facebook = (string)reader["Facebook"],
+                Email = (string)reader["Email"],
+                Enfermedades = (string)reader["Enfermedades"],
+                SeleccionarClase1 = (int)reader["SeleccionarClase1"],
+                DiaAndHoraClase = (string)reader["DiaAndHoraClase"],
+                SeleccionarClase2 = (int)reader["SeleccionarClase2"],
+                DiaAndHoraClaseOpcional = (string)reader["DiaAndHoraClaseOpcional"],
+                NombrePapas = (string)reader["NombrePapas"],
+                CelularPapas = (string)reader["CelularPapas"],
+                EmailPapas = (string)reader["EmailPapa"],//checar esta parte
+                TutorRecoger = (string)reader["TutorRecoger"],
+                CelularTR = (string)reader["CelularTR"],
+                NumEmergencia = (string)reader["NumEmergencia"],
+                Estudios = reader.GetBoolean(reader.GetOrdinal("Estudios")),
+                EscuelaActuales = (string)reader["EscuelaActual"],
+                Trabajas = reader.GetBoolean(reader.GetOrdinal("Trabajas")),
+                LugarTrabajo = (string)reader["LugarTrabajo"],
+
+                ConConocimiento = reader.GetBoolean(reader.GetOrdinal("ConConocimiento")),
+                Instrumento = (string)reader["InstrumentoOne"],
+                InstrumentoCasa = reader.GetBoolean(reader.GetOrdinal("InstrumentoCasa")),
+                InstrumentotTwo = (string)reader["InstrumentotTwo"],
+                EnterasteEsc = (string)reader["EnterasteEsc"],
+                InteresGnroMusical = reader.GetBoolean(reader.GetOrdinal("InteresGnroMusical")),
+                CualesMusicales = (string)reader["CualesGenroMusicalV"],
+
+                ClaseOpcional = reader.GetBoolean(reader.GetOrdinal("ClasOpcional")),
+                DescuentoP = reader.GetBoolean(reader.GetOrdinal("DescuentoP")),
+                Amables = reader.GetBoolean(reader.GetOrdinal("Amablebilidad")),
+                NombreRecepcionista = (string)reader["NombreRecepcionista"],
+
+                Activo = reader.GetBoolean(reader.GetOrdinal("Activo")),
+            };
+        }
+
+        public async Task<List<InsertarAlumnoModelV1>> GetListAlumnosTotalV1()
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand("MostrarAlumnoTotalV1", sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        var response = new List<InsertarAlumnoModelV1>(); //1
+                        await sql.OpenAsync();
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToAlumnoTotalV1(reader));//2
+                            }
+                        }
+                        return response;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+
+        }
 
 
         // mostrar usando inner join 
@@ -211,7 +289,7 @@ namespace EMAI.Datos
                     using (SqlCommand cmd = new SqlCommand("ListFolio", sql))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        
+
                         await sql.OpenAsync();
 
                         SqlDataReader reader = await cmd.ExecuteReaderAsync();
@@ -227,14 +305,14 @@ namespace EMAI.Datos
                 }
                 return FolioArray.ToArray();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
             }
         }
 
 
-        private AlumnosbyIDModel MaptoAlumnosbyID (SqlDataReader reader)
+        private AlumnosbyIDModel MaptoAlumnosbyID(SqlDataReader reader)
         {
             return new AlumnosbyIDModel()
             {
@@ -296,7 +374,7 @@ namespace EMAI.Datos
                 classOpcional = (bool)reader["ClasOpcional"],
                 Descuento = (bool)reader["DescuentoP"],
                 amable = (bool)reader["Amable"],
-               
+
                 IdInteresInstrumento = (int)reader["IDInteres"], //
                 otro = reader["Otro"].ToString(),
                 Idpersonal = (int)reader["IDPersonal"],
@@ -308,10 +386,10 @@ namespace EMAI.Datos
         }
         public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request)
         {
-           
+
             bool success = false;
 
-           try
+            try
             {
                 using (SqlConnection sql = new SqlConnection(EMAIConnection))
                 {
@@ -402,7 +480,7 @@ namespace EMAI.Datos
         }
 
 
-        private ObtenerAlumno MapToAlumnosTodo (SqlDataReader reader)
+        private ObtenerAlumno MapToAlumnosTodo(SqlDataReader reader)
         {
 
             return new ObtenerAlumno()
@@ -445,7 +523,7 @@ namespace EMAI.Datos
                 NumeroEmergencia = reader["NumEmergencia"].ToString(), //30  
 
                 // TABLA ESTUDIOS 
-                Estudios = (bool) reader["Estudios"], //31
+                Estudios = (bool)reader["Estudios"], //31
                 GradoEstudios = reader["GradoEstudios"].ToString(), //32
                 EscuelaActual = reader["EscuelaActual"].ToString(), //33
                 Trabajas = (bool)reader["Trabajas"], //34
@@ -470,7 +548,7 @@ namespace EMAI.Datos
 
                 // TABLA RECEPCIONISTA
                 NombreRecepcionista = reader["Nombre"].ToString()  //47
-                
+
             };
         }
 
@@ -599,7 +677,7 @@ namespace EMAI.Datos
 
         // Actualizar Alumno 
 
-        public async Task<bool> UpdateAlumnos(int IdAlumno,int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
+        public async Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -656,7 +734,7 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion",value.FechaInsctipcion ));
+                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", value.FechaInsctipcion));
                     cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
                     cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.Dias));
                     cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", value.FechaInicioClaseGratis));
@@ -669,13 +747,13 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@HoraOpcional", value.HoraOpcional));
                     cmd.Parameters.Add(new SqlParameter("@NombreCompleto", value.NombreCompleto));
                     cmd.Parameters.Add(new SqlParameter("@Edad", value.Edad));
-                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento",value.FechaNacimientoAlumno));
+                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimientoAlumno));
                     cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", value.TelefonoCasa));
                     cmd.Parameters.Add(new SqlParameter("@Celular", value.Celular));
                     cmd.Parameters.Add(new SqlParameter("@Facebook", value.Facebook));
                     cmd.Parameters.Add(new SqlParameter("@Email", value.Email));
                     cmd.Parameters.Add(new SqlParameter("@Enfermedades", value.Enfermedades));
-                   
+
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -701,12 +779,12 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@NombredelTutorRecoger", value.NombreTutorRecoger));
                     cmd.Parameters.Add(new SqlParameter("@CelularTutorRecoger", value.CelularTutorRecoger));
                     cmd.Parameters.Add(new SqlParameter("@NumeroEmergencia", value.NumeroEmergencia));
-                    
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
                 }
-         
+
             }
         }
 
@@ -746,7 +824,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", value.EnterasteEsc));
                     cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", value.GeneroMusical));
                     cmd.Parameters.Add(new SqlParameter("@Cuales", value.Cuales));
-                  
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;

@@ -1,4 +1,5 @@
-﻿using EMAI.Comun.Models;
+﻿using AutoMapper;
+using EMAI.Comun.Models;
 using EMAI.Datos;
 using EMAI.DTOS.Dtos.Base;
 using EMAI.DTOS.Dtos.Response;
@@ -12,10 +13,12 @@ namespace EMAI.LND
     public class AlumnosOperaciones : IAlumnosOperaciones
     {
         private readonly IConfiguration _config;
+        private readonly IMapper _mapper;
 
-        public AlumnosOperaciones(IConfiguration config)
+        public AlumnosOperaciones(IConfiguration config, IMapper mapper)
         {
             _config = config;
+            _mapper = mapper;
         }
 
         //MOSTRAR
@@ -26,11 +29,11 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task<ObtenerAlumno> GetAlumnosbyID(int id) 
+        public async Task<ObtenerAlumno> GetAlumnosbyID(int id)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
             var rsp = await db.GetAlumnosbyID(id);
-            return rsp; 
+            return rsp;
         }
 
         public async Task<bool> InsertarAlumno(InsertAlumnoModel value)
@@ -49,14 +52,14 @@ namespace EMAI.LND
         }
 
         // ACTUALIZAR ALUMNO 
-        public async Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
+        public async Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateAlumnos(IdAlumno, IdClase, Tag, NoDiaClases, FechaInicioClaseGratis,FechaFinClaseGratis, Nombre,  ApellidoP,  ApellidoM,  Edad,  FechaNacimiento,  TelefonoCasa, Celular,  Facebook,  Email,  Enfermedades,  Discapacidad,  InstrumentoBase,  Dia,  Hora,  InstrumentoOpcional,  DiaOpcional,  HoraOpcional, CelularPapas,  EmailPapas, RecogerPapas, CelularTR, NumEmergencia);
+            var rsp = await db.UpdateAlumnos(IdAlumno, IdClase, Tag, NoDiaClases, FechaInicioClaseGratis, FechaFinClaseGratis, Nombre, ApellidoP, ApellidoM, Edad, FechaNacimiento, TelefonoCasa, Celular, Facebook, Email, Enfermedades, Discapacidad, InstrumentoBase, Dia, Hora, InstrumentoOpcional, DiaOpcional, HoraOpcional, CelularPapas, EmailPapas, RecogerPapas, CelularTR, NumEmergencia);
             return rsp;
         }
 
-       
+
 
         // prueba para obtener alumnos por ID 
 
@@ -65,7 +68,7 @@ namespace EMAI.LND
             using var db = AppRepositoryFactory.GetAppRepository();
             var rsp = await db.ObtenerAlumnosporID(id);
             return rsp;
-            
+
         }
 
         // nuevos requirimintos
@@ -87,7 +90,7 @@ namespace EMAI.LND
         public async Task<bool> InsertarEstudios(EstudiosNuevo value)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.InsertarEstudios(value); 
+            var rsp = await db.InsertarEstudios(value);
             return rsp;
         }
 
@@ -101,7 +104,7 @@ namespace EMAI.LND
         public async Task<bool> InsertarHobbys(Hoobys value)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.InsertarHobbys( value);
+            var rsp = await db.InsertarHobbys(value);
             return rsp;
         }
 
@@ -132,21 +135,22 @@ namespace EMAI.LND
             return response;
         }
 
-            public async Task<bool> verificarExistFolio(string folio)
+        public async Task<bool> verificarExistFolio(string folio)
+        {
+
+            bool response = false;
+            using var db = AppRepositoryFactory.GetAppRepository();
+            //recorrer el array
+            var lista = await db.GetListFolio();
+            int countList = lista.Length;
+            for (int i = 0; i < countList; i++)
             {
-                bool response = false;
-                using var db = AppRepositoryFactory.GetAppRepository();
-                //recorrer el array
-                var lista = await db.GetListFolio();
-                int countList= lista.Length;
-                for (int i = 0; i < countList; i++)
-                {
-                    if (lista[i].Folio.Equals(folio))
-                        response=true;
-                        break;
-                }
-                return response;
+                if (lista[i].Folio.Equals(folio))
+                    response = true;
+                break;
             }
+            return response;
+        }
 
         public async Task<ListFolioResponse> FolioGenerate()
         {
@@ -170,8 +174,8 @@ namespace EMAI.LND
                         var indice = bytesArray[i] % validCharCount;
                         result[i] = validChars[indice];
                     }
-                    
-                     response.Folio=prefijo + new string(result);
+
+                    response.Folio = prefijo + new string(result);
                     return response;
 
                 }
@@ -180,6 +184,28 @@ namespace EMAI.LND
                     throw new Exception("Hubo Problema en el Folio", ex);
                 }
             }
+        }
+
+        public async Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1()
+        {
+            var response = new BaseResponse<List<AlumnoResponseV1>>();
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var data = await db.GetListAlumnosTotalV1();
+
+
+            if (data != null)
+            {
+                response.IsSuccess = true;
+                response.Data = _mapper.Map<List<AlumnoResponseV1>>(data);
+
+                response.Message = StaticVariable.MESSAGE_QUERY;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+            }
+            return response;
         }
 
 
@@ -204,7 +230,7 @@ namespace EMAI.LND
         //    return response;
     }
 
-    }
+}
 
 
 

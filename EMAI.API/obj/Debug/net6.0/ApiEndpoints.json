@@ -311,6 +311,26 @@
   },
   {
     "ContainingType": "EMAI.API.Controllers.AlumnosController",
+    "Method": "GetAllAlumosTotal",
+    "RelativePath": "api/Alumnos/GetListAlumnosTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[EMAI.DTOS.Dtos.Response.AlumnoResponseV1, EMAI.DTOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EMAI.API.Controllers.AlumnosController",
     "Method": "Put",
     "RelativePath": "api/Alumnos/Put",
     "HttpMethod": "PUT",

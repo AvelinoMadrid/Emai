@@ -29,9 +29,14 @@ namespace EMAI.API.Controllers
         {
             var folio = await _repository.FolioGenerate();
             return Ok(folio);
-   
         }
+        [HttpGet("GetListAlumnosTotal")]
+        public async Task<ActionResult<List<AlumnoResponseV1>>> GetAllAlumosTotal()
+        {
+            var response = await _repository.GetListaAlumnoV1();
+            return Ok(response);
 
+        }
 
         // buscar ID /api/Adicional/Insertar
         [HttpGet("{id}")]
@@ -39,6 +44,7 @@ namespace EMAI.API.Controllers
         {
             return await _repository.ObtenerAlumnosporID(id);
         }
+
         //[HttpPost]
         //public async Task Post([FromBody] InsertAlumnoModel value)
         //{
@@ -50,6 +56,8 @@ namespace EMAI.API.Controllers
             var response = await _repository.RegisterAlumno(request);
             return Ok(response);
         }
+
+
 
         [HttpPost("api/Alumnos/InsertarNuevaparte")]
         public async Task Post([FromBody] AlumnosNuevo value)
