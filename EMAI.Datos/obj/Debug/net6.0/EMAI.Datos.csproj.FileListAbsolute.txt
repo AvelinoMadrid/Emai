@@ -457,8 +457,8 @@ C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInpu
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.sourcelink.json
-C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
+C:\repos\Residencia\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.Up2Date

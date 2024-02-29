@@ -2354,9 +2354,9 @@ C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets\msbuild.build
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EMAI.API.props
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\staticwebassets.pack.json
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\scopedcss\bundle\EMAI.API.styles.css
-C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.CopyComplete
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.dll
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\refint\EMAI.API.dll
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.pdb
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.genruntimeconfig.cache
 C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\ref\EMAI.API.dll
+C:\repos\Residencia\Emai\EMAI.API\obj\Debug\net6.0\EMAI.API.csproj.Up2Date

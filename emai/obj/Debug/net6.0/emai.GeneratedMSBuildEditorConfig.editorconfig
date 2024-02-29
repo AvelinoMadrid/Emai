@@ -222,6 +222,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWFcVGFibGFQcm9ncmFtYTVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/repos/Residencia/Emai/emai/Views/Promociones/Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcUHJvbW9jaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Residencia/Emai/emai/Views/Promosiones/agregarpromociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9zaW9uZXNcYWdyZWdhcnByb21vY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Residencia/Emai/emai/Views/Promosiones/Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9zaW9uZXNcUHJvbW9jaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/repos/Residencia/Emai/emai/Views/Reponerclase/agregarreponerclases.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25lcmNsYXNlXGFncmVnYXJyZXBvbmVyY2xhc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
