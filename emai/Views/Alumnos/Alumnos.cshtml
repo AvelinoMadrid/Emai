@@ -80,20 +80,13 @@
                             </thead>
                             <tbody>
                                 
-                              @*   @{
-                                        var response = await httpClient.GetAsync("https://localhost:7265/api/Alumnos/GetListAlumnosTotal");
-                                        response.EnsureSuccessStatusCode();
-
-                                        var alumnoLista = await response.Content.ReadFromJsonAsync<BaseResponse>();
-                                        //Console.WriteLine(mesesLista);
+                                @{
+                                        
 
                                 
-                                    foreach (var alumno in alumnoLista.Data)
+                                    foreach (var alumno in Model.Data)
                                     {
                                         <tr>
-
-
-                                            <td></td>
                                             <td>@alumno.IdAlumno</td>
                                             <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
@@ -111,12 +104,12 @@
                                             <td>@alumno.StringActivo</td>
                                             <td>
                                                 <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
-                                                <a asp-action="Eliminar" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
+                                                <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                             </td>
                                         </tr>
                                     }
 
-                                } *@
+                                }
                                 
 
                             </tbody>

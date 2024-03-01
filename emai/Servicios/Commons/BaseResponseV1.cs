@@ -2,10 +2,10 @@
 
 namespace emai.Servicios.Commons
 {
-    public class BaseResponseV1<Generica>
+    public class BaseResponseV1<Generica>///AlumModel
     {
         public bool IsSuccess { get; set; }
-        public List<Generica>? Data { get; set; }
+        public List<Generica>? Data { get; set; } ///AlumModel
         public string? Message { get; set; }
 
         

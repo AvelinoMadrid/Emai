@@ -16,8 +16,9 @@ namespace EMAI.DTOS.Mappers
     {
         public AlumnoMappingProfile()
         {
+            //mapear objetos de mi tabla 
             CreateMap<AlumnoResponseV1,InsertarAlumnoModelV1>().ReverseMap();
-            CreateMap<InsertarAlumnoModelV1, AlumnoResponseV1>().ForMember(x => x.Facebook, x => x.MapFrom(y => string.IsNullOrEmpty(y.Facebook) ? "Sin redes" : y.Facebook))
+            CreateMap<InsertarAlumnoModelV1,AlumnoResponseV1>().ForMember(x => x.Facebook, x => x.MapFrom(y => string.IsNullOrEmpty(y.Facebook) ? "Sin Sociales" : y.Facebook))
                                                                 .ForMember(x =>    x.StringActivo, x => x.MapFrom(y =>y.Activo.Equals((int)StateTypes.Activo == 1) ? "Activo" : "Inactivo"))
                                                                 .ForMember(x =>    x.ClaseOpcional, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo == 1) ? "Si" : "No"))
                                                                 .ForMember(x =>    x.DescuentoP, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo == 1) ? "Si" : "No"))

@@ -23,28 +23,57 @@ namespace emai.Controllers
             _ServicioAlumnos_Api = servicioUsuarios_Api;
         }
 
-        public async Task<IActionResult> ListarAllAlumnos()
-        {
-             BaseResponseV1<AlumnoModel> alumnos  = await _ServicioAlumnos_Api.ListarAllAlumnos();
-             return View(alumnos);
-            ////los que hacemos en validar que diavlos viene 
-            //if (alumnos.IsSuccess==true)
-            //{
-            //     alumnos = alum;
-            //    return View(alumnos);
-            //}
-            //else
-            //{
-            //    ViewBag.errormessage = response.Message; //staticvariable.message_not_acceder;
-            //    return View();//podemos visualizar un vista mostrardo la direccion del error
-            //}
+        //public async Task<IActionResult> ListarAllAlumnos()
+        //{
+        //     BaseResponseV1<AlumnoModel> alumnos  = await _ServicioAlumnos_Api.ListarAllAlumnos();
+        //     return View(alumnos);
+        //    ////los que hacemos en validar que diavlos viene 
+        //    //if (alumnos.IsSuccess==true)
+        //    //{
+        //    //     alumnos = alum;
+        //    //    return View(alumnos);
+        //    //}
+        //    //else
+        //    //{
+        //    //    ViewBag.errormessage = response.Message; //staticvariable.message_not_acceder;
+        //    //    return View();//podemos visualizar un vista mostrardo la direccion del error
+        //    //}
 
+        //}
+        [HttpGet]
+        public async Task<IActionResult> Eliminar(int IdAlumno)
+        {
+            var respuesta = await _ServicioAlumnos_Api.EliminarAlu(IdAlumno);
+
+            if (respuesta)
+                return RedirectToAction("Alumnos");
+            else
+                return NoContent();
         }
+        [HttpGet]
+        public async Task<IActionResult> EliminarAlumnosV1(int IdAlumno)
+        {
+            BaseResponseV2<bool> alumnos = await _ServicioAlumnos_Api.EliminarAlumnoV1(IdAlumno);
+
+            if (alumnos.Data==true)
+            {
+                return RedirectToAction("Alumnos");
+
+            }
+            else
+            {
+                return NoContent();
+            }
+
+
+
+            
+        }
+
         public async Task<IActionResult> Alumnos()
         {
-            List<Alumnos> Lista = await _ServicioAlumnos_Api.Lista();
-
-            return View(Lista);
+            BaseResponseV1<AlumnoModel> alumnos = await _ServicioAlumnos_Api.ListarAllAlumnos();
+            return View(alumnos);
         }
         //public async Task<IActionResult> ListarAllAlumnos()
         //{
@@ -92,6 +121,26 @@ namespace emai.Controllers
             }
             return View(modelo_Alumnos);
         }
+         [HttpPost]
+        public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)
+        {
+            bool respuesta;
+
+            if (ob_Alumno.IdAlumno == 0)
+            {
+                respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_Alumno);
+            }
+            else
+            {
+                respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_Alumno);
+            }
+
+            if (respuesta)
+                return RedirectToAction("Alumnos");
+            else
+                return NoContent();
+        }
+
 
         // pModal de Papás
         public async Task<IActionResult> agregarpapas (int IdAlumno)
@@ -137,36 +186,12 @@ namespace emai.Controllers
         }
 
 
-        [HttpPost]
-        public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)
-        {
-            bool respuesta;
+  
 
-            if (ob_Alumno.IdAlumno == 0)
-            {
-                respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_Alumno);
-            }
-            else
-            {
-                respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_Alumno);
-            }
+   
+        
+        
 
-            if (respuesta)
-                return RedirectToAction("Alumnos");
-            else
-                return NoContent();
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Eliminar(int IdAlumno)
-        {
-            var respuesta = await _ServicioAlumnos_Api.EliminarAlu(IdAlumno);
-
-            if (respuesta)
-                return RedirectToAction("Alumnos");
-            else
-                return NoContent();
-        }
 
        
 

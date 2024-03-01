@@ -21,17 +21,30 @@ namespace emai.Servicios
         public async Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos()
         {
             //var response = new BaseResponseV1<AlumnoModel>();
-            BaseResponseV1<AlumnoModel> MyData = new BaseResponseV1<AlumnoModel>();
+            var MyData = new BaseResponseV1<AlumnoModel>();
 
             using (var httpClient = new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(_baseurl);
-                var httpResponse = await httpClient.GetAsync($"api/Alumnos/GetListAlumnosTotal/");
+                var httpResponse = await httpClient.GetAsync("api/Alumnos/GetListAlumnosTotal/");
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
                     var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
-                    MyData = JsonConvert.DeserializeObject<BaseResponseV1<AlumnoModel>>(jsonResponse);
+
+                    var responseData = JsonConvert.DeserializeObject<BaseResponseV1<AlumnoModel>>(jsonResponse);
+
+                    if (responseData != null)
+                    {
+                        MyData.IsSuccess = responseData.IsSuccess;
+                        MyData.Data = responseData.Data;
+                        MyData.Message= responseData.Message;
+                    }
+                    else
+                    {
+                            MyData.IsSuccess  = false;
+                            MyData.Message= StaticVariable.MESSAGE_NOT_ACCEDER;
+                    }
                 }
                 else
                 {
@@ -145,6 +158,64 @@ namespace emai.Servicios
         {
             throw new NotImplementedException();
         }
+
+        public async Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno)
+        {
+            var response = new BaseResponseV2<bool>();
+
+            using (var httpClient = new HttpClient())
+            {
+                //httpClient.BaseAddress = new Uri(_baseurl);
+                   
+                var httpResponse = await httpClient.DeleteAsync($"https://localhost:7265/api/Alumnos/DeleteAlumno/{IdAlumno}");
+                
+
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    
+                    var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+
+                    var responseData = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(jsonResponse);
+
+                    response.IsSuccess = responseData.IsSuccess;
+                    response.Data = responseData.Data;
+                    response.Message = responseData.Message;
+
+                    return response;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                }
+            }
+            return response;
+
+        }
+
+        //public async Task<BaseResponseV2<bool>> InsertarAlumno(AlumnoModeInsertV1 entity)
+        //{
+        //    var response = new BaseResponseV2<bool>();
+
+        //    var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+
+        //    var alumno1 = new HttpClient();
+        //    var dataEnvio = await alumno1.PostAsync("https://localhost:7265/api/Alumnos/RegistarAlumnoV1", content);
+
+        //    if (dataEnvio.IsSuccessStatusCode)
+        //    {
+        //        response.IsSuccess= true;
+        //        response.Data = true;
+        //    }
+        //    else
+        //    {
+        //        response.IsSuccess = false;
+        //        response.Data = false;
+        //    }
+        //    return response
+  
+
+        //}
     }
 }
 
