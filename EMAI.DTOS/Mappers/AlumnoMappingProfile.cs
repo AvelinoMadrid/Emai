@@ -30,6 +30,8 @@ namespace EMAI.DTOS.Mappers
                                                                 .ForMember(x => x.FechaInicioClase, y => y.MapFrom(z => z.FechaInicioClase.ToString("dd/MMMM/yyyy")))
                                                                 .ForMember(x => x.FechaNacimiento, y => y.MapFrom(z => z.FechaNacimiento.ToString("dd/MMMM/yyyy")))
                                                                 .ForMember(x =>    x.ConConocimiento, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo == 1) ? "Si" : "No")).ReverseMap();
+            CreateMap<AlumnoRequest, InsertarAlumnoModelV1>().ReverseMap();
+            CreateMap<InsertarAlumnoModelV1, AlumnoRequest>().ReverseMap();
         }
     }
 }

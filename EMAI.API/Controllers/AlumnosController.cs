@@ -1,4 +1,5 @@
 ﻿using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Request;
 using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
 using Microsoft.AspNetCore.Mvc;
@@ -51,7 +52,7 @@ namespace EMAI.API.Controllers
         //    await _repository.InsertarAlumno(value);
         //}
         [HttpPost("RegistarAlumnoV1")]
-        public async Task<IActionResult> RegisterAlumno([FromBody] InsertarAlumnoModelV1 request)
+        public async Task<IActionResult> RegisterAlumno([FromBody] AlumnoRequest request)
         {
             var response = await _repository.RegisterAlumno(request);
             return Ok(response);

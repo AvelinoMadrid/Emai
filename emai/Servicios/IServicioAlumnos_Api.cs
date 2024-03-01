@@ -1,4 +1,5 @@
 ﻿using emai.Models;
+using emai.Servicios.Commons;
 
 namespace emai.Servicios
 {
@@ -7,7 +8,8 @@ namespace emai.Servicios
         Task<List<Alumnos>> Lista();
 
         Task<Alumnos> ObtenerAlu(int IdAlumno);
-
+        Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos();
+                
         Task<bool> GuardarAlu(Alumnos Alumno);
 
         Task<bool> EditarAlu(Alumnos Alumno);
@@ -18,6 +20,6 @@ namespace emai.Servicios
         // Nuevas APIS
         Task<bool> RegistrarAlumnos(Alumnos Alumno);
 
-        
+
     }
 }

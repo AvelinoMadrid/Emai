@@ -4862,6 +4862,20 @@
         "runtime": {
           "lib/netstandard1.6/XLParser.dll": {}
         }
+      },
+      "Emai.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Emai.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Emai.Utilities.dll": {}
+        }
       }
     }
   },
@@ -13431,6 +13445,11 @@
         "xlparser.1.5.2.nupkg.sha512",
         "xlparser.nuspec"
       ]
+    },
+    "Emai.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Emai.Utilities/Emai.Utilities.csproj",
+      "msbuildProject": "../Emai.Utilities/Emai.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13438,6 +13457,7 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "ClosedXML >= 0.102.0",
+      "Emai.Utilities >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "Google.Apis.Auth >= 1.66.0",
       "Google.Apis.Sheets.v4 >= 1.66.0.3148",
@@ -13486,7 +13506,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {
+              "projectPath": "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

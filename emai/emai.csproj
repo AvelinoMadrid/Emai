@@ -30,7 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Servicios\Interfaces\" />
+    <Folder Include="Servicios\Services\" />
     <Folder Include="Views\Escolar\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Emai.Utilities\Emai.Utilities.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

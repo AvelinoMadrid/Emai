@@ -7,6 +7,8 @@
 
 }
 
+
+
     <div class="col-md-12">
         <div class="card card-default">
             <div class="card-header">
@@ -636,10 +638,16 @@
 
 
                                 <div class="col-md-6 form-group">
-                                    <label class="form-label">Mes</label>
-                                    <input type="date" class="form-control form-control-sa"  required />
+                                    <label class="form-label">Clase opcional</label>
+@*                                     <select class="form-control select2" asp-for="IdClase" required>
+                                        <option selected disabled value="">Escoger una clase</option>
+                                        @foreach (var meses in Model.ListarMeses)
+                                        {
+                                            <option value="@meses.IdMeses">@meses.NombreMes</option>
+                                        }
+                                    </select> *@
                                     <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
 
@@ -742,24 +750,10 @@
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
-                                </div>
-                               
-                               
-
-
+                                </div>1
                             </div>
-
-
-                         
                         </div>
-
-
-
                     </form>
-
-
-
-
                     </div>
                 </div>
             </div>

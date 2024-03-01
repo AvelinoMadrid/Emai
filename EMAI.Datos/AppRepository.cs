@@ -455,10 +455,10 @@ namespace EMAI.Datos
 
                         //cmd.Parameters.Add(new SqlParameter("@IdAlumno", 0));
                         cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
-                        cmd.Parameters.Add(new SqlParameter("@@Tag", request.Tag));
+                        cmd.Parameters.Add(new SqlParameter("@Tag", request.Tag));
                         cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
                         cmd.Parameters.Add(new SqlParameter("@FechaInicioClase", request.FechaInicioClase));
-                        cmd.Parameters.Add(new SqlParameter("@NombreCompleto", request.FechaInicioClase));
+                        cmd.Parameters.Add(new SqlParameter("@NombreCompleto", request.NombreCompleto));
 
                         cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
                         cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));

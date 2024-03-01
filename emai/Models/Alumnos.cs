@@ -75,6 +75,7 @@ namespace emai.Models
         public string NombreRecepcionista { get; set; }
 
         public List<Alumnos> Lista { get; set; }
+       
 
     }
 

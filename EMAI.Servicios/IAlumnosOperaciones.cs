@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Base;
+using EMAI.DTOS.Dtos.Request;
 using EMAI.DTOS.Dtos.Response;
 using EMAI.Entidades;
 using EMAI.Servicios;
@@ -20,7 +21,7 @@ namespace EMAI.Servicios
         Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<BaseResponse<AlumnoResponseV1>> GetAlumnosByIdV1(int IdAlumno);
         Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value);
-        Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request);
+        Task<BaseResponse<bool>> RegisterAlumno(AlumnoRequest request);
         Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1();
         Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno);
         Task<bool> DeleteByIdAlumno(int Id);

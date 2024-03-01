@@ -2,6 +2,7 @@
 using EMAI.Comun.Models;
 using EMAI.Datos;
 using EMAI.DTOS.Dtos.Base;
+using EMAI.DTOS.Dtos.Request;
 using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
 using Email.Utiilities.Static;
@@ -114,12 +115,16 @@ namespace EMAI.LND
         }
 
 
-        public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelV1 request)
+        public async Task<BaseResponse<bool>> RegisterAlumno(AlumnoRequest request)
         {
             var response = new BaseResponse<bool>();
 
             using var db = AppRepositoryFactory.GetAppRepository();
-            response.Data = await db.InsertarAlumnoTwo(request);
+
+            var newAlumno = _mapper.Map<InsertarAlumnoModelV1>(request);
+
+
+            response.Data = await db.InsertarAlumnoTwo(newAlumno);
 
             if (response.Data)
             {

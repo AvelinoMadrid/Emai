@@ -359,8 +359,8 @@ C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.Assembly
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.AssemblyInfo.cs
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.csproj.CoreCompileInputs.cache
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.sourcelink.json
+C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Ser.27CE18FC.Up2Date
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.dll
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\refint\EMAI.Servicios.dll
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Servicios.pdb
 C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\ref\EMAI.Servicios.dll
-C:\repos\Residencia\Emai\EMAI.Servicios\obj\Debug\net6.0\EMAI.Ser.27CE18FC.Up2Date

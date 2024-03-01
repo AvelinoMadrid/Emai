@@ -8,6 +8,8 @@ using emai.Models;
 using System.Diagnostics;
 
 using emai.Servicios;
+using Email.Utiilities.Static;
+using emai.Servicios.Commons;
 
 namespace emai.Controllers
 {
@@ -17,17 +19,64 @@ namespace emai.Controllers
 
         public AlumnosController(IServicioAlumnos_Api servicioUsuarios_Api)
         {
-            string baseurl = "https://localhost:7265"; 
+            string baseurl = "https://localhost:7265";
             _ServicioAlumnos_Api = servicioUsuarios_Api;
         }
 
+        public async Task<IActionResult> ListarAllAlumnos()
+        {
+             BaseResponseV1<AlumnoModel> alumnos  = await _ServicioAlumnos_Api.ListarAllAlumnos();
+             return View(alumnos);
+            ////los que hacemos en validar que diavlos viene 
+            //if (alumnos.IsSuccess==true)
+            //{
+            //     alumnos = alum;
+            //    return View(alumnos);
+            //}
+            //else
+            //{
+            //    ViewBag.errormessage = response.Message; //staticvariable.message_not_acceder;
+            //    return View();//podemos visualizar un vista mostrardo la direccion del error
+            //}
 
+        }
         public async Task<IActionResult> Alumnos()
         {
             List<Alumnos> Lista = await _ServicioAlumnos_Api.Lista();
 
             return View(Lista);
         }
+        //public async Task<IActionResult> ListarAllAlumnos()
+        //{
+        //    BaseResponseV1<AlumnoModel> response = await _ServicioAlumnos_Api.ListarAllAlumnos();
+
+        //    return View(response);
+        //    ////los que hacemos en validar que diavlos viene 
+        //    //if (response.IsSuccess == true)
+        //    //  {
+        //    //      var alumnos = response.Data;
+        //    //      return View(alumnos);
+        //    //  }
+        //    //  else
+        //    //  {
+        //    //      ViewBag.ErrorMessage = response.Message; //StaticVariable.MESSAGE_NOT_ACCEDER;
+        //    //      return View();//Podemos visualizar un vista mostrardo la direccion del error
+        //    //  }
+
+        //}
+
+
+
+
+
+        //public async Task<IActionResult> ListarMeses()
+        //{
+        //    List<MesesModel> Lista = await _ServicioAlumnos_Api.ListarMesesV1();
+
+        //    return Ok(Lista);
+        //}
+
+
 
 
         public async Task<IActionResult> agregaralumnos(int IdAlumno)

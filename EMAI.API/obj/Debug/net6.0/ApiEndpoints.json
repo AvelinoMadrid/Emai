@@ -403,7 +403,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "EMAI.Comun.Models.InsertarAlumnoModelV1",
+        "Type": "EMAI.DTOS.Dtos.Request.AlumnoRequest",
         "IsRequired": true
       }
     ],

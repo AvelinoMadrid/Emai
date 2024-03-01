@@ -1,4 +1,6 @@
 ﻿using emai.Models;
+using emai.Servicios.Commons;
+using Email.Utiilities.Static;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
@@ -15,6 +17,29 @@ namespace emai.Servicios
 
             _baseurl = builder.GetSection("ApiSetting:baseUrl").Value;
 
+        }
+        public async Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos()
+        {
+            //var response = new BaseResponseV1<AlumnoModel>();
+            BaseResponseV1<AlumnoModel> MyData = new BaseResponseV1<AlumnoModel>();
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var httpResponse = await httpClient.GetAsync($"api/Alumnos/GetListAlumnosTotal/");
+
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+                    MyData = JsonConvert.DeserializeObject<BaseResponseV1<AlumnoModel>>(jsonResponse);
+                }
+                else
+                {
+                    MyData.IsSuccess = false;
+                    MyData.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                }
+            }
+            return MyData;
         }
 
         public async Task<List<Alumnos>> Lista()
@@ -120,6 +145,6 @@ namespace emai.Servicios
         {
             throw new NotImplementedException();
         }
-    }   
+    }
 }
 
