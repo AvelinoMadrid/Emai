@@ -16,6 +16,8 @@ namespace emai.Servicios
 
         Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno);
 
+        Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity);
+
 
         Task<bool> GuardarAlu(Alumnos Alumno);
 

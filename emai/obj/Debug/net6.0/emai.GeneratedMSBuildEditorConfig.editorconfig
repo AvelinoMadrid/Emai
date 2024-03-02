@@ -214,16 +214,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbkVzdHVkaW9zXE1vc3RyYXJDbGFzZXNIb3JhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Programa/Programa5s.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWFcUHJvZ3JhbWE1cy5jc2h0bWw=
+[C:/repos/Residencia/Emai/emai/Views/Programa5s/Programa5s.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWE1c1xQcm9ncmFtYTVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Programa/TablaPrograma5s.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWFcVGFibGFQcm9ncmFtYTVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/repos/Residencia/Emai/emai/Views/Promociones/Promociones.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcUHJvbW9jaW9uZXMuY3NodG1s
+[C:/repos/Residencia/Emai/emai/Views/Programa5s/TablaPrograma5s.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWE1c1xUYWJsYVByb2dyYW1hNXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repos/Residencia/Emai/emai/Views/Promosiones/agregarpromociones.cshtml]

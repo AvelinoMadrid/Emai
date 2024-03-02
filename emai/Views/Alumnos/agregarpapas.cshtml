@@ -16,7 +16,7 @@
 
         <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="was-validated" novalidate>
 
-            <input asp-for="IdClase" type="hidden" />
+           @*  <input asp-for="IdClase" type="hidden" /> *@
 
 
             <div class="row">
@@ -59,7 +59,7 @@
                 @*Fecha Inicio de Clase Gratis*@
                 <div class="col-md-3 form-group">
                     <label class="form-label" for="FechaInicioClase">Fecha de inicio de clases gratis</label>
-                    <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClaseGratis" id="FechaInicioClase" name="FechaInicioClaseGratis" required />
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClase" id="FechaInicioClase" name="FechaInicioClase" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>

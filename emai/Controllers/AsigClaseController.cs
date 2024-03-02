@@ -7,8 +7,6 @@ using emai.Models;
 //using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-using emai.Servicios;
-
 namespace emai.Controllers
 {
     public class AsigClaseController : Controller

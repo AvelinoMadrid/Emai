@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Net;
-using emai.Servicios;
 using emai.Models;
 //using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,6 +9,10 @@ using System.Diagnostics;
 using emai.Servicios;
 using Email.Utiilities.Static;
 using emai.Servicios.Commons;
+using System.Threading.Tasks;
+using static System.Web.Razor.Parser.SyntaxConstants;
+using System.Runtime.Intrinsics.X86;
+using System;
 
 namespace emai.Controllers
 {
@@ -50,31 +53,9 @@ namespace emai.Controllers
             else
                 return NoContent();
         }
-        [HttpGet]
-        public async Task<IActionResult> EliminarAlumnosV1(int IdAlumno)
-        {
-            BaseResponseV2<bool> alumnos = await _ServicioAlumnos_Api.EliminarAlumnoV1(IdAlumno);
-
-            if (alumnos.Data==true)
-            {
-                return RedirectToAction("Alumnos");
-
-            }
-            else
-            {
-                return NoContent();
-            }
 
 
 
-            
-        }
-
-        public async Task<IActionResult> Alumnos()
-        {
-            BaseResponseV1<AlumnoModel> alumnos = await _ServicioAlumnos_Api.ListarAllAlumnos();
-            return View(alumnos);
-        }
         //public async Task<IActionResult> ListarAllAlumnos()
         //{
         //    BaseResponseV1<AlumnoModel> response = await _ServicioAlumnos_Api.ListarAllAlumnos();
@@ -106,40 +87,73 @@ namespace emai.Controllers
         //}
 
 
-
-
-        public async Task<IActionResult> agregaralumnos(int IdAlumno)
+        public async Task<IActionResult> Alumnos()
         {
-
-            Alumnos modelo_Alumnos = new Alumnos();
-
-            ViewBag.Accion = "Nuevo Alumno";
-            if (IdAlumno != 0)
-            {
-                modelo_Alumnos = await _ServicioAlumnos_Api.ObtenerAlu(IdAlumno);
-                ViewBag.Action = "Editar Alumno";
-            }
-            return View(modelo_Alumnos);
+            BaseResponseV1<AlumnoModel> alumnos = await _ServicioAlumnos_Api.ListarAllAlumnos();
+            return View(alumnos);
         }
-         [HttpPost]
-        public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)
+        public IActionResult DireccionarAlumno()
         {
-            bool respuesta;
+            return View("agregaralumnos");
+        }
 
-            if (ob_Alumno.IdAlumno == 0)
-            {
-                respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_Alumno);
-            }
-            else
-            {
-                respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_Alumno);
-            }
+        [HttpPost]
+        public async Task<IActionResult> agregarNuevoAlumno(Alumnos entity)
+        {
+           
+            BaseResponseV2<bool> result = await _ServicioAlumnos_Api.InsertarAlumnoV1(entity);
 
-            if (respuesta)
+      
+            if (result.IsSuccess && result.Data)
+            {
+               
                 return RedirectToAction("Alumnos");
+            }
             else
-                return NoContent();
+            {
+                
+                return View("DireccionarAlumno", entity);
+            }
+            return View("DireccionarAlumno", entity);
+
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> EliminarAlumnosV1(int IdAlumno)
+        {
+            BaseResponseV2<bool> alumnos = await _ServicioAlumnos_Api.EliminarAlumnoV1(IdAlumno);
+            if (alumnos.Data == true)
+            {
+                return RedirectToAction("Alumnos");
+
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
+
+
+        // [HttpPost]
+        //public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)
+        //{
+        //    bool respuesta;
+
+        //    if (ob_Alumno.IdAlumno == 0)
+        //    {
+        //        respuesta = await _ServicioAlumnos_Api.GuardarAlu(ob_Alumno);
+        //    }
+        //    else
+        //    {
+        //        respuesta = await _ServicioAlumnos_Api.EditarAlu(ob_Alumno);
+        //    }
+
+        //    if (respuesta)
+        //        return RedirectToAction("Alumnos");
+        //    else
+        //        return NoContent();
+        //}
 
 
         // pModal de Papás

@@ -23,7 +23,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Tabla Alumnos</h3>
-                        <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Alumno </a>
+                        @* asp-route-IdAlumno="0" *@
+                        <a asp-action="DireccionarAlumno" asp-controller="Alumnos" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Alumno </a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body table-responsive">

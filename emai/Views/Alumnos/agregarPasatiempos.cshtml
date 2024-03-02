@@ -16,8 +16,8 @@
 
         <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="was-validated" novalidate>
 
-            <input asp-for="IdClase" type="hidden" />
-
+          @*   <input asp-for="IdClase" type="hidden" />
+ *@
 
             <div class="row">
 
@@ -42,8 +42,8 @@
 
                 @*Otro *@
                 <div class="col-md-12 form-group">
-                    <label class="form-label" for="instrumentos">¿Algun otro interés musical?</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="Otro" id="Otro" name="Otro" required />
+                    <label class="form-label" for="OtroOpcional">¿Algun otro interés musical?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
@@ -98,13 +98,13 @@
 
 
                 @*Nombre recepcion*@
-                <div class="col-md-12 form-group">
+            @*     <div class="col-md-12 form-group">
                     <label class="form-label" for="nombrerecepcionista">¿Quién la atendió?</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="amable" id="amable" name="amable" required />
+                    <input type="text" class="form-control form-control-sa" asp-for="Amables" id="Amables" name="Amables" required />
 
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-                </div>
+                </div> *@
                 
                 @*Botones de guardar*@
                 <div class="col-md-6 form-group">

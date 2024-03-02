@@ -8,74 +8,69 @@ namespace emai.Models
 {
     public class Alumnos
     {
-        public int IdAlumno { get; set; }
-
-        public int IdClase { get; set; }
         public DateTime FechaInscripcion { get; set; }
-        public string Tag { get; set; }
+        public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
-        public DateTime FechaInicioClaseGratis { get; set; }
-        public DateTime FechaFinClaseGratis { get; set; }
-        public string Nombre { get; set; }
-        public string ApPaterno { get; set; }
-        public string ApMaterno { get; set; }
+        public DateTime FechaInicioClase { get; set; }
+        public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string telefono { get; set; }
-        public string Celular { get; set; }
-        public string Facebook { get; set; }
-        public string Email { get; set; }
-        public string Enfermedades { get; set; }
-        public bool Discapacidad { get; set; }
-        public string InstrumentoBase { get; set; }
-        public string Dia { get; set; }
-        public string InstrumentoOpcional { get; set; }
-        public string diaOpcional { get; set; }
-        public string horaOpcional { get; set; }
+        public string TelefonoCasa { get; set; } = null!;
+        public string Celular { get; set; } = null!;
+        public string Facebook { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Enfermedades { get; set; } = null!;
+        public int SeleccionarClase1 { get; set; }
+        public string DiaAndHoraClase { get; set; } = null!;
+        public int SeleccionarClase2 { get; set; }
+        public string DiaAndHoraClaseOpcional { get; set; } = null!;
+        public bool Activo { get; set; }
 
-        // Tabla papas
-        public string NombrePapas { get; set; }
-        public string CelularPapas { get; set; }
-        
-        public string FacebookPapas { get; set; }
-        public string EmailPapas { get; set; }
-        public string TutorRecoger { get; set; }
-        public string CelularTR { get; set; }
-        public string NumEmergencia { get; set; }
+        public string NombrePapas { get; set; } = null!;
+        public string CelularPapas { get; set; } = null!;
+        public string FacebookPapas { get; set; } = null!;
+        public string EmailPapas { get; set; } = null!;
+        public string TutorRecoger { get; set; } = null!;
+        public string CelularTR { get; set; } = null!;
+        public string NumEmergencia { get; set; } = null!;
 
-        //tabla estudios 
         public bool Estudios { get; set; }
-        public string GradoEstudios { get; set; }
-        public string EscuelaActuales { get; set; }
+        public string GradoEstudios { get; set; } = null!;
+        public string EscuelaActuales { get; set; } = null!;
         public bool Trabajas { get; set; }
-        public string LugarTrabajo { get; set; }
+        public string LugarTrabajo { get; set; } = null!;
 
 
-        // Tabla conocimientos Actuales
-        public string ConActual { get; set; }
-        public string Instrumento { get; set; }
+        public bool ConConocimiento { get; set; }
+        public string Instrumento { get; set; } = null!;
         public bool InstrumentoCasa { get; set; }
-        public string NoInstrumento { get; set; }
-        public string EnterasteEscuela { get; set; }
+        public string InstrumentotTwo { get; set; } = null!;
+        public string EnterasteEsc { get; set; } = null!;
         public bool InteresGnroMusical { get; set; }
-        public string Cuales { get; set; }
+        public string CualesMusicales { get; set; } = null!;
 
-        // Tabla interes Instrumento
-        public string Otro { get; set; }
 
-        // Tabla Personal 
+        public string TipoInteres { get; set; } = null!;
+        public string OtroOpcional { get; set; } = null!;
+        public string MusicalInteres { get; set; } = null!;
         public bool ClaseOpcional { get; set; }
         public bool DescuentoP { get; set; }
-        public bool amable { get; set; }
+        public bool Amables { get; set; }
+        public string NombreRecepcionista { get; set; } = null!;
 
-        // Tabla Recepcionista 
-
-
-        //public int IdRecepcionista { get; set; }
-        public string NombreRecepcionista { get; set; }
-
-        public List<Alumnos> Lista { get; set; }
-       
+        public string Folio { get; set; } = null!;
+        public int IdPromosion { get; set; }
+        public int IdMes { get; set; }
+        public DateTime FechaPago { get; set; }
+        public decimal CostoLibro { get; set; }
+        public string NombreLibro { get; set; } = null!;
+        public string Atendio { get; set; } = null!;
+        public decimal Costo { get; set; }
+        public decimal Subtotal { get; set; }
+        public decimal IVA { get; set; }
+        public decimal Total { get; set; }
+        public decimal Inscripcion { get; set; }
+        public decimal Mensualidad { get; set; }
 
     }
 

@@ -15,6 +15,8 @@
         public const string MESSAGE_QUERY_EMPATY = "No se encotro registro";
         public const string MESSAGE_CHANGE_AUTENTIFACTION = "Se ha cambiado la clave de Inserccion de Api GOOGLE SHEED";
         public const string MESSAGE_CHANGE_AUTENTIFACTION_ERROR = "Se presento un problema en la autentificacion";
+        public const string MESSAGE_FALLED_NEW = "No se Pude registrar el Alumno";
+
 
     }
 }

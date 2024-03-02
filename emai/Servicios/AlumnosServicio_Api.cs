@@ -2,6 +2,7 @@
 using emai.Servicios.Commons;
 using Email.Utiilities.Static;
 using Newtonsoft.Json;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -193,6 +194,37 @@ namespace emai.Servicios
 
         }
 
+        public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
+        {
+            var response = new BaseResponseV2<bool>();
+
+            try
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+                using (var httpClient = new HttpClient())
+                {
+                    var httpResponse = await httpClient.PostAsync("https://localhost:7265/api/Alumnos/RegistarAlumnoV1", content);
+
+                    if (httpResponse.IsSuccessStatusCode)
+                    {
+                        var dataResponse = await httpResponse.Content.ReadAsStringAsync();
+                         response = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(dataResponse);
+                    }
+                    else
+                    {
+                        response.IsSuccess = false;
+                        response.Message= StaticVariable.MESSAGE_FALLED_NEW;
+                    }
+                }
+
+            }catch(Exception ex) {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED_NEW;
+
+            }
+            return response;   
+        }
+
         //public async Task<BaseResponseV2<bool>> InsertarAlumno(AlumnoModeInsertV1 entity)
         //{
         //    var response = new BaseResponseV2<bool>();
@@ -213,7 +245,7 @@ namespace emai.Servicios
         //        response.Data = false;
         //    }
         //    return response
-  
+
 
         //}
     }

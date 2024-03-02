@@ -16,7 +16,7 @@
 
         <form asp-action="GuardarCambios" asp-controller="Alumnos" method="post" class="was-validated" novalidate>
 
-            <input asp-for="IdClase" type="hidden" />
+           @*  <input asp-for="IdClase" type="hidden" /> *@
 
 
             <div class="row">
@@ -26,10 +26,10 @@
                 <div class="col-md-4 form-group">
                     <label class="form-label" for="conocimientomusicales">¿Cúentas con algún conocimiento musical?</label>
                     @*<input type="text" class="form-control form-control-sa" asp-for="ConActual" name="conocimientomusicales" id="conocimientosmusicales" required />*@
-                    <select class="form-control  select2-hidden-accessible" asp-for="ConActual" name="conocimientomusicales" id="conocimientosmusicales" required>
+                    <select class="form-control  select2-hidden-accessible" asp-for="ConConocimiento" name="ConConocimiento" id="ConConocimiento" required>
                         <option selected="" disabled="" value="">Seleccionar</option>
-                        <option value="Sí">Sí</option>
-                        <option value="No">No</option>
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
                     </select>
 
                     <div class="valid-feedback">Válido.</div>
@@ -70,8 +70,8 @@
 
                 @*Enteraste Escuela*@
                 <div class="col-md-4 form-group">
-                    <label class="form-label" for="enterasteescuela">¿Cómo te enteraste de EMAI?</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="EnterasteEscuela" id="enterasteescuela" name="enterasteescuela" required />
+                    <label class="form-label" for="EnterasteEsc">¿Cómo te enteraste de EMAI?</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="EnterasteEsc" id="EnterasteEsc" name="EnterasteEsc" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>

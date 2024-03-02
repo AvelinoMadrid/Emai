@@ -8,7 +8,6 @@ namespace EMAI.DTOS.Dtos.Request
 {
     public class AlumnoRequest
     {
-        public int IdAlumno { get; set; }
         public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
