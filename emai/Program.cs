@@ -21,7 +21,8 @@ builder.Services.AddScoped<IServicioAsigClase_Api, AsigClaseServicio_Api>();
 builder.Services.AddScoped<IServicioCooperaciones_Api, CooperacionesServicio_Api>();
 builder.Services.AddScoped<IServicioPlanEstudios_Api, PlanEstudiosServicio_Api>();
 builder.Services.AddScoped<IServicioAlumnos_Api, AlumnosServicio_Api>();
-
+builder.Services.AddScoped<IServicioPrograma5s_Api, Programa5sServicio_Api>();
+builder.Services.AddScoped<IServicioPromosiones_Api, PromosionesServicio_Api>();
 
 
 

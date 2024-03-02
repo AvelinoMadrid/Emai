@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Programa5s>
 
 <section class="content">
     <div class="container-fluid">
@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Programa 5S</h3>
-                        <a href="@Url.Action("Programa5s", "Programa")" class="btn btn-dark btn-sm" style="float: right !important">Registro</a>
+                        <a asp-action="Programa5s" asp-controller="Programa5s" asp-route-IdUsuario="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Programa </a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -25,28 +25,32 @@
                                     <th>Supervisor</th>
                                     <th>Imagen de antes</th>
                                     <th>Imagen despues</th>
-                                   
+                                    <th>Detalles</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach (var item in Model)
+                                {
 
-                       
-                                
+
                                     <tr>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                 
-                                       
+                                        <td>@item.Id</td>
+                                        <td>@item.Area</td>
+                                        <td>@item.Supervisor</td>
+                                        <td>@item.FechaAntes</td>
+                                        <td>@item.FechaInicio</td>
+                                        <td>@item.ImagenDespues</td>
+                                        <td>@item.ImagenAntes</td>
+                                        <td>@item.Detalles</td>
+                                        <td> <a asp-action="Programa5s" asp-controller="Programa5s" asp-route-Id="@item.Id" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a></td>
+
+
                                     </tr>
-                               
+                                }
                             </tbody>
-                  
+
                         </table>
                     </div>
                     <!-- /.card-body -->

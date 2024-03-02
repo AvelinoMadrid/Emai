@@ -1,19 +1,25 @@
 ﻿using emai.Models;
+using emai.Servicios.Commons;
 
 namespace emai.Servicios
 {
     public interface IServicioPromosiones_Api
     {
-        Task<List<Promosiones>> Lista();
+        Task<List<PromocionesModelV1>> Lista();
 
-        Task<Promosiones> Obtener(int IdPromociones);
+        Task<BaseResponseV3<PromocionesModelV1>> ListarAllPromosiones();
+        Task<PromocionesModelV1> Obtener(int IdPromociones);
 
-        Task<bool> Guardar(Promosiones Promosiones);
+        Task<bool> Guardar(PromocionesModelV1 PromocionesModelV1);
 
-        Task<bool> Editar(Promosiones Promosiones);
+        Task<bool> Editar(PromocionesModelV1 PromocionesModelV1);
 
         Task<bool> Eliminar(int IdPromociones);
 
-        Task<List<Promosiones>> ObtenerTodos();
+        Task<BaseResponseV4<bool>> EliminarPromosionV1(int IdPromociones);
+
+        //Task<List<PromocionesModelV1>> ObtenerTodos();
+
+        //Task<BaseResponseV3<bool>> EliminarpromosionesV1(int IdPromociones);
     }
 }

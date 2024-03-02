@@ -1,0 +1,188 @@
+﻿@model Programa5s
+
+
+@{
+    ViewData["Title"] = "Agregar Programa5s";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<style>
+ 
+
+    .preview-box1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+        height: calc(50vh - 50px);
+        background-color: #fafafa;
+    }
+</style>
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="Programa5s" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="Id" type="hidden" />
+
+            <div class="row">
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="Usuario">Area</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Area" name="Area" id="Area" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="Usuario">Supervisor</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Supervisor" name="Supervisor" id="Supervisor" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label" for="Usuario">Fecha Antes</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaAntes" name="FechaAntes" id="FechaAntes" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Usuario">Fecha Inicio</label>
+                    <input type="date" class="form-control form-control-sa" asp-for="FechaInicio" name="FechaInicio" id="FechaInicio" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Usuario">Detalles</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="Detalles" name="Detalles" id="Detalles" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                
+       @*          <div class="col-md-3 form-group">
+                    <label class="form-label" for="Usuario">Imagen antes</label>
+                    <input type="file" class="form-control form-control-sa" asp-for="ImagenAntes" name="ImagenAntes" id="ImagenAntes" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+
+                <div class="col-md-3 form-group">
+                    <label class="form-label" for="Usuario">Imagen despues</label>
+                    <input type="file" class="form-control form-control-sa" asp-for="ImagenDespues" name="ImagenDespues" id="ImagenDespues" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div> *@
+
+
+                <div class="col-md-6 form-group">
+                    <div class="containerup">
+                        <input asp-for="ImagenAntes" name="ImagenAntes" id="ImagenAntes" type="file"
+                               accept="image/*"
+                               onchange="handleChange(event, 'preview-box1')"
+                               hidden />
+                        <label class="btn-upload" for="ImagenAntes" role="button">
+                            Subir logotipo 1
+                        </label>
+                        <div class="preview-box1"></div>
+                    </div>
+
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese la contraseña.</div>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                    <div class="containerup">
+                        <input asp-for="ImagenDespues" name="ImagenDespues" id="ImagenDespues" type="file"
+                               accept="image/*"
+                               onchange="handleChange(event, 'preview-box2')"
+                               hidden />
+                        <label class="btn-upload" for="ImagenDespues" role="button">
+                            Subir logotipo 2
+                        </label>
+                        <div class="preview-box2"></div>
+                    </div>
+
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Ingrese la contraseña.</div>
+                </div>
+
+                
+
+                <div class="col-md-6 form-group">
+
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="Programa5s" asp-controller="Programa5s" class="btn btn-warning btn-sm" style="width:100% !important">Regresar</a>
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+
+
+
+    </div>
+</div>
+
+<script>
+    let previousFile1 = null;
+    let previousFile2 = null;
+
+    const handleChange = (event, previewBoxClass) => {
+        const fileUploader = event.target;
+        const getFile = fileUploader.files;
+
+        if (getFile.length !== 0) {
+            const uploadedFile = getFile[0];
+
+            if (previewBoxClass === 'preview-box1' && uploadedFile !== previousFile1) {
+                previousFile1 = uploadedFile;
+                readFile(uploadedFile, previewBoxClass);
+            } else if (previewBoxClass === 'preview-box2' && uploadedFile !== previousFile2) {
+                previousFile2 = uploadedFile;
+                readFile(uploadedFile, previewBoxClass);
+            } else {
+                console.log("Esta es la misma imagen que la anterior.");
+            }
+        }
+    }
+
+    const readFile = (uploadedFile, previewBoxClass) => {
+        if (uploadedFile) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                const parent = document.querySelector(`.${previewBoxClass}`);
+                parent.innerHTML = `<img class="preview-content" src="${reader.result}" />`;
+            };
+
+            reader.readAsDataURL(uploadedFile);
+        }
+    };
+</script>

@@ -1,4 +1,5 @@
-﻿@model List<Promosiones>
+﻿@using emai.Servicios.Commons
+@model BaseResponseV3<PromocionesModelV1>
 
 @{
     ViewBag.Title = "Tabla de Promociones ";
@@ -21,7 +22,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Tabla Promociones</h3>
 
-                        <a asp-action="agregarpromociones" asp-controller="Promociones" asp-route-IdMaestro="0" class="btn btn-dark btn-sm" style="float:right !important">Nuevo Promociones</a>
+                        <a asp-action="agregarpromociones" asp-controller="Promosiones" asp-route-IdPromociones="0" class="btn btn-dark btn-sm" style="float:right !important">Nuevo Promociones</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -39,22 +40,25 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                 @{
 
-                                @foreach (var item in Model)
-                                {
+
+
+                                    foreach (var PromocionesModelV1 in Model.Data)
+                                    {
                                     <tr>
 
-                                        <td>@item.IdPromociones</td>
-                                        <td>@item.NombrePromocion</td>
-                                        <td>@item.Porcentaje</td>
-                                        <td>@item.Activo</td>
+                                            <td>@PromocionesModelV1.IdPromociones</td>
+                                            <td>@PromocionesModelV1.NombrePromocion</td>
+                                            <td>@PromocionesModelV1.Porcentaje</td>
+                                            <td>@PromocionesModelV1.statePromocion</td>
 
                                         <td>
-                                            <a asp-action="agregarpromociones" asp-controller="Promociones" asp-route-IdMaestro="@item.IdPromociones" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
-                                            <a asp-action="Eliminar" asp-controller="Promociones" asp-route-IdMaestro="@item.IdPromociones" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
+                                                <a asp-action="agregarpromociones" asp-controller="Promosiones" asp-route-IdPromociones="@PromocionesModelV1.IdPromociones" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                                <a asp-action="EliminarPromosionV1" asp-controller="Promosiones" asp-route-IdPromociones="@PromocionesModelV1.IdPromociones" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>
                                         </td>
                                     </tr>
-                                }
+                                }}
                             </tbody>
                         </table>
                     </div>

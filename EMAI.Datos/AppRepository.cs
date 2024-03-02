@@ -3813,7 +3813,7 @@ namespace EMAI.Datos
         }
         #endregion
 
-        #region "Seccion ---> Clases"
+        #region "Seccion ---> Programa5s"
 
         public async Task<List<Programa5sModel>> GetPrograma5s()
         {
