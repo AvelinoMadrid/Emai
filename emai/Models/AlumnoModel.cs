@@ -48,6 +48,7 @@ namespace emai.Models
         public string NombreRecepcionista { get; set; } = null!;
         public string StringActivo { get; set; }
         public BaseResponseV1<AlumnoModel> ListarAllAlumnos { get; set; }
+      
 
     }
     public class AlumnoModeInsertV1

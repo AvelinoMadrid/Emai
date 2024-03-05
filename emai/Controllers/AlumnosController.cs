@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using static System.Web.Razor.Parser.SyntaxConstants;
 using System.Runtime.Intrinsics.X86;
 using System;
+using emai.Servicios.Dtos.Response;
+using Humanizer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace emai.Controllers
 {
@@ -53,6 +56,37 @@ namespace emai.Controllers
             else
                 return NoContent();
         }
+        [HttpGet]
+        public async Task<string> GenerarFolioV1()
+        {
+            try
+            {
+                var response = await _ServicioAlumnos_Api.GenerarFolio();
+           
+                if(response!=null)
+                {
+                    return response;
+                }
+                else
+                {
+                    return ("Excuse me, No generador de Folio");
+
+                }
+            }
+            catch(Exception ex)
+            {
+                return "Error en la solicitud de generar Folio";
+
+            }
+
+
+            ////correcion de try castrch
+            //var response = new FolioGenerado();
+            //response = await _ServicioAlumnos_Api.GenerarFolio();
+
+            //return response;
+
+        }
 
 
 
@@ -89,34 +123,40 @@ namespace emai.Controllers
 
         public async Task<IActionResult> Alumnos()
         {
+            //Falta hacer el try catch ese devuelve un filo
             BaseResponseV1<AlumnoModel> alumnos = await _ServicioAlumnos_Api.ListarAllAlumnos();
             return View(alumnos);
         }
-        public IActionResult DireccionarAlumno()
+        public async Task<IActionResult> NuevoAlumno()
         {
-            return View("agregaralumnos");
+            var alumno = new Alumnos();
+            alumno.Folio = await GenerarFolioV1();
+            alumno.ListarClasesSelect = await _ServicioAlumnos_Api.ListarClasesSelect();
+            alumno.ListSelectPromocion= await _ServicioAlumnos_Api.ListSelectPromocion();
+            alumno.ListarMesesSelect= await _ServicioAlumnos_Api.ListarMesesSelect();
+            return View("agregaralumnos", alumno);
+            
         }
 
         [HttpPost]
         public async Task<IActionResult> agregarNuevoAlumno(Alumnos entity)
         {
-           
+        
             BaseResponseV2<bool> result = await _ServicioAlumnos_Api.InsertarAlumnoV1(entity);
 
       
             if (result.IsSuccess && result.Data)
             {
-               
+              
                 return RedirectToAction("Alumnos");
             }
             else
             {
-                
-                return View("DireccionarAlumno", entity);
+               
+                return View("NuevoAlumno", entity);
             }
-            return View("DireccionarAlumno", entity);
-
         }
+
 
 
         [HttpGet]

@@ -61,13 +61,10 @@
                     </div>
                     </div>
                     <div class="bs-stepper-content">
-                    <form asp-action="agregaralumnos" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+                    <form asp-action="agregarNuevoAlumno" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
 
                         <!-- your steps content here -->
                         <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                       
-
-                            @* <input asp-for="IdClase" type="hidden" /> *@
 
                             <div class="row">
 
@@ -78,6 +75,20 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+                                <script>
+                                    //estyo esta mal se va corregirt 
+                                    window.onload = function () {
+                                        var fecha1 = new Date(); //Fecha actual
+                                        var mes1 = fecha1.getMonth() + 1; //obteniendo mes
+                                        var dia1 = fecha1.getDate(); //obteniendo dia
+                                        var ano1 = fecha1.getFullYear(); //obteniendo año
+                                        if (dia1 < 10)
+                                            dia1 = '0' + dia1; //agrega cero si el menor de 10
+                                        if (mes1 < 10)
+                                            mes1 = '0' + mes1 //agrega cero si el menor de 10
+                                        document.getElementById('FechaInscripcion').value = ano1 + "-" + mes1 + "-" + dia1;
+                                    }
+                                </script>
 
                                 @*Tag de Registro*@
                                 <div class="col-md-3 form-group">
@@ -89,12 +100,17 @@
 
                                 @*Dia de Clases*@
                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="NoDiaClases">No. de Dia de Clases</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="NoDiaClases" id="NoDiaClases" name="No.DiaClases" required />
+                                    <label class="form-label" for="NoDiaClases">No. de Día de Clases</label>
+                                    <select class="form-control form-control-sa" asp-for="NoDiaClases" id="NoDiaClases" name="NoDiaClases" required>
+                                        <option value="">Seleccionar...</option>
+                                        <option value="1">1 día</option>
+                                        <option value="2">2 días</option>
+                                        <option value="3">3 días</option>
+                                    </select>
                                     <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                    <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
-
+                              
 
                                 @*Fecha Inicio de Clase Gratis*@
                                 <div class="col-md-3 form-group">
@@ -103,23 +119,24 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-
-
-                                @*Fecha Fin de Clase Gratis*@
-                          @*       <div class="col-md-3 form-group">
-                                    <label class="form-label" for="FechaInicioClase">Fecha de clase final</label>
-                                    <input type="date" class="form-control form-control-sa" asp-for="FechaFinClaseGratis" id="FechaFinClase" name="FechaFinClaseGratis" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                </div> *@
-
+                                <script>
+                                    var dateValue = document.getElementById('FechaInicioClase');
+                                    var formattedDate = fechaActual.toISOString().split('T')[0];
+                                    fechaInput.value = formattedDate;
+                                </script>
 
                                 @*Instumento Base*@
                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="InstrumentoBase">Instrumento Base</label>
-                                    <input type="int" class="form-control form-control-sa" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="Instrumento Base" required />
+                                    <label class="form-label" for="SeleccionarClase1">Fecha de clase inicio</label>
+                                    <select class="form-control form-control-sa" onchange="ShowSelected();" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
+                                        <option value="">Seleccionar...</option>
+                                        @foreach (var listClase in Model.ListarClasesSelect)
+                                        {
+                                            <option value="@listClase.idClase">@listClase.Nombre</option>
+                                        }
+                                    </select>
                                     <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                    <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
 
 
@@ -131,32 +148,21 @@
                                         <div class="valid-feedback">Válido.</div>
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
-
                                 </div>
-
-
-                                @*Hora de clase*@
-                           @*      <div class="col-md-3 form-group">
-                                    <label class="form-label" for="hora">Hora de Clase</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-sa" asp-for="horaOpcional" id="hora" name="hora" required />
-                                        <div class="valid-feedback">Válido.</div>
-                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                    </div>
-
-                                </div> *@
 
                                 @*Instrumento Opcional*@
                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="instrumentoopcional">Instrumento Opcional</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control form-control-sa" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="instrumentoopcional" required />
-                                        <div class="valid-feedback">Válido.</div>
-                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                    </div>
-
+                                    <label class="form-label" for="SeleccionarClase2">Instrumento Opcional</label>
+                                    <select class="form-control form-control-sa" onchange="ShowSelectedV1();" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="SeleccionarClase2" required>
+                                        <option value="">Seleccionar...</option>
+                                        @foreach (var listClase in Model.ListarClasesSelect)
+                                        {
+                                            <option value="@listClase.idClase">@listClase.Nombre</option>
+                                        }
+                                    </select>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
-
 
                                 @*Dia Opcional*@
                                 <div class="col-md-3 form-group">
@@ -168,18 +174,6 @@
                                     </div>
 
                                 </div>
-
-                                @*Hora Opcional*@
-                            @*     <div class="col-md-3 form-group">
-                                    <label class="form-label" for="HoraOpcional">Hora Opcional</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-sa" asp-for="horaOpcional" id="HoraOpcional" name="HoraOpcional" required />
-                                        <div class="valid-feedback">Válido.</div>
-                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                    </div>
-
-                                </div> *@
-
 
 
                                 @*Nombre Completo*@
@@ -211,6 +205,12 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
+                                <script>
+                                    var dateValue = document.getElementById('FechaNacimiento');
+                                    var fechaActual = new Date();
+                                    var formatearDate = fechaActual.toISOString().split('T')[1];
+                                    fechaInput.value = formatearDate;
+                                </script>
 
 
                                 @*Telefono del alumno*@
@@ -261,73 +261,67 @@
                                 </div>  
                             </div>
           </div>
-
-
-
-
-
+                                      @*------------------------------------------------------------------------------------------CORRECION TOAL HASTA ESTA PARTE*@
 
                         <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
 
                             <div class="row">
-                            @*Nombre del Papa o mama*@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="NombrePapas">Nombre de mamá y/o papá</label>
+
+                                @*Nombre del Papa o mama*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="NombrePapas">Nombre de mamá y/o papá</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="NombrePapas" name="NombrePapas" id="NombrePapas" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
-                            @*Celular del papa *@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="celular">Celular</label>
+                                @*Celular del papa *@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="CelularPapas">Celular</label>
                                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="CelularPapas" id="CelularPapas" name="CelularPapas" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
-
-                            @*Facebook del papa*@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="facebook">Facebook papá o mamá</label>
+                                @*Facebook del papa*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="FacebookPapas">Facebook papá o mamá</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="FacebookPapas" name="FacebookPapas" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
-                            @*Email del papa *@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="email">Email</label>
+                                @*Email del papa *@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="email">Email</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="EmailPapas" name="EmailPapas" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo..</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
 
-                            @*Nombre del tutor a recoger*@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="NombreTR">Nombre de la persona que recogerá al niño</label>
+                                @*Nombre del tutor a recoger*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="TutorRecoger">Nombre de la persona que recogerá al niño</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="TutorRecoger" id="TutorRecoger" name="TutorRecoger" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
-                            @*Celular del alumno*@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="Celular">Celular persona que recoge al niño</label>
+                                @*Celular del alumno*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="CelularTR">Celular persona que recoge al niño</label>
                                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="CelularTR" id="CelularTR" name="CelularTR" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
-
-                            @*Numero de Emergencia*@
-                            <div class="col-md-3 form-group">
-                                <label class="form-label" for="NumEmergencia">Número de Emergencia</label>
+                                @*Numero de Emergencia*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="NumEmergencia">Número de Emergencia</label>
                                     <input type="tel" class="form-control form-control-sa" data-inputmask='"mask": "(999) 999-9999"' data-mask asp-for="NumEmergencia" id="NumEmergencia" name="NumEmergencia" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
-
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
 
                                 @*Botones de guardar*@
                                 <div class="col-md-6 form-group">
@@ -339,30 +333,33 @@
                                 </div>
 
                             </div>
-                           </div>
+                       </div>
+
+                           @*Correcion Total de Papas*@
 
 
 
                         <div id="estudios-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                         <div class="row">
+
+
                                 @*Estudios*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="Estudios">¿Actualmente estudias?</label>
                                     @*<input type="text" class="form-control form-control-sa" asp-for="Estudios" name="estudios" id="estudios" required /> *@
                                     <select class="form-control  select2" asp-for="Estudios" name="Estudios" id="Estudios" required>
                                         <option selected="" disabled="" value="">Seleccionar</option>
-                                        <option value="1">Sí</option>
-                                        <option value="0">No</option>
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
                                     </select>
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
-
                                 @*Grado de Estudios*@
                                 <div class="col-md-4 form-group">
-                                    <label class="form-label" for="gradoEstudios">Grado de estudios</label>
+                                    <label class="form-label" for="GradoEstudios">Grado de estudios</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="GradoEstudios" id="GradoEstudios" name="GradoEstudios" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -370,21 +367,20 @@
 
                                 @*Nombre de la Escuela *@
                                 <div class="col-md-4 form-group">
-                                    <label class="form-label" for="nombreEscuela">Nombre de la Escuela</label>
+                                    <label class="form-label" for="EscuelaActuales">Nombre de la Escuela</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="EscuelaActuales" id="EscuelaActuales" name="EscuelaActuales" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
-
                                 @*Trabajas*@
                                 <div class="col-md-4 form-group">
-                                    <label class="form-label" for="trabajas">¿Actualmente Trabajas?</label>
+                                    <label class="form-label" for="Trabajas">¿Actualmente Trabajas?</label>
                                     @*<input type="text" class="form-control form-control-sa" asp-for="Trabajas" id="trabajas" name="trabajas" required />*@
                                     <select class="form-control  select2" asp-for="Trabajas" id="Trabajas" name="Trabajas" required>
                                         <option selected="" disabled="" value="">Seleccionar</option>
-                                        <option value="1">Sí</option>
-                                        <option value="0">No</option>
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
                                     </select>
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -398,6 +394,7 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+                             
 
                                 @*Botones de guardar*@
                                 <div class="col-md-6 form-group">
@@ -412,21 +409,18 @@
  </div>
 
 
-
-
-
-
                         <div id="instrumento-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                            
                             <div class="row">
+
                                 @*Conocimientos Musicales*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="conocimientomusicales">¿Cúentas con algún conocimiento musical?</label>
                                     @*<input type="text" class="form-control form-control-sa" asp-for="ConActual" name="conocimientomusicales" id="conocimientosmusicales" required />*@
                                     <select class="form-control  select2" asp-for="ConConocimiento" name="ConConocimiento" id="ConConocimiento" required>
                                         <option selected="" disabled="" value="">Seleccionar</option>
-                                        <option value="1">Sí</option>
-                                        <option value="0">No</option>
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
                                     </select>
 
                                     <div class="valid-feedback">Válido.</div>
@@ -445,10 +439,10 @@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="instrumentocasa">¿Cuentas con un Instrumento en Casa?</label>
                                     @*<input type="text" class="form-control form-control-sa" asp-for="InstrumentoCasa" id="instrumentocasa" name="instrumentocasa" required />*@
-                                    <select class="form-control  select2" asp-for="InstrumentoCasa" id="InstrumentoCasa" name="InstrumentoCasa" required>
+                                    <select class="form-control  select2" asp-for="InstrumentoCasa" id="instrumentocasa" name="instrumentocasa" required>
                                         <option selected="" disabled="" value="">Seleccionar</option>
-                                        <option value="1">Sí</option>
-                                        <option value="0">No</option>
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
                                     </select>
 
                                     <div class="valid-feedback">Válido.</div>
@@ -459,7 +453,7 @@
                                 @*Que instrumento tiene en casa*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="Instrumento">Que instrumento (s)</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="InstrumentotTwo" id="InstrumentotTwo" name="InstrumentotTwo" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="Instrumento" id="" name="instrumento" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -467,7 +461,7 @@
 
                                 @*Enteraste Escuela*@
                                 <div class="col-md-4 form-group">
-                                    <label class="form-label" for="enterasteescuela">¿Cómo te enteraste de EMAI?</label>
+                                    <label class="form-label" for="EnterasteEsc">¿Cómo te enteraste de EMAI?</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="EnterasteEsc" id="EnterasteEsc" name="EnterasteEsc" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -475,37 +469,40 @@
 
 
                                 @*Interes musical*@
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-4 form-group" >
                                     <label class="form-label" for="InteresGnroMusical">¿Tienes algun género en especial?</label>
                                     @*<input type="date" class="form-control form-control-sa" asp-for="InteresGnroMusical" id="interesmusical" name="interesmusical" required />*@
-                                    <select class="form-control  select2" asp-for="InteresGnroMusical" id="InteresGnroMusical" name="InteresGnroMusical" required>
+                                    <select class="form-control  select2" onchange="viewInput()" asp-for="InteresGnroMusical" id="InteresGnroMusical" name="InteresGnroMusical" required>
                                         <option selected="" disabled="" value="">Seleccionar</option>
-                                        <option value="1">Sí</option>
-                                        <option value="0">No</option>
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
                                     </select>
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                @*Cuales musicales*@
-                                <div class="col-md-4 form-group" style="display:none;" id="DivCampoMusical">
-                                    <label class="form-label" for="CualesMusicales">¿Cuales Musicales?</label>
+                            
+                                @*Cuales Generos Musicales*@
+                                <div class="col-md-4 form-group" style="display:none" id="inputTextCuales">
+                                    <label class="form-label" for="CualesMusicales">¿Mencionalo?</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="CualesMusicales" id="CualesMusicales" name="CualesMusicales" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+                                @*Javscript*@
                                 <script>
-                                    @*https://es.stackoverflow.com/questions/445432/c%C3%B3mo-mostrar-y-ocultar-input-de-un-select-con-javascript*@
+                                    
 
-                                        document.getElementById("InteresGnroMusical").addEventListener("change", function () {
-                                        var divAOcultar = document.getElementById("DivCampoMusical");
-                                        var valueSelect = this.value;
-                                            if (valueSelect === "1") {
-                                            divAOcultar.style.display = "block";
-                                        } else {
-                                            divAOcultar.style.display = "none";
+                                    function viewInput(){
+                                        var valueSelect = document.getElementById("InteresGnroMusical");
+                                        var inputText = document.getElementById("inputTextCuales");
+
+                                        if (valueSelect.value == "true") {
+                                            inputText.style.display = "block";
+                                        }else{
+                                            inputText.style.display = "none";
                                         }
-                                    });
+                                    }
 
                                 </script>
 
@@ -520,32 +517,33 @@
                             </div>
                          </div>
 
-
-
-
                         <div id="interes-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                          <div class="row">
+
                                 @*interes Hobby *@
                                 <div class="col-md-12 form-group">
                                     <label class="form-label" for="InteresHobby">Selecciona: ¿Cuál es tu interés en aprender un instrumento musical?</label>
                                     <br /><br />
                                     <div class="radio-container">
-                                        <label for="hobby"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Hobby" id="hobby"> Hobby</label>
-                                        <label for="formarGrupo"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Formar un grupo musical" id="formarGrupo"> Formar un grupo musical</label>
-                                        <label for="serProfesional"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Ser profesional" id="serProfesional"> Ser profesional</label>
-                                        <label for="inquietud"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Inquietud" id="inquietud"> Inquietud</label>
-                                        <label for="mejoraTecnica"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Porque tus papás quieren mejorar técnica" id="mejoraTecnica"> Porque tus papás quieren mejorar técnica</label>
-                                        <label for="pasarRato"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Pasar el rato" id="pasarRato"> Pasar el rato</label>
-                                        <label for="otro"><input type="radio" asp-for="TipoInteres" name="InteresMusical" value="Otro" id="otro"> Otro</label>
+                                        <label for="hobby"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Hobby" id="hobby"> Hobby</label>
+                                        <label for="formarGrupo"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Formar un grupo musical" id="formarGrupo"> Formar un grupo musical</label>
+                                        <label for="serProfesional"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Ser profesional" id="serProfesional"> Ser profesional</label>
+                                        <label for="inquietud"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Inquietud" id="inquietud"> Inquietud</label>
+                                        <label for="mejoraTecnica"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Porque tus papás quieren mejorar técnica" id="mejoraTecnica"> Porque tus papás quieren mejorar técnica</label>
+                                        <label for="pasarRato"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Pasar el rato" id="pasarRato"> Pasar el rato</label>
+                                        <label for="otro"><input type="radio" asp-for="InteresGnroMusical" name="InteresMusical" value="Otro" id="otro"> Otro</label>
                                     </div>
                                 </div>
-                                @*Otra intreres*@
-                                <div class="col-md-4 form-group" style="display:none;" id="OtroInteresV1">
-                                    <label class="form-label" for="Mencionelo</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional" required />
+
+
+                                @*Otro *@
+                                <div class="col-md-12 form-group" style="display:none" id="OtroInteresV1">
+                                    <label class="form-label" for="OtroOpcional">¿Algun otro interés musical?</label>
+                                    <input type="text" class="form-control form-control-sa" placeholder="Mencionalo" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+
                                 <script>
                                     var otroInteresV1 = document.getElementById("OtroInteresV1");
                                     var radiosInteresMusical = document.querySelectorAll('input[name="InteresMusical"]');
@@ -562,56 +560,52 @@
 
 
                                 </script>
-                                @*Otro musicales *@
+
+                                @*Musica de Interes *@
                                 <div class="col-md-12 form-group">
-                                    <label class="form-label" for="MusicalInteres">¿Algun otro interés musical?</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres" required />
+                                    <label class="form-label" for="MusicalInteres">¿Musica de Interes?</label>
+                                    <input type="text" class="form-control form-control-sa" placeholder="Cumbia" asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
                                 @*Clase Opcionales*@
                                 <div class="col-md-12 form-group">
-                                    <label class="form-label" for="ClaseOpcional">¿La persona que lo atendió le mencionó las clases opcionales?</label>
+                                    <label class="form-label" for="claseopcional">¿La persona que lo atendió le mencionó las clases opcionales?</label>
                                     <br /><br />
                                     <div class="radio-container">
                                         <label for="opcionSi">
-                                            <input type="radio" name="ClaseOpcional" asp-for="ClaseOpcional" value="1" id="opcionSi" required> Sí
+                                            <input type="radio" name="opcionClase" asp-for="ClaseOpcional" value="true" required> Sí
                                         </label>
                                         <label for="opcionNo">
-                                            <input type="radio" name="ClaseOpcional" asp-for="ClaseOpcional" value="0" id="opcionNo" required> No
+                                            <input type="radio" name="opcionClase" asp-for="ClaseOpcional" value="false" required> No
                                         </label>
                                     </div>
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-
-
 
                                 @*Pago Puntual*@
                                 <div class="col-md-12 form-group">
-                                    <label class="form-label" for="DescuentoP">¿La persona que lo atendió te mencionó sobre el descuento en pago puntual?</label>
+                                    <label class="form-label" for="descuento">¿La persona que lo atendió te mencionó sobre el descuento en pago puntual?</label>
                                     <br /><br />
                                     <div class="radio-container">
-                                        <label><input type="radio" name="DescuentoP" asp-for="DescuentoP" value="1" required> Sí</label>
-                                        <label><input type="radio" name="DescuentoP" asp-for="DescuentoP" value="0"> No</label>
+                                        <label><input type="radio" name="DescuentoP" asp-for="DescuentoP" value="true" required> Sí</label>
+                                        <label><input type="radio" name="DescuentoP" asp-for="DescuentoP" value="false"> No</label>
                                     </div>
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
-
                                 @*Amable*@
                                 <div class="col-md-12 form-group">
-                                    <label class="form-label" for="Amables">¿La persona que le atendió fue amable contigo?</label>
-                                    @*<input type="date" class="form-control form-control-sa" asp-for="amable" id="amable" name="amable" required />*@
+                                    <label class="form-label" for="amable">¿La persona que le atendió fue amable contigo?</label>
                                     <br /><br />
-                                    <div class="radio-container">       
-                                         <label><input type="radio" name="Amables" asp-for="Amables" value="1" required> Sí</label>
-                                         <label><input type="radio" name="Amables" asp-for="Amables" value="0" required> No</label>
-                                      
+                                    <div class="radio-container">
+                                        <label><input type="radio" name="Amables" asp-for="Amables" value="true">Sí</label>
+                                        <label><input type="radio" name="Amables" asp-for="Amables" value="false"> No</label>
                                     </div>
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
@@ -627,6 +621,9 @@
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
+
+
+
                                 @*Botones de guardar*@
                                 <div class="col-md-6 form-group">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
@@ -636,91 +633,119 @@
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
 
-                         </div>
-                        </div>
-
-
-
+                          </div>
+                      </div>
                         <div id="pagos-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                          
+
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Folio</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="Folio" id="Folio" name="Folio" required />
+                                   
+                                    <input type="text" disabled class="form-control form-control-sa" value="@Model.Folio" asp-for="Folio" id="Folio" name="Folio" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
                                 <div class="col-md-6 form-group">
-                                    <label class="form-label">Fecha</labelFechaPago
-                                    <input type="date" class="form-control form-control-sa" asp-for="FechaPago" id="Folio" name="FechaPago" required />
+                                    <label class="form-label">Fecha</label>
+                                    <input type="date" class="form-control form-control-sa" asp-for="FechaPago" id="FechaPago" name="FechaPago" required />
+
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-
-                            @*     <div class="col-md-6 form-group">
-                                    <label class="form-label">fecha de pago</label>
-                                    <input type="date" class="form-control form-control-sa" required />
-                                    <div class="valid-feedback">válido.</div>
-                                    <div class="invalid-feedback">por favor rellene este campo..</div>
-                                </div> *@
-
-                            @*     <div class="col-md-6 form-group">
-                                    <label class="form-label">SaldoPendiente</label>
-                                    <input type="text" class="form-control form-control-sa" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div> *@
-
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Promoción</label>
-                                    <input type="number" class="form-control form-control-sa" asp-for="IdPromosion" id="IdPromosion" name="IdPromosion" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+                                <script>
+                                    var fecha = new Date();
+                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
+                                                    document.getElementById("FechaPago").value = fechaZone.toJSON().slice(0, 10);
+                                </script>
 
 
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Mes</label>
-                                    <input type="num" class="form-control form-control-sa" asp-for="IdMes" id="IdMes" name="IdMes" required />
-
-@*                                     <select class="form-control select2" asp-for="IdClase" required>
-                                        <option selected disabled value="">Escoger una clase</option>
-                                        @foreach (var meses in Model.ListarMeses)
+                                @*Lista de Promociones*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="IdPromosion">Promociones</label>
+                                    <select class="form-control form-control-sa" asp-for="IdPromosion" id="IdPromosion" name="IdPromosion" required>
+                                        <option value="">Seleccionar...</option>
+                                        @foreach (var listPromocion in Model.ListSelectPromocion.Data)
                                         {
-                                            <option value="@meses.IdMeses">@meses.NombreMes</option>
+                                            <option value="@listPromocion.IdPromociones">@listPromocion.NombrePromocion ---> @listPromocion.Porcentaje</option>
                                         }
-                                    </select> *@
-
+                                    </select>
                                     <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                    <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
 
-
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Clase opcional</label>
-                                    <input type="text" class="form-control form-control-sa"  required />
+                                @*Lista de Meses*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="IdMes">Meses</label>
+                                    <select class="form-control form-control-sa" asp-for="IdMes" id="IdMes" name="IdMes" required>
+                                        <option value="">Seleccionar...</option>
+                                        @foreach (var listMeses in Model.ListarMesesSelect)
+                                        {
+                                            <option value="@listMeses.IdMeses">@listMeses.NombreMes</option>
+                                        }
+                                    </select>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor seleccione una opción.</div>
+                                </div>
+                                <div class="col-md-6 form-group" >
+                                    <label class="form-label">Instrumento Base</label>
+                                    <input type="text" disabled class="form-control form-control-sa" required name="IntrumentoBaseV1" id="IntrumentoBaseV1" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Horario</label>
-                                    <input type="text" class="form-control form-control-sa" required />
+                                    <input type="text" class="form-control disabled form-control-sa" name="HorarioSelectV1" id="HorarioSelectV1" required />
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Instrumento Opcional</label>
+                                    <input type="text" disabled class="form-control form-control-sa" required name="IntrumentoBaseV2" id="IntrumentoBaseV2" />
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Horario</label>
+                                    <input type="text" class="form-control disabled form-control-sa" name="HorarioSelectV2" id="HorarioSelectV2" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Día</label>
-                                    <input type="text" class="form-control form-control-sa"  required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+                                <script>
+                                    //Podemos no repetir esos y mandalor en funciones ShowSelected(x1,y1)
+                                    function ShowSelected(){
+                                        var cod = document.getElementById("SeleccionarClase1");
+                                        var select = cod.options[cod.selectedIndex].text;
+                                        var selectBase = document.getElementById("IntrumentoBaseV1");
+                                        selectBase.value = select;
+                                    }
+                                    function ShowSelectedV1() {
+                                        var cod = document.getElementById("SeleccionarClase2");
+                                        var select = cod.options[cod.selectedIndex].text;
+                                        var selectBase = document.getElementById("IntrumentoBaseV2");
+                                        selectBase.value = select;
+                                    }
+
+                                    document.getElementById("DiaAndHoraClase").addEventListener('input', function () {
+                                        var valor = this.value;
+                                        document.getElementById('HorarioSelectV1').value = valor;
+
+                                    });
+                                    document.getElementById("DiaAndHoraClaseOpcional").addEventListener('input', function () {
+                                        var valor = this.value;
+                                        document.getElementById('HorarioSelectV2').value = valor;
+
+                                    });
+                                    // var select1 = document.getElementById('DiaAndHoraClase').value;
+                                    // var selectV1 = document.getElementById('HorarioSelectV1');
+                                    // selectV1.value = select1;
+
+                                </script>
 
                                 <div class="col-md-6 form-group">
-                                    <label class="form-label">Instrumento</label>
-                                    <input type="text" class="form-control form-control-sa" required />
+                                    <label class="form-label">¿Qué libro fue?</label>
+                                    <input type="text" disabled class="form-control form-control-sa" asp-for="NombreLibro" id="NombreLibro" name="NombreLibro"  />
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
@@ -728,22 +753,15 @@
 
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Costo de libro</label>
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="CostoLibro" id="CostoLibro" name="CostoLibro" required />
+                
+                                    <input type="number" class="form-control form-control-sa" asp-for="CostoLibro" id="CostoLibro" name="CostoLibro" required />
+
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-
                                 <div class="col-md-6 form-group">
-                                    <label class="form-label">¿Qué libro fue?</label>
-                                    @* <input type="text" class="form-control form-control-sa" required /> *@
-                                    <input type="text" class="form-control form-control-sa" asp-for="NombreLibro" id="NombreLibro" name="NombreLibro" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+                                    <label class="form-label">Nombre Atendio</label>
 
-                                <div class="col-md-12 form-group">
-                                    <label class="form-label">Atendio</label>
-                                    @* <input type="text" class="form-control form-control-sa"  required />+ *@
                                     <input type="text" class="form-control form-control-sa" asp-for="Atendio" id="Atendio" name="Atendio" required />
 
                                     <div class="valid-feedback">Válido.</div>
@@ -752,69 +770,67 @@
 
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Inscripción</label>
-                                   @*  <input type="text" class="form-control form-control-sa" required id="Inscripcion"/> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="Inscripcion" id="Inscripcion" name="Inscripcion" required />
+                                    <input type="number"  class="form-control form-control-sa" asp-for="Inscripcion" id="Inscripcion" name="Inscripcion" required />
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Mensualidad</label>
-                                   @*  <input type="text" class="form-control form-control-sa" required id="Mensualidad"/> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="Mensualidad" id="Mensualidad" name="Mensualidad" required />
-
+                                    <input type="number" class="form-control form-control-sa" asp-for="Mensualidad" id="Mensualidad" name="Mensualidad" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-
-
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Costo</label>
-                                    @* <input type="text" class="form-control form-control-sa"  required id="Costo" /> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="Costo" id="Costo" name="Costo" required />
-
+                                    <input type="number" class="form-control form-control-sa" asp-for="Costo" id="Costo" name="Costo" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
-
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">SubTotal</label>
-                                    @* <input type="text" class="form-control form-control-sa" required /> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" name="Subtotal" required />
-
+                                    <input type="number" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" name="Subtotal" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Iva</label>
-                                    @* <input type="text" class="form-control form-control-sa" required id="IVA" /> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" required />
-
+                                    <input type="number" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Total</label>
-                                  @*   <input type="text" class="form-control form-control-sa" required id="Total" /> *@
-                                    <input type="number" step="any" class="form-control form-control-sa" asp-for="Total" id="Total" name="Total" required />
+                                    <input type="number" class="form-control form-control-sa" asp-for="Total" id="Total" name="Total" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
+
 
                                 <div class="col-md-12 form-group">
                                     <button type="submit" class="btn btn-success" style="width:100% !important">Guardar y pagar</button>
                                 </div>
                                 <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
-                                </div>1
+                                </div>
+
+
+
+
                             </div>
+
+
+
                         </div>
-                    </form>
+
+
+
+             
+             </form>
                     </div>
                 </div>
             </div>

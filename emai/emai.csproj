@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.Mvc.HttpActionResults.ClientError" Version="0.3.0" />
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="ClosedXML" Version="0.102.0" />
@@ -30,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Servicios\Dtos\Request\" />
     <Folder Include="Servicios\Interfaces\" />
     <Folder Include="Servicios\Services\" />
     <Folder Include="Views\Escolar\" />

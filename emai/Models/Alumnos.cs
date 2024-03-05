@@ -1,4 +1,6 @@
-﻿using System;
+﻿using emai.Servicios.Commons;
+using emai.Servicios.Dtos.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -71,6 +73,11 @@ namespace emai.Models
         public decimal Total { get; set; }
         public decimal Inscripcion { get; set; }
         public decimal Mensualidad { get; set; }
+
+        public List<ClasesResponse> ListarClasesSelect { get; set; }
+        public FolioGenerado GeneradorFolioV1 { get; set; }
+        public BaseResponseV1<Promosiones> ListSelectPromocion { get; set; }
+        public List<MesesModel> ListarMesesSelect { get; set; }
 
     }
 

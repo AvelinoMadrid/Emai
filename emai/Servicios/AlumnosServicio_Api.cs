@@ -1,5 +1,6 @@
 ﻿using emai.Models;
 using emai.Servicios.Commons;
+using emai.Servicios.Dtos.Response;
 using Email.Utiilities.Static;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Asn1.Ocsp;
@@ -18,6 +19,40 @@ namespace emai.Servicios
 
             _baseurl = builder.GetSection("ApiSetting:baseUrl").Value;
 
+        }
+     
+        public async Task<BaseResponseV1<Promosiones>> ListSelectPromocion()
+        {
+            var response = new BaseResponseV1<Promosiones>();
+
+            using(HttpClient httpSelectPromocion = new HttpClient()) {
+                httpSelectPromocion.BaseAddress = new Uri(_baseurl);
+                var httpResponse = await httpSelectPromocion.GetAsync("api/Promosiones/GetSelectPromociones/");
+
+                if (httpResponse.IsSuccessStatusCode) { 
+
+                    var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+                    var responseData = JsonConvert.DeserializeObject<BaseResponseV1<Promosiones>>(jsonResponse);
+
+                    if(responseData != null)
+                    {
+                        response.IsSuccess = responseData.IsSuccess;
+                        response.Data= responseData.Data;
+                        response.Message= responseData.Message;
+                    }
+                    else
+                    {
+                        response.IsSuccess= false;
+                        response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                    }
+                }
+                else
+                {
+                    response.IsSuccess= false;
+                    response.Message= StaticVariable.MESSAGE_NOT_ACCEDER;
+                }
+            }
+            return response;
         }
         public async Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos()
         {
@@ -196,11 +231,15 @@ namespace emai.Servicios
 
         public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
         {
+
             var response = new BaseResponseV2<bool>();
 
             try
             {
                 var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+
+                
+
                 using (var httpClient = new HttpClient())
                 {
                     var httpResponse = await httpClient.PostAsync("https://localhost:7265/api/Alumnos/RegistarAlumnoV1", content);
@@ -209,6 +248,7 @@ namespace emai.Servicios
                     {
                         var dataResponse = await httpResponse.Content.ReadAsStringAsync();
                          response = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(dataResponse);
+
                     }
                     else
                     {
@@ -225,29 +265,118 @@ namespace emai.Servicios
             return response;   
         }
 
-        //public async Task<BaseResponseV2<bool>> InsertarAlumno(AlumnoModeInsertV1 entity)
-        //{
-        //    var response = new BaseResponseV2<bool>();
+        public async Task<List<MesesModel>> ListarMesesSelect()
+        {
+            List<MesesModel> lista = new List<MesesModel>();
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var response = await httpClient.GetAsync($"api/Meses/SelectMeses/");
 
-        //    var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+                    lista = JsonConvert.DeserializeObject<List<MesesModel>>(jsonRespuesta);
 
-        //    var alumno1 = new HttpClient();
-        //    var dataEnvio = await alumno1.PostAsync("https://localhost:7265/api/Alumnos/RegistarAlumnoV1", content);
+                    if (lista != null)
+                    {
+                        return lista;
+                    }
+                    else
+                    {
+                        throw new Exception("Lista De Meses Vacia");
 
-        //    if (dataEnvio.IsSuccessStatusCode)
-        //    {
-        //        response.IsSuccess= true;
-        //        response.Data = true;
-        //    }
-        //    else
-        //    {
-        //        response.IsSuccess = false;
-        //        response.Data = false;
-        //    }
-        //    return response
+                    }
+                }
+                else
+                {
+                    throw new Exception($"No se cumple la peticion de GET {response.StatusCode}");
+                }
+            }
+        }
+
+        public async Task<List<ClasesResponse>> ListarClasesSelect()
+        {
+            List<ClasesResponse> lista = new List<ClasesResponse>();
+
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var response = await httpClient.GetAsync($"api/Clase/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+                    var claseoriginal = JsonConvert.DeserializeObject<List<Clase>>(jsonRespuesta);
+
+                    //mapearla 
+                    foreach(var claseV in claseoriginal)
+                    {
+                        ClasesResponse classFormateada = new ClasesResponse
+                        {
+                            idClase = claseV.idClase,
+                            Nombre = claseV.Nombre
+                        };
+                        lista.Add(classFormateada);
+                    }
+                }
+                else
+                {
+                    throw new Exception($"La solicitud GET no fue exitosa. Código de estado: {response.StatusCode}");
+                }
+            }
+            return lista;
+        }
+
+        public async Task<string> GenerarFolio()
+        {
+            //var response = new FolioGenerado();
+
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
+
+            using (var httpClient = new HttpClient())
+            {
+              
+                var response = await httpClient.GetAsync("https://localhost:7265/api/Alumnos/Folio/GenerarFolio");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+
+                    var folioV = JsonConvert.DeserializeObject<FolioGenerado>(jsonRespuesta);
+                    if (folioV != null && !string.IsNullOrEmpty(folioV.Folio))
+                    {
+                        // Retorna el valor del folio si no es null o vacío
+                        return folioV.Folio;
+                    }
+                    else
+                    {
+                        // Maneja el caso en que el valor del folio sea null o vacío
+                        throw new Exception("El valor del folio es nulo o vacío");
+                    }
+
+                }
+                else
+                {
+                    // Manejar el caso cuando la respuesta no es exitosa
+                    // Puedes lanzar una excepción, registrar el error, etc.
+                    throw new Exception($"La solicitud GET no fue exitosa. Código de estado: {response.StatusCode}");
+                }
+            }
+        }
 
 
-        //}
     }
 }
 
