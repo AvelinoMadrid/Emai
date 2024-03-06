@@ -12,7 +12,7 @@ namespace EMAI.Servicios
         Task<List<GastosDiaModel>> GetGastosDia();
         Task<GastosDiaIDModel> GetGastosDiaID(int IdGastoDia);
         Task<bool> InsertarGastosDia(GastosDiaInsertarModel value);
-        Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor, decimal Cantidad);
+        Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor, decimal Cantidad, string img);
         Task<bool> EliminarGastosDia(int IdGastoDia);
 
     }

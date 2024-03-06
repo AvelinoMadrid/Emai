@@ -8,7 +8,7 @@ namespace emai.Models
         public int IdPromociones { get; set; }
         public string NombrePromocion { get; set; }
         public string Porcentaje { get; set; }
-        public string statePromocion { get; set; }
+        //public string statePromocion { get; set; }
 
         public BaseResponseV3<PromocionesModelV1> ListarAllPromosiones { get; set; }
     }

@@ -18,6 +18,12 @@ namespace emai.Servicios
 
         Task<BaseResponseV4<bool>> EliminarPromosionV1(int IdPromociones);
 
+
+        Task<BaseResponseV4<bool>> InsertarPromocionV1(PromocionesModelV1 entity);
+
+
+        Task<bool> RegistrarPromocion(PromocionesModelV1 PromocionesModelV1);
+
         //Task<List<PromocionesModelV1>> ObtenerTodos();
 
         //Task<BaseResponseV3<bool>> EliminarpromosionesV1(int IdPromociones);

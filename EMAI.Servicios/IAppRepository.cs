@@ -113,8 +113,7 @@ namespace EMAI.Servicios
         Task<List<GastosModel>> GetGastos();
         Task<GastosIDModel> GetGastosID(int IdGasto);
         Task<bool> InsertarGastos(GastosInsertarModel value);
-        Task<bool> ActualizarGastos(int IdGasto, int IdCooperaciones, int IdDotacion, int IdGastosDia, int IdNomina, DateTime Fecha, string NoPedidoE_S,
-          string Proveedor, string Descripcion, decimal Cantidad);
+        Task<bool> ActualizarGastos(int IdGasto, DateTime Fecha, string NoPedidoE_S, string Proveedor, decimal Cantidad, string img);
         Task<bool> EliminarGastos(int IdGasto);
 
         #endregion
@@ -124,10 +123,12 @@ namespace EMAI.Servicios
         Task<GastosDiaIDModel> GetGastosDiaID(int IdGastoDia);
         Task<bool> InsertarGastosDia(GastosDiaInsertarModel value);
         Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedor,
-            decimal Cantidad);
+            decimal Cantidad, string img);
         Task<bool> EliminarGastosDia(int IdGastoDia);
 
         #endregion
+
+
 
         #region "Horarios"
         Task<List<HorariosModel>> GetHorarios();
