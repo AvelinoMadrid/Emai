@@ -236,7 +236,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/EMAI.Comun.dll": {}
@@ -252,7 +253,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "EMAI.Comun": "1.0.0",
-          "Emai.Utilities": "1.0.0"
+          "Emai.Utilities": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/EMAI.DTOS.dll": {}
@@ -268,7 +270,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/EMAI.Entidades.dll": {}
@@ -282,7 +285,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/Emai.Utilities.dll": {}
@@ -690,7 +694,8 @@
       "EMAI.DTOS >= 1.0.0",
       "EMAI.Entidades >= 1.0.0",
       "Google.Apis.Auth >= 1.66.0",
-      "Google.Apis.Sheets.v4 >= 1.66.0.3148"
+      "Google.Apis.Sheets.v4 >= 1.66.0.3148",
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
@@ -768,6 +773,10 @@
           "Google.Apis.Sheets.v4": {
             "target": "Package",
             "version": "[1.66.0.3148, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [

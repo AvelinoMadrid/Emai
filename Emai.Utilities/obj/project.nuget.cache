@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CIij/RStaHqFoBaCVhQNKvLGKYw7lrqskQFbVb2JnS7k8GHREpLKTRKwPgORWY1RXLcikYKYTssETrBIgU764w==",
+  "dgSpecHash": "Gx3oVRfYGE4VHSOEDCZBkCoWXj3aU6L5Am2GmeUzYeZTD9mPbDwyDGhaR6vyoZBuDMtpViRE/rGPuqrl9bqS2A==",
   "success": true,
   "projectFilePath": "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\jiren\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\jiren\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

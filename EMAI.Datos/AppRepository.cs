@@ -197,12 +197,12 @@ namespace EMAI.Datos
             {
                 IdAlumno = (int)reader["codigoAlumno"],
                 Tag = (string)reader["Tag"],
-                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
+                //FechaInscripcion = (DateTime)reader["FechaInscripcion"],
                 NoDiaClases = (int)reader["NoDiaClases"],
-                FechaInicioClase = (DateTime)reader["FechaInicioClase"],
+                //FechaInicioClase = (DateTime)reader["FechaInicioClase"],
                 NombreCompleto = (string)reader["NombreCompleto"],
                 Edad = (int)reader["Edad"],
-                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
+                //FechaNacimiento = (DateTime)reader["FechaNacimiento"],
                 TelefonoCasa = (string)reader["TelCasa"],
                 Celular = (string)reader["Celular"],
                 Facebook = (string)reader["Facebook"],
@@ -454,14 +454,14 @@ namespace EMAI.Datos
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                         //cmd.Parameters.Add(new SqlParameter("@IdAlumno", 0));
-                        cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
+                        //cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
                         cmd.Parameters.Add(new SqlParameter("@Tag", request.Tag));
                         cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
-                        cmd.Parameters.Add(new SqlParameter("@FechaInicioClase", request.FechaInicioClase));
+                        //cmd.Parameters.Add(new SqlParameter("@FechaInicioClase", request.FechaInicioClase));
                         cmd.Parameters.Add(new SqlParameter("@NombreCompleto", request.NombreCompleto));
 
                         cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
-                        cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
+                        //cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
                         cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", request.TelefonoCasa));
                         cmd.Parameters.Add(new SqlParameter("@Celular", request.Celular));
                         cmd.Parameters.Add(new SqlParameter("@Facebook", request.Facebook));
@@ -510,7 +510,7 @@ namespace EMAI.Datos
                         cmd.Parameters.Add(new SqlParameter("@Folio", request.Folio));
                         cmd.Parameters.Add(new SqlParameter("@IdPromosion", request.IdPromosion));
                         cmd.Parameters.Add(new SqlParameter("@IdMes", request.IdMes));
-                        cmd.Parameters.Add(new SqlParameter("@FechaPago", request.FechaPago));
+                        //cmd.Parameters.Add(new SqlParameter("@FechaPago", request.FechaPago));
                         cmd.Parameters.Add(new SqlParameter("@CostoLibro", request.CostoLibro));
                         cmd.Parameters.Add(new SqlParameter("@NombreLibro", request.NombreLibro));
                         cmd.Parameters.Add(new SqlParameter("@Atendio", request.Atendio));

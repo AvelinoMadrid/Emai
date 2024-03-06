@@ -16,6 +16,7 @@
           "Emai.Utilities": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3",
           "System.Security.Cryptography.Cng": "5.0.0"
         },
         "runtime": {
@@ -674,7 +675,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Comun.dll": {}
@@ -691,7 +693,8 @@
           "EMAI.Servicios": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148",
-          "Microsoft.Data.SqlClient": "5.1.1"
+          "Microsoft.Data.SqlClient": "5.1.1",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Datos.dll": {}
@@ -702,7 +705,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "EMAI.Comun": "1.0.0",
-          "Emai.Utilities": "1.0.0"
+          "Emai.Utilities": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.DTOS.dll": {}
@@ -713,7 +717,8 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Entidades.dll": {}
@@ -727,7 +732,8 @@
           "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Helpers.dll": {}
@@ -741,7 +747,8 @@
           "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
-          "Google.Apis.Sheets.v4": "1.66.0.3148"
+          "Google.Apis.Sheets.v4": "1.66.0.3148",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Servicios.dll": {}
@@ -750,7 +757,8 @@
       "Emai.Utilities/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "Emai.Utilities.dll": {}

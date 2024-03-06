@@ -1,21 +1,14 @@
-﻿using emai.Servicios.Commons;
-using emai.Servicios.Dtos.Response;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-namespace emai.Models
+﻿namespace emai.Servicios.Dtos.Request
 {
-    public class Alumnos
+    public class ModelAlumnoV1Final
     {
-       // public DateTime FechaInscripcion { get; set; }
+        public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
-        //public DateTime FechaInicioClase { get; set; }
+        public DateTime FechaInicioClase { get; set; }
         public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
-        //public DateTime FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public string TelefonoCasa { get; set; } = null!;
         public string Celular { get; set; } = null!;
         public string Facebook { get; set; } = null!;
@@ -41,6 +34,7 @@ namespace emai.Models
         public bool Trabajas { get; set; }
         public string LugarTrabajo { get; set; } = null!;
 
+
         public bool ConConocimiento { get; set; }
         public string Instrumento { get; set; } = null!;
         public bool InstrumentoCasa { get; set; }
@@ -48,6 +42,7 @@ namespace emai.Models
         public string EnterasteEsc { get; set; } = null!;
         public bool InteresGnroMusical { get; set; }
         public string CualesMusicales { get; set; } = null!;
+
 
         public string TipoInteres { get; set; } = null!;
         public string OtroOpcional { get; set; } = null!;
@@ -60,7 +55,7 @@ namespace emai.Models
         public string Folio { get; set; } = null!;
         public int IdPromosion { get; set; }
         public int IdMes { get; set; }
-        //public DateTime FechaPago { get; set; }
+        public DateTime FechaPago { get; set; }
         public decimal CostoLibro { get; set; }
         public string NombreLibro { get; set; } = null!;
         public string Atendio { get; set; } = null!;
@@ -70,12 +65,6 @@ namespace emai.Models
         public decimal Total { get; set; }
         public decimal Inscripcion { get; set; }
         public decimal Mensualidad { get; set; }
-
-        public List<ClasesResponse> ListarClasesSelect { get; set; }
-        public BaseResponseV1<Promosiones> ListSelectPromocion { get; set; }
-        public List<MesesModel> ListarMesesSelect { get; set; }
-        public string GeneradorFolioV1 { get; set; }
-
-
     }
 }
+

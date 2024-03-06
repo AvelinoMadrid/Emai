@@ -168,13 +168,13 @@ namespace EMAI.Comun.Models
     public class InsertarAlumnoModelV1 //Este Inserte Model Equivale a todo mi tabla Principal Me euivoque
     {
         public int IdAlumno { get; set; }
-        public DateTime FechaInscripcion { get; set; }
+      //  public DateTime FechaInscripcion { get; set; }
         public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
-        public DateTime FechaInicioClase { get; set; }
+       // public DateTime FechaInicioClase { get; set; }
         public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
-        public DateTime FechaNacimiento { get; set; }
+       // public DateTime FechaNacimiento { get; set; }
         public string TelefonoCasa { get; set; } = null!;
         public string Celular { get; set; } = null!;
         public string Facebook { get; set; } = null!;
@@ -221,7 +221,7 @@ namespace EMAI.Comun.Models
         public string Folio { get; set; } = null!;
         public int IdPromosion { get; set; }
         public int IdMes { get; set; }
-        public DateTime FechaPago { get; set; }
+       // public DateTime FechaPago { get; set; }
         public decimal CostoLibro { get; set; }
         public string NombreLibro { get; set; } = null!;
         public string Atendio { get; set; } = null!;

@@ -14,7 +14,8 @@
           "Google.Apis.Sheets.v4": "1.66.0.3148",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "EMAI.Helpers.dll": {}

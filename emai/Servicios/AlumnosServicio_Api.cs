@@ -12,7 +12,7 @@ namespace emai.Servicios
     public class AlumnosServicio_Api : IServicioAlumnos_Api
     {
         private static string _baseurl;
-
+        
         public AlumnosServicio_Api()
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
@@ -231,39 +231,43 @@ namespace emai.Servicios
 
         public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
         {
-
-            var response = new BaseResponseV2<bool>();
+            var dataFinal = new BaseResponseV2<bool>();
 
             try
             {
-                var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+                var json = JsonConvert.SerializeObject(entity);
+                var requestContent = new StringContent(json, Encoding.UTF8, "application/json");
 
-                
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/RegistarAlumnoV1");
 
-                using (var httpClient = new HttpClient())
+                //var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(requestUrl, requestContent).ConfigureAwait(false);
+
+                if (response.IsSuccessStatusCode)
                 {
-                    var httpResponse = await httpClient.PostAsync("https://localhost:7265/api/Alumnos/RegistarAlumnoV1", content);
-
-                    if (httpResponse.IsSuccessStatusCode)
-                    {
-                        var dataResponse = await httpResponse.Content.ReadAsStringAsync();
-                         response = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(dataResponse);
-
-                    }
-                    else
-                    {
-                        response.IsSuccess = false;
-                        response.Message= StaticVariable.MESSAGE_FALLED_NEW;
-                    }
+                    var resp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    dataFinal = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(resp);
                 }
-
-            }catch(Exception ex) {
-                response.IsSuccess = false;
-                response.Message = StaticVariable.MESSAGE_FALLED_NEW;
-
+                else
+                {  
+                    dataFinal.IsSuccess = false;
+                    dataFinal.Message = $"Error al Ingresar Alumno {response.StatusCode}";
+                }
             }
-            return response;   
+            catch (Exception ex)
+            {
+             
+                dataFinal.IsSuccess = false;
+                dataFinal.Message = $"Error al Ingresar Alumno {ex.Message}";
+            }
+
+            return dataFinal;
         }
+
 
         public async Task<List<MesesModel>> ListarMesesSelect()
         {

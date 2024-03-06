@@ -129,13 +129,16 @@ namespace emai.Controllers
         }
         public async Task<IActionResult> NuevoAlumno()
         {
-            var alumno = new Alumnos();
-            alumno.Folio = await GenerarFolioV1();
-            alumno.ListarClasesSelect = await _ServicioAlumnos_Api.ListarClasesSelect();
-            alumno.ListSelectPromocion= await _ServicioAlumnos_Api.ListSelectPromocion();
-            alumno.ListarMesesSelect= await _ServicioAlumnos_Api.ListarMesesSelect();
-            return View("agregaralumnos", alumno);
             
+
+            var folioGenerador = await GenerarFolioV1();
+            Alumnos alumno = new Alumnos();
+            alumno.GeneradorFolioV1 = folioGenerador;
+
+            alumno.ListarClasesSelect = await _ServicioAlumnos_Api.ListarClasesSelect();
+            alumno.ListSelectPromocion = await _ServicioAlumnos_Api.ListSelectPromocion();
+            alumno.ListarMesesSelect = await _ServicioAlumnos_Api.ListarMesesSelect();
+            return View("agregaralumnos", alumno);
         }
 
         [HttpPost]
@@ -153,7 +156,7 @@ namespace emai.Controllers
             else
             {
                
-                return View("NuevoAlumno", entity);
+                return View("agregaralumnos", entity);
             }
         }
 
@@ -239,15 +242,6 @@ namespace emai.Controllers
             return View(modelo_Alumnos);
         }
 
-
-  
-
-   
-        
-        
-
-
-       
 
     }
 }

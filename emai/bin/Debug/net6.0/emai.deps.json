@@ -22,6 +22,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "Newtonsoft.Json": "13.0.3",
           "Puya.Platform.Infrastructure.Data.SqlServer": "1.0.0.140",
           "Reec.Inspection.SqlServer": "1.0.5",
           "Twilio": "6.14.1",
@@ -3401,7 +3402,8 @@
       "Emai.Utilities/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "Emai.Utilities.dll": {}
