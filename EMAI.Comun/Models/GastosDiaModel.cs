@@ -16,6 +16,9 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string img { get; set; }
+
     }
 
     public class GastosDiaIDModel
@@ -28,6 +31,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string img { get; set; }
     }
 
     public class GastosDiaInsertarModel
@@ -39,6 +44,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string img { get; set; }
     }
 
     public class GastosDiaActualizarModel
@@ -51,6 +58,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string img { get; set; }
     }
 
     public class GastosDiaEliminarModel

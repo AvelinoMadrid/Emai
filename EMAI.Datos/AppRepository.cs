@@ -1812,16 +1812,14 @@ namespace EMAI.Datos
             {
 
                 IdGasto = (int)reader["IdGasto"],
-                IdColegiatura = (int)reader["IdColegiatura"],
-                IdCooperaciones = (int)reader["IdCooperaciones"],
-                IdDotacion = (int)reader["IdDotacion"],
-                IdGastosDia = (int)reader["IdGastosDia"],
-                IdNomina = (int)reader["IdNomina"],
+
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedidoE_S = (string)reader["NoPedidoE_S"],
                 Proveedor = (string)reader["Proveedor"],
-                Descripcion = (string)reader["Descripcion"],
+
                 Cantidad = (decimal)reader["Cantidad"],
+                imagen = reader["GastosImg"].ToString()
+
             };
         }
 
@@ -1855,16 +1853,13 @@ namespace EMAI.Datos
             {
 
                 IdGasto = (int)reader["IdGasto"],
-                IdColegiatura = (int)reader["IdColegiatura"],
-                IdCooperaciones = (int)reader["IdCooperaciones"],
-                IdDotacion = (int)reader["IdDotacion"],
-                IdGastosDia = (int)reader["IdGastosDia"],
-                IdNomina = (int)reader["IdNomina"],
+
                 Fecha = (DateTime)reader["Fecha"],
                 NoPedidoE_S = (string)reader["NoPedidoE_S"],
                 Proveedor = (string)reader["Proveedor"],
-                Descripcion = (string)reader["Descripcion"],
+
                 Cantidad = (decimal)reader["Cantidad"],
+                imagen = reader["GastosImg"].ToString()
             };
         }
 
@@ -1875,17 +1870,13 @@ namespace EMAI.Datos
                 using (SqlCommand cmd = new SqlCommand("InsertarGasto", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdColegiatura", value.IdColegiatura));
-                    cmd.Parameters.Add(new SqlParameter("@IdCooperaciones", value.IdCooperaciones));
-                    cmd.Parameters.Add(new SqlParameter("@IdDotacion", value.IdDotacion));
-                    cmd.Parameters.Add(new SqlParameter("@IdGastosDia", value.IdGastosDia));
-                    cmd.Parameters.Add(new SqlParameter("@IdNomina", value.IdNomina));
+
                     cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedidoE_S", value.NoPedidoE_S));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", value.Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
-                    cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
 
+                    cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
+                    cmd.Parameters.Add(new SqlParameter("@Img", value.imagen));
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
@@ -1893,8 +1884,8 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarGastos(int IdGasto, int IdCooperaciones, int IdDotacion, int IdGastosDia, int IdNomina, DateTime Fecha, string NoPedidoE_S,
-          string Proveedor, string Descripcion, decimal Cantidad)
+        public async Task<bool> ActualizarGastos(int IdGasto, DateTime Fecha, string NoPedidoE_S,
+          string Proveedor, decimal Cantidad, string Imagen)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -1902,16 +1893,13 @@ namespace EMAI.Datos
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdGasto", IdGasto));
-                    cmd.Parameters.Add(new SqlParameter("@IdColegiatura", IdCooperaciones));
-                    cmd.Parameters.Add(new SqlParameter("@IdCooperaciones", IdDotacion));
-                    cmd.Parameters.Add(new SqlParameter("@IdDotacion", IdGastosDia));
-                    cmd.Parameters.Add(new SqlParameter("@IdGastosDia", IdNomina));
-                    cmd.Parameters.Add(new SqlParameter("@IdNomina", IdNomina));
+
                     cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
                     cmd.Parameters.Add(new SqlParameter("@NoPedidoE_S", NoPedidoE_S));
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", Proveedor));
-                    cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
+                    cmd.Parameters.Add(new SqlParameter("@Img", Imagen));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
+
 
 
                     await sql.OpenAsync();
@@ -1973,7 +1961,9 @@ namespace EMAI.Datos
                 Proveedor = (string)reader["Proveedor"],
                 //Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
-                //Subtotal = (decimal)reader["Subtotal"],
+                img = reader["Img"].ToString()
+
+
                 //Total = (decimal)reader["Total"],
             };
         }
@@ -2013,6 +2003,7 @@ namespace EMAI.Datos
                 Proveedor = (string)reader["Proveedor"],
                 //Descripcion = (string)reader["Descripcion"],
                 Cantidad = (decimal)reader["Cantidad"],
+                img = reader["Img"].ToString()
                 //Subtotal = (decimal)reader["Subtotal"],
                 //Total = (decimal)reader["Total"],
             };
@@ -2030,6 +2021,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", value.Proveedor));
                     //cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
+                    cmd.Parameters.Add(new SqlParameter("@Img", value.img));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
                     //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
 
@@ -2041,7 +2033,7 @@ namespace EMAI.Datos
         }
 
         public async Task<bool> ActualizarGastosDia(int IdGastoDia, DateTime Fecha, string NoPedido, string Proveedro,
-            decimal Cantidad)
+            decimal Cantidad, string img)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2054,6 +2046,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Proveedor", Proveedro));
                     //cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
+                    cmd.Parameters.Add(new SqlParameter("@Img", img));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
                     //cmd.Parameters.Add(new SqlParameter("@Total", Total));
 

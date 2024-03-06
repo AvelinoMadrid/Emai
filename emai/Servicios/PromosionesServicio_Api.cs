@@ -169,6 +169,46 @@ namespace emai.Servicios
 
 
 
+        //public async Task<BaseResponseV4<bool>> EliminarPromosionV1(int IdPromociones)
+        //{
+        //    var response = new BaseResponseV4<bool>();
+
+        //    using (var httpClient = new HttpClient())
+        //    {
+        //        //httpClient.BaseAddress = new Uri(_baseurl);
+
+        //        var httpResponse = await httpClient.DeleteAsync($"https://localhost:7265/api/Promosiones/Delete/{IdPromociones}");
+
+
+        //        if (httpResponse.IsSuccessStatusCode)
+        //        {
+
+        //            var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+
+        //            var responseData = JsonConvert.DeserializeObject<BaseResponseV4<bool>>(jsonResponse);
+
+        //            response.IsSuccess = responseData.IsSuccess;
+        //            response.Data = responseData.Data;
+        //            response.Message = responseData.Message;
+
+        //            return response;
+        //        }
+        //        else
+        //        {
+        //            response.IsSuccess = false;
+        //            response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+        //        }
+        //    }
+        //    return response;
+
+        //}
+
+
+        public Task<bool> RegistrarPromocion(PromocionesModelV1 PromocionesModelV1)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<BaseResponseV4<bool>> EliminarPromosionV1(int IdPromociones)
         {
             var response = new BaseResponseV4<bool>();
@@ -202,6 +242,64 @@ namespace emai.Servicios
             return response;
 
         }
+
+        public async Task<BaseResponseV4<bool>> InsertarPromocionV1(PromocionesModelV1 entity)
+        {
+
+            var response = new BaseResponseV4<bool>();
+
+            try
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+
+
+
+                using (var httpClient = new HttpClient())
+                {
+                    var httpResponse = await httpClient.PostAsync("https://localhost:7265/api/Promosiones/RegistarPromocionV1", content);
+
+                    if (httpResponse.IsSuccessStatusCode)
+                    {
+                        var dataResponse = await httpResponse.Content.ReadAsStringAsync();
+                        response = JsonConvert.DeserializeObject<BaseResponseV4<bool>>(dataResponse);
+
+                    }
+                    else
+                    {
+                        response.IsSuccess = false;
+                        response.Message = StaticVariable.MESSAGE_FALLED_NEW;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED_NEW;
+
+            }
+            return response;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

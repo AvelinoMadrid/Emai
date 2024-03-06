@@ -65,19 +65,51 @@ namespace emai.Controllers
         }
 
 
-        public async Task<IActionResult> agregarpromociones(int IdPromociones)
+        //public async Task<IActionResult> agregarpromociones(int IdPromociones)
+        //{
+
+        //    PromocionesModelV1 modelo_promosion = new PromocionesModelV1();
+
+        //    ViewBag.Accion = "Nuevo Promocion";
+        //    if (IdPromociones != 0)
+        //    {
+        //        modelo_promosion = await _ServicioPromosiones_Api.Obtener(IdPromociones);
+        //        ViewBag.Action = "Editar Promocion";
+        //    }
+        //    return View(modelo_promosion);
+        //}
+
+
+        public async Task<IActionResult> NuevoPromocion()
+        {
+            var PromocionesModelV1 = new PromocionesModelV1();
+
+            return View("agregarpromociones", PromocionesModelV1);
+
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> agregarNuevoPromocion(PromocionesModelV1 entity)
         {
 
-            PromocionesModelV1 modelo_promosion = new PromocionesModelV1();
+            BaseResponseV4<bool> result = await _ServicioPromosiones_Api.InsertarPromocionV1(entity);
 
-            ViewBag.Accion = "Nuevo Promocion";
-            if (IdPromociones != 0)
+
+            if (result.IsSuccess && result.Data)
             {
-                modelo_promosion = await _ServicioPromosiones_Api.Obtener(IdPromociones);
-                ViewBag.Action = "Editar Promocion";
+
+                return RedirectToAction("Promociones");
             }
-            return View(modelo_promosion);
+            else
+            {
+
+                return View("NuevoPromocion", entity);
+            }
         }
+
+
+
 
 
         [HttpPost]

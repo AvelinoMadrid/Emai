@@ -1,7 +1,7 @@
 ﻿@model PromocionesModelV1
 
 @{
-    ViewData["Title"] = "Agreagar Clase";
+    ViewData["Title"] = "Agreagar Alumnos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,7 +12,7 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="Guardar" asp-controller="Promosiones" method="post" class="needs-validation" novalidate>
+        <form asp-action="agregarNuevoPromocion" asp-controller="Promosiones" method="post" class="needs-validation" novalidate>
 
 
             <div class="row">
@@ -20,7 +20,7 @@
 
                 <input asp-for="IdPromociones" type="hidden" />
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label class="form-label" for="Nombre">Nombre Promocion</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NombrePromocion" name="NombrePromocion" id="NombrePromocion" required />
                     <div class="valid-feedback">Válido.</div>
@@ -28,20 +28,20 @@
                 </div>
 
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label class="form-label" for="ApellidoP">Porcentaje</label>
                     <input type="text" class="form-control form-control-sa" asp-for="Porcentaje" name="Porcentaje" id="Porcentaje" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
-
+@* 
                 <div class="col-md-4 form-group">
                     <label class="form-label" for="ApellidoM">Activo</label>
                     <input type="text" class="form-control form-control-sa" asp-for="statePromocion" name="statePromocion" id="statePromocion" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-                </div>
+                </div> *@
 
 
 
