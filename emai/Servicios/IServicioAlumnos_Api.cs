@@ -23,7 +23,6 @@ namespace emai.Servicios
         Task<bool> GuardarAlu(Alumnos Alumno);
         Task<bool> EditarAlu(Alumnos Alumno);
         Task<bool> EliminarAlu(int IdAlumno);
-        Task<bool> RegistrarAlumnos(Alumnos Alumno);
 
 
     }

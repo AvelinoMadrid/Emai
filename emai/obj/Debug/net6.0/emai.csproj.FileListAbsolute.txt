@@ -5593,6 +5593,7 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.deps.json
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.runtimeconfig.json
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\emai.pdb
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AspNetCore.Mvc.HttpActionResults.ClientError.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AutoMapper.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Azure.Core.dll
@@ -5656,6 +5657,7 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.Identity.Sto
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -5905,5 +5907,3 @@ C:\repos\Residencia\Emai\emai\obj\Debug\net6.0\refint\emai.dll
 C:\repos\Residencia\Emai\emai\obj\Debug\net6.0\emai.pdb
 C:\repos\Residencia\Emai\emai\obj\Debug\net6.0\emai.genruntimeconfig.cache
 C:\repos\Residencia\Emai\emai\obj\Debug\net6.0\ref\emai.dll
-C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\AspNetCore.Mvc.HttpActionResults.ClientError.dll
-C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,18 @@ namespace EMAI.DTOS.Dtos.Request
 {
     public class AlumnoRequest
     {
-      //  public DateTime FechaInscripcion { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public string FechaInscripcion { get; set; }
         public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
-       // public DateTime FechaInicioClase { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public string FechaInicioClase { get; set; }
         public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
-       // public DateTime FechaNacimiento { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public string FechaNacimiento { get; set; }
         public string TelefonoCasa { get; set; } = null!;
         public string Celular { get; set; } = null!;
         public string Facebook { get; set; } = null!;
@@ -61,7 +67,8 @@ namespace EMAI.DTOS.Dtos.Request
         public string Folio { get; set; } = null!;
         public int IdPromosion { get; set; }
         public int IdMes { get; set; }
-       // public DateTime FechaPago { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public string FechaPago { get; set; }
         public decimal CostoLibro { get; set; }
         public string NombreLibro { get; set; } = null!;
         public string Atendio { get; set; } = null!;

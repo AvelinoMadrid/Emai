@@ -36,10 +36,7 @@
                                     <th>Tag</th>
                                     <th>No. Dia Clases</th>
                                     <th>Fecha Inicio ClaseGratis</th>
-                                    <th>Fecha FinClase Gratis</th>
-                                    <th>Nombre</th>
-                                    <th>Ap. Paterno</th>
-                                    <th>Ap. Materno</th>
+                                    <th>Nombre Completo</th>
                                     <th>Edad</th>
                                     <th>Fecha Nacimiento</th>
                                     <th>Telefono Casa</th>
@@ -47,7 +44,6 @@
                                     <th>Facebook</th>
                                     <th>Email</th> 
                                     <th>Enfermedades</th>
-                                    <th>Discapacidad</th>
                                     <th>Instrumento Base</th>
                                     <th>Dia</th>
                                     <th>Instrumento Opcional</th>
@@ -89,7 +85,7 @@
                                     {
                                         <tr>
                                             <td>@alumno.IdAlumno</td>
-                                            @* <td>@alumno.FechaInscripcion</td>*@
+                                            <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
                                             <td>@alumno.NoDiaClases</td>
                                             @* <td>@alumno.FechaInicioClase</td>*@
@@ -101,8 +97,24 @@
                                             <td>@alumno.Facebook</td>
                                             <td>@alumno.Email</td>
                                             <td>@alumno.Enfermedades</td>
-                                            <td>@alumno.Enfermedades</td>
+                                            <td>@alumno.Instrumento</td>
+                                            <td>@alumno.DiaAndHoraClase</td>
+                                            <td>@alumno.InstrumentotTwo</td>
+                                            <td>@alumno.DiaAndHoraClaseOpcional</td>
+
+                                            <td>@alumno.NombrePapas</td>
+                                            <td>@alumno.CelularPapas</td>
+                                            <td>@alumno.Facebook</td>
+                                            <td>@alumno.EmailPapas</td>
+                                            <td>@alumno.TutorRecoger</td>
+                                            <td>@alumno.CelularTR</td>
+                                            <td>@alumno.NumEmergencia</td>
+                                            <td>@alumno.Estudios</td>
+                                            <td>@alumno.EscuelaActuales</td>
+                                            <td>@alumno.Trabajas</td>
+                                            <td>@alumno.LugarTrabajo</td>
                                             <td>@alumno.StringActivo</td>
+                                            
                                             <td>
                                                 <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                                 <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">ELIMINAR </a>

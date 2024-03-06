@@ -20,7 +20,46 @@ namespace emai.Servicios
             _baseurl = builder.GetSection("ApiSetting:baseUrl").Value;
 
         }
-     
+        public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
+        {
+
+            var dataFinal = new BaseResponseV2<bool>();
+
+            try
+            {
+                var json = JsonConvert.SerializeObject(entity);
+                var requestContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/RegistarAlumnoV1");
+
+                //var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(requestUrl, requestContent).ConfigureAwait(false);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var resp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    dataFinal = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(resp);
+                }
+                else
+                {
+                    dataFinal.IsSuccess = false;
+                    dataFinal.Message = $"Error al Ingresar Alumno {response.StatusCode}";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                dataFinal.IsSuccess = false;
+                dataFinal.Message = $"Error al Ingresar Alumno {ex.Message}";
+            }
+
+            return dataFinal;
+        }
+
         public async Task<BaseResponseV1<Promosiones>> ListSelectPromocion()
         {
             var response = new BaseResponseV1<Promosiones>();
@@ -190,11 +229,6 @@ namespace emai.Servicios
             return respuesta;
         }
 
-        public Task<bool> RegistrarAlumnos(Alumnos Alumno)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno)
         {
             var response = new BaseResponseV2<bool>();
@@ -229,44 +263,7 @@ namespace emai.Servicios
 
         }
 
-        public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
-        {
-            var dataFinal = new BaseResponseV2<bool>();
 
-            try
-            {
-                var json = JsonConvert.SerializeObject(entity);
-                var requestContent = new StringContent(json, Encoding.UTF8, "application/json");
-
-                using var client = new HttpClient();
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/RegistarAlumnoV1");
-
-                //var content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(requestUrl, requestContent).ConfigureAwait(false);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var resp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    dataFinal = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(resp);
-                }
-                else
-                {  
-                    dataFinal.IsSuccess = false;
-                    dataFinal.Message = $"Error al Ingresar Alumno {response.StatusCode}";
-                }
-            }
-            catch (Exception ex)
-            {
-             
-                dataFinal.IsSuccess = false;
-                dataFinal.Message = $"Error al Ingresar Alumno {ex.Message}";
-            }
-
-            return dataFinal;
-        }
 
 
         public async Task<List<MesesModel>> ListarMesesSelect()

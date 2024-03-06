@@ -134,7 +134,6 @@ namespace emai.Controllers
             var folioGenerador = await GenerarFolioV1();
             Alumnos alumno = new Alumnos();
             alumno.GeneradorFolioV1 = folioGenerador;
-
             alumno.ListarClasesSelect = await _ServicioAlumnos_Api.ListarClasesSelect();
             alumno.ListSelectPromocion = await _ServicioAlumnos_Api.ListSelectPromocion();
             alumno.ListarMesesSelect = await _ServicioAlumnos_Api.ListarMesesSelect();
@@ -144,13 +143,13 @@ namespace emai.Controllers
         [HttpPost]
         public async Task<IActionResult> agregarNuevoAlumno(Alumnos entity)
         {
-        
+
             BaseResponseV2<bool> result = await _ServicioAlumnos_Api.InsertarAlumnoV1(entity);
 
       
             if (result.IsSuccess && result.Data)
             {
-              
+                 
                 return RedirectToAction("Alumnos");
             }
             else

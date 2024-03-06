@@ -69,28 +69,26 @@
                             <div class="row">
 
                                 @*FechaInscripcion*@
-                         @*        <div class="col-md-3 form-group">
+                                <div class="col-md-3 form-group">
                                     <label class="form-label" for="FechaInscripcion">Fecha Inscripción</label>
                                     <input type="date" class="form-control form-control-sa" asp-for="FechaInscripcion" name="FechaInscripcion" id="FechaInscripcion" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                </div> *@
+                                </div>
                                 <script>
-                                    // var fecha = new Date();
-                                    // var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    // document.getElementById("FechaInscripcion").value = fechaZone.toJSON().slice(0, 10);
+                                    var fecha = new Date();
+                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
+                                    document.getElementById("FechaInscripcion").value = fechaZone.toJSON().slice(0, 10);
 
-                                    // var fechaInscripcion = document.getElementById("FechaInscripcion");
+                                    var fechaInscripcion = document.getElementById("FechaInscripcion");
 
-                                    // fechaInscripcion.addEventListener("change", function () {
-                                       
-                                    //     var fechaSeleccionada = fechaInscripcion.value;
-                                    //     var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
+                                    fechaInscripcion.addEventListener("change", function () {
 
-                                    //     fechaInscripcion.value = fechaFormateada.Date.toISOString;
-                                        
+                                        var fechaSeleccionada = fechaInscripcion.value;
+                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
 
-                                    // });
+                                        fechaInscripcion.value = fechaFormateada.Date.toISOString;
+                                    });
                                 </script>
 
                                 @*Tag de Registro*@
@@ -115,27 +113,29 @@
                                 </div>
                               
 
-                                @*Fecha Inicio de Clase Gratis*@
-                            @*     <div class="col-md-3 form-group">
+                                @*Fecha Inicio de clases*@
+                                <div class="col-md-3 form-group">
                                     <label class="form-label" for="FechaInicioClase">Fecha de clase inicio</label>
-                                    <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClase" id="FechaInicioClase" name="FechaInicioClaseGratis" required />
+                                    <input type="date" class="form-control form-control-sa" asp-for="FechaInicioClase" id="FechaInicioClase" name="FechaInicioClase" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                </div> *@
+                                </div>
                                 <script>
-                                    // var fecha = new Date();
-                                    // var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    // document.getElementById("FechaInicioClase").value = fechaZone.toJSON().slice(0, 10);
+                                    var fecha = new Date();
+                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
+                                    document.getElementById("FechaInicioClase").value = fechaZone.toJSON().slice(0, 10);
 
-                                    // var fechaInicio = document.getElementById("FechaInicioClase");
+                                    var fechaInicio = document.getElementById("FechaInicioClase");
 
-                                    // fechaInicio.addEventListener("change", function () {
+                                    fechaInicio.addEventListener("change", function () {
 
-                                    //     var fechaSeleccionada = fechaInicio.value;
-                                    //     var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
+                                        var fechaSeleccionada = fechaInicio.value;
+                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
 
-                                    //     fechaInicio.value = fechaFormateada.Date.toISOString();
-                                    // });
+                                        fechaInicio.value = fechaFormateada.Date.toISOString();
+
+                                        //console.log(fechaInicio.value);
+                                    });
                                 </script>
 
                                 @*Instumento Base*@
@@ -212,28 +212,29 @@
                                 </div>
 
                                 @*Fecha Nacimiento del Alumno*@
-                                @* <div class="col-md-3 form-group">
+                                <div class="col-md-3 form-group">
                                     <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento del Alumno</label>
                                     <div class="input-group">
                                         <input type="date" class="form-control form-control-sa" asp-for="FechaNacimiento" id="FechaNacimiento" required />
                                         <div class="valid-feedback">Válido.</div>
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
-                                </div> *@
+                                </div>
                                 <script>
-                                    // var fecha = new Date();
-                                    // var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    // document.getElementById("FechaNacimiento").value = fechaZone.toJSON().slice(0, 10);
+                                    var fecha = new Date();
+                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
+                                    document.getElementById("FechaNacimiento").value = fechaZone.toJSON().slice(0, 10);
 
-                                    // var fechaInicio = document.getElementById("FechaNacimiento");
+                                    var fechaInicio = document.getElementById("FechaNacimiento");
 
-                                    // fechaInicio.addEventListener("change", function () {
+                                    fechaInicio.addEventListener("change", function () {
 
-                                    //     var fechaSeleccionada = fechaInicio.value;
-                                    //     var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
+                                        var fechaSeleccionada = fechaInicio.value;
+                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
 
-                                    //     fechaInicio.value = fechaFormateada.Date.toISOString();
-                                    // });
+                                        fechaInicio.value = fechaFormateada.Date.toISOString();
+
+                                    });
                                 </script>
 
                                 @*Telefono del alumno*@
@@ -662,7 +663,7 @@
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Folio</label>
                                    
-                                    <input type="text" disabled class="form-control form-control-sa"   asp-for="Folio" id="Folio" name="Folio" required />
+                                    <input type="text"  class="form-control form-control-sa" asp-for="Folio" id="Folio" name="Folio" required />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -671,20 +672,21 @@
                                         var folio = "@Model.GeneradorFolioV1";
                                         document.getElementById("Folio").value = folio;
                                     });
+
                                 </script>
 
-                       @*          <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group">
                                     <label class="form-label">Fecha</label>
                                     <input type="date" class="form-control form-control-sa" asp-for="FechaPago" id="FechaPago" name="FechaPago" required />
 
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div> *@
-                     @*            <script>
+                                </div>
+                                <script>
                                     var fecha = new Date();
                                     var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                                    document.getElementById("FechaPago").value = fechaZone.toJSON().slice(0, 10);
-                                </script> *@
+                                    document.getElementById("FechaPago").value = fechaZone.toJSON().slice(0, 10);
+                                </script>
 
 
                                 @*Lista de Promociones*@
