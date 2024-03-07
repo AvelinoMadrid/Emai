@@ -714,19 +714,21 @@
                                 @*Lista de Promociones*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="IdPromosion">Promociones</label>
-                                    <select class="form-control form-control-sa" asp-for="IdPromosion" id="IdPromosion" name="IdPromosion" required>
+                                    <select class="form-control form-control-sa" asp-for="IdPromosion"  id="IdPromosion" name="IdPromosion" required>
                                         <option value="">Seleccionar...</option>
                                         @if (Model != null && Model.ListSelectPromocion != null)
                                         {
                                             foreach (var listPromocion in Model.ListSelectPromocion.Data)
                                             {
-                                                <option value="@listPromocion.IdPromociones">@listPromocion.NombrePromocion ---> @listPromocion.Porcentaje</option>
+                                                <option value="@listPromocion.IdPromociones" data-porcentaje="@listPromocion.Porcentaje" >@listPromocion.NombrePromocion ---> @listPromocion.Porcentaje</option>
                                             }
                                         }
                                     </select>
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
+
+                                
 
 
                                 @*Lista de Meses*@
@@ -901,12 +903,26 @@
 
 @section Scripts {
      <script>
+
+        var porcentaje = 1;
+
+        document.getElementById("IdPromosion").addEventListener('change', function () {
+            var select = document.getElementById("IdPromosion");
+            var selectedOption = select.options[select.selectedIndex];
+            porcentaje = parseFloat(selectedOption.getAttribute("data-porcentaje"));
+            calcularTotales();
+        });
+
         $(document).ready(function () {
 
             // obtenciom de la inscripcion 
             $("#Inscripcion").keyup(function () {
                 calcularTotales();
             });
+            $("#Inscripcion").keyup(function () {
+                calcularTotales();
+            });
+
 
             // obtension de mensualidad
             $("#Mensualidad").keyup(function () {
@@ -916,19 +932,18 @@
                 calcularTotales();
             });
 
+            
+
             // Funcion para calcular 
             function calcularTotales() {
                 
                 var inscripcion = parseFloat($("#Inscripcion").val());
                 var mensualidad = parseFloat($("#Mensualidad").val());
                 var pagosLibro = parseFloat($("#CostoLibro").val());
-
-                var total = inscripcion + mensualidad + pagosLibro;
+                var total = porcentaje + inscripcion + mensualidad + pagosLibro;
 
                 $("#Total").val(total.toFixed(2));
             }
-
-            // Initial call to calculate totals on page load
             calcularTotales();
         });
     </script> 

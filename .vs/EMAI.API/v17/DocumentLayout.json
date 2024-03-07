@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\repos\\Residencia\\Emai\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\views\\alumnos\\agregaralumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\views\\alumnos\\agregaralumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 3429,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "agregaralumnos.cshtml",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Views\\Alumnos\\agregaralumnos.cshtml",
+              "RelativeDocumentMoniker": "emai\\Views\\Alumnos\\agregaralumnos.cshtml",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Views\\Alumnos\\agregaralumnos.cshtml",
+              "RelativeToolTip": "emai\\Views\\Alumnos\\agregaralumnos.cshtml",
+              "ViewState": "AQIAAKgDAAAAAAAAAAAAAI8DAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T21:03:24.6Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
