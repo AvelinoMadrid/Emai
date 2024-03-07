@@ -544,9 +544,9 @@ namespace EMAI.Datos
                         cmd.Parameters.Add(new SqlParameter("@CostoLibro", request.CostoLibro));
                         cmd.Parameters.Add(new SqlParameter("@NombreLibro", request.NombreLibro));
                         cmd.Parameters.Add(new SqlParameter("@Atendio", request.Atendio));
-                        cmd.Parameters.Add(new SqlParameter("@Costo", request.Costo));
-                        cmd.Parameters.Add(new SqlParameter("@Subtotal", request.Subtotal));
-                        cmd.Parameters.Add(new SqlParameter("@IVA", request.IVA));
+                        //cmd.Parameters.Add(new SqlParameter("@Costo", request.Costo));
+                        //cmd.Parameters.Add(new SqlParameter("@Subtotal", request.Subtotal));
+                        //cmd.Parameters.Add(new SqlParameter("@IVA", request.IVA));
                         cmd.Parameters.Add(new SqlParameter("@Total", request.Total));
                         cmd.Parameters.Add(new SqlParameter("@Inscripcion", request.Inscripcion));
                         cmd.Parameters.Add(new SqlParameter("@Mensualidad", request.Mensualidad));

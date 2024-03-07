@@ -59,9 +59,9 @@
         public decimal CostoLibro { get; set; }
         public string NombreLibro { get; set; } = null!;
         public string Atendio { get; set; } = null!;
-        public decimal Costo { get; set; }
-        public decimal Subtotal { get; set; }
-        public decimal IVA { get; set; }
+        //public decimal Costo { get; set; }
+        //public decimal Subtotal { get; set; }
+        //public decimal IVA { get; set; }
         public decimal Total { get; set; }
         public decimal Inscripcion { get; set; }
         public decimal Mensualidad { get; set; }

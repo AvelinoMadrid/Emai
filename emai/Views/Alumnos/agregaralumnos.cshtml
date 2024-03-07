@@ -836,7 +836,7 @@
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
-                                <div class="col-md-3 form-group">
+                                @* <div class="col-md-3 form-group">
                                     <label class="form-label">Costo</label>
                                     <input type="number" class="form-control form-control-sa" asp-for="Costo" id="Costo" name="Costo" required />
                                     <div class="valid-feedback">Válido.</div>
@@ -855,7 +855,7 @@
                                     <input type="number" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" value="16" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+                                </div> *@
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Total</label>
@@ -902,10 +902,6 @@
 @section Scripts {
      <script>
         $(document).ready(function () {
-            // asignacion de la casilla 
-            $("#Costo").keyup(function () {
-                calcularTotales();
-            });
 
             // obtenciom de la inscripcion 
             $("#Inscripcion").keyup(function () {
@@ -916,26 +912,19 @@
             $("#Mensualidad").keyup(function () {
                 calcularTotales();
             });
-
-            // obtension de IVA
-            $("#IVA").keyup(function () {
+            $("#CostoLibro").keyup(function () {
                 calcularTotales();
             });
-
-
 
             // Funcion para calcular 
             function calcularTotales() {
                 
                 var inscripcion = parseFloat($("#Inscripcion").val());
                 var mensualidad = parseFloat($("#Mensualidad").val());
-                var IVA = parseFloat($("#IVA").val());
+                var pagosLibro = parseFloat($("#CostoLibro").val());
 
+                var total = inscripcion + mensualidad + pagosLibro;
 
-                var Subtotal = inscripcion + mensualidad;
-                var total = Subtotal * IVA / 100 + Subtotal;
-
-                $("#Costo").val(Subtotal.toFixed(2));
                 $("#Total").val(total.toFixed(2));
             }
 
