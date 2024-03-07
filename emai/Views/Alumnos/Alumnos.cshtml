@@ -13,7 +13,12 @@
 }
 
 
-<p></p>
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -26,74 +31,46 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body table-responsive">
-                        <table class="table table-bordered table-hover table-striped">
+                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">
                             <thead>
                                 <tr>
-                                    <th>ID Alumno</th>
-                                    <th>Fecha Inscripcion</th>
+                                    <th>ID</th>
+                                    <th>Fecha Inscripción</th>
                                     <th>Tag</th>
                                     <th>No. Dia Clases</th>
-                                    <th>Fecha Inicio ClaseGratis</th>
+                                    <th>Fecha Inicio Clase </th>
                                     <th>Nombre Completo</th>
                                     <th>Edad</th>
-                                    <th>Fecha Nacimiento</th>
                                     <th>Telefono Casa</th>
                                     <th>Celular</th>
-                                    <th>Facebook</th>
-                                    <th>Email</th> 
                                     <th>Enfermedades</th>
                                     <th>Instrumento Base</th>
                                     <th>Dia</th>
                                     <th>Instrumento Opcional</th>
-                                    <th>Dia Opcio</th>
-                                    <th>Hora Opcio</th>
                                     <th>Nombre Papa</th>
                                     <th>Celular Papas</th>
-                                    <th>Facebook Papas</th>
-                                    <th>Email Papas</th>
                                     <th>Tutor Recoger</th>
                                     <th>Celular Tutor</th>
                                     <th>NumEmergencia</th>
-                                    <th>Estudios</th>
-                                    <th>Grado Estudios</th>
-                                    <th>Escuela Actuales</th>
-                                    <th>Trabajas</th>
-                                    <th>Lugar Trabajo</th>
-                                    <th>Conocimiento Actual</th>
-                                    <th>Instrumento</th>
-                                    <th>Instrumento Casa</th>
-                                    <th>No. Instrumento</th>
-                                    <th>Como te enteraste de la Escuela</th>
-                                    <th>Interes Gnro Musical</th>
-                                    <th>Cuales</th>
-                                    <th>Otro</th>
-                                    <th>Clase Opcional</th>
-                                    <th>DescuentoP</th>
-                                    <th>amable</th>
-                                    <th>NombreRecepcionista</th>
+                                    <th>Acitvo</th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                @{
-                                        
 
-                                
+                                @{
                                     foreach (var alumno in Model.Data)
+
                                     {
                                         <tr>
                                             <td>@alumno.IdAlumno</td>
                                             <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
                                             <td>@alumno.NoDiaClases</td>
-                                            @* <td>@alumno.FechaInicioClase</td>*@
                                             <td>@alumno.NombreCompleto</td>
                                             <td>@alumno.Edad</td>
-                                            @* <td>@alumno.FechaNacimiento</td>*@
                                             <td>@alumno.TelefonoCasa</td>
                                             <td>@alumno.Celular</td>
-                                            <td>@alumno.Facebook</td>
-                                            <td>@alumno.Email</td>
                                             <td>@alumno.Enfermedades</td>
                                             <td>@alumno.Instrumento</td>
                                             <td>@alumno.DiaAndHoraClase</td>
@@ -102,28 +79,19 @@
 
                                             <td>@alumno.NombrePapas</td>
                                             <td>@alumno.CelularPapas</td>
-                                            <td>@alumno.Facebook</td>
-                                            <td>@alumno.EmailPapas</td>
                                             <td>@alumno.TutorRecoger</td>
                                             <td>@alumno.CelularTR</td>
-                                            <td>@alumno.NumEmergencia</td>
-                                            <td>@alumno.Estudios</td>
-                                            <td>@alumno.EscuelaActuales</td>
-                                            <td>@alumno.Trabajas</td>
-                                            <td>@alumno.LugarTrabajo</td>
                                             <td>@alumno.StringActivo</td>
-                                            
+
                                             <td>
                                                 <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
-                                                <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;margin-bottom:10px">ELIMINAR </a>
-                                                <a asp-action="ReactivarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-success btn-sm" style="width:100%;">Reactivar</a>
-
+                                                <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">Desactivar </a>
                                             </td>
                                         </tr>
                                     }
 
                                 }
-                                
+
 
                             </tbody>
                         </table>
