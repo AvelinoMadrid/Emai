@@ -137,6 +137,7 @@ namespace emai.Controllers
             alumno.ListarClasesSelect = await _ServicioAlumnos_Api.ListarClasesSelect();
             alumno.ListSelectPromocion = await _ServicioAlumnos_Api.ListSelectPromocion();
             alumno.ListarMesesSelect = await _ServicioAlumnos_Api.ListarMesesSelect();
+            alumno.ListarHorarioSelect= await _ServicioAlumnos_Api.ListarHorarioSelect();
             return View("agregaralumnos", alumno);
         }
 
@@ -173,6 +174,21 @@ namespace emai.Controllers
             else
             {
                 return NoContent();
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> ReactivarAlumnosV1(int IdAlumno)
+        {
+            BaseResponseV2<bool> alumnos = await _ServicioAlumnos_Api.ReactivarAlumnoV1(IdAlumno);
+
+            if (alumnos.Data == true)
+            {
+                return RedirectToAction("Alumnos");
+
+            }
+            else
+            {
+                return RedirectToAction("Alumnos");
             }
         }
 

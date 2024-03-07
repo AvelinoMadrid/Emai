@@ -156,7 +156,7 @@
                                 </div>
 
                                 @*Dia de clase*@
-                                <div class="col-md-3 form-group">
+                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="dia">Dia y Hora de clase</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control form-control-sa" asp-for="DiaAndHoraClase" id="DiaAndHoraClase" name="DiaAndHoraClase" required />
@@ -164,6 +164,28 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
+                                @*Hcaer Prueba de Mul*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="dia">Array de Horarrio</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sa" id="tomarClases1" name="tomarClases1" required />
+                                        <div class="valid-feedback">Válido.</div>
+                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                </div>
+                                <script>
+
+                                    document.addEventListener('DOMContentLoaded',function(){
+                                        var elementoId = document.getElementById("NoDiaClases").value;
+                                        elementoId.addEventListener('change', function () {
+                                            var valorCoount = elementoId.value;
+                                            console.log(valorCoount);
+                                        })
+                                    })
+
+                                    
+                                </script>
+                                
 
                                 @*Instrumento Opcional*@
                                 <div class="col-md-3 form-group">
@@ -240,7 +262,7 @@
                                 @*Telefono del alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Telefono">Teléfono de Casa</label>
-                                    <input type="tel" class="form-control form-control-sa" maxlength="10" asp-for="TelefonoCasa" id="TelefonoCasa" name="TelefonoCasa" required />
+                                    <input type="tel" class="form-control form-control-sa" maxlength="10" asp-for="TelefonoCasa" id="TelefonoCasa" name="TelefonoCasa"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese un numero Telefónico.</div>
                                 </div>
@@ -248,7 +270,7 @@
                                 @*Celular del alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Telefono">Celular</label>
-                                    <input type="tel" class="form-control form-control-sa" maxlength="10" asp-for="Celular" id="Celular" name="Celular" required />
+                                    <input type="tel" class="form-control form-control-sa" maxlength="10" asp-for="Celular" id="Celular" name="Celular"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese un numero Telefónico (Celular).</div>
                                 </div>
@@ -256,7 +278,7 @@
                                 @*Facebook del Alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Facebook">Facebook</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="Facebook" name="Facebook" placeholder="URL o Nombre" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="Facebook" name="Facebook" placeholder="URL o Nombre"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese Facebook.</div>
                                 </div>
@@ -264,7 +286,7 @@
                                 @*Email del Alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Email">Email del Alumno</label>
-                                    <input type="email" class="form-control form-control-sa" asp-for="Email" id="Email" name="Email" required />
+                                    <input type="email" class="form-control form-control-sa" asp-for="Email" id="Email" name="Email"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese Email.</div>
                                 </div>
@@ -310,7 +332,7 @@
                                 @*Facebook del papa*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="FacebookPapas">Facebook papá o mamá</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="FacebookPapas" name="FacebookPapas" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="FacebookPapas" name="FacebookPapas"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -318,7 +340,7 @@
                                 @*Email del papa *@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="email">Email</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="EmailPapas" name="EmailPapas" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="EmailPapas" name="EmailPapas"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -413,7 +435,7 @@
                                 @*Lugar de Trabajo*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="LugarTrabajo">Lugar de Trabajo</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="LugarTrabajo" id="LugarTrabajo" name="LugarTrabajo" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="LugarTrabajo" id="LugarTrabajo" name="LugarTrabajo"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -452,7 +474,7 @@
                                 @*Instrumentos *@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="instrumentos">En que instrumentos</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="Instrumento" id="Instrumento" name="Instrumento" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="Instrumento" id="Instrumento" name="Instrumento"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -475,7 +497,7 @@
                                 @*Que instrumento tiene en casa*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="Instrumento">Que instrumento (s)</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="InstrumentotTwo" id="" name="InstrumentotTwo" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="InstrumentotTwo" id="" name="InstrumentotTwo"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -484,7 +506,7 @@
                                 @*Enteraste Escuela*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="EnterasteEsc">¿Cómo te enteraste de EMAI?</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="EnterasteEsc" id="EnterasteEsc" name="EnterasteEsc" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="EnterasteEsc" id="EnterasteEsc" name="EnterasteEsc"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -507,7 +529,7 @@
                                 @*Cuales Generos Musicales*@
                                 <div class="col-md-4 form-group" style="display:none" id="inputTextCuales">
                                     <label class="form-label" for="CualesMusicales">¿Mencionalo?</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="CualesMusicales" id="CualesMusicales" name="CualesMusicales" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="CualesMusicales" id="CualesMusicales" name="CualesMusicales" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -561,7 +583,7 @@
                                 @*Otro *@
                                 <div class="col-md-12 form-group" style="display:none" id="OtroInteresV1">
                                     <label class="form-label" for="OtroOpcional">¿Algun otro interés musical?</label>
-                                    <input type="text" class="form-control form-control-sa" placeholder="Mencionalo" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional" required />
+                                    <input type="text" class="form-control form-control-sa" placeholder="Mencionalo" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -586,7 +608,7 @@
                                 @*Musica de Interes *@
                                 <div class="col-md-12 form-group">
                                     <label class="form-label" for="MusicalInteres">¿Musica de Interes?</label>
-                                    <input type="text" class="form-control form-control-sa" placeholder="Cumbia" asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres" required />
+                                    <input type="text" class="form-control form-control-sa" placeholder="Cumbia" asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -781,14 +803,13 @@
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">¿Qué libro fue?</label>
                                     <input type="text" class="form-control form-control-sa" asp-for="NombreLibro" id="NombreLibro" name="NombreLibro" />
-
-                                    <div class="valid-feedback">Válido.</div>
+                                  <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Costo de libro</label>
-                                    <input type="number" class="form-control form-control-sa" asp-for="CostoLibro" id="CostoLibro" name="CostoLibro" required />
+                                    <input type="number" class="form-control form-control-sa" asp-for="CostoLibro" id="CostoLibro" name="CostoLibro" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -831,7 +852,7 @@
 
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Iva</label>
-                                    <input type="number" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" required />
+                                    <input type="number" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" value="16" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>

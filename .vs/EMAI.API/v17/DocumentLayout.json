@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\repos\\Residencia\\Emai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\servicios\\alumnosservicio_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\servicios\\alumnosservicio_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\views\\alumnos\\alumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\views\\alumnos\\alumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\views\\alumnos\\agregaralumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\views\\alumnos\\agregaralumnos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\controllers\\alumnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\controllers\\alumnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\servicios\\alumnosservicio_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\servicios\\alumnosservicio_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\servicios\\iservicioalumnos_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\servicios\\iservicioalumnos_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{562BED59-D813-4F10-9DE1-D86AB5994BD3}|EMAI.Servicios\\EMAI.Servicios.csproj|c:\\repos\\residencia\\emai\\emai.servicios\\ialumnosoperaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{562BED59-D813-4F10-9DE1-D86AB5994BD3}|EMAI.Servicios\\EMAI.Servicios.csproj|solutionrelative:emai.servicios\\ialumnosoperaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77FB4C71-951B-40F5-AE4C-8E44E1D70C09}|EMAI.Datos\\EMAI.Datos.csproj|c:\\repos\\residencia\\emai\\emai.datos\\apprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77FB4C71-951B-40F5-AE4C-8E44E1D70C09}|EMAI.Datos\\EMAI.Datos.csproj|solutionrelative:emai.datos\\apprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{562BED59-D813-4F10-9DE1-D86AB5994BD3}|EMAI.Servicios\\EMAI.Servicios.csproj|c:\\repos\\residencia\\emai\\emai.servicios\\iapprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{562BED59-D813-4F10-9DE1-D86AB5994BD3}|EMAI.Servicios\\EMAI.Servicios.csproj|solutionrelative:emai.servicios\\iapprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\models\\alumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\models\\alumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\servicios\\dtos\\response\\horarioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\servicios\\dtos\\response\\horarioresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|c:\\repos\\residencia\\emai\\emai\\models\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAFA808B-8CAE-49BD-BB1C-BFBB99F3B031}|emai\\emai.csproj|solutionrelative:emai\\models\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +59,114 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Alumnos.cshtml",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Views\\Alumnos\\Alumnos.cshtml",
+              "RelativeDocumentMoniker": "emai\\Views\\Alumnos\\Alumnos.cshtml",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Views\\Alumnos\\Alumnos.cshtml",
+              "RelativeToolTip": "emai\\Views\\Alumnos\\Alumnos.cshtml",
+              "ViewState": "AQIAAGwAAAAAAAAAAADwv3oAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-07T17:22:58.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAlumnosOperaciones.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\IAlumnosOperaciones.cs",
+              "RelativeDocumentMoniker": "EMAI.Servicios\\IAlumnosOperaciones.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\IAlumnosOperaciones.cs",
+              "RelativeToolTip": "EMAI.Servicios\\IAlumnosOperaciones.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA7wBsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T17:11:17.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAppRepository.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\IAppRepository.cs",
+              "RelativeDocumentMoniker": "EMAI.Servicios\\IAppRepository.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\IAppRepository.cs",
+              "RelativeToolTip": "EMAI.Servicios\\IAppRepository.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAqwCsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T17:06:20.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppRepository.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\AppRepository.cs",
+              "RelativeDocumentMoniker": "EMAI.Datos\\AppRepository.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\EMAI.Datos\\AppRepository.cs",
+              "RelativeToolTip": "EMAI.Datos\\AppRepository.cs",
+              "ViewState": "AQIAAFQBAAAAAAAAAAAwwGUBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T16:33:16.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlumnosController.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Controllers\\AlumnosController.cs",
+              "RelativeDocumentMoniker": "emai\\Controllers\\AlumnosController.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Controllers\\AlumnosController.cs",
+              "RelativeToolTip": "emai\\Controllers\\AlumnosController.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAtwLMAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:38:57.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HorarioResponse.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\Dtos\\Response\\HorarioResponse.cs",
+              "RelativeDocumentMoniker": "emai\\Servicios\\Dtos\\Response\\HorarioResponse.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\Dtos\\Response\\HorarioResponse.cs",
+              "RelativeToolTip": "emai\\Servicios\\Dtos\\Response\\HorarioResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:32:48.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Horario.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Models\\Horario.cs",
+              "RelativeDocumentMoniker": "emai\\Models\\Horario.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Models\\Horario.cs",
+              "RelativeToolTip": "emai\\Models\\Horario.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:30:50.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IServicioAlumnos_Api.cs",
+              "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\IServicioAlumnos_Api.cs",
+              "RelativeDocumentMoniker": "emai\\Servicios\\IServicioAlumnos_Api.cs",
+              "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\IServicioAlumnos_Api.cs",
+              "RelativeToolTip": "emai\\Servicios\\IServicioAlumnos_Api.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA0wBEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T21:30:21.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AlumnosServicio_Api.cs",
               "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\AlumnosServicio_Api.cs",
               "RelativeDocumentMoniker": "emai\\Servicios\\AlumnosServicio_Api.cs",
               "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Servicios\\AlumnosServicio_Api.cs",
               "RelativeToolTip": "emai\\Servicios\\AlumnosServicio_Api.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAA1wDsAAAAMAAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAA5wO8AAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T20:22:25.321Z",
               "EditorCaption": ""
@@ -45,23 +179,22 @@
               "RelativeDocumentMoniker": "emai\\Views\\Alumnos\\agregaralumnos.cshtml",
               "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Views\\Alumnos\\agregaralumnos.cshtml",
               "RelativeToolTip": "emai\\Views\\Alumnos\\agregaralumnos.cshtml",
-              "ViewState": "AQIAAN4AAAAAAAAAAADwv38AAABfAAAA",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAkwLwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-06T20:06:01.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Alumnos.cs",
               "DocumentMoniker": "C:\\repos\\Residencia\\Emai\\emai\\Models\\Alumnos.cs",
               "RelativeDocumentMoniker": "emai\\Models\\Alumnos.cs",
               "ToolTip": "C:\\repos\\Residencia\\Emai\\emai\\Models\\Alumnos.cs",
               "RelativeToolTip": "emai\\Models\\Alumnos.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAgwBEAAAAmAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAA1wFQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T20:04:37.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-06T20:04:37.796Z"
             }
           ]
         }

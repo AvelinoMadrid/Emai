@@ -14,9 +14,11 @@ namespace emai.Servicios
         Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos();
         //puedo mapearlo
         //Task<BaseResponseV2<bool>> InsertarAlumno(AlumnoResponse entity);//No esto reciendo los datos acuados otra entiodad
-        Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno);
+        Task<BaseResponseV2<bool>>  EliminarAlumnoV1(int IdAlumno);
+        Task<BaseResponseV2<bool>> ReactivarAlumnoV1(int IdAlumno);
         Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity);
         Task<List<ClasesResponse>> ListarClasesSelect();
+        Task<List<HorarioResponse>> ListarHorarioSelect();
         Task<BaseResponseV1<Promosiones>> ListSelectPromocion();
         Task<List<MesesModel>> ListarMesesSelect();
         Task<string> GenerarFolio();

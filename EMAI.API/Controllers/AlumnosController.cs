@@ -70,6 +70,13 @@ namespace EMAI.API.Controllers
             return Ok(response);
         }
 
+        [HttpDelete("ReactivarAlumno/{IdAlumno}")]
+        public async Task<IActionResult> ReactivarAlumno(int IdAlumno)
+        {
+            var response = await _repository.ReactivarByIdAlumnoV1(IdAlumno);
+            return Ok(response);
+        }
+
 
         [HttpPost("api/Alumnos/InsertarNuevaparte")]
         public async Task Post([FromBody] AlumnosNuevo value)

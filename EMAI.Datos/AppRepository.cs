@@ -333,6 +333,36 @@ namespace EMAI.Datos
                 throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
             }
         }
+        public async Task<bool> ReactivarByIdAlumnoV1(int IdAlumno)
+        {
+            bool response = false;
+
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                await sql.OpenAsync();
+
+                using (SqlCommand cmd = new SqlCommand("ReactivarAlumnoTotalV1", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdReactivar", IdAlumno));
+
+                    SqlParameter paramSalida = new SqlParameter("@RowAffect", SqlDbType.Int);
+                    paramSalida.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(paramSalida);
+
+                    await cmd.ExecuteNonQueryAsync();
+
+                    int valorDevuelto = (int)paramSalida.Value;
+
+                    if (valorDevuelto > 0)
+                    {
+                        response = true;
+                    }
+                }
+            }
+            return response;
+        }
+
         public async Task<bool> DeleteByIdAlumnoV1(int IdAlumno)
         {
             bool response = false;
@@ -4073,6 +4103,7 @@ namespace EMAI.Datos
         {
             GC.Collect();
         }
+
 
 
 

@@ -213,6 +213,37 @@ namespace EMAI.LND
             return response;
         }
 
+        public async Task<BaseResponse<bool>> ReactivarByIdAlumnoV1(int IdAlumno)
+        {
+            var response = new BaseResponse<bool>();
+            using var db = AppRepositoryFactory.GetAppRepository();
+
+            var alumnoById = await GetAlumnosByIdV1(IdAlumno);
+
+            if (alumnoById != null)
+            {
+                response.Data = await db.ReactivarByIdAlumnoV1(IdAlumno);
+
+                if (response.Data)
+                {
+                    response.IsSuccess = true;
+                    response.Message = StaticVariable.MESSAGE_REACTIVE;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_FALLED;
+                }
+            }
+             else
+                {
+                response.IsSuccess = false;
+                response.Message = StaticVariable.MESSAGE_FALLED;
+                }
+            return response;
+        }
+
+
         public async Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno)
         {
               var response = new BaseResponse<bool>();
@@ -265,6 +296,8 @@ namespace EMAI.LND
             }
             return response;
         }
+
+
 
 
         //public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)

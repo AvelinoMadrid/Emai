@@ -7,6 +7,7 @@
         public const string SECURITYCLAVE = "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";
         public const string nameApplication = "1vqFy4IZLfeiyaeSD73fNR326V63kGg7TgM2L-RizQMI";
         public const string MESSAGE_DELETE = "Registro Eliminado correctamente";
+        public const string MESSAGE_REACTIVE = "Registro Reactivado correctamente";
         public const string MESSAGE_QUERY = "Consulta Existosa";
         public const string MESSAGE_UPDATE = "Registro Modificado correctamente";
         public const string MESSAGE_SAVE = "Datos Guardado Correctamente";

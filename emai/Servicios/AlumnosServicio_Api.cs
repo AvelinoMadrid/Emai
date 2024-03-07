@@ -228,6 +228,39 @@ namespace emai.Servicios
 
             return respuesta;
         }
+        public async Task<BaseResponseV2<bool>> ReactivarAlumnoV1(int IdAlumno)
+        {
+            var response = new BaseResponseV2<bool>();
+
+
+            using (var httpClient = new HttpClient())
+            {
+                //httpClient.BaseAddress = new Uri(_baseurl);
+
+                var httpResponse = await httpClient.DeleteAsync($"https://localhost:7265/api/Alumnos/ReactivarAlumno/{IdAlumno}");
+
+
+                if (httpResponse.IsSuccessStatusCode)
+                {
+
+                    var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+
+                    var responseData = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(jsonResponse);
+
+                    response.IsSuccess = responseData.IsSuccess;
+                    response.Data = responseData.Data;
+                    response.Message = responseData.Message;
+
+                    return response;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                }
+            }
+            return response;
+        }
 
         public async Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno)
         {
@@ -264,6 +297,41 @@ namespace emai.Servicios
         }
 
 
+        public async Task<List<HorarioResponse>> ListarHorarioSelect()
+        {
+            List<HorarioResponse> listaHorario = new List<HorarioResponse>();
+
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var response = await httpClient.GetAsync($"api/Horarios/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+                    listaHorario = JsonConvert.DeserializeObject<List<HorarioResponse>>(jsonRespuesta);
+
+                    if (listaHorario != null)
+                    {
+                        return listaHorario;
+                    }
+                    else
+                    {
+                        throw new Exception("Lista De Horario Vacia");
+
+                    }
+                }
+                else
+                {
+                    throw new Exception($"No se cumple la peticion de GET {response.StatusCode}");
+                }
+            }
+
+        }
 
 
         public async Task<List<MesesModel>> ListarMesesSelect()
@@ -377,7 +445,7 @@ namespace emai.Servicios
             }
         }
 
-
+      
     }
 }
 

@@ -395,6 +395,22 @@
   },
   {
     "ContainingType": "EMAI.API.Controllers.AlumnosController",
+    "Method": "ReactivarAlumno",
+    "RelativePath": "api/Alumnos/ReactivarAlumno/{IdAlumno}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdAlumno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMAI.API.Controllers.AlumnosController",
     "Method": "RegisterAlumno",
     "RelativePath": "api/Alumnos/RegistarAlumnoV1",
     "HttpMethod": "POST",
