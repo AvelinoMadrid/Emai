@@ -32,10 +32,10 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task <bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor, decimal Cantidad)
+        public async Task <bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor, decimal Cantidad,string img)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarNomina(IdNomina,Fecha,NoPedido,Proveedor,Cantidad);    
+            var rsp = await db.ActualizarNomina(IdNomina,Fecha,NoPedido,Proveedor,Cantidad,img);    
             return rsp;
         }
 

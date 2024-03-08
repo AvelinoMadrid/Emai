@@ -16,6 +16,9 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal SubTotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string Img { get; set; }
+
     }
 
     public class InsertCooperacionModel
@@ -28,6 +31,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal SubTotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
     }
 
     public class UpdateCooperacionesModel
@@ -40,6 +44,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal SubTotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string Img { get; set; }
     }
 
 

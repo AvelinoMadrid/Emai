@@ -15,6 +15,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
+
     }
 
     public class ColegiaturaIDModel
@@ -25,6 +27,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
     }
 
     public class ColegiaturaInsertarModel
@@ -35,6 +38,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
     }
 
     public class ColegiaturaActualizarModel
@@ -46,6 +50,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
     }
 
     public class ColegiaturaEliminarModel

@@ -76,7 +76,7 @@ namespace EMAI.Servicios
 
         Task<bool> InsertarCooperaciones(InsertCooperacionModel value);
         Task<bool> DeleteCooperacionesbyId(int id);
-        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, decimal cantidad);
+        Task<bool> UpdateCooperaciones(int id, DateTime Fecha, string NoPedido, string Proveedor, decimal cantidad, string img);
 
         #endregion
 
@@ -88,7 +88,7 @@ namespace EMAI.Servicios
 
         Task<ColegiaturaIDModel> GetColegiaturaID(int IdColegiatura);
         Task<bool> InsertarColegiatura(ColegiaturaInsertarModel value);
-        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad);
+        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad,string img);
         Task<bool> EliminarColegiatura(int IdColegiatura);
         #endregion
 
@@ -173,7 +173,7 @@ namespace EMAI.Servicios
         Task<NominaModel> GetByIDNomina(int id);
 
         Task<bool> InsertarNomina(InsertNominaModel value);
-        Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad);
+        Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad,string img);
 
         Task<bool> EliminarNomina(int id);
 

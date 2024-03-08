@@ -48,7 +48,7 @@ namespace EMAI.API.Controllers
         [HttpPut("[action]")]
         public async Task Put([FromBody] UpdateNominaModel value)
         {
-            await _repository.ActualizarNomina(value.IdNomina, value.Fecha, value.NoPedido, value.Proveedor,  value.Cantidad);
+            await _repository.ActualizarNomina(value.IdNomina, value.Fecha, value.NoPedido, value.Proveedor,  value.Cantidad,value.Img);
         }
 
 

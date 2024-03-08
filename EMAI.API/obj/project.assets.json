@@ -1802,8 +1802,8 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": "1.0.0",
           "EMAI.Comun": "1.0.0",
-          "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "EMAI.Helpers": "1.0.0",
           "EMAI.Servicios": "1.0.0",
@@ -1817,23 +1817,6 @@
         },
         "runtime": {
           "bin/placeholder/EMAI.Datos.dll": {}
-        }
-      },
-      "EMAI.DTOS/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "EMAI.Comun": "1.0.0",
-          "Emai.Utilities": "1.0.0",
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "bin/placeholder/EMAI.DTOS.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EMAI.DTOS.dll": {}
         }
       },
       "EMAI.Entidades/1.0.0": {
@@ -1879,7 +1862,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "EMAI.DTOS": "1.0.0",
+          "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": "1.0.0",
           "EMAI.Datos": "1.0.0",
           "EMAI.Servicios": "1.0.0",
           "Emai.Utilities": "1.0.0",
@@ -1901,8 +1884,8 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": "1.0.0",
           "EMAI.Comun": "1.0.0",
-          "EMAI.DTOS": "1.0.0",
           "EMAI.Entidades": "1.0.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Sheets.v4": "1.66.0.3148",
@@ -4538,11 +4521,6 @@
       "path": "../EMAI.Datos/EMAI.Datos.csproj",
       "msbuildProject": "../EMAI.Datos/EMAI.Datos.csproj"
     },
-    "EMAI.DTOS/1.0.0": {
-      "type": "project",
-      "path": "../EMAI.DTOS/EMAI.DTOS.csproj",
-      "msbuildProject": "../EMAI.DTOS/EMAI.DTOS.csproj"
-    },
     "EMAI.Entidades/1.0.0": {
       "type": "project",
       "path": "../EMAI.Entidades/EMAI.Entidades.csproj",
@@ -4573,8 +4551,8 @@
     "net6.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
       "EMAI.Comun >= 1.0.0",
-      "EMAI.DTOS >= 1.0.0",
       "EMAI.LND >= 1.0.0",
       "EMAI.Servicios >= 1.0.0",
       "Google.Apis.Auth >= 1.66.0",
@@ -4588,23 +4566,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jiren\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Residencia\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
       "projectName": "EMAI.API",
-      "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.API\\EMAI.API.csproj",
-      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\Residencia\\Emai\\EMAI.API\\obj\\",
+      "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\EMAI.API.csproj",
+      "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4613,24 +4593,23 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
-              "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
+            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Comun\\EMAI.Comun.csproj"
             },
-            "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
-              "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
+            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj"
             },
-            "C:\\repos\\Residencia\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
-              "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.LND\\EMAI.LND.csproj"
+            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.LND\\EMAI.LND.csproj"
             },
-            "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
-              "projectPath": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
+            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj": {
+              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj"
             }
           }
         }
@@ -4639,11 +4618,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4712,8 +4686,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "No se encuentra información del proyecto para \"C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
+      "libraryId": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

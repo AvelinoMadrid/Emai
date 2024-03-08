@@ -41,10 +41,10 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task<bool> UpdateCooperaciones (int id, DateTime Fecha, string NoPedido, string Proveedor,  decimal cantidad)
+        public async Task<bool> UpdateCooperaciones (int id, DateTime Fecha, string NoPedido, string Proveedor,  decimal cantidad, string img)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateCooperaciones(id,Fecha,NoPedido,Proveedor,cantidad);
+            var rsp = await db.UpdateCooperaciones(id,Fecha,NoPedido,Proveedor,cantidad,img);
             return rsp;
                 
         }

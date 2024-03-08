@@ -14,7 +14,7 @@ namespace EMAI.Servicios
         Task<List<NominaModel>> GetAllNomina();
         Task<NominaModel> GetByIDNomina(int id);
         Task<bool> InsertarNomina(InsertNominaModel value);
-        Task<bool> ActualizarNomina(int IdNomina,DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad);
+        Task<bool> ActualizarNomina(int IdNomina,DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad,string img);
         Task<bool> EliminarNomina(int id);
 
     }

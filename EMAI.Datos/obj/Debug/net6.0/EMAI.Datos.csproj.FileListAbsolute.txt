@@ -196,27 +196,6 @@ C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
 C:\Users\ansel\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Comun.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Entidades.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Helpers.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Servicios.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.AssemblyReference.cache
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfoInputs.cache
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.AssemblyInfo.cs
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CoreCompileInputs.cache
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.csproj.CopyComplete
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\refint\EMAI.Datos.dll
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\EMAI.Datos.pdb
-C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\EMAI.Datos\obj\Debug\net6.0\ref\EMAI.Datos.dll
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.deps.json
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.dll
 C:\Users\Barco Usuario\Desktop\emai9Agto\Emai\EMAI.Datos\bin\Debug\net6.0\EMAI.Datos.pdb

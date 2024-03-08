@@ -45,7 +45,7 @@ namespace EMAI.API.Controllers
         [HttpPut("[action]")]
         public async Task Put([FromBody] UpdateCooperacionesModel value)
         {
-            await _repository.UpdateCooperaciones(value.IdCooperacion, value.Fecha, value.NoPedido, value.Proveedor,  value.Cantidad);
+            await _repository.UpdateCooperaciones(value.IdCooperacion, value.Fecha, value.NoPedido, value.Proveedor,  value.Cantidad,value.Img);
         }
 
 

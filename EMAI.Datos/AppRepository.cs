@@ -38,8 +38,8 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI7MARZO;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI27FB;Integrated Security=True;TrustServerCertificate=True;";
+            //EMAIConnection = "Data Source=.;initial Catalog=EMAI7MARZO;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -1473,6 +1473,7 @@ namespace EMAI.Datos
                 Proveedor = reader["Proveedor"].ToString(), 
                 //Descripcion = reader["Descripcion"].ToString(), 
                 Cantidad = (decimal)reader["Cantidad"], 
+                Img = reader["Img"].ToString()
                 //SubTotal = (decimal)reader["SubTotal"], 
                 //Total = (decimal)reader["Total"]
             };
@@ -1492,6 +1493,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
                     //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    cmd.Parameters.Add(new SqlParameter("@Img", value.Img));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1531,7 +1533,9 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", cantidad));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
                     //cmd.Parameters.Add(new SqlParameter("@Total", Total));
-                    
+                    cmd.Parameters.Add(new SqlParameter("@Img", value.Img));
+
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
@@ -1578,6 +1582,7 @@ namespace EMAI.Datos
                 Cantidad = (decimal)reader["Cantidad"],
                 //Subtotal = (decimal)reader["Subtotal"],
                 //Total = (decimal)reader["Total"]
+                Img = reader["Img"].toString()
             };
         }
 
@@ -1616,6 +1621,7 @@ namespace EMAI.Datos
                 Cantidad = (decimal)reader["Cantidad"],
                 //Subtotal = (decimal)reader["Subtotal"],
                 //Total = (decimal)reader["Total"]
+                Img = reader["Img"].toString()
             };
         }
 
@@ -2716,9 +2722,10 @@ namespace EMAI.Datos
                 Proveedor = reader["Proveedor"].ToString(),
                 //Descripcion = reader["Descripcion"].ToString(),
                 Cantidad = (decimal)reader["Cantidad"], 
+                //Img = reader["Img"].ToString()
                 //Subtotal = (decimal)reader["Subtotal"], 
                 //Total = (decimal)reader["Total"]
-               
+
             };
         }
 
@@ -2736,7 +2743,7 @@ namespace EMAI.Datos
                     //cmd.Parameters.Add(new SqlParameter("@Descripcion", value.Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", value.Cantidad));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", value.SubTotal));
-                    //cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
+                    cmd.Parameters.Add(new SqlParameter("@Img", value.Img));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -2747,7 +2754,7 @@ namespace EMAI.Datos
 
         // ACTUALIZAR 
 
-        public async Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad)
+        public async Task<bool> ActualizarNomina(int IdNomina, DateTime Fecha, string NoPedido, string Proveedor,  decimal Cantidad, string img)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2761,8 +2768,8 @@ namespace EMAI.Datos
                     //cmd.Parameters.Add(new SqlParameter("@Descripcion", Descripcion));
                     cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
                     //cmd.Parameters.Add(new SqlParameter("@Subtotal", Subtotal));
-                    //cmd.Parameters.Add(new SqlParameter("@Total", Total));
-              
+                    cmd.Parameters.Add(new SqlParameter("@Img", img));
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;

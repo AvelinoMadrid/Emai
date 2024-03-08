@@ -37,10 +37,10 @@ namespace EMAI.LND
         }
 
         //Actualizar Colegiatura
-        public async Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad)
+        public async Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad, string img)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.ActualizarColegiatura(IdColegiatura,Fecha,Descripcion,Cantidad);
+            var rsp = await db.ActualizarColegiatura(IdColegiatura,Fecha,Descripcion,Cantidad,img);
             return rsp;
         }
 

@@ -17,6 +17,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }  
+
+        public decimal Img { get; set; }
     }
 
     public class InsertNominaModel
@@ -28,6 +30,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get;set; }
         //public decimal SubTotal { get; set; }
         //public decimal Total { get; set; }
+        public decimal Img { get; set; }
     }
 
     public class UpdateNominaModel
@@ -40,6 +43,7 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+        public string Img { get; set; }
     }
 
 

@@ -12,7 +12,7 @@ namespace EMAI.Servicios
         Task<List<ColegiaturaModel>> GetColegiatura();
         Task<ColegiaturaIDModel> GetColegiaturaID(int IdColegiatura);
         Task<bool> InsertarColegiatura(ColegiaturaInsertarModel value);
-        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad);
+        Task<bool> ActualizarColegiatura(int IdColegiatura, DateTime Fecha,  string Descripcion, decimal Cantidad, string img);
         Task<bool> EliminarColegiatura(int IdColegiatura);
     }
 }

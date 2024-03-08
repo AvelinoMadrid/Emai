@@ -1,23 +1,33 @@
 {
   "version": 2,
-  "dgSpecHash": "unS/x1SD9kflMLzBTBcbHuUZBKUAX1ZbgWiY8OBiAYIMCXZ5ulWlPUeU4vHlf5F78wuJ6aeOiaD0sO3wl5eyMg==",
-  "success": true,
-  "projectFilePath": "C:\\repos\\Residencia\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
+  "dgSpecHash": "O6CSD0bZMKENIq9QLnN4MzzFDqws/9mDWe+Z4mxFY2BUF0WZzruJLL9a+O2foAMcPilhO9fY1FNORe5omfJ/vw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jiren\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
-    "C:\\Users\\jiren\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.auth\\1.66.0\\google.apis.auth.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.core\\1.66.0\\google.apis.core.1.66.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\google.apis.sheets.v4\\1.66.0.3148\\google.apis.sheets.v4.1.66.0.3148.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
+    "C:\\Users\\Horusvivo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "No se encuentra información del proyecto para \"C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
+      "libraryId": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
