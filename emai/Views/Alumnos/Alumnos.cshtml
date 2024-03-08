@@ -30,8 +30,8 @@
                         <a asp-action="NuevoAlumno" asp-controller="Alumnos" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Alumno </a>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body table-responsive">
-                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline">
+                    <div class="card-body ">
+                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline table-responsive">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -47,12 +47,14 @@
                                     <th>Instrumento Base</th>
                                     <th>Dia</th>
                                     <th>Instrumento Opcional</th>
+                                    <th>Día y Hora Opcional</th>
                                     <th>Nombre Papa</th>
                                     <th>Celular Papas</th>
                                     <th>Tutor Recoger</th>
                                     <th>Celular Tutor</th>
                                     <th>NumEmergencia</th>
                                     <th>Acitvo</th>
+                                    <th>Acciones</th>
 
                                 </tr>
                             </thead>
@@ -67,6 +69,7 @@
                                             <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
                                             <td>@alumno.NoDiaClases</td>
+                                            <td>@alumno.FechaInicioClase</td>
                                             <td>@alumno.NombreCompleto</td>
                                             <td>@alumno.Edad</td>
                                             <td>@alumno.TelefonoCasa</td>
@@ -81,6 +84,7 @@
                                             <td>@alumno.CelularPapas</td>
                                             <td>@alumno.TutorRecoger</td>
                                             <td>@alumno.CelularTR</td>
+                                            <td>@alumno.Enfermedades</td>
                                             <td>@alumno.StringActivo</td>
 
                                             <td>

@@ -9,10 +9,10 @@ namespace emai.Models
         public string FechaInscripcion { get; set; }
         public string Tag { get; set; } = null!;
         public int NoDiaClases { get; set; }
-       // public string FechaInicioClase { get; set; }
+        public string FechaInicioClase { get; set; }
         public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
-        //public string FechaNacimiento { get; set; }
+        public string FechaNacimiento { get; set; }
         public string TelefonoCasa { get; set; } = null!;
         public string Celular { get; set; } = null!;
         public string Facebook { get; set; } = null!;

@@ -39,7 +39,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI7MARZO;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -199,10 +199,10 @@ namespace EMAI.Datos
                 Tag = (string)reader["Tag"],
                 FechaInscripcion = (string)reader["FechaInscripcion"],
                 NoDiaClases = (int)reader["NoDiaClases"],
-                //FechaInicioClase = (DateTime)reader["FechaInicioClase"],
+               FechaInicioClase = (string)reader["FechaInicioClase"],
                 NombreCompleto = (string)reader["NombreCompleto"],
                 Edad = (int)reader["Edad"],
-                //FechaNacimiento = (DateTime)reader["FechaNacimiento"],
+                FechaNacimiento = (string)reader["FechaNacimiento"],
                 TelefonoCasa = (string)reader["TelCasa"],
                 Celular = (string)reader["Celular"],
                 Facebook = (string)reader["Facebook"],
