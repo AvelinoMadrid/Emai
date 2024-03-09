@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "O6CSD0bZMKENIq9QLnN4MzzFDqws/9mDWe+Z4mxFY2BUF0WZzruJLL9a+O2foAMcPilhO9fY1FNORe5omfJ/vw==",
-  "success": false,
+  "dgSpecHash": "2HZNpRTlrpWvBO0DVUVym2IW/A4KIb/K/AtY+8tkgMK7SAy8N1rIvuFUnk+GuRm/HzgmX/b6TqSRX8fv+CitSg==",
+  "success": true,
   "projectFilePath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.Servicios\\EMAI.Servicios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Horusvivo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -19,15 +19,5 @@
     "C:\\Users\\Horusvivo\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\Horusvivo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "No se encuentra información del proyecto para \"C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj\". Si está usando Visual Studio, puede deberse a que el proyecto no se haya cargado o no forme parte de la solución actual, por lo que debe ejecutar una restauración desde la línea de comandos. De lo contrario, puede que el archivo del proyecto no sea válido o que falten destinos necesarios para la restauración.",
-      "libraryId": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\EMAI.DTOS\\EMAI.DTOS.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

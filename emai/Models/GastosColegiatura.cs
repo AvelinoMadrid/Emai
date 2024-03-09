@@ -15,6 +15,8 @@ namespace emai.Models
         public decimal Cantidad { get; set; }
         //public decimal Subtotal { get; set; }
         //public decimal Total { get; set; }
+
+        public string Img { get; set; }
         public List<GastosColegiatura> Lista { get; set; }
     }
 }

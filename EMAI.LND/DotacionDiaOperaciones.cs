@@ -34,10 +34,10 @@ namespace EMAI.LND
             return rsp;
         }
 
-        public async Task<bool> UpdateDotacionDia(int id, DateTime fecha, string NoPedido, string Descripcion, decimal cantidad, decimal subtotal, decimal Total)
+        public async Task<bool> UpdateDotacionDia(int id, DateTime fecha, string NoPedido, string Descripcion, decimal cantidad, string img)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateDotacionDia(id,fecha,NoPedido,Descripcion,cantidad,subtotal,Total);
+            var rsp = await db.UpdateDotacionDia(id,fecha,NoPedido,Descripcion,cantidad,img);
             return rsp;
         }
 

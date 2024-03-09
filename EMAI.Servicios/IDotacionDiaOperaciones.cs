@@ -12,7 +12,7 @@ namespace EMAI.Servicios
         Task<List<DotacionDiaModel>> GetAllDotacionDia();
         Task<DotacionDiaModel> GetDotacionDiaById(int id);
         Task<bool> InsertarDotacionDia(InsertDotacionDiaModel value);
-        Task<bool> UpdateDotacionDia(int id,DateTime fecha, string NoPedido, string Descripcion, decimal cantidad, decimal subtotal, decimal Total);
+        Task<bool> UpdateDotacionDia(int id, DateTime fecha, string NoPedido, string Descripcion, decimal cantidad, string img);
         Task<bool> DeleteDotacionDiabyID(int id);
     }
 }

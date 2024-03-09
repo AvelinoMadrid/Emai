@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\emai",
+    "\\EMAI.API",
+    "\\EMAI.API\\Controllers",
+    "\\EMAI.Datos",
+    "\\emai\\Views",
+    "\\emai\\Views\\Clase"
   ],
+  "SelectedNode": "\\EMAI.Datos\\AppRepository.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -41,7 +41,7 @@ namespace EMAI.API.Controllers
         [HttpPut("[action]")]
         public async Task Put([FromBody] UpdateDotacionModel value)
         {
-            await _repository.UpdateDotacionDia(value.IdDotacion, value.Fecha, value.NoPedido, value.Descripcion, value.Cantidad, value.Subtotal, value.Total);
+            await _repository.UpdateDotacionDia(value.IdDotacion, value.Fecha, value.NoPedido, value.Descripcion, value.Cantidad, value.Img);
         }
 
         // Eliminar datos 

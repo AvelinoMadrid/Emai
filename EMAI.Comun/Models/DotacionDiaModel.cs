@@ -16,6 +16,8 @@ namespace EMAI.Comun.Models
         public decimal Subtotal { get; set; }
         public decimal Total { get; set; }
 
+        public string Img { get; set; }
+
     }
 
     public class InsertDotacionDiaModel
@@ -26,6 +28,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         public decimal Subtotal { get; set; }
         public decimal Total { get; set; }
+
+        public string Img { get; set; }
     }
 
     public class UpdateDotacionModel
@@ -37,6 +41,8 @@ namespace EMAI.Comun.Models
         public decimal Cantidad { get; set; }
         public decimal Subtotal { get; set; }
         public decimal Total { get; set; }
+
+        public string Img { get; set; }
     }
 
 

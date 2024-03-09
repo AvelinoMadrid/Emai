@@ -29,6 +29,7 @@
                                     <th>Cantidad</th>
                                     @* <th>Subtotal</th>
                                     <th>Total</th> *@
+                                    <th>Img</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -42,8 +43,8 @@
                                         <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
                                         <td>@item.Descripcion</td>
                                         <td>@item.Cantidad</td>
-                                        @* <td>@item.Subtotal</td>
-                                        <td>@item.Total</td> *@
+                                        <td>@item.Img</td>
+                                        @* <td>@item.Total</td> *@
                                         <td>
                                             <a asp-action="agregarcolegiatura" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                             <a asp-action="Eliminar" asp-controller="Colegiatura" asp-route-IdColegiatura="@item.IdColegiatura" class="btn btn-danger btn-sm" style="width:100%">ELIMINAR </a>

@@ -72,3 +72,15 @@ C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.dll
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
 C:\repos\Residencia\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.deps.json
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\bin\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.csproj.AssemblyReference.cache
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfoInputs.cache
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.AssemblyInfo.cs
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\refint\Emai.Utilities.dll
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\Emai.Utilities.pdb
+C:\Users\Horusvivo\Source\Repos\AvelinoMadrid\Emai\Emai.Utilities\obj\Debug\net6.0\ref\Emai.Utilities.dll
