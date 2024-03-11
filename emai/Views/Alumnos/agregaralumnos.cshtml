@@ -1,10 +1,13 @@
 ﻿@model Alumnos
-
+@using System.Web.Mvc
+@using Syncfusion.Blazor.DropDowns;
 
 @{
     ViewData["Title"] = "Agregar Alumnos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
+    
+        
 }
 
 
@@ -61,7 +64,7 @@
                     </div>
                     </div>
                     <div class="bs-stepper-content">
-                    <form asp-action="agregarNuevoAlumno" asp-controller="Alumnos" method="post" class="needs-validation" novalidate>
+                    <form asp-action="agregarNuevoAlumno" asp-controller="Alumnos" method="post" name="formAddAlumno" class="needs-validation" novalidate>
 
                         <!-- your steps content here -->
                         <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
@@ -141,8 +144,8 @@
                                 @*Instumento Base*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="SeleccionarClase1">Instrumento Base</label>
-                                    <select class="form-control form-control-sa" @* onchange="ShowSelected();" *@ asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
-                                        <option value="">Seleccionar...</option>
+                                    <select class="form-control form-control-sa" onchange="cambiar_clases_horarios()" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
+                                        <option value="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
                                             foreach (var listClase in Model.ListarClasesSelect)
@@ -155,37 +158,37 @@
                                     <div class="invalid-feedback">Por favor seleccione una opción.</div>
                                 </div>
 
-                                @*Dia de clase*@
-                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="dia">Dia y Hora de clase</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-sa" asp-for="DiaAndHoraClase" id="DiaAndHoraClase" name="DiaAndHoraClase" required />
-                                        <div class="valid-feedback">Válido.</div>
-                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                    </div>
-                                </div>
-                                @*Hcaer Prueba de Mul*@
+                                @*MultiselectHorario*@
                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="dia">Array de Horarrio</label>
+                                    <label class="form-label" for="dia">Seleccione sus horario</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control form-control-sa" id="tomarClases1" name="tomarClases1" required />
+                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases1" name="tomarClases1" required>
+                                            @* <option value="0">Seleccionar...</option> *@
+                                        </select>
                                         <div class="valid-feedback">Válido.</div>
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
-                                <script>
+@*                                 <script>
 
-                                    document.addEventListener('DOMContentLoaded',function(){
+                                    document.addEventListener('DOMContentLoaded', function () {
                                         var elementoId = document.getElementById("NoDiaClases").value;
                                         elementoId.addEventListener('change', function () {
                                             var valorCoount = elementoId.value;
                                             console.log(valorCoount);
                                         })
                                     })
+                                </script> *@
 
-                                    
-                                </script>
-                                
+                                @*Dia de clase*@
+@*                                  <div class="col-md-3 form-group">
+                                    <label class="form-label" for="dia">Dia y Hora de clase</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sa" asp-for="DiaAndHoraClase" id="DiaAndHoraClase" name="DiaAndHoraClase" required />
+                                        <div class="valid-feedback">Válido.</div>
+                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                </div> *@
 
                                 @*Instrumento Opcional*@
                                 <div class="col-md-3 form-group">
@@ -194,9 +197,9 @@
                                         <option value="">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
-                                            foreach (var listClase in Model.ListarClasesSelect)
+                                            foreach (var listUnique in Model.ListClasesUnique.Data)
                                             {
-                                                <option value="@listClase.idClase">@listClase.Nombre</option>
+                                                <option value="@listUnique.idClase">@listUnique.Nombre</option>
                                             }
                                         }
                                     </select>
@@ -205,13 +208,14 @@
                                 </div>
                                 @*Dia Opcional*@
                                 <div class="col-md-3 form-group">
-                                    <label class="form-label" for="diaopcional">Dia y hora Opcional</label>
+                                    <label class="form-label" for="dia">Seleccione sus horario</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control form-control-sa" asp-for="DiaAndHoraClaseOpcional" id="DiaAndHoraClaseOpcional" name="DiaAndHoraClaseOpcional" required />
+                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases2" name="tomarClases2" required>
+                                            @* <option value="0">Seleccionar...</option> *@
+                                        </select>
                                         <div class="valid-feedback">Válido.</div>
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
-
                                 </div>
                                 @*Nombre Completo*@
                                 <div class="col-md-3 form-group">
@@ -715,12 +719,12 @@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="IdPromosion">Promociones</label>
                                     <select class="form-control form-control-sa" asp-for="IdPromosion"  id="IdPromosion" name="IdPromosion" required>
-                                        <option value="">Seleccionar...</option>
+                                        <option value="0" selected data-porcentaje="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListSelectPromocion != null)
                                         {
                                             foreach (var listPromocion in Model.ListSelectPromocion.Data)
                                             {
-                                                <option value="@listPromocion.IdPromociones" data-porcentaje="@listPromocion.Porcentaje" >@listPromocion.NombrePromocion ---> @listPromocion.Porcentaje</option>
+                                                <option value="@listPromocion.IdPromociones" data-porcentaje="@listPromocion.Porcentaje">@listPromocion.NombrePromocion ---> @listPromocion.Porcentaje</option>
                                             }
                                         }
                                     </select>
@@ -876,19 +880,9 @@
                                 <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
-
-
-
-
                             </div>
 
-
-
                         </div>
-
-
-
-             
              </form>
                     </div>
                 </div>
@@ -904,52 +898,169 @@
 @section Scripts {
      <script>
 
-        var porcentaje = 1;
+         var selectDay = document.getElementById("NoDiaClases");
+         var selectPorcentaje = document.getElementById("IdPromosion");
+         var select1Emisor = "SeleccionarClase1";
+         var select2Emisor = "SeleccionarClase2";
+         var selectDestino = "tomarClases1";
+         var select2Destino = "tomarClases2";
+        //  var forAlumno = document.forms.formAddAlumno;
 
-        document.getElementById("IdPromosion").addEventListener('change', function () {
-            var select = document.getElementById("IdPromosion");
-            var selectedOption = select.options[select.selectedIndex];
-            porcentaje = parseFloat(selectedOption.getAttribute("data-porcentaje"));
-            calcularTotales();
-        });
+        // forAlumno
 
         $(document).ready(function () {
-
-            // obtenciom de la inscripcion 
-            $("#Inscripcion").keyup(function () {
-                calcularTotales();
-            });
-            $("#Inscripcion").keyup(function () {
-                calcularTotales();
-            });
-
-
-            // obtension de mensualidad
-            $("#Mensualidad").keyup(function () {
-                calcularTotales();
-            });
-            $("#CostoLibro").keyup(function () {
-                calcularTotales();
-            });
-
-            
-
-            // Funcion para calcular 
-            function calcularTotales() {
-                
-                var inscripcion = parseFloat($("#Inscripcion").val());
-                var mensualidad = parseFloat($("#Mensualidad").val());
-                var pagosLibro = parseFloat($("#CostoLibro").val());
-                var total = porcentaje + inscripcion + mensualidad + pagosLibro;
-
-                $("#Total").val(total.toFixed(2));
-            }
-            calcularTotales();
+            cargaListHoario(select1Emisor, selectDestino);
+            cargaListHoario(select2Emisor, select2Destino);
         });
+        //https://www.youtube.com/watch?v=wrayuZuBgYA&ab_channel=CodigoEstudiante
+        //https://www.somostechies.com/combos-en-cascada-para-asp-net-mvc/
+        //https://kinsta.com/es/base-de-conocimiento/javascript-peticion-http/
+        //https://es.javascript.info/array#acerca-de-length
+        //https://www.rafaelacosta.net/Blog/2019/12/6/ajax-f%c3%a1cil-con-ajaxactionlink-en-aspnet-mvc-5?AspxAutoDetectCookieSupport=1
+        //para no repetir dos veces esyte codigo ncompertilo en fguincion en parametros 
+
+
+
+        function cargaListHoario(typeSelecccionClass,elegirDestinoSelect) {
+            var IdClaseValue = $(`#${typeSelecccionClass} option:selected`).val();
+            $.ajax({
+                url: '@Url.Action("SelectListClasesHorarioV1Nombre", "Alumnos")',
+                type: 'GET',
+                data:{
+                    IdClase: IdClaseValue
+                },
+                dataType:"json",       
+                success: function (response) {
+                    if (response.success) {
+                        var data = response.data;
+                        var tam = data.length;
+                        var i = 0;
+
+                        $(`#${elegirDestinoSelect}`).empty();
+
+                        $(`#${elegirDestinoSelect}`).append(
+                            $("<option>").attr("value", "").text("Seleccionar...")
+                        );
+
+                        while (i < tam) {
+                            $(`#${elegirDestinoSelect}`).append(
+                                $("<option>").attr("value", data[i].dia).text(data[i].dia)
+                            );
+
+                            i++;
+                        }
+
+                    }else{
+                        console.error('Error al obtener la lista de horarios de la clase: ', response.message);
+
+                    }
+                },
+                error: function (error) {
+                    console.error('Error al llamar a la action SelectListClasesHorario: ', error);
+                }
+            });
+        }
+
+
+
+
+
+        selectDay.addEventListener("change", function () {
+
+            var varDaySeleccion = selectDay.value;
+        });
+
+        $('#tomarClases1').on("change", function () {
+
+            var selectDayV1 = selectDay.value;
+
+            if (selectDayV1 == "") {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "warning",
+                    title: "Seleccione la Cantidad de Dia de clases",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }else{
+
+                var valoresSeleccionado = [];
+                var selectedOptions = this.selectedOptions;
+                for (var i = 0; i < selectedOptions.length; i++) {
+                    var selectValue = selectedOptions[i].value;
+                    valoresSeleccionado.push(selectValue);
+                }
+
+                //console.log("Valor seleccionado en el primer select: " + selectDayV1);
+
+                if (valoresSeleccionado.length > selectDayV1) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "warning",
+                        title: "No puede Seleccionar más de " + selectDayV1 + " clases",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }   
+        });
+
+         $("#SeleccionarClase1").on("change", function () {
+            cargaListHoario(select1Emisor, selectDestino);
+             $('#tomarClases1').trigger('change');//trigger entiendo como un diusparador de eventos
+         });
+        $("#SeleccionarClase2").on("change", function () {
+            cargaListHoario(select2Emisor, select2Destino);
+            $('#tomarClases2').trigger('change');//trigger entiendo como un diusparador de eventos
+        });
+
+        var porcentaje;
+        selectPorcentaje.addEventListener("change", function () {
+
+            var porceSelect = selectPorcentaje.value;
+            var selectedOption = selectPorcentaje.options[selectPorcentaje.selectedIndex];
+            porcentaje = parseFloat(selectedOption.getAttribute("data-porcentaje"));
+            // console.log("Porcentasje es " + porcentaje);
+
+        });
+         var mensualidadInput = document.getElementById("Mensualidad");
+
+         function calcularPago(porcentajeV1,mensualidad){
+             var resultado = parseFloat((porcentajeV1 * mensualidad) / 100);
+             return resultado;
+         }
+            $(document).ready(function () {
+                
+                $("#Inscripcion").keyup(function () {
+                    calcularTotales();
+                });
+                $("#CostoLibro").keyup(function () {
+                calcularTotales();
+                 });
+                $("#Mensualidad").keyup(function () {
+                    calcularTotales();
+                });
+            });
+
+             mensualidadInput.addEventListener("blur", function () {
+              var pagoMensual = parseFloat(mensualidadInput.value);
+              var porcentajeV = porcentaje;
+              var pagoEsMensual = pagoMensual - (calcularPago(porcentajeV, pagoMensual));
+              $(this).val(pagoEsMensual);
+                calcularTotales();
+
+          });
+         function calcularTotales(){
+            var inscripcion = parseFloat($("#Inscripcion").val());
+            var mensualidad = parseFloat($("#Mensualidad").val());
+            var pagosLibro = parseFloat($("#CostoLibro").val());
+            var total =inscripcion + mensualidad + pagosLibro;
+            $("#Total").val(total.toFixed(2));
+         }
+        calcularTotales();
+
     </script> 
 }
-
-
 
 
 <script>

@@ -38,11 +38,15 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
+<<<<<<< HEAD
+            //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+=======
             EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI27FB;Integrated Security=True;TrustServerCertificate=True;";
             //EMAIConnection = "Data Source=.;initial Catalog=EMAI7MARZO;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
+>>>>>>> a99428c1319b5a32542fe4e1c106434a0d14cfcb
         }
-
 
         #region " Sección Alumnos --> "
 
@@ -1234,6 +1238,69 @@ namespace EMAI.Datos
                 }
             }
         }
+        public async Task<List<SelectClasesUnique>> GetListaUniqueHorario()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("MostrarClasesUnica", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<SelectClasesUnique>(); 
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToClasesUnique(reader));
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        public async Task<List<SelectClasesHorarioResponse>> SelectClasesHorario(string nameProcedure, int idClase)
+        {
+            var response = new List<SelectClasesHorarioResponse>();
+
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand(nameProcedure, sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@IdClase", idClase));
+                        await sql.OpenAsync();
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToClasesHorario(reader));
+                            }
+                        }
+                        return response;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+        }
+         private SelectClasesHorarioResponse MapToClasesHorario(SqlDataReader reader)
+        {
+            return new SelectClasesHorarioResponse()
+            {
+                IdClase = (int)reader["CodigoClase"],
+                IdHorario= (int)reader["CodigHorario"],
+                Dia = (string)reader["TheDay"]
+            };
+        }
+
 
         private ListaClases MapToClasesNombre(SqlDataReader reader)
         {
@@ -1268,6 +1335,16 @@ namespace EMAI.Datos
         }
 
 
+        private SelectClasesUnique MapToClasesUnique(SqlDataReader reader)
+        {
+            return new SelectClasesUnique()
+            {
+
+                IdClase = (int)reader["IdClase"],
+                Nombre = (string)reader["Nombre"],
+
+            };
+        }
 
         private ClasesModel MapToClases(SqlDataReader reader)
         {
@@ -4112,6 +4189,9 @@ namespace EMAI.Datos
         {
             GC.Collect();
         }
+
+
+
 
 
 

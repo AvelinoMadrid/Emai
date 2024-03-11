@@ -16,6 +16,7 @@
     <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.66.0.3148" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="KendoUICore" Version="2024.1.130" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
@@ -28,6 +29,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Puya.Platform.Infrastructure.Data.SqlServer" Version="1.0.0.140" />
     <PackageReference Include="Reec.Inspection.SqlServer" Version="1.0.5" />
+    <PackageReference Include="Syncfusion.Blazor.Core" Version="24.2.9" />
+    <PackageReference Include="Syncfusion.Blazor.DropDowns" Version="24.2.9" />
     <PackageReference Include="Twilio" Version="6.14.1" />
   </ItemGroup>
 

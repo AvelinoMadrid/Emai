@@ -1,4 +1,5 @@
 ﻿using emai.Models;
+using emai.Servicios.Commons;
 
 namespace emai.Servicios
 {
@@ -15,6 +16,8 @@ namespace emai.Servicios
         Task<bool> Eliminar(int IdClase);
 
         Task<List<Clase>> ObtenerTodos();
+
+       
     }
 
 }

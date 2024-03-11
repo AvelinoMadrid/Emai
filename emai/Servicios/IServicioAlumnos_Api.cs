@@ -18,8 +18,10 @@ namespace emai.Servicios
         Task<BaseResponseV2<bool>> ReactivarAlumnoV1(int IdAlumno);
         Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity);
         Task<List<ClasesResponse>> ListarClasesSelect();
+        Task<BaseResponseV1<ClasesResponse>> ListarClasesSelectUnique();
         Task<List<HorarioResponse>> ListarHorarioSelect();
         Task<BaseResponseV1<Promosiones>> ListSelectPromocion();
+        Task<BaseResponseV1<SelectLisHorario>> SelectListHorario(int IdClase);
         Task<List<MesesModel>> ListarMesesSelect();
         Task<string> GenerarFolio();
         Task<bool> GuardarAlu(Alumnos Alumno);

@@ -1,6 +1,9 @@
 ﻿using EMAI.Comun.Models;
 using EMAI.Datos;
+using EMAI.DTOS.Dtos.Base;
+using EMAI.DTOS.Dtos.Response;
 using EMAI.Servicios;
+using Email.Utiilities.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,10 +63,33 @@ namespace EMAI.LND
             return rsp;
         }
 
+        public async Task<BaseResponse<List<SelectClasesUnique>>> GetSelectClasesUnique()
+        {
+            var response = new BaseResponse<List<SelectClasesUnique>>();
+            try
+            { 
+                using var db = AppRepositoryFactory.GetAppRepository();
 
+                var listClase = await db.GetListaUniqueHorario();
 
-
-
-
+                if (listClase != null)
+                {
+                    response.IsSuccess = true;
+                    response.Data = listClase;
+                    response.Message = StaticVariable.MESSAGE_QUERY;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_FALLED;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
     }
 }

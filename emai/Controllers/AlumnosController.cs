@@ -138,6 +138,7 @@ namespace emai.Controllers
             alumno.ListSelectPromocion = await _ServicioAlumnos_Api.ListSelectPromocion();
             alumno.ListarMesesSelect = await _ServicioAlumnos_Api.ListarMesesSelect();
             alumno.ListarHorarioSelect= await _ServicioAlumnos_Api.ListarHorarioSelect();
+            alumno.ListClasesUnique= await _ServicioAlumnos_Api.ListarClasesSelectUnique();
             return View("agregaralumnos", alumno);
         }
 
@@ -191,7 +192,37 @@ namespace emai.Controllers
                 return RedirectToAction("Alumnos");
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> SelectListClasesHorario(int IdClase)
+        {
+            BaseResponseV1<SelectLisHorario> listaSelect = await _ServicioAlumnos_Api.SelectListHorario(IdClase);
 
+            if(listaSelect.IsSuccess)
+            {
+                return Json(new { success = true, data = listaSelect.Data });
+            }
+            else
+            {
+                return Json(new { success = false, message = "Hubo un error" });
+
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> SelectListClasesHorarioV1Nombre(int IdClase)
+        {
+            BaseResponseV1<SelectLisHorario> listaSelect = await _ServicioAlumnos_Api.SelectListHorario(IdClase);
+
+            if (listaSelect.IsSuccess)
+            {
+               var data = listaSelect.Data.Select(i =>new { Dia = i.Dia });
+                return Json(new {success=true, data });    
+            }
+            else
+            {
+                return Json(new { success = false, message = "Hubo un error" });
+            }
+        }
 
         // [HttpPost]
         //public async Task<IActionResult> GuardarCambios(Alumnos ob_Alumno)

@@ -5304,6 +5304,9 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Web.WebPages.Deployment.dl
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Web.WebPages.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -5351,6 +5354,7 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.d
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.JSInterop.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
@@ -5383,6 +5387,16 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Puya.Platform.Shared.Server.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Reec.Inspection.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Reec.Inspection.SqlServer.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Buttons.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Core.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Data.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.DropDowns.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Inputs.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Notifications.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Popups.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.Spinner.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Blazor.SplitButtons.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\Syncfusion.Licensing.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.CodeDom.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Composition.Convention.dll
@@ -5394,6 +5408,7 @@ C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Data.SqlClient.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Management.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Memory.Data.dll
 C:\repos\Residencia\Emai\emai\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll

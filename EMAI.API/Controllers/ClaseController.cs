@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using EMAI.Comun;
 using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Response;
 
 namespace EMAI.API.Controllers
 {
@@ -22,7 +23,13 @@ namespace EMAI.API.Controllers
         {
             return await _repository.GetClases();
         }
-
+        [HttpGet("ListClassUnique")]
+        public async Task<ActionResult<List<SelectClasesUnique>>> ListarClasesUnique()
+        {
+            var response = await _repository.GetSelectClasesUnique();
+            return Ok(response);
+        }
+       
         // buscar ID 
         [HttpGet("{IdClase}")]
         public async Task<ActionResult<ClasesIdModel>> GetAlumnosbyID(int IdClase)

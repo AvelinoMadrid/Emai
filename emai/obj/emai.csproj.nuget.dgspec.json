@@ -151,6 +151,10 @@
               "target": "Package",
               "version": "[1.66.0.3148, )"
             },
+            "KendoUICore": {
+              "target": "Package",
+              "version": "[2024.1.130, )"
+            },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.9, )"
@@ -188,6 +192,14 @@
             "Reec.Inspection.SqlServer": {
               "target": "Package",
               "version": "[1.0.5, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[24.2.9, )"
+            },
+            "Syncfusion.Blazor.DropDowns": {
+              "target": "Package",
+              "version": "[24.2.9, )"
             },
             "Twilio": {
               "target": "Package",

@@ -93,6 +93,88 @@ namespace emai.Servicios
             }
             return response;
         }
+        public async Task<BaseResponseV1<SelectLisHorario>> SelectListHorario(int IdClase)
+        {
+            var Mydata = new BaseResponseV1<SelectLisHorario>();
+
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    httpClient.BaseAddress = new Uri(_baseurl);
+
+                    var httpResponse = await httpClient.GetAsync($"api/Alumnos/SelectListClasesHorarioV1/{IdClase}");
+
+                    if (httpResponse.IsSuccessStatusCode)
+                    {
+                        var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+
+                        var responseData = JsonConvert.DeserializeObject<BaseResponseV1<SelectLisHorario>>(jsonResponse);
+
+                        if (responseData != null)
+                        {
+                            Mydata.IsSuccess = responseData.IsSuccess;
+                            Mydata.Data = responseData.Data;
+                            Mydata.Message = responseData.Message;
+                        }
+                        else
+                        {
+                            Mydata.IsSuccess = false;
+                            Mydata.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                        }
+                    }
+                    else
+                    {
+                        Mydata.IsSuccess = false;
+                        Mydata.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                    }
+
+                }
+
+                }catch (Exception ex)
+            {
+                Mydata.IsSuccess = false;
+                Mydata.Message = $"Error al Generar Lista de Clase : {ex.Message}";
+            }
+            return Mydata;
+        }
+
+        public async Task<BaseResponseV1<ClasesResponse>> ListarClasesSelectUnique()
+        {
+            var MyData = new BaseResponseV1<ClasesResponse>();
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var httpResponse = await httpClient.GetAsync("api/Clase/ListClassUnique/");
+
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+
+                    var responseData = JsonConvert.DeserializeObject<BaseResponseV1<ClasesResponse>>(jsonResponse);
+
+                    if (responseData != null)
+                    {
+                        MyData.IsSuccess = responseData.IsSuccess;
+                        MyData.Data = responseData.Data;
+                        MyData.Message = responseData.Message;
+                    }
+                    else
+                    {
+                        MyData.IsSuccess = false;
+                        MyData.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                    }
+                }
+                else
+                {
+                    MyData.IsSuccess = false;
+                    MyData.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
+                }
+            }
+            return MyData;
+        }
+
         public async Task<BaseResponseV1<AlumnoModel>> ListarAllAlumnos()
         {
             //var response = new BaseResponseV1<AlumnoModel>();
@@ -367,7 +449,7 @@ namespace emai.Servicios
                 }
             }
         }
-
+     
         public async Task<List<ClasesResponse>> ListarClasesSelect()
         {
             List<ClasesResponse> lista = new List<ClasesResponse>();
@@ -445,7 +527,7 @@ namespace emai.Servicios
             }
         }
 
-      
+
     }
 }
 

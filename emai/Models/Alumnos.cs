@@ -78,9 +78,11 @@ namespace emai.Models
 
         public List<ClasesResponse> ListarClasesSelect { get; set; }
         public BaseResponseV1<Promosiones> ListSelectPromocion { get; set; }
+        public BaseResponseV1<ClasesResponse> ListClasesUnique { get; set; }
         public List<MesesModel> ListarMesesSelect { get; set; }
         public List<HorarioResponse> ListarHorarioSelect { get; set; }
         public string GeneradorFolioV1 { get; set; }
+        //public BaseResponseV1<SelectLisHorario> SelectListHorario { get; set; }
 
     }
 }

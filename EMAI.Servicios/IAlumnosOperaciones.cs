@@ -22,6 +22,7 @@ namespace EMAI.Servicios
         Task<BaseResponse<AlumnoResponseV1>> GetAlumnosByIdV1(int IdAlumno);
         Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value);
         Task<BaseResponse<bool>> RegisterAlumno(AlumnoRequest request);
+        Task<BaseResponse<List<SelectClasesHorarioResponse>>> SelectListClaseHorarioV1(int idClase);
         Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1();
         Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno);
         Task<BaseResponse<bool>> ReactivarByIdAlumnoV1(int IdAlumno);

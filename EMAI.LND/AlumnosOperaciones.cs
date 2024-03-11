@@ -16,6 +16,7 @@ namespace EMAI.LND
         private readonly IConfiguration _config;
         private readonly IMapper _mapper;
 
+
         public AlumnosOperaciones(IConfiguration config, IMapper mapper)
         {
             _config = config;
@@ -190,6 +191,38 @@ namespace EMAI.LND
                 }
             }
         }
+        public async Task<BaseResponse<List<SelectClasesHorarioResponse>>> SelectListClaseHorarioV1(int idClase)
+        {
+            string nameprocedure = _config.GetValue<string>("NameProcedure:SelectListHorarioVista");
+
+            var response = new BaseResponse<List<SelectClasesHorarioResponse>>();
+
+            try
+            {
+                using var db = AppRepositoryFactory.GetAppRepository();
+                var dataList = await db.SelectClasesHorario(nameprocedure,idClase);
+
+                if (dataList != null)
+                {
+                    response.IsSuccess = true;
+                    response.Data = dataList;
+                    response.Message = StaticVariable.MESSAGE_QUERY;
+
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_FALLED;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess= false;
+                response.Message= ex.Message;
+            }
+            return response;
+        }
 
         public async Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1()
         {
@@ -297,28 +330,12 @@ namespace EMAI.LND
             return response;
         }
 
+  
 
 
 
-        //public async Task<BaseResponse<bool>> RegisterAlumno(InsertarAlumnoModelTwo request)
-        //{
-        //    var response = new BaseResponse<bool>();
 
-        //    using var db = AppRepositoryFactory.GetAppRepository();
-        //    response.Data= await db.InsertarAlumnoTwo(request);
-
-        //    if (response.Data)
-        //    {
-        //        response.IsSuccess= true;
-        //        response.Message = StaticVariable.MESSAGE_SAVE;
-
-        //    }
-        //    else
-        //    {
-        //        response.IsSuccess= false;
-        //        response.Message = StaticVariable.MESSAGE_FALLED;
-        //    }
-        //    return response;
+      
     }
 
 }

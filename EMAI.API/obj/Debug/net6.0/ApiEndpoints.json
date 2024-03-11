@@ -426,6 +426,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMAI.API.Controllers.AlumnosController",
+    "Method": "SelectClasssHorario",
+    "RelativePath": "api/Alumnos/SelectListClasesHorarioV1/{IdClase}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdClase",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[EMAI.DTOS.Dtos.Response.SelectClasesHorarioResponse, EMAI.DTOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "EMAI.API.Controllers.AsignacionClaseController",
     "Method": "Get",
     "RelativePath": "api/AsignacionClase",
@@ -669,6 +695,26 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EMAI.API.Controllers.ClaseController",
+    "Method": "ListarClasesUnique",
+    "RelativePath": "api/Clase/ListClassUnique",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[EMAI.DTOS.Dtos.Response.SelectClasesUnique, EMAI.DTOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
