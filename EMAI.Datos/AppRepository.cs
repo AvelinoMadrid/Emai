@@ -38,14 +38,9 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-<<<<<<< HEAD
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
             EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
-=======
-            EMAIConnection = "Data Source=DESKTOP-6HI2H4T;Initial Catalog=EMAI27FB;Integrated Security=True;TrustServerCertificate=True;";
-            //EMAIConnection = "Data Source=.;initial Catalog=EMAI7MARZO;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
->>>>>>> a99428c1319b5a32542fe4e1c106434a0d14cfcb
         }
 
         #region " Sección Alumnos --> "

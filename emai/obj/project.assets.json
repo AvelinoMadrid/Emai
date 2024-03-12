@@ -17838,25 +17838,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Horusvivo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\jiren\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
+      "projectUniqueName": "C:\\repos\\Residencia\\Emai\\emai\\emai.csproj",
       "projectName": "emai",
-      "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\emai.csproj",
-      "packagesPath": "C:\\Users\\Horusvivo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\emai\\obj\\",
+      "projectPath": "C:\\repos\\Residencia\\Emai\\emai\\emai.csproj",
+      "packagesPath": "C:\\Users\\jiren\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\Residencia\\Emai\\emai\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Horusvivo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jiren\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -17865,14 +17863,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {
-              "projectPath": "C:\\Users\\Horusvivo\\Source\\Repos\\AvelinoMadrid\\Emai\\Emai.Utilities\\Emai.Utilities.csproj"
+            "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj": {
+              "projectPath": "C:\\repos\\Residencia\\Emai\\Emai.Utilities\\Emai.Utilities.csproj"
             }
           }
         }
@@ -17881,6 +17880,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -17997,13 +18001,12 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
-<<<<<<< HEAD
       "code": "NU1602",
       "level": "Warning",
       "warningLevel": 1,
@@ -18024,8 +18027,6 @@
       ]
     },
     {
-=======
->>>>>>> a99428c1319b5a32542fe4e1c106434a0d14cfcb
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
