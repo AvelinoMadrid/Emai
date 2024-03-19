@@ -9,263 +9,263 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = emai
 build_property.RootNamespace = emai
-build_property.ProjectDir = C:\repos\Residencia\Emai\emai\
+build_property.ProjectDir = C:\repos\Residencia\Resi2024\AvelinoMadrid\Emai\emai\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\repos\Residencia\Emai\emai
+build_property.MSBuildProjectDirectory = C:\repos\Residencia\Resi2024\AvelinoMadrid\Emai\emai
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/repos/Residencia/Emai/emai/Views/Account/Login.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/agregaralumnos.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/agregaralumnos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xhZ3JlZ2FyYWx1bW5vcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/agregarConocimientosMusicales.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/agregarConocimientosMusicales.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xhZ3JlZ2FyQ29ub2NpbWllbnRvc011c2ljYWxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/agregarEstudios.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/agregarEstudios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xhZ3JlZ2FyRXN0dWRpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/agregarpapas.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/agregarpapas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xhZ3JlZ2FycGFwYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/agregarPasatiempos.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/agregarPasatiempos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xhZ3JlZ2FyUGFzYXRpZW1wb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/Alumnos.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/Alumnos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xBbHVtbm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Alumnos/Prueba.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Alumnos/Prueba.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vc1xQcnVlYmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/AsigClase/agregarasigclase.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/AsigClase/agregarasigclase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ0NsYXNlXGFncmVnYXJhc2lnY2xhc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/AsigClase/AsigClase.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/AsigClase/AsigClase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ0NsYXNlXEFzaWdDbGFzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/AsignacionMaestro/agregarasignacionmaestros.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/AsignacionMaestro/agregarasignacionmaestros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbk1hZXN0cm9cYWdyZWdhcmFzaWduYWNpb25tYWVzdHJvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/AsignacionMaestro/Asignacionmaestros.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/AsignacionMaestro/Asignacionmaestros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbk1hZXN0cm9cQXNpZ25hY2lvbm1hZXN0cm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Asistencia/Asistenciamaestros.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Asistencia/Asistenciamaestros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RlbmNpYVxBc2lzdGVuY2lhbWFlc3Ryb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Balance/VerBalance.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Balance/VerBalance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFsYW5jZVxWZXJCYWxhbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Clase/agregarclase.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Clase/agregarclase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcYWdyZWdhcmNsYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Clase/Clase.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Clase/Clase.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc2VcQ2xhc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Colegiatura/agregarcolegiatura.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Colegiatura/agregarcolegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcYWdyZWdhcmNvbGVnaWF0dXJhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Colegiatura/Colegiatura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpYXR1cmFcQ29sZWdpYXR1cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Comprobacion/agregarcomprobacion.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Comprobacion/agregarcomprobacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvYmFjaW9uXGFncmVnYXJjb21wcm9iYWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Comprobacion/VerComprobacion.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Comprobacion/VerComprobacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJvYmFjaW9uXFZlckNvbXByb2JhY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Configuracion/Configuracionusuario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Configuracion/Configuracionusuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvblxDb25maWd1cmFjaW9udXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Cooperaciones/agregarcooperaciones.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Cooperaciones/agregarcooperaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYWNpb25lc1xhZ3JlZ2FyY29vcGVyYWNpb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Cooperaciones/Cooperaciones.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Cooperaciones/Cooperaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcGVyYWNpb25lc1xDb29wZXJhY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/DotacionDia/agregardotaciondia.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/DotacionDia/agregardotaciondia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG90YWNpb25EaWFcYWdyZWdhcmRvdGFjaW9uZGlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/DotacionDia/DotacionDia.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/DotacionDia/DotacionDia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG90YWNpb25EaWFcRG90YWNpb25EaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Evento/agregarevento.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Evento/agregarevento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXGFncmVnYXJldmVudG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Evento/Evento.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Evento/Evento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXEV2ZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/GastosDia/agregargastodia.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/GastosDia/agregargastodia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zRGlhXGFncmVnYXJnYXN0b2RpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/GastosDia/GastosDia.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/GastosDia/GastosDia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zRGlhXEdhc3Rvc0RpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Gastos/MenuGastos.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Gastos/MenuGastos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9zXE1lbnVHYXN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Historial/VerHistorial.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Historial/VerHistorial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFsXFZlckhpc3RvcmlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Home/Index.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Home/Privacy.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Horarios/MenuHorarios.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Horarios/MenuHorarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcTWVudUhvcmFyaW9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/HorarioVerano/agregarhorarioVr.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/HorarioVerano/agregarhorarioVr.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1ZlcmFub1xhZ3JlZ2FyaG9yYXJpb1ZyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/HorarioVerano/HorarioVerano.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/HorarioVerano/HorarioVerano.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1ZlcmFub1xIb3JhcmlvVmVyYW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Horario/agregarhorario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Horario/agregarhorario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xhZ3JlZ2FyaG9yYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Horario/Horario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Horario/Horario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xIb3JhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Libro/agregarlibro.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Libro/agregarlibro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Libro/agregarlibro1.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Libro/agregarlibro1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Libro/agregarlibro2.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Libro/agregarlibro2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cYWdyZWdhcmxpYnJvMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Libro/Libro.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Libro/Libro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cTGlicm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Maestro/agregarmaestro.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Maestro/agregarmaestro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xhZ3JlZ2FybWFlc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Maestro/Maestro.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Maestro/Maestro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xNYWVzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Nomina/agregarnomina.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Nomina/agregarnomina.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXGFncmVnYXJub21pbmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Nomina/Nomina.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Nomina/Nomina.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXE5vbWluYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Pago/agregarpago.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Pago/agregarpago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xhZ3JlZ2FycGFnby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Pago/Pago.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Pago/Pago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xQYWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Perfil/Perfilusuario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Perfil/Perfilusuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFBlcmZpbHVzdWFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/PlanEstudios/MostrarClasesHorario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/PlanEstudios/MostrarClasesHorario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbkVzdHVkaW9zXE1vc3RyYXJDbGFzZXNIb3JhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Programa5s/Programa5s.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Programa5s/Programa5s.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWE1c1xQcm9ncmFtYTVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Programa5s/TablaPrograma5s.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Programa5s/TablaPrograma5s.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbWE1c1xUYWJsYVByb2dyYW1hNXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Promosiones/agregarpromociones.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Promosiones/agregarpromociones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9zaW9uZXNcYWdyZWdhcnByb21vY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Promosiones/Promociones.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Promosiones/Promociones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9zaW9uZXNcUHJvbW9jaW9uZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Reponerclase/agregarreponerclases.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Reponerclase/agregarreponerclases.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25lcmNsYXNlXGFncmVnYXJyZXBvbmVyY2xhc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Reponerclase/Reponerclases.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Reponerclase/Reponerclases.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25lcmNsYXNlXFJlcG9uZXJjbGFzZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Shared/Error.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Usuarios/agregarusuario1.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Usuarios/agregarusuario1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcYWdyZWdhcnVzdWFyaW8xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Usuarios/Usuario.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Usuarios/Usuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcVXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/_ViewImports.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/_ViewStart.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repos/Residencia/Emai/emai/Views/Shared/_Layout.cshtml]
+[C:/repos/Residencia/Resi2024/AvelinoMadrid/Emai/emai/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-37ybrpbh2n
