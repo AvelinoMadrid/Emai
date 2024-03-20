@@ -39,7 +39,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=19marzo;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -198,7 +198,7 @@ namespace EMAI.Datos
                 Tag = (string)reader["Tag"],
                 FechaInscripcion = (string)reader["FechaInscripcion"],
                 NoDiaClases = (int)reader["NoDiaClases"],
-               FechaInicioClase = (string)reader["FechaInicioClase"],
+                FechaInicioClase = (string)reader["FechaInicioClase"],
                 NombreCompleto = (string)reader["NombreCompleto"],
                 Edad = (int)reader["Edad"],
                 FechaNacimiento = (string)reader["FechaNacimiento"],
@@ -368,7 +368,7 @@ namespace EMAI.Datos
             //https://codigowolf.blogspot.com/2020/04/parametros-de-salida-c-y-sql-server.html difere3wnciar para hacerla mas corta posible
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                await sql.OpenAsync();  
+                await sql.OpenAsync();
 
                 using (SqlCommand cmd = new SqlCommand("EliminarAlumnoTotalV1", sql))
                 {
@@ -388,7 +388,7 @@ namespace EMAI.Datos
                         response = true;
                     }
                 }
-            } 
+            }
 
             return response;
         }
@@ -938,6 +938,7 @@ namespace EMAI.Datos
                 }
             }
         }
+
 
 
 

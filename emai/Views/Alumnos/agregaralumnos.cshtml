@@ -6,16 +6,12 @@
     ViewData["Title"] = "Agregar Alumnos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-
-
 }
-
-
 
 <div class="col-md-12">
     <div class="card card-default">
         <div class="card-header">
-            <h3 class="card-title">Registrar Alumno</h3>
+            @ViewBag.Accion
         </div>
         <div class="card-body p-0" ng-controller="myCtrl">
             <div class="bs-stepper">
@@ -56,7 +52,7 @@
                         </button>
                     </div>
                     <div class="line"></div>
-                    <div class="step" data-target="#pagos-part">
+                    <div class="step" data-target="#pagos-part" id="pagos-partV1">
                         <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
                             <span class="bs-stepper-circle">6</span>
                             <span class="bs-stepper-label">Pagar</span>
@@ -64,13 +60,13 @@
                     </div>
                 </div>
                 <div class="bs-stepper-content">
-                    <form asp-action="agregarNuevoAlumno" asp-controller="Alumnos" method="post" name="formAddAlumno" class="needs-validation" novalidate>
+                    <form asp-action="GuardarCambiosV1" asp-controller="Alumnos" method="post" name="formAddAlumno" class="needs-validation" novalidate>
 
                         <!-- your steps content here -->
                         <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
 
                             <div class="row">
-
+                                <input asp-for="IdAlumno" type="hidden" id="IdAlumno" />
                                 @*FechaInscripcion*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="FechaInscripcion">Fecha Inscripción</label>
@@ -106,7 +102,7 @@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="NoDiaClases">No. de Día de Clases</label>
                                     <select class="form-control form-control-sa" asp-for="NoDiaClases" id="NoDiaClases" name="NoDiaClases" required>
-                                        <option value="">Seleccionar...</option>
+                                        <option value="" disabled>Seleccionar...</option>
                                         <option value="1">1 día</option>
                                         <option value="2">2 días</option>
                                         <option value="3">3 días</option>
@@ -123,6 +119,7 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
+
                                 <script>
                                     var fecha = new Date();
                                     var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
@@ -136,15 +133,13 @@
                                         var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
 
                                         fechaInicio.value = fechaFormateada.Date.toISOString();
-
-                                        //console.log(fechaInicio.value);
                                     });
                                 </script>
 
                                 @*Instumento Base*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="SeleccionarClase1">Instrumento Base</label>
-                                    <select class="form-control form-control-sa" onchange="cambiar_clases_horarios()" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
+                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
                                         <option value="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
@@ -169,32 +164,20 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
-                                @*                                 <script>
 
-                                document.addEventListener('DOMContentLoaded', function () {
-                                var elementoId = document.getElementById("NoDiaClases").value;
-                                elementoId.addEventListener('change', function () {
-                                var valorCoount = elementoId.value;
-                                console.log(valorCoount);
-                                })
-                                })
-                                </script> *@
-
-                                @*Dia de clase*@
-                                @*                                  <div class="col-md-3 form-group">
-                                <label class="form-label" for="dia">Dia y Hora de clase</label>
-                                <div class="input-group">
-                                <input type="text" class="form-control form-control-sa" asp-for="DiaAndHoraClase" id="DiaAndHoraClase" name="DiaAndHoraClase" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Horario Base</label>
+                                    <input type="text" class="form-control disabled form-control-sa" asp-for="DiaAndHoraClase" id="DiaAndHoraClaseBase" required />
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-                                </div> *@
+
 
                                 @*Instrumento Opcional*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="SeleccionarClase2">Instrumento Opcional</label>
-                                    <select class="form-control form-control-sa" onchange="ShowSelectedV1();" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="SeleccionarClase2" required>
-                                        <option value="">Seleccionar...</option>
+                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="SeleccionarClase2" required>
+                                        <option value="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
                                             foreach (var listUnique in Model.ListClasesUnique.Data)
@@ -217,6 +200,14 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Horario Opcional</label>
+                                    <input type="text" class="form-control disabled form-control-sa" asp-for="DiaAndHoraClaseOpcional" id="DiaAndHoraClaseBaseOpcional" required />
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
+                                </div>
+
                                 @*Nombre Completo*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="NombreCompleto">Nombre Completo del Alumno</label>
@@ -685,7 +676,7 @@
                         </div>
                         <div id="pagos-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
 
-                            <div class="row">
+                            <div class="row" id="row-condiccion">
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Folio</label>
 
@@ -759,24 +750,18 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Horario</label>
-                                    <input type="text" class="form-control disabled form-control-sa" name="HorarioSelectV1" id="HorarioSelectV1" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+
+
+
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Instrumento Opcional</label>
-                                    <input type="text" disabled class="form-control form-control-sa" required name="IntrumentoBaseV2" id="IntrumentoBaseV2" />
+                                    <input type="text" disabled class="form-control form-control-sa" name="IntrumentoBaseV2" id="IntrumentoBaseV2" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
-                                <div class="col-md-6 form-group">
-                                    <label class="form-label">Horario</label>
-                                    <input type="text" class="form-control disabled form-control-sa" name="HorarioSelectV2" id="HorarioSelectV2" required />
-                                    <div class="valid-feedback">Válido.</div>
-                                    <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
+
+
+
 
                                 <script>
                                     //Podemos no repetir esos y mandalor en funciones ShowSelected(x1,y1)
@@ -786,12 +771,7 @@
                                         var selectBase = document.getElementById("IntrumentoBaseV1");
                                         selectBase.value = select;
                                     }
-                                    function ShowSelectedV1() {
-                                        var cod = document.getElementById("SeleccionarClase2");
-                                        var select = cod.options[cod.selectedIndex].text;
-                                        var selectBase = document.getElementById("IntrumentoBaseV2");
-                                        selectBase.value = select;
-                                    }
+
 
                                     document.getElementById("DiaAndHoraClase").addEventListener('input', function () {
                                         var valor = this.value;
@@ -842,27 +822,6 @@
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
 
-                                @* <div class="col-md-3 form-group">
-                                <label class="form-label">Costo</label>
-                                <input type="number" class="form-control form-control-sa" asp-for="Costo" id="Costo" name="Costo" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
-
-                                <div class="col-md-3 form-group">
-                                <label class="form-label">SubTotal</label>
-                                <input type="number" class="form-control form-control-sa" asp-for="Subtotal" id="Subtotal" name="Subtotal" required />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div>
-
-                                <div class="col-md-3 form-group">
-                                <label class="form-label">Iva</label>
-                                <input type="number" class="form-control form-control-sa" asp-for="IVA" id="IVA" name="IVA" value="16" />
-                                <div class="valid-feedback">Válido.</div>
-                                <div class="invalid-feedback">Por favor rellene este campo..</div>
-                                </div> *@
-
                                 <div class="col-md-3 form-group">
                                     <label class="form-label">Total</label>
                                     <input type="number" class="form-control form-control-sa" asp-for="Total" id="Total" name="Total" required />
@@ -895,16 +854,48 @@
 
 @section Scripts {
     <script>
+        // //proceso para acomplar la desactivar de botton de idAlumno cuando es 0 y !xhtml10f
+        // var inputValue = document.getElementById("IdAlumno").value;
+        // console.log("CODIGO ES "+inputValue);
+
+        //OBTENER EL IDALUMNO DE FORMA ASINCRINO
+        async function obtenerIdAlumno() {
+            return new Promise(resolve => {
+                const inputIdAlumno = document.getElementById("IdAlumno").value;
+                resolve(inputIdAlumno);
+            });
+        }
+
+        async function getProccessAndExecute() {
+            const valorId = await obtenerIdAlumno();
+            var idSeccionForm = document.getElementById('pagos-part');
+            var idSeccionFormV1 = document.getElementById('pagos-partV1');
+
+
+            if (valorId != 0) {
+                //quiere decir editar
+                idSeccionForm.style.display = "none";
+                idSeccionFormV1.style.display = "none";
+            }
+        }
+
+        getProccessAndExecute();
+
 
         var selectDay = document.getElementById("NoDiaClases");
         var selectPorcentaje = document.getElementById("IdPromosion");
         var mensualidadInput = document.getElementById("Mensualidad");
+        var DiaAndHoraClaseBase = document.getElementById('DiaAndHoraClaseBase');
+        var DiaAndHoraClaseOpcional = document.getElementById('DiaAndHoraClaseBaseOpcional');
+        var selectOpcionales = document.getElementById("SeleccionarClase2");
+
         var select1Emisor = "SeleccionarClase1";
         var select2Emisor = "SeleccionarClase2";
         var selectDestino = "tomarClases1";
         var select2Destino = "tomarClases2";
         var porcentaje = 0;
-  
+
+
 
 
         selectPorcentaje.addEventListener("change", function () {
@@ -914,31 +905,24 @@
             calculoActualizardo();
         });
 
-             function calculoActualizardo(){
-                    var pagoMensual = parseFloat(mensualidadInput.value);
-                    var porcentajeV = porcentaje;
-                    var pagoEsMensual = pagoMensual - (calcularPago(porcentajeV, pagoMensual));
-                    mensualidadInput.value = pagoEsMensual.toFixed(2);
-                    calcularTotales();
-            }
-        mensualidadInput.addEventListener('blur', function(){
+        function calculoActualizardo() {
+            var pagoMensual = parseFloat(mensualidadInput.value);
+            var porcentajeV = porcentaje;
+            var pagoEsMensual = pagoMensual - (calcularPago(porcentajeV, pagoMensual));
+            mensualidadInput.value = pagoEsMensual.toFixed(2);
+            calcularTotales();
+        }
+        mensualidadInput.addEventListener('blur', function () {
             calculoActualizardo();
         });
-  
+
         $(document).ready(function () {
             cargaListHoario(select1Emisor, selectDestino);
             cargaListHoario(select2Emisor, select2Destino);
         });
 
-        //https://www.youtube.com/watch?v=wrayuZuBgYA&ab_channel=CodigoEstudiante
-        //https://www.somostechies.com/combos-en-cascada-para-asp-net-mvc/
-        //https://kinsta.com/es/base-de-conocimiento/javascript-peticion-http/
-        //https://es.javascript.info/array#acerca-de-length
-        //https://www.rafaelacosta.net/Blog/2019/12/6/ajax-f%c3%a1cil-con-ajaxactionlink-en-aspnet-mvc-5?AspxAutoDetectCookieSupport=1
-        //para no repetir dos veces esyte codigo ncompertilo en fguincion en parametros
-
-
         function cargaListHoario(typeSelecccionClass, elegirDestinoSelect) {
+
             var IdClaseValue = $(`#${typeSelecccionClass} option:selected`).val();
             $.ajax({
                 url: '@Url.Action("SelectListClasesHorarioV1Nombre", "Alumnos")',
@@ -956,7 +940,7 @@
                         $(`#${elegirDestinoSelect}`).empty();
 
                         $(`#${elegirDestinoSelect}`).append(
-                            $("<option>").attr("value", "").text("Seleccionar...")
+                            $("<option>").attr("value", " ").text("Seleccionar...")
                         );
 
                         while (i < tam) {
@@ -981,7 +965,33 @@
         selectDay.addEventListener("change", function () {
 
             var varDaySeleccion = selectDay.value;
+            console.log("Select de dioa es " + varDaySeleccion);
         });
+
+        var selectOpcionalesV1 = 0;
+
+        selectOpcionales.addEventListener("change", function () {
+            selectOpcionalesV1 = this.value;
+            //console.log("Esrata Vaciao " + selectOpcionalesV1);
+        });
+
+        $('#tomarClases2').on("change", function () {
+
+            var selectOp = selectOpcionalesV1;
+            var selectOne = this.value;
+
+            console.log("Vairable se tome en " + selectOne);
+            console.log("Que  tiene " + selectOp);
+            if (selectOp == '0') {
+                DiaAndHoraClaseOpcional.value = "{}";
+                //console.log("Esrata Vaciao ");
+
+            } else {
+                DiaAndHoraClaseOpcional.value = "{" + selectOne + "}";
+            }
+
+        });
+
 
         $('#tomarClases1').on("change", function () {
 
@@ -1003,6 +1013,8 @@
                     var selectValue = selectedOptions[i].value;
                     valoresSeleccionado.push(selectValue);
                 }
+                DiaAndHoraClaseBase.value = JSON.stringify("{ " + valoresSeleccionado.join(" , ") + " }");
+
 
                 //console.log("Valor seleccionado en el primer select: " + selectDayV1);
 
@@ -1028,9 +1040,10 @@
         });
 
 
-        
 
-     
+
+
+
         $(document).ready(function () {
 
             $("#Inscripcion").keyup(function () {

@@ -8,7 +8,7 @@ namespace emai.Servicios.Commons
         public List<Generica>? Data { get; set; } ///AlumModel
         public string? Message { get; set; }
 
-        
-      //  public BaseResponseV1<AlumnoModel> ListarAllAlumnos { get; set; }
+
+        //  public BaseResponseV1<AlumnoModel> ListarAllAlumnos { get; set; }
     }
 }

@@ -12,13 +12,94 @@ namespace emai.Servicios
     public class AlumnosServicio_Api : IServicioAlumnos_Api
     {
         private static string _baseurl;
-        
+
         public AlumnosServicio_Api()
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
 
             _baseurl = builder.GetSection("ApiSetting:baseUrl").Value;
 
+        }
+
+        public async Task<BaseResponseV2<Alumnos>> ObtenerAlumnoById(int IdAlumno)
+        {
+            var response = new BaseResponseV2<Alumnos>();
+
+            try
+            {
+                using (var cliente1 = new HttpClient())
+                {
+                    cliente1.BaseAddress = new Uri(_baseurl);
+
+                    var responseHttp = await cliente1.GetAsync($"api/Alumnos/ListarById/{IdAlumno}");
+
+                    if (responseHttp.IsSuccessStatusCode)
+                    {
+                        var json_respuesta = await responseHttp.Content.ReadAsStringAsync();
+                        var destinoData = JsonConvert.DeserializeObject<BaseResponseV2<AlumnoResponseById>>(json_respuesta);
+
+                        var alumno = new Alumnos();
+                        alumno.asingarResponseV1(destinoData.Data);
+
+
+                        response.IsSuccess = true;
+                        response.Data = alumno;
+                        response.Message = StaticVariable.MESSAGE_QUERY;
+                    }
+                    else
+                    {
+                        response.IsSuccess = false;
+                        response.Message = StaticVariable.MESSAGE_QUERY_EMPATY;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = $"Error al Buscar Alumno {ex.Message}";
+            }
+
+            return response;
+        }
+        public async Task<BaseResponseV2<bool>> UpdateAlumnoById(int IdAlumno, Alumnos entity)
+        {
+            var dataFinal = new BaseResponseV2<bool>();
+
+            try
+            {
+                var json = JsonConvert.SerializeObject(entity);
+                var requestContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+                using var client = new HttpClient();
+
+                client.DefaultRequestHeaders.Accept.Clear();
+
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/Update/" + IdAlumno);
+
+                var response = await client.PutAsync(requestUrl, requestContent).ConfigureAwait(false);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var resp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    dataFinal = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(resp);
+                }
+                else
+                {
+                    dataFinal.IsSuccess = false;
+                    dataFinal.Message = $"Error al Editar Alumno {response.StatusCode}";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                dataFinal.IsSuccess = false;
+                dataFinal.Message = $"Error al Editar Alumno {ex.Message}";
+            }
+
+            return dataFinal;
         }
         public async Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity)
         {
@@ -64,31 +145,33 @@ namespace emai.Servicios
         {
             var response = new BaseResponseV1<Promosiones>();
 
-            using(HttpClient httpSelectPromocion = new HttpClient()) {
+            using (HttpClient httpSelectPromocion = new HttpClient())
+            {
                 httpSelectPromocion.BaseAddress = new Uri(_baseurl);
                 var httpResponse = await httpSelectPromocion.GetAsync("api/Promosiones/GetSelectPromociones/");
 
-                if (httpResponse.IsSuccessStatusCode) { 
+                if (httpResponse.IsSuccessStatusCode)
+                {
 
                     var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
                     var responseData = JsonConvert.DeserializeObject<BaseResponseV1<Promosiones>>(jsonResponse);
 
-                    if(responseData != null)
+                    if (responseData != null)
                     {
                         response.IsSuccess = responseData.IsSuccess;
-                        response.Data= responseData.Data;
-                        response.Message= responseData.Message;
+                        response.Data = responseData.Data;
+                        response.Message = responseData.Message;
                     }
                     else
                     {
-                        response.IsSuccess= false;
+                        response.IsSuccess = false;
                         response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
                     }
                 }
                 else
                 {
-                    response.IsSuccess= false;
-                    response.Message= StaticVariable.MESSAGE_NOT_ACCEDER;
+                    response.IsSuccess = false;
+                    response.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
                 }
             }
             return response;
@@ -131,7 +214,8 @@ namespace emai.Servicios
 
                 }
 
-                }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Mydata.IsSuccess = false;
                 Mydata.Message = $"Error al Generar Lista de Clase : {ex.Message}";
@@ -195,12 +279,12 @@ namespace emai.Servicios
                     {
                         MyData.IsSuccess = responseData.IsSuccess;
                         MyData.Data = responseData.Data;
-                        MyData.Message= responseData.Message;
+                        MyData.Message = responseData.Message;
                     }
                     else
                     {
-                            MyData.IsSuccess  = false;
-                            MyData.Message= StaticVariable.MESSAGE_NOT_ACCEDER;
+                        MyData.IsSuccess = false;
+                        MyData.Message = StaticVariable.MESSAGE_NOT_ACCEDER;
                     }
                 }
                 else
@@ -351,13 +435,13 @@ namespace emai.Servicios
             using (var httpClient = new HttpClient())
             {
                 //httpClient.BaseAddress = new Uri(_baseurl);
-                   
+
                 var httpResponse = await httpClient.DeleteAsync($"https://localhost:7265/api/Alumnos/DeleteAlumno/{IdAlumno}");
-                
+
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    
+
                     var jsonResponse = await httpResponse.Content.ReadAsStringAsync();
 
                     var responseData = JsonConvert.DeserializeObject<BaseResponseV2<bool>>(jsonResponse);
@@ -449,7 +533,7 @@ namespace emai.Servicios
                 }
             }
         }
-     
+
         public async Task<List<ClasesResponse>> ListarClasesSelect()
         {
             List<ClasesResponse> lista = new List<ClasesResponse>();
@@ -469,7 +553,7 @@ namespace emai.Servicios
                     var claseoriginal = JsonConvert.DeserializeObject<List<Clase>>(jsonRespuesta);
 
                     //mapearla 
-                    foreach(var claseV in claseoriginal)
+                    foreach (var claseV in claseoriginal)
                     {
                         ClasesResponse classFormateada = new ClasesResponse
                         {
@@ -498,7 +582,7 @@ namespace emai.Servicios
 
             using (var httpClient = new HttpClient())
             {
-              
+
                 var response = await httpClient.GetAsync("https://localhost:7265/api/Alumnos/Folio/GenerarFolio");
 
                 if (response.IsSuccessStatusCode)

@@ -41,7 +41,7 @@ namespace EMAI.API.Controllers
         [HttpGet("SelectListClasesHorarioV1/{IdClase}")]
         public async Task<ActionResult<List<SelectClasesHorarioResponse>>> SelectClasssHorario(int IdClase)
         {
-            var response= await _repository.SelectListClaseHorarioV1(IdClase);
+            var response = await _repository.SelectListClaseHorarioV1(IdClase);
             return Ok(response);
         }
 
@@ -66,8 +66,8 @@ namespace EMAI.API.Controllers
         [HttpGet("ListarById/{IdAlumno}")]
         public async Task<ActionResult<AlumnoResponseV1>> GetAlumnoById(int IdAlumno)
         {
-           var response = await _repository.GetAlumnosByIdV1(IdAlumno);
-           return Ok(response);
+            var response = await _repository.GetAlumnosByIdV1(IdAlumno);
+            return Ok(response);
         }
 
 

@@ -8,6 +8,6 @@ namespace EMAI.DTOS.Dtos.Response
 {
     public class AlumnoResponse
     {
-       
+
     }
 }

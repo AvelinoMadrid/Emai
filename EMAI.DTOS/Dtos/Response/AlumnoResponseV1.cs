@@ -55,3 +55,4 @@ namespace EMAI.DTOS.Dtos.Response
         public string StringActivo { get; set; }
     }
 }
+  

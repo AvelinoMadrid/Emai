@@ -200,7 +200,7 @@ namespace EMAI.LND
             try
             {
                 using var db = AppRepositoryFactory.GetAppRepository();
-                var dataList = await db.SelectClasesHorario(nameprocedure,idClase);
+                var dataList = await db.SelectClasesHorario(nameprocedure, idClase);
 
                 if (dataList != null)
                 {
@@ -218,8 +218,8 @@ namespace EMAI.LND
             }
             catch (Exception ex)
             {
-                response.IsSuccess= false;
-                response.Message= ex.Message;
+                response.IsSuccess = false;
+                response.Message = ex.Message;
             }
             return response;
         }
@@ -268,21 +268,21 @@ namespace EMAI.LND
                     response.Message = StaticVariable.MESSAGE_FALLED;
                 }
             }
-             else
-                {
+            else
+            {
                 response.IsSuccess = false;
                 response.Message = StaticVariable.MESSAGE_FALLED;
-                }
+            }
             return response;
         }
 
 
         public async Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno)
         {
-              var response = new BaseResponse<bool>();
-              using var db = AppRepositoryFactory.GetAppRepository();
-            
-              var alumnoById = await GetAlumnosByIdV1(IdAlumno);
+            var response = new BaseResponse<bool>();
+            using var db = AppRepositoryFactory.GetAppRepository();
+
+            var alumnoById = await GetAlumnosByIdV1(IdAlumno);
 
             if (alumnoById != null)
             {
@@ -291,12 +291,12 @@ namespace EMAI.LND
                 if (response.Data)
                 {
                     response.IsSuccess = true;
-                    response.Message= StaticVariable.MESSAGE_DELETE;
+                    response.Message = StaticVariable.MESSAGE_DELETE;
                 }
                 else
                 {
                     response.IsSuccess = false;
-                    response.Message= StaticVariable.MESSAGE_FALLED;
+                    response.Message = StaticVariable.MESSAGE_FALLED;
                 }
 
             }
@@ -330,15 +330,13 @@ namespace EMAI.LND
             return response;
         }
 
-  
 
 
 
 
-      
+
+
     }
 
 }
-
-
 

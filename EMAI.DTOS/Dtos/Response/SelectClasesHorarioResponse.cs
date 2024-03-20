@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EMAI.DTOS.Dtos.Response
 {
-    public  class SelectClasesHorarioResponse
+    public class SelectClasesHorarioResponse
     {
         public int IdClase { get; set; }
         public int IdHorario { get; set; }

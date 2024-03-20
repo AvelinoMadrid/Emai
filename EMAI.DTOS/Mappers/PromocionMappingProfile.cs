@@ -13,11 +13,10 @@ namespace EMAI.DTOS.Mappers
             CreateMap<PromocionesRequest, PromocionesModelV1>().ReverseMap();
             CreateMap<PromocionesModelV1, PromocionesRequest>().ReverseMap();
             CreateMap<PromocionesModelV1, PromocionResponseV1>().
-                       ForMember(x => x.statePromocion, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo==1) ? "Activo" : "InaActivo")).ReverseMap();
+                       ForMember(x => x.statePromocion, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo == 1) ? "Activo" : "InaActivo")).ReverseMap();
 
             CreateMap<PromocionesModelV1, PromocionResponseSelectV1>().ReverseMap();
 
         }
     }
 }
-                                                                                                                                                                            

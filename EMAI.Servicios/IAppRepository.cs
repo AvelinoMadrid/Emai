@@ -39,7 +39,7 @@ namespace EMAI.Servicios
         Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request);
         Task<ListFolioResponse[]> GetListFolio();
         Task<List<InsertarAlumnoModelV1>> GetListAlumnosTotalV1();
-        Task<List<SelectClasesHorarioResponse>> SelectClasesHorario(string nameProcedure,int idClase);
+        Task<List<SelectClasesHorarioResponse>> SelectClasesHorario(string nameProcedure, int idClase);
         Task<InsertarAlumnoModelV1> GetListAlumnoByIdV1(int IdAlumno);
         Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> ReactivarByIdAlumnoV1(int IdAlumno);
