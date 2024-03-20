@@ -63,6 +63,8 @@ builder.Services.AddScoped(typeof(IAdicionalesOperaciones), f => OperationsFacto
 builder.Services.AddScoped(typeof(ILibrosOperaciones), f => OperationsFactory.ObtenerLibrosOperaciones());
 builder.Services.AddScoped(typeof(IHorariosVeranoOperaciones), f => OperationsFactory.ObtenerHorariosVeranoOperaciones());
 builder.Services.AddScoped(typeof(IEventosOperaciones), f => OperationsFactory.ObtenerEventosOperaciones());
+/*ASIGNACION DE MAESTRO*/
+builder.Services.AddScoped(typeof(IAsignacionMaestroOperaciones), f => OperationsFactory.ObtenerAsignacionMaestroOperaciones());
 builder.Services.AddScoped(typeof(IAsignacionClaseOperaciones), f => OperationsFactory.ObtenerAsignacionClaseOperaciones());
 builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
 builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());

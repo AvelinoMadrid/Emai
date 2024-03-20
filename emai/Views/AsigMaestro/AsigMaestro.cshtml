@@ -1,0 +1,72 @@
+@model List<AsigMaestro>
+
+@{
+    ViewData["Title"] = "Asignación de Maestro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Asignación de maestros</h3>
+                        <a asp-action="agregarasigMaestro" asp-controller="AsigMaestro" asp-route-idClase="0" class="btn btn-dark btn-sm" style="float: right !important">Nueva Asignacion </a>
+
+                    </div>
+                    <!--<a href="@Url.Action("AsignarAsigMaestro", "AsigMaestro")" class="btn btn-dark btn-sm" style="float: right !important">Asginación </a>
+                    /.card-header   -->
+                    <div class="card-body table-responsive">
+                        <table id="datatable" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre del maestro</th>
+                                    <th>Día y Hora</th>
+                                    <th>Clases</th>
+                                    <th>Editar / Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.AsgnId</td>
+                                        <td>@item.NombreMaestro </td>
+                                        <td>@item.Horario</td>
+                                        <td>@item.NombreClase</td>
+
+                                        <td>
+                                            <a asp-action="agregarasigMaestro" asp-controller="AsigMaestro" asp-route-AsgnId="@item.AsgnId" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">Editar </a>
+                                            <a asp-action="EliminarAsignacion" asp-controller="AsigMaestro" asp-route-AsgnId="@item.AsgnId" class="btn btn-danger btn-sm" style="width:100%;">Eliminar </a>
+                                            <input type="hidden" name="del" id="del" />
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<script>
+    function confirmar(){
+        if (confirm("Quieres eliminar el registro?")) {
+            document.getElementById("del").value = "sí";
+        else{
+                document.getElementById("del").vale = "No";
+        }
+    }
+</script>

@@ -105,6 +105,11 @@ namespace EMAI.LND
             return new AsignacionClaseOperaciones();
         }
 
+        public static IAsignacionMaestroOperaciones ObtenerAsignacionMaestroOperaciones()
+        {
+            return new AsignacionMaestroOperaciones();
+        }
+
         public static IPrograma5sOperaciones ObtenerPrograma5sOperaciones()
         {
             return new Programa5sOperaciones();

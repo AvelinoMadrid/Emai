@@ -250,6 +250,20 @@ namespace EMAI.Servicios
         Task<bool> EliminarAsignacion(int AsgnId);
         #endregion
 
+        #region "AsigancionMaestro"
+
+        Task<List<AsigMaestroModel>> GetAsigMaestro1();
+
+        Task<AsigMaestroId> GetAsigMaestroId(int AsgnId);
+
+        Task<bool> AsignarMaestro(AsigMaestro1Asignar value);
+
+        Task<bool> EliminarAsignacionMaestro(int AsgnId);
+
+
+        Task<bool> ActualizarAsigMaestro(int AsgnId, int IdMaestro, int IdClase, int IdHorario);
+        #endregion
+
         #region "Programa5s"
 
         Task<List<Programa5sModel>> GetPrograma5s();

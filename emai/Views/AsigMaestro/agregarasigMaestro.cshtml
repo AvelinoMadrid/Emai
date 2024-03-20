@@ -1,0 +1,88 @@
+@model AsigMaestro
+
+@{
+    ViewData["Title"] = "Asignación de Maestros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="card">
+    <div class="card-header">
+        Asignación de maestros
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" ng-controller="myCtrl">
+
+        <form asp-action="GuardarCambios" asp-controller="AsigMaestro" method="post" class="needs-validation" novalidate>
+
+            <input asp-for="AsgnId" type="hidden" />
+
+            <div class="row">
+
+                <div class="col-md-4 form-group">
+
+                    <div class="form-group">
+                        <label class="form-label">Nombre del maestro</label>
+                        <select class="form-control select2" asp-for="IdMaestro" required>
+                            <option selected disabled value="">Escoger un maestro</option>
+                            @foreach (var maestro in Model.MaestrosDisponibles)
+                            {
+                                <option value="@maestro.IdMaestro">@maestro.Nombre</option>
+                            }
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4 form-group" data-select2-id="43">
+                    <label class="form-label">Día y Hora</label>
+                    <select class="form-control select2" asp-for="IdHorario" required>
+                        <option selected disabled value="">Escoger Horario</option>
+                        @foreach (var horario in Model.HorariosDisponibles)
+                        {
+                            <option value="@horario.IdHorario">@horario.Dia</option>
+                        }
+                    </select>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-4 form-group">
+                    <div class="form-group">
+                        <label class="form-label">Nombre de la clase</label>
+                        <select class="form-control select2" asp-for="IdClase" required>
+                            <option selected disabled value="">Escoger Clase</option>
+                            @foreach (var clase in Model.ClasesDisponibles)
+                            {
+                                <option value="@clase.idClase">@clase.Nombre</option>
+                            }
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+                </div>
+                <div class="col-md-6 form-group">
+                    <a asp-action="AsigMaestro" asp-controller="AsigMaestro" asp-route-idClase="0" class="btn btn-warning btn-sm" style="width:100% !important">Cancelar</a>
+                </div>              
+
+
+            </div>
+
+
+        </form>
+
+        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
+
+    </div>
+</div>
+

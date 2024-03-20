@@ -3918,6 +3918,101 @@ namespace EMAI.Datos
         }
         #endregion
 
+        #region "Seccion -----> AsignacionMaestro"
+        /*Mostrar todo*/
+
+        public async Task<List<AsigMaestroModel>> GetAsigMaestro1()
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_ObtenerAsigMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<AsigMaestroModel>(); //1
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToAsigMaestro1(reader));//2
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private AsigMaestroModel MapToAsigMaestro1(SqlDataReader reader)
+        {
+            return new AsigMaestroModel()
+            {
+
+                AsgnId = (int)reader["AsgnId"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                IdHorario = (int)reader["IdHorario"]
+            };
+        }
+
+
+        public async Task<bool> AsignarMaestro(AsigMaestro1Asignar value)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("AsignarMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@MaestroId", value.IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@ClaseId", value.IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@HorarioId", value.IdHorario));
+
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+        /*ELIMINAR ASIGNACION MAESTRO*/
+        public async Task<bool> EliminarAsignacionMaestro(int AsgnId)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("EliminarAsigMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgMaestro", AsgnId));
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+        }
+        /*ACTUALIZAR ASIGNACION DE MAESTRO*/
+        public async Task<bool> ActualizarAsigMaestro(int AsgnId, int IdMaestro, int IdClase, int IdHorario)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_AsigMaestroUpdate", sql))
+                {
+
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgnId", AsgnId));
+                    cmd.Parameters.Add(new SqlParameter("MaestroId", IdMaestro));
+                    cmd.Parameters.Add(new SqlParameter("@ClaseId", IdClase));
+                    cmd.Parameters.Add(new SqlParameter("@HorarioId", IdHorario));
+
+                    await sql.OpenAsync();
+                    await cmd.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+
+        }
+        #endregion "Seccion --------->Asignacion de maestro"
+
         #region "Seccion ---> Programa5s"
 
         public async Task<List<Programa5sModel>> GetPrograma5s()
@@ -4184,6 +4279,11 @@ namespace EMAI.Datos
         public void Dispose()
         {
             GC.Collect();
+        }
+
+        public Task<AsigMaestroId> GetAsigMaestroId(int AsgnId)
+        {
+            throw new NotImplementedException();
         }
 
 
