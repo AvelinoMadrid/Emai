@@ -3920,7 +3920,42 @@ namespace EMAI.Datos
 
         #region "Seccion -----> AsignacionMaestro"
         /*Mostrar todo*/
+        
+        public async Task<AsigMaestroId> GetAsigMaestroId(int IdEvento)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("BuscarPorIDAsigMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgnId", IdEvento));
+                    AsigMaestroId response = null;//3
+                    await sql.OpenAsync();
 
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToAsigMaestroId(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private AsigMaestroId MapToAsigMaestroId(SqlDataReader reader)
+        {
+            return new AsigMaestroId()
+            {
+
+                AsgnId = (int)reader["AsgnId"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                IdHorario = (int)reader["IdHorario"]
+            };
+        }
         public async Task<List<AsigMaestroModel>> GetAsigMaestro1()
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
@@ -4279,11 +4314,6 @@ namespace EMAI.Datos
         public void Dispose()
         {
             GC.Collect();
-        }
-
-        public Task<AsigMaestroId> GetAsigMaestroId(int AsgnId)
-        {
-            throw new NotImplementedException();
         }
 
 
