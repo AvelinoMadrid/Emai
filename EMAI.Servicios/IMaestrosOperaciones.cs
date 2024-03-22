@@ -14,7 +14,7 @@ namespace EMAI.Servicios
         Task<MaestrosIDModel> GetMaestrosID(int IdMaestro);
         Task<bool> InsertarMaestro(MaestrosInsertarModel value);
 
-        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora);
+        Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora, string Area);
 
         Task<bool> EliminarMaestro(int IdMaestro);
     }

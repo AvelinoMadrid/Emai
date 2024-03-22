@@ -22,6 +22,8 @@ namespace EMAI.Comun.Models
         public decimal PagoSemanal { get; set; }
         public decimal PagoHora { get; set; }
 
+        public string Area { get; set; }
+
 
 
     }
@@ -44,6 +46,8 @@ namespace EMAI.Comun.Models
 
         public decimal PagoHora { get; set; }
 
+        public string Area { get; set; }
+
     }
 
     public class MaestrosInsertarModel
@@ -62,6 +66,8 @@ namespace EMAI.Comun.Models
         public decimal PagoSemanal { get; set; }
 
         public decimal PagoHora { get; set; }
+
+        public string Area { get; set; }
 
     }
 
@@ -82,6 +88,8 @@ namespace EMAI.Comun.Models
 
         public decimal PagoHora { get; set; }
 
+        public string Area { get; set; }
+
 
     }
 
@@ -101,6 +109,8 @@ namespace EMAI.Comun.Models
         public decimal PagoSemanal { get; set; }
 
         public decimal PagoHora { get; set; }
+
+        public string Area { get; set; }
 
     }
 }

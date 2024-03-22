@@ -20,6 +20,7 @@ namespace emai.Models
         public decimal PagoSemanal { get; set; }
         public decimal PagoHora { get; set; }
         public string StatusSeleccionado { get; set; }
+        public string Area { get; set; }
         public List<Maestro> Lista { get; set; }
     }
 }
