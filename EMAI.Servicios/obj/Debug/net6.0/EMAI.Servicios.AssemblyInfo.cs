@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.Servicios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+144d9963eef51356173668f744078b8fd42567f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df070743bfcd9ba97261c2764b45273f51b707d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.Servicios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.Servicios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
