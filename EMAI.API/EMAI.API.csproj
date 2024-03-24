@@ -49,7 +49,9 @@
     <Folder Include="Dtos\" />
     <Folder Include="interfaces\" />
     <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\" />
     <Folder Include="Views\" />
+    <Folder Include="wwwroot\ProgramasImagenes\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

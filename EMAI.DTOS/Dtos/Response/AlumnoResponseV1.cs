@@ -51,7 +51,6 @@ namespace EMAI.DTOS.Dtos.Response
         public string DescuentoP { get; set; }
         public string Amables { get; set; }
         public string NombreRecepcionista { get; set; } = null!;
-
         public string StringActivo { get; set; }
     }
 }

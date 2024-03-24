@@ -1,26 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
+﻿using EMAI.Comun.Models;
+using EMAI.DTOS.Dtos.Response;
 //using EMAI.Comun.DTOs;
 //using EMAI.Comun.Models;
 //using EMAI.Entiddes;
 
-using System;
-using System.Collections.Generic;
 using EMAI.Servicios;
-using EMAI.Helpers;
-using EMAI.Comun.Models;
 using Microsoft.Data.SqlClient;
-using System.Diagnostics.Metrics;
-using static EMAI.Comun.Models.EventosIDModel;
 using Newtonsoft.Json.Linq;
-using EMAI.DTOS.Dtos.Request;
+using System.Data;
+using static EMAI.Comun.Models.EventosIDModel;
 using static EMAI.Comun.Models.RepClaseModel;
-using EMAI.DTOS.Dtos.Response;
 
 namespace EMAI.Datos
 {
@@ -39,7 +28,11 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
+<<<<<<< HEAD
+            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+=======
             EMAIConnection = "Data Source=.;initial Catalog=22marzo;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+>>>>>>> 7d5395469324ec40e25c4609e34868be52aa89a8
 
         }
 
@@ -3143,98 +3136,6 @@ namespace EMAI.Datos
             }
         }
 
-
-
-        //public async Task<PromosionesIDModel> GetPromosionesID(int IdColegiatura)
-        //{
-        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("BuscarPorIDPromosiones", sql))
-        //        {
-        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //            cmd.Parameters.Add(new SqlParameter("@IdPromosiones", IdColegiatura));
-        //            PromosionesIDModel response = null;//3
-        //            await sql.OpenAsync();
-
-        //            using (var reader = await cmd.ExecuteReaderAsync())
-        //            {
-        //                while (await reader.ReadAsync())
-        //                {
-        //                    response = MapToPromosionesId(reader);//3
-        //                }
-        //            }
-
-        //            return response;
-        //        }
-        //    }
-        //}
-
-        //private PromosionesIDModel MapToPromosionesId(SqlDataReader reader)
-        //{
-        //    return new PromosionesIDModel()
-        //    {
-
-        //        IdPromosion = (int)reader["IdPromosion"],
-        //        IdAlumno = (int)reader["IdAlumno"],
-        //        Porcentaje = (int)reader["Porcentaje"],
-        //        Fecha = (DateTime)reader["Fecha"],
-        //    };
-        //}
-
-        //public async Task<bool> InsertarPromosiones(PromosionesInsertarModel value)
-        //{
-        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("InsertarPromosiones", sql))
-        //        {
-        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //            cmd.Parameters.Add(new SqlParameter("@IdAlumno", value.IdAlumno));
-        //            cmd.Parameters.Add(new SqlParameter("@Porcentaje", value.Porcentaje));
-        //            cmd.Parameters.Add(new SqlParameter("@Fecha", value.Fecha));
-
-        //            await sql.OpenAsync();
-        //            await cmd.ExecuteNonQueryAsync();
-        //            return true;
-        //        }
-        //    }
-        //}
-
-        //public async Task<bool> ActualizarPromosiones(int IdPromosion, int IdAlumno, int Porcentaje, DateTime Fecha)
-        //{
-        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("ActualizarPromosiones", sql))
-        //        {
-        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //            cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
-        //            cmd.Parameters.Add(new SqlParameter("@IdAlumno", IdAlumno));
-        //            cmd.Parameters.Add(new SqlParameter("@Porcentaje", Porcentaje));
-        //            cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
-
-
-        //            await sql.OpenAsync();
-        //            await cmd.ExecuteNonQueryAsync();
-        //            return true;
-        //        }
-        //    }
-        //}
-
-        //public async Task<bool> EliminarPromosiones(int IdPromosion)
-        //{
-        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("EliminarPromosiones", sql))
-        //        {
-        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //            cmd.Parameters.Add(new SqlParameter("@IdPromosion", IdPromosion));
-        //            await sql.OpenAsync();
-        //            await cmd.ExecuteNonQueryAsync();
-        //            return true;
-        //        }
-        //    }
-        //}
-
-
         #endregion
 
         #region "Seccion ---> Usuarios"
@@ -4072,10 +3973,36 @@ namespace EMAI.Datos
                             response.Add(MapToPrograma5s(reader));//2
                         }
                     }
-
                     return response;
                 }
             }
+        }
+        public async Task<List<Programa5ModelV1>> GetAllPrograma5sV1(string nameProducedure) {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand(nameProducedure, sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        var response = new List<Programa5ModelV1>(); 
+                        await sql.OpenAsync();
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                response.Add(MapToPrograma5sById(reader));
+                            }
+                        }
+                        return response;
+                    }
+                }
+            }
+            catch (Exception ex) {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
+
         }
 
         private Programa5sModel MapToPrograma5s(SqlDataReader reader)
@@ -4091,8 +4018,36 @@ namespace EMAI.Datos
                 ImagenAntes = (string)reader["ImagenAntes"],
                 ImagenDespues = (string)reader["ImagenDespues"],
                 Detalles = (string)reader["Detalles"]
-
             };
+        }
+        public async Task<Programa5ModelV1> GetPrograma5sById(string nameProducedure, int IdPrograma)
+        {
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    using (SqlCommand cmd = new SqlCommand(nameProducedure, sql))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@IdPrograma", IdPrograma));
+                        Programa5ModelV1 response = null;
+                        await sql.OpenAsync();
+
+                        using(var reader= await cmd.ExecuteReaderAsync())
+                        {
+                            while(await reader.ReadAsync())
+                            {
+                                response = MapToPrograma5sById(reader);
+                            }
+                        }
+                        return response;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+            }
         }
 
         public async Task<Programa5sIdModel> GetPrograma5sId(int Id)
@@ -4136,6 +4091,64 @@ namespace EMAI.Datos
             };
         }
 
+        public async Task<bool> InsertarPrograma5sV1(string nameProducedure, Programa5ModelV1 entity)
+        {
+
+            bool respuestas = false;
+            int valor_Retrono;
+            try
+            {
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    await sql.OpenAsync();
+
+                    using (SqlTransaction trasaction = sql.BeginTransaction(System.Data.IsolationLevel.Serializable))
+                    {
+                        try
+                        {
+                            using (SqlCommand cmd = new SqlCommand(nameProducedure, sql, trasaction))
+                            {
+
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new SqlParameter("@Area", entity.Area));
+                                cmd.Parameters.Add(new SqlParameter("@Supervisor", entity.Supervisor));
+                                cmd.Parameters.Add(new SqlParameter("@ImagenAntes", entity.ImagenAntes));
+                                cmd.Parameters.Add(new SqlParameter("@FechaSubidaAntes", entity.FechaSubidaAntes));
+                                cmd.Parameters.Add(new SqlParameter("@ImagenDespues", entity.ImagenDespues));
+                                cmd.Parameters.Add(new SqlParameter("@FechaSubidaDespues", entity.@FechaSubidaDespues));
+                                cmd.Parameters.Add(new SqlParameter("@Detalles", entity.Detalles));
+                                
+                                SqlParameter paramOut= new SqlParameter("@Resultado",SqlDbType.Int);
+                                paramOut.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(paramOut);
+
+                                await cmd.ExecuteNonQueryAsync();
+                                valor_Retrono = (int)paramOut.Value;
+
+                                if(valor_Retrono == 1)
+                                {
+                                    respuestas = true;
+                                }
+                                trasaction.Commit();
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            trasaction.Rollback();
+                            return respuestas = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
+
+            }
+            return respuestas;
+        }
+
         public async Task<bool> InsertarPrograma5s(Programa5sInsertarModel value)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
@@ -4158,6 +4171,22 @@ namespace EMAI.Datos
                     return true;
                 }
             }
+        }
+
+        private Programa5ModelV1 MapToPrograma5sById(SqlDataReader reader)
+        {
+            return new Programa5ModelV1()
+            {
+
+                Id = (int)reader["IdPrograma"],
+                Area = (string)reader["Area"],
+                Supervisor = (string)reader["Supervisor"],
+                ImagenAntes = (string)reader["ImagenAntes"],
+                FechaSubidaAntes = (DateTime)reader["FechaSubidaAntes"],
+                ImagenDespues= (string)reader["ImagenDespues"],
+                FechaSubidaDespues= (DateTime)reader["FechaSubidaAntes"],
+                Detalles = (string)reader["Detalles"],
+            };
         }
 
         public async Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles)

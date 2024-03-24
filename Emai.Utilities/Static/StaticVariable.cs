@@ -12,11 +12,15 @@
         public const string MESSAGE_UPDATE = "Registro Modificado correctamente";
         public const string MESSAGE_SAVE = "Datos Guardado Correctamente";
         public const string MESSAGE_FALLED = "Operacion Fallida";
+        public const string MESSAGE_FALLEDV1 = "El Registro No se Guardo Correctamente";
         public const string MESSAGE_NOT_ACCEDER = "ERROR AL LEER LOS DATOS";
+        public const string MESSAGE_NOT_DATABASE = "ERROR EN LA BASE DE DATOS";
         public const string MESSAGE_QUERY_EMPATY = "No se encotro registro";
         public const string MESSAGE_CHANGE_AUTENTIFACTION = "Se ha cambiado la clave de Inserccion de Api GOOGLE SHEED";
         public const string MESSAGE_CHANGE_AUTENTIFACTION_ERROR = "Se presento un problema en la autentificacion";
         public const string MESSAGE_FALLED_NEW = "No se Pude registrar el Alumno";
+        public const string MESSAGE_VALIDATE = "Errores de Validacion";
+        public const string Contenedor_Imagenes = "ProgramasImagenes";
 
 
     }

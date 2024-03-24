@@ -110,10 +110,10 @@ namespace EMAI.LND
             return new AsignacionMaestroOperaciones();
         }
 
-        public static IPrograma5sOperaciones ObtenerPrograma5sOperaciones()
-        {
-            return new Programa5sOperaciones();
-        }
+        //public static IPrograma5sOperaciones ObtenerPrograma5sOperaciones()
+        //{
+        //    return new Programa5sOperaciones();
+        //}
         public static IGoogleSheetOperaciones ObtenerGoogleSheetOperaciones()
         {
 

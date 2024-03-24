@@ -3,13 +3,6 @@ using Emai.Utilities.Static;
 using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Request;
 using EMAI.DTOS.Dtos.Response;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace EMAI.DTOS.Mappers
 {
     public class AlumnoMappingProfile : Profile

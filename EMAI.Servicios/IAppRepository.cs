@@ -269,11 +269,17 @@ namespace EMAI.Servicios
 
         Task<Programa5sIdModel> GetPrograma5sId(int Id);
 
+        //Estrucracion Propia
+        Task<bool> InsertarPrograma5sV1(string nameProducedure,Programa5ModelV1 entity);
+        Task<Programa5ModelV1> GetPrograma5sById(string nameProducedure, int IdPrograma);
+        Task<List<Programa5ModelV1>> GetAllPrograma5sV1(string nameProducedure); 
+        //Estrucracion Propia
         Task<bool> InsertarPrograma5s(Programa5sInsertarModel value);
 
         Task<bool> ActualizarPrograma5s(int Id, string Area, string Supervisor, DateTime FechaAntes, DateTime FechaInicio, string Detalles);
 
         #endregion
+
         #region "Meses"
         Task<List<MesesModelV1>> GetSelectMeses();
         #endregion

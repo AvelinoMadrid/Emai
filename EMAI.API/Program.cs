@@ -6,10 +6,12 @@ using EMAI.Servicios;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.OpenApi.Models;
 
+
 var builder = WebApplication.CreateBuilder(args);
 var configuraction = builder.Configuration;
 
 builder.Services.AddInjectionLdn(configuraction);
+
 
 
 builder.Services.AddCors(options =>
@@ -66,7 +68,7 @@ builder.Services.AddScoped(typeof(IEventosOperaciones), f => OperationsFactory.O
 /*ASIGNACION DE MAESTRO*/
 builder.Services.AddScoped(typeof(IAsignacionMaestroOperaciones), f => OperationsFactory.ObtenerAsignacionMaestroOperaciones());
 builder.Services.AddScoped(typeof(IAsignacionClaseOperaciones), f => OperationsFactory.ObtenerAsignacionClaseOperaciones());
-builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
+//builder.Services.AddScoped(typeof(IPrograma5sOperaciones), f => OperationsFactory.ObtenerPrograma5sOperaciones());
 builder.Services.AddScoped(typeof(IHorasOperaciones), f => OperationsFactory.ObtenerHorasOperaciones());
 builder.Services.AddScoped(typeof(IGoogleSheetOperaciones), f => OperationsFactory.ObtenerGoogleSheetOperaciones());
 builder.Services.AddScoped(typeof(IRepClaseOperaciones), f => OperationsFactory.ObtenerRepClaseOperaciones());
@@ -108,6 +110,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseStaticFiles();
 
 app.UseEndpoints(endpoints =>
 {
