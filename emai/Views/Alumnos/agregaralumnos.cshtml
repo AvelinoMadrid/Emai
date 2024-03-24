@@ -547,6 +547,7 @@
 
                                 @*Botones de guardar*@
                                 <div class="col-md-6 form-group">
+
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
@@ -661,16 +662,21 @@
                                 </div>
 
 
-
+                                @***********************************************************@
 
                                 @*Botones de guardar*@
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group" data-target="#pagos-part" id="desactivarGuardarCambios">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
                                 <div class="col-md-6 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
+                                <div class="col-md-6 form-group" data-target="#pagos-part" id="ActivarEditar0">
+                                    <button id="guardarCambios" type="submit" class="btn btn-success" style="width:100% !important">Guardar Cambios</button>
+                                </div>
+
+                                @***********************************************************@
 
                             </div>
                         </div>
@@ -830,13 +836,15 @@
                                 </div>
 
                                 <input type="hidden" asp-for="Activo" id="Activo" value="true" />
+                                @******************************************@
+                                <div class="col-md-12 form-group" data-target="#pagos-part" id="desacctivarEditar">
+                                    <button id="guardar" type="submit" class="btn btn-success" style="width:100% !important">Guardar y pagar </button>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <a data-target="#pagos-part" id="desacctivarEditar2" class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
+                                </div>
+                                @******************************************@
 
-                                <div class="col-md-12 form-group">
-                                    <button type="submit" class="btn btn-success" style="width:100% !important">Guardar y pagar</button>
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
-                                </div>
                             </div>
 
                         </div>
@@ -865,20 +873,32 @@
                 resolve(inputIdAlumno);
             });
         }
-
+        /*inicio*/
         async function getProccessAndExecute() {
             const valorId = await obtenerIdAlumno();
             var idSeccionForm = document.getElementById('pagos-part');
             var idSeccionFormV1 = document.getElementById('pagos-partV1');
+            var iddesacctivarEditar = document.getElementById('desacctivarEditar');
+            var iddesacctivarEditar2 = document.getElementById('desacctivarEditar2');
+            var idActivarEditar0 = document.getElementById('ActivarEditar0');
+            var iddesactivarGuardarCambios = document.getElementById('desactivarGuardarCambios');
+            var btnGuardar = document.getElementById('guardar');
+            var btnGuardarCambios = document.getElementById('guardarCambios');
 
 
             if (valorId != 0) {
                 //quiere decir editar
                 idSeccionForm.style.display = "none";
                 idSeccionFormV1.style.display = "none";
+                iddesacctivarEditar.style.display = "none";
+                iddesacctivarEditar2.style.display = "none";
+                iddesactivarGuardarCambios.style.display = "none";
+
+            } else {
+                idActivarEditar0.style.display = "none";
             }
         }
-
+        /*fin*/
         getProccessAndExecute();
 
 

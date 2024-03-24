@@ -84,22 +84,39 @@
 
                 </div>
 
+                <script type="text/javascript">
+                    /* Calcular dos numeros. */
+                    function calcular() {
+                        try {
+                            var num1 = parseFloat(document.getElementById('horaTrabajada').value) || 0;
+                            var num2 = parseFloat(document.getElementById('Pagohora').value) || 0;
+
+                            document.getElementById('Pagosemanal').value = num1 * num2;
+                        } catch (e) { }
+                    }
+                </script>
 
 
                 <div class="col-md-3 form-group">
-                    <label class="form-label" for="Pago">Pago</label>
-                    <input type="text" class="form-control form-control-sa" asp-for="Pago" />
-                </div>
-
-                <div class="col-md-6 form-group">
-                    <label class="form-label" for="Pago">Pago semanal</label>
-                    <input type="text" class="form-control form-control-sa" id="Pagosemanal" asp-for="PagoSemanal" />
+                    <label class="form-label" for="Pago">Horas Trabajada</label>
+                    <input type="text" class="form-control form-control-sa" id="horaTrabajada" asp-for="Pago" oninput="calcular()" />
                 </div>
 
                 <div class="col-md-6 form-group">
                     <label class="form-label" for="Pago">Pago por Hora</label>
-                    <input type="text" class="form-control form-control-sa" id="Pagohora" asp-for="PagoHora" />
+                    <input type="text" class="form-control form-control-sa" id="Pagohora" asp-for="PagoHora" oninput="calcular()" />
                 </div>
+
+                <div class="col-md-6 form-group">
+                    <label class="form-label" for="Pago">Total Semanal</label>
+                    <input type="text" class="form-control form-control-sa" id="Pagosemanal" asp-for="PagoSemanal" />
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <label class="form-label" for="Pago">Área</label>
+                    <input type="text" class="form-control form-control-sa" id="area" asp-for="Area" />
+                </div>
+
 
                 <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>

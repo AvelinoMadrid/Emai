@@ -37,13 +37,12 @@ namespace EMAI.API.Controllers
             await _repository.InsertarMaestro(value);
         }
 
-        //Actualizar Maestros
         [HttpPut("/api/Maestros/Actualizar")]
         public async Task Put([FromBody] MaestrosActualizarModel value)
         {
             await _repository.ActualizarMaestro(value.IdMaestro, value.Nombre, value.ApellidoP, value.ApellidoM,
                 value.Direccion, value.Telefono, value.FechaNacimiento,
-                value.Estatus, value.Pago, value.PagoSemanal, value.PagoHora);
+                value.Estatus, value.Pago, value.PagoSemanal, value.PagoHora, value.Area);
         }
 
         //Eliminar Maestros

@@ -33,13 +33,13 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body ">
-                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline table-responsive">
+                        <table id="example1" class="table table-bordered table-striped dataTable dtr-inline table-responsive no-footer collapsed" aria-describedby="example1_info">
                             <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Fecha Inscripción</th>
                                     <th>Tag</th>
-                                    <th>Acciones</th>
+                                
                                     <th>No. Dia Clases</th>
                                     <th>Fecha Inicio Clase </th>
                                     <th>Nombre Completo</th>
@@ -51,12 +51,8 @@
                                     <th>Dia</th>
                                     <th>Instrumento Opcional</th>
                                     <th>Día y Hora Opcional</th>
-                                    <th>Nombre Papa</th>
-                                    <th>Celular Papas</th>
-                                    <th>Tutor Recoger</th>
-                                    <th>Celular Tutor</th>
-                                    <th>NumEmergencia</th>
-                                    <th>Acitvo</th>
+                                   
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,11 +65,7 @@
                                             <td>@alumno.IdAlumno</td>
                                             <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
-                                            <td>
-                                                <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
-                                                <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">Desactivar </a>
-                                                <a asp-action="ReactivarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-success btn-sm" style="width:100%;">Reactivar</a>
-                                            </td>
+                                           
                                             <td>@alumno.NoDiaClases</td>
                                             <td>@alumno.FechaInicioClase</td>
                                             <td>@alumno.NombreCompleto</td>
@@ -85,13 +77,12 @@
                                             <td>@alumno.DiaAndHoraClase</td>
                                             <td>@alumno.SeleccionarClase2</td>
                                             <td>@alumno.DiaAndHoraClaseOpcional</td>
-
-                                            <td>@alumno.NombrePapas</td>
-                                            <td>@alumno.CelularPapas</td>
-                                            <td>@alumno.TutorRecoger</td>
-                                            <td>@alumno.CelularTR</td>
-                                            <td>@alumno.Enfermedades</td>
-                                            <td>@alumno.StringActivo</td>
+                               
+                                            <td>
+                                                <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                                <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">Desactivar </a>
+                                                <a asp-action="ReactivarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-success btn-sm" style="width:100%;">Reactivar</a>
+                                            </td>
 
 
                                         </tr>

@@ -39,7 +39,7 @@ namespace EMAI.Datos
         {
             _isUnitOfWork = isUnitOfWork;
             //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-            EMAIConnection = "Data Source=.;initial Catalog=19marzo;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
+            EMAIConnection = "Data Source=.;initial Catalog=22marzo;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
@@ -2608,7 +2608,8 @@ namespace EMAI.Datos
 
                 Pago = (decimal)reader["Pago"],
                 PagoSemanal = (decimal)reader["PagoSemanal"],
-                PagoHora = (decimal)reader["PagoHora"]
+                PagoHora = (decimal)reader["PagoHora"],
+                Area = (string)reader["Area"]
 
             };
         }
@@ -2631,8 +2632,8 @@ namespace EMAI.Datos
                             response = MapToMaestrosId(reader);//3
                         }
                     }
-
                     return response;
+
                 }
             }
         }
@@ -2655,7 +2656,9 @@ namespace EMAI.Datos
 
                 Pago = (decimal)reader["Pago"],
                 PagoSemanal = (decimal)reader["PagoSemanal"],
-                PagoHora = (decimal)reader["PagoHora"]
+                PagoHora = (decimal)reader["PagoHora"],
+
+                Area = (string)reader["Area"]
 
             };
         }
@@ -2679,6 +2682,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Pago", value.Pago));
                     cmd.Parameters.Add(new SqlParameter("@PagoSemanal", value.PagoSemanal));
                     cmd.Parameters.Add(new SqlParameter("@PagoHora", value.PagoHora));
+                    cmd.Parameters.Add(new SqlParameter("@Area", value.Area));
 
 
                     await sql.OpenAsync();
@@ -2688,7 +2692,7 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora)
+        public async Task<bool> ActualizarMaestro(int IdMaestro, string Nombre, string ApellidoP, string ApellidoM, string Direccion, string Telefono, DateTime FechaNacimiento, string Status, decimal Pago, decimal PagoSemanal, decimal PagoHora, string Area)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
@@ -2708,6 +2712,7 @@ namespace EMAI.Datos
                     cmd.Parameters.Add(new SqlParameter("@Pago", Pago));
                     cmd.Parameters.Add(new SqlParameter("@PagoSemanal", PagoSemanal));
                     cmd.Parameters.Add(new SqlParameter("@PagoHora", PagoHora));
+                    cmd.Parameters.Add(new SqlParameter("@Area", Area));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -3920,7 +3925,42 @@ namespace EMAI.Datos
 
         #region "Seccion -----> AsignacionMaestro"
         /*Mostrar todo*/
+        
+        public async Task<AsigMaestroId> GetAsigMaestroId(int IdEvento)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("BuscarPorIDAsigMaestro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@AsgnId", IdEvento));
+                    AsigMaestroId response = null;//3
+                    await sql.OpenAsync();
 
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response = MapToAsigMaestroId(reader);//3
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+
+        private AsigMaestroId MapToAsigMaestroId(SqlDataReader reader)
+        {
+            return new AsigMaestroId()
+            {
+
+                AsgnId = (int)reader["AsgnId"],
+                IdMaestro = (int)reader["IdMaestro"],
+                IdClase = (int)reader["IdClase"],
+                IdHorario = (int)reader["IdHorario"]
+            };
+        }
         public async Task<List<AsigMaestroModel>> GetAsigMaestro1()
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
@@ -4279,11 +4319,6 @@ namespace EMAI.Datos
         public void Dispose()
         {
             GC.Collect();
-        }
-
-        public Task<AsigMaestroId> GetAsigMaestroId(int AsgnId)
-        {
-            throw new NotImplementedException();
         }
 
 
