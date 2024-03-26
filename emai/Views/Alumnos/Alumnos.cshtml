@@ -1,4 +1,4 @@
-﻿@using emai.Servicios.Commons
+﻿﻿@using emai.Servicios.Commons
 @model BaseResponseV1<AlumnoModel>
 
 @* @{
@@ -9,10 +9,7 @@
     ViewData["Title"] = "Alumnos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-
-
 }
-
 
 <style>
     div.dt-buttons {
@@ -39,7 +36,7 @@
                                     <th>ID</th>
                                     <th>Fecha Inscripción</th>
                                     <th>Tag</th>
-                                
+
                                     <th>No. Dia Clases</th>
                                     <th>Fecha Inicio Clase </th>
                                     <th>Nombre Completo</th>
@@ -51,7 +48,7 @@
                                     <th>Dia</th>
                                     <th>Instrumento Opcional</th>
                                     <th>Día y Hora Opcional</th>
-                                   
+
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -65,7 +62,7 @@
                                             <td>@alumno.IdAlumno</td>
                                             <td>@alumno.FechaInscripcion</td>
                                             <td>@alumno.Tag</td>
-                                           
+
                                             <td>@alumno.NoDiaClases</td>
                                             <td>@alumno.FechaInicioClase</td>
                                             <td>@alumno.NombreCompleto</td>
@@ -77,7 +74,7 @@
                                             <td>@alumno.DiaAndHoraClase</td>
                                             <td>@alumno.SeleccionarClase2</td>
                                             <td>@alumno.DiaAndHoraClaseOpcional</td>
-                               
+
                                             <td>
                                                 <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                                 <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">Desactivar </a>
@@ -104,5 +101,3 @@
     </div>
     <!-- /.container-fluid -->
 </section>
-
-

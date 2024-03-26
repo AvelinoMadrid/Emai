@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using EMAI.Comun.Models;
+﻿using EMAI.Comun.Models;
 using EMAI.DTOS.Dtos.Base;
 using EMAI.DTOS.Dtos.Request;
 using EMAI.DTOS.Dtos.Response;

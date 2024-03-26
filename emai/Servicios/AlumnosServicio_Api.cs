@@ -69,6 +69,7 @@ namespace emai.Servicios
             try
             {
                 var json = JsonConvert.SerializeObject(entity);
+
                 var requestContent = new StringContent(json, Encoding.UTF8, "application/json");
 
                 using var client = new HttpClient();

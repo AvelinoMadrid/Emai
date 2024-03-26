@@ -26,6 +26,9 @@ namespace EMAI.DTOS.Mappers
                                                                 .ForMember(x => x.ConConocimiento, x => x.MapFrom(y => y.Activo.Equals((int)StateTypes.Activo == 1) ? "Si" : "No")).ReverseMap();
             CreateMap<AlumnoRequest, InsertarAlumnoModelV1>().ReverseMap();
             CreateMap<InsertarAlumnoModelV1, AlumnoRequest>().ReverseMap();
+
+            CreateMap<InsertarAlumnoModelV1, AlumnoRequestV1>().ReverseMap();
+            CreateMap<AlumnoRequestV1, InsertarAlumnoModelV1>().ReverseMap();
         }
     }
 }

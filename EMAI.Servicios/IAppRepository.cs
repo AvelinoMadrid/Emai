@@ -31,30 +31,18 @@ namespace EMAI.Servicios
         #endregion
 
         #region "Alumnos"  
-
-        Task<List<AlumnosModel>> GetAlumnos();
-
-        Task<ObtenerAlumno> GetAlumnosbyID(int id);
-        Task<bool> InsertarAlumno(InsertAlumnoModel value);
         Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request);
+        Task<bool> EditarAlumnoV1(InsertarAlumnoModelV1 request);
         Task<ListFolioResponse[]> GetListFolio();
         Task<List<InsertarAlumnoModelV1>> GetListAlumnosTotalV1();
         Task<List<SelectClasesHorarioResponse>> SelectClasesHorario(string nameProcedure, int idClase);
         Task<InsertarAlumnoModelV1> GetListAlumnoByIdV1(int IdAlumno);
-        Task<bool> DeleteByIdAlumno(int Id);
         Task<bool> ReactivarByIdAlumnoV1(int IdAlumno);
         Task<bool> DeleteByIdAlumnoV1(int IdAlumno);
-        Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
-           int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,
-           string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia);
-        Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
+      
 
-        // nuevos Alumnos con Requisitos
-        Task<bool> InsertarAlumnosParteI(AlumnosNuevo value);
-        Task<bool> InsertarPapas(PapasNuevo value);
-        Task<bool> InsertarEstudios(EstudiosNuevo value);
-        Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value);
-        Task<bool> InsertarHobbys(Hoobys value);
+
+ 
 
 
 

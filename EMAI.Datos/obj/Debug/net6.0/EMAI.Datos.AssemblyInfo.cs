@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.Datos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e66939b39cc138f04ee3bf137656c84492e8fae1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad0771134576741c5832f62be0c8129ef50e5487")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.Datos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.Datos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,9 +1,11 @@
-﻿using emai.Servicios.Commons;
+﻿using emai.Models;
+using emai.Servicios.Commons;
 using emai.Servicios.Dtos.Response;
 using System.ComponentModel.DataAnnotations;
-namespace emai.Models
+
+namespace emai.Servicios.Dtos.Request
 {
-    public class Alumnos
+    public class EditarAlumnoRequest
     {
         public int IdAlumno { get; set; }
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -57,17 +59,6 @@ namespace emai.Models
         public bool Amables { get; set; }
         public string NombreRecepcionista { get; set; } = null!;
 
-        public string Folio { get; set; } = null!;
-        public int IdPromosion { get; set; }
-        public int IdMes { get; set; }
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public string FechaPago { get; set; }
-        public decimal CostoLibro { get; set; }
-        public string NombreLibro { get; set; } = null!;
-        public string Atendio { get; set; } = null!;
-        public decimal Total { get; set; }
-        public decimal Inscripcion { get; set; }
-        public decimal Mensualidad { get; set; }
         public void asingarResponseV1(AlumnoResponseById data)
         {
             this.IdAlumno = data.IdAlumno;
@@ -126,9 +117,6 @@ namespace emai.Models
         public List<ClasesResponse> ListarClasesSelect { get; set; }
         public BaseResponseV1<Promosiones> ListSelectPromocion { get; set; }
         public BaseResponseV1<ClasesResponse> ListClasesUnique { get; set; }
-        public List<MesesModel> ListarMesesSelect { get; set; }
-        public List<HorarioResponse> ListarHorarioSelect { get; set; }
-        public string GeneradorFolioV1 { get; set; }
-        //public BaseResponseV1<SelectLisHorario> SelectListHorario { get; set; }
+
     }
 }

@@ -14,38 +14,16 @@ namespace EMAI.Servicios
 {
     public interface IAlumnosOperaciones
     {
-        // obtener todos los datos 
-        Task<List<AlumnosModel>> GetAlumnos();
         Task<bool> verificarExistFolio(string folio);
         Task<ListFolioResponse> FolioGenerate();
-        Task<ObtenerAlumno> GetAlumnosbyID(int id);
         Task<BaseResponse<AlumnoResponseV1>> GetAlumnosByIdV1(int IdAlumno);
-        Task<bool> InsertarAlumno(InsertarAlumnoModelV1 value);
         Task<BaseResponse<bool>> RegisterAlumno(AlumnoRequest request);
+        Task<BaseResponse<bool>> EditarAlumnoV1(int IdAlumno,AlumnoRequestV1 request);
         Task<BaseResponse<List<SelectClasesHorarioResponse>>> SelectListClaseHorarioV1(int idClase);
         Task<BaseResponse<List<AlumnoResponseV1>>> GetListaAlumnoV1();
         Task<BaseResponse<bool>> DeleteByIdAlumnoV1(int IdAlumno);
         Task<BaseResponse<bool>> ReactivarByIdAlumnoV1(int IdAlumno);
-        Task<bool> DeleteByIdAlumno(int Id);
-        Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM,
-            int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia,
-            string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia);
-
-
-
-        // prueba de obtener alumnos por id
-        Task<AlumnosbyIDModel> ObtenerAlumnosporID(int id);
-
-        Task<bool> InsertarAlumnosParteI(AlumnosNuevo value);
-
-        Task<bool> InsertarPapas(PapasNuevo value);
-
-        Task<bool> InsertarEstudios(EstudiosNuevo value);
-
-        Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value);
-
-        Task<bool> InsertarHobbys(Hoobys value);
-
+    
     }
 }
  

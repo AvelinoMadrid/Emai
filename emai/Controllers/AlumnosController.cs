@@ -48,7 +48,6 @@ namespace emai.Controllers
             return View("agregaralumnos", alumno);
 
         }
-
         public async Task<IActionResult> agregaralumnos(int IdAlumno)
         {
             BaseResponseV2<Alumnos> baseReponse = new BaseResponseV2<Alumnos>();
@@ -62,6 +61,8 @@ namespace emai.Controllers
                 alumno = baseReponse.Data;
                 ViewBag.Accion = "Editar Alumno";
             }
+
+
 
             var folioGenerador = await GenerarFolioV1();
 
@@ -98,8 +99,8 @@ namespace emai.Controllers
             {
                 return NoContent();
             }
-
         }
+
 
         [HttpGet]
         public async Task<IActionResult> EliminarAlumnosV1(int IdAlumno)
@@ -130,6 +131,7 @@ namespace emai.Controllers
                 return RedirectToAction("Alumnos");
             }
         }
+
         [HttpGet]
         public async Task<IActionResult> ObtenerAlumnoById(int IdAlumno)
         {

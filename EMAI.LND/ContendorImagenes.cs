@@ -19,6 +19,15 @@ namespace EMAI.LND
             _webHostEnvironment = webHostEnvironment;
             _htpContextAccessor = htpContextAccessor;
         }
+
+        public Task<string> FileUpload(string host, string carpeta, string prefijoEntidad, IFormFile arcxhivo)
+        {
+            
+            //string archivo = string.Concat(prefijoEntidad,"_", )
+
+            throw new NotImplementedException();
+        }
+
         public async Task<string> GuadarImagen(byte[] file, string contentType, string extension, string container, string name)
         {
             string response = "";

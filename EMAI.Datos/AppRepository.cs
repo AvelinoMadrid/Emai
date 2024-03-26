@@ -6,7 +6,6 @@ using EMAI.DTOS.Dtos.Response;
 
 using EMAI.Servicios;
 using Microsoft.Data.SqlClient;
-using Newtonsoft.Json.Linq;
 using System.Data;
 using static EMAI.Comun.Models.EventosIDModel;
 using static EMAI.Comun.Models.RepClaseModel;
@@ -27,139 +26,14 @@ namespace EMAI.Datos
         public AppRepository(bool isUnitOfWork = false)
         {
             _isUnitOfWork = isUnitOfWork;
-            //EMAIConnection = "Data Source=.;Initial Catalog=EMAI;Integrated Security=True;TrustServerCertificate=True;";
-<<<<<<< HEAD
-            EMAIConnection = "Data Source=.;initial Catalog=EMAI27FB;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
-=======
-            EMAIConnection = "Data Source=.;initial Catalog=22marzo;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
->>>>>>> 7d5395469324ec40e25c4609e34868be52aa89a8
+            EMAIConnection = "Data Source=.;initial Catalog=marzo22;User Id=sa;Password=admin123;Integrated Security=True;TrustServerCertificate=True;";
 
         }
 
         #region " Sección Alumnos --> "
 
-        //MOSTAR TODO
-        public async Task<List<AlumnosModel>> GetAlumnos()
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_ObtenerAlumnos", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<AlumnosModel>(); //1
-                    await sql.OpenAsync();
+       
 
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response.Add(MapToAlumnos(reader));//2
-                        }
-                    }
-                    return response;
-                }
-            }
-        }
-
-
-
-        private AlumnosModel MapToAlumnos(SqlDataReader reader)
-        {
-            return new AlumnosModel()
-            {
-                IdAlumno = (int)reader["IdAlumno"],
-                //IdClase = (int)reader["IdClase"],
-                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
-                Tag = reader["Tag"].ToString(),
-                NoClasesDia = (int)reader["NoDiaClases"],
-                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                //FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
-                Nombre = reader["Nombre"].ToString(),
-                //ApPaterno = reader["ApellidoP"].ToString(),
-                //ApMaterno = reader["ApellidoM"].ToString(),
-                Edad = (int)reader["Edad"],
-                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-                Telefono = reader["TelCasa"].ToString(),
-                Celular = reader["Celular"].ToString(),
-                Facebook = reader["Facebook"].ToString(),
-                Email = reader["E-mail"].ToString(),
-                Enfermedades = reader["Enfermedades"].ToString(),
-                //Discapacidad = reader["Discapacidad"] == DBNull.Value ? false : (bool)reader["Discapacidad"],
-                InstrumentoBase = reader["InstrumentoBase"].ToString(),
-                Diayhora = reader["Dia"].ToString(),
-                //Hora = reader["Hora"].ToString(),
-                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
-                DiaOpcional = reader["DiaOpcio"].ToString(),
-                //HoraOpcional = reader["HoraOpcio"].ToString(),
-
-                // tabla papas
-                //IdPapas = (int)reader["IdPapas"],
-                NombrePapa = reader["NombrePapas"].ToString(),
-                TelefonoPapa = reader["CelularPapas"].ToString(),
-                FacebookPapa = reader["FacebookPapas"].ToString(),
-                Emailpapas = reader["E-mail"].ToString(),
-                TutorRecoger = reader["TutorRecoger"].ToString(),
-                CelularTR = reader["CelularTR"].ToString(),
-                NumEmergencia = reader["NumEmergencia"].ToString(),
-
-                // tabla estudios
-                //IdEstudios = (int)reader["IdEstudio"],
-                Estudios = reader["Estudios"] == DBNull.Value ? false : (bool)reader["Estudios"],
-                GradoEstudios = reader["GradoEstudios"].ToString(),
-                EscuelaActual = reader["EscuelaActual"].ToString(),
-                Trabajo = reader["Trabajas"] == DBNull.Value ? false : (bool)reader["Trabajas"],
-                LugarTrabajo = reader["LugarTrabajo"].ToString(),
-
-                // tabla conocimientos actuales
-                //IdConocimientoMusicales = (int)reader["ID"],
-                conActual = reader["ConActual"].ToString(),
-                instrumentoMusical = reader["Instrumento"].ToString(),
-                InstrumentoCasa = reader["InstrumentoCasa"] == DBNull.Value ? false : (bool)reader["Estudios"],
-                NoInstrumentoMusical = reader["NoInstrumento"].ToString(),
-                EntersteEsc = reader["EnterasteEsc"].ToString(),
-                interesGnroMusical = reader["InteresGnroMusical"] == DBNull.Value ? false : (bool)reader["Estudios"],
-                interesgros = reader["Cuales"].ToString(),
-                interes = reader["Otro"].ToString(), // verificar en la base de daatos 
-                classOpcional = reader["ClasOpcional"] == DBNull.Value ? false : (bool)reader["Estudios"],
-                Descuento = reader["DescuentoP"] == DBNull.Value ? false : (bool)reader["Estudios"],
-                Amable = reader["Amable"] == DBNull.Value ? false : (bool)reader["Estudios"],
-
-                //IdInteresInstrumento = (int)reader["IDInteres"], //
-                //otro = reader["Otro"].ToString(),
-                //Idpersonal = (int)reader["IDPersonal"],
-
-
-                //IDRecepcionista = (int)reader["IdRecepcionista"],
-                //NombreRecepcionista = reader["NombreRecepcionista"].ToString(); nora no modificar en el proyecto de angel
-                NombreRecepcionista = reader["Nombre"].ToString()
-
-            };
-        }
-
-        // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
-        public async Task<ObtenerAlumno> GetAlumnosbyID(int Id)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("ObtenerAlumnoPorId", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", Id));
-                    ObtenerAlumno response = null;//3
-                    await sql.OpenAsync();
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response = MapToAlumnosTodo(reader);//3
-                        }
-                    }
-
-                    return response;
-                }
-            }
-        }
 
         public async Task<InsertarAlumnoModelV1> GetListAlumnoByIdV1(int IdAlumno)
         {
@@ -263,32 +137,7 @@ namespace EMAI.Datos
         }
 
 
-        // mostrar usando inner join 
 
-        // MOSTRAR POR ID AÑADIENDO LAS DEMAS TABLAS
-        public async Task<AlumnosbyIDModel> ObtenerAlumnosporID(int Id)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("ObtenerAlumnoPorId", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", Id));
-                    AlumnosbyIDModel response = null;//3
-                    await sql.OpenAsync();
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response = MaptoAlumnosbyID(reader);//3
-                        }
-                    }
-
-                    return response;
-                }
-            }
-        }
 
         public async Task<ListFolioResponse[]> GetListFolio()
         {
@@ -385,83 +234,109 @@ namespace EMAI.Datos
 
             return response;
         }
-
-
-
-
-
-        private AlumnosbyIDModel MaptoAlumnosbyID(SqlDataReader reader)
+        public async Task<bool> EditarAlumnoV1(InsertarAlumnoModelV1 request)
         {
-            return new AlumnosbyIDModel()
+          bool success = false;
+
+            try
             {
-                IdAlumno = (int)reader["IdAlumno"],
-                IdClase = (int)reader["IdClase"],
-                FechaInscripcion = (DateTime)reader["FechaInscripcion"],
-                Tag = reader["Tag"].ToString(),
-                NoClasesDia = (int)reader["NoDiaClases"],
-                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"],
-                //FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"],
-                Nombre = reader["Nombre"].ToString(),
-                //ApPaterno = reader["ApellidoP"].ToString(),
-                //ApMaterno = reader["ApellidoM"].ToString(),
-                Edad = (int)reader["Edad"],
-                FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-                Telefono = reader["TelCasa"].ToString(),
-                Celular = reader["Celular"].ToString(),
-                Facebook = reader["Facebook"].ToString(),
-                Email = reader["E-mail"].ToString(),
-                Enfermedades = reader["Enfermedades"].ToString(),
-                //Discapacidad = (bool)reader["Discapacidad"],
-                InstrumentoBase = reader["InstrumentoBase"].ToString(),
-                Diayhora = reader["Dia"].ToString(),
-                //Hora = reader["Hora"].ToString(),
-                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(),
-                DiaOpcional = reader["DiaOpcio"].ToString(),
-                //HoraOpcional = reader["HoraOpcio"].ToString(),
-                Img = reader["Imagen"].ToString(),
+                using (SqlConnection sql = new SqlConnection(EMAIConnection))
+                {
+                    await sql.OpenAsync();
+                    using (SqlTransaction transaction = sql.BeginTransaction(System.Data.IsolationLevel.Serializable))
+                    {
+               try
+               {
+                    using (SqlCommand cmd = new SqlCommand("UpdateAlumnoV1", sql, transaction))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.Add(new SqlParameter("@IdAlumno", request.IdAlumno));
+                                cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", request.FechaInscripcion));
+                                cmd.Parameters.Add(new SqlParameter("@Tag", request.Tag));
+                                cmd.Parameters.Add(new SqlParameter("@NoDiaClases", request.NoDiaClases));
+                                cmd.Parameters.Add(new SqlParameter("@FechaInicioClase", request.FechaInicioClase));
+                                cmd.Parameters.Add(new SqlParameter("@NombreCompleto", request.NombreCompleto));
+
+                                cmd.Parameters.Add(new SqlParameter("@Edad", request.Edad));
+                                cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", request.FechaNacimiento));
+                                cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", request.TelefonoCasa));
+                                cmd.Parameters.Add(new SqlParameter("@Celular", request.Celular));
+                                cmd.Parameters.Add(new SqlParameter("@Facebook", request.Facebook));
+
+                                cmd.Parameters.Add(new SqlParameter("@Email", request.Email));
+                                cmd.Parameters.Add(new SqlParameter("@Enfermedades", request.Enfermedades));
+                                cmd.Parameters.Add(new SqlParameter("@SeleccionarClase1", request.SeleccionarClase1));
+                                cmd.Parameters.Add(new SqlParameter("@DiaAndHoraClase", request.DiaAndHoraClase));
+                                cmd.Parameters.Add(new SqlParameter("@SeleccionarClase2", request.SeleccionarClase2));
+                                cmd.Parameters.Add(new SqlParameter("@DiaAndHoraClaseOpcional", request.DiaAndHoraClaseOpcional));
+                                cmd.Parameters.Add(new SqlParameter("@Activo", request.Activo));
+
+                                cmd.Parameters.Add(new SqlParameter("@NombrePapas", request.NombrePapas));
+                                cmd.Parameters.Add(new SqlParameter("@CelularPapas", request.Celular));
+                                cmd.Parameters.Add(new SqlParameter("@FacebookPapas", request.FacebookPapas));
+                                cmd.Parameters.Add(new SqlParameter("@EmailPapas", request.EmailPapas));
+                                cmd.Parameters.Add(new SqlParameter("@TutorRecoger", request.TutorRecoger));
+                                cmd.Parameters.Add(new SqlParameter("@CelularTR", request.CelularTR));
+                                cmd.Parameters.Add(new SqlParameter("@NumEmergencia", request.NumEmergencia));
+
+                                cmd.Parameters.Add(new SqlParameter("@Estudios", request.Estudios));
+                                cmd.Parameters.Add(new SqlParameter("@GradoEstudios", request.GradoEstudios));
+                                cmd.Parameters.Add(new SqlParameter("@EscuelaActuales", request.EscuelaActuales));
+                                cmd.Parameters.Add(new SqlParameter("@Trabajas", request.Trabajas));
+                                cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", request.LugarTrabajo));
 
 
-                // tabla papas
-                IdPapas = (int)reader["IdPapas"],
-                NombrePapas = reader["NombrePapas"].ToString(),
-                TelefonoPapa = reader["CelularPapas"].ToString(),
-                FacebookPapa = reader["FacebookPapas"].ToString(),
-                EmailPapa = reader["E-mail"].ToString(),
-                TutorRecoger = reader["TutorRecoger"].ToString(),
-                CelularTR = reader["CelularTR"].ToString(),
-                NumEmergencia = reader["NumEmergencia"].ToString(),
-
-                // tabla estudios
-                IdEstudios = (int)reader["IdEstudio"],
-                Estudios = (bool)reader["Estudios"],
-                GradoEstudios = reader["GradoEstudios"].ToString(),
-                EscuelaActual = reader["EscuelaActual"].ToString(),
-                Trabajo = (bool)reader["Trabajas"],
-                LugarTrabajo = reader["LugarTrabajo"].ToString(),
-
-                // tabla conocimientos actuales
-                IdConocimientoMusicales = (int)reader["ID"],
-                conActual = reader["ConActual"].ToString(),
-                instrumentoMusical = reader["Instrumento"].ToString(),
-                InstrumentoCasa = (bool)reader["InstrumentoCasa"],
-                NoInstrumentoMusical = reader["NoInstrumento"].ToString(),
-                EntersteEsc = reader["EnterasteEsc"].ToString(),
-                interesGnroMusical = (bool)reader["InteresGnroMusical"],
-                interesgros = reader["Cuales"].ToString(),
-                interes = reader["Otro"].ToString(), // verificar en la base de daatos 
-                classOpcional = (bool)reader["ClasOpcional"],
-                Descuento = (bool)reader["DescuentoP"],
-                amable = (bool)reader["Amable"],
-
-                IdInteresInstrumento = (int)reader["IDInteres"], //
-                otro = reader["Otro"].ToString(),
-                Idpersonal = (int)reader["IDPersonal"],
+                                cmd.Parameters.Add(new SqlParameter("@ConConocimiento", request.ConConocimiento));
+                                cmd.Parameters.Add(new SqlParameter("@Instrumento", request.Instrumento));
+                                cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", request.InstrumentoCasa));
+                                cmd.Parameters.Add(new SqlParameter("@InstrumentotTwo", request.InstrumentotTwo));
+                                cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", request.EnterasteEsc));
+                                cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", request.InteresGnroMusical));
+                                cmd.Parameters.Add(new SqlParameter("@CualesMusicales", request.CualesMusicales));
 
 
-                IDRecepcionista = (int)reader["IdRecepcionista"],
-                NombreRecepcionista = reader["NombreRecepcionista"].ToString()
-            };
+                                cmd.Parameters.Add(new SqlParameter("@TipoInteres", request.TipoInteres));
+                                cmd.Parameters.Add(new SqlParameter("@OtroOpcional", request.OtroOpcional));
+                                cmd.Parameters.Add(new SqlParameter("@MusicalInteres", request.MusicalInteres));
+                                cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", request.ClaseOpcional));
+                                cmd.Parameters.Add(new SqlParameter("@DescuentoP", request.DescuentoP));
+                                cmd.Parameters.Add(new SqlParameter("@Amables", request.Amables));
+                                cmd.Parameters.Add(new SqlParameter("@NombreRecepcionista", request.NombreRecepcionista));
+
+                            
+
+                                SqlParameter salidaInt = new SqlParameter("@IntResult", SqlDbType.Int);
+                                salidaInt.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(salidaInt);
+
+                                await cmd.ExecuteNonQueryAsync();
+
+                                if (Convert.ToInt32(salidaInt.Value) == 1)
+                                {
+                                    success = true;
+                                }
+                                transaction.Commit();
+                            }
+                        }
+                        catch(Exception ex)
+                {
+                            transaction.Rollback();
+                            throw new Exception("Error al ejecutar el procedimiento almacenado", ex);
+
+                        }
+             }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se presentó un problema de conexión con la base de datos", ex);
+
+            }
+            return success;
         }
+
         public async Task<bool> InsertarAlumnoTwo(InsertarAlumnoModelV1 request)
         {
 
@@ -556,386 +431,6 @@ namespace EMAI.Datos
                 return false;
             }
         }
-
-
-        private ObtenerAlumno MapToAlumnosTodo(SqlDataReader reader)
-        {
-
-            return new ObtenerAlumno()
-            {
-
-                // TABLA DE ALUMNO
-                IDAlumno = (int)reader["IdAlumno"], //1
-                IdClase = (int)reader["IdClase"],
-                FechaInscripcion = (DateTime)reader["FechaInscripcion"], //2
-                Tag = reader["Tag"].ToString(), //3
-                NoDiaClases = (int)reader["NoDiaClases"], //4
-                FechaInicioClaseGratis = (DateTime)reader["FechaInicioClaseGratis"], //5
-                FechaFinClaseGratis = (DateTime)reader["FechaFinClaseGratis"], //6
-                Nombre = reader["Nombre"].ToString(),//7
-                ApellidoP = reader["ApellidoP"].ToString(), //8
-                ApellidoM = reader["ApellidoM"].ToString(), //9
-                Edad = (int)reader["Edad"], //10
-                FechaNaciminto = (DateTime)reader["FechaNacimiento"], //11
-                TelCasa = reader["TelCasa"].ToString(), //12
-                Celular = reader["Celular"].ToString(), //13
-                Facebook = reader["Facebook"].ToString(), //14
-                Email = reader["E-mail"].ToString(), //15
-                Enfermedades = reader["Enfermedades"].ToString(), //16
-                Discapacidad = (bool)reader["Discapacidad"], //17
-                Instrumentobase = reader["InstrumentoBase"].ToString(), //18
-                Dia = reader["Dia"].ToString(), //19
-                Hora = reader["Hora"].ToString(), //30
-                InstrumentoOpcional = reader["InstrumentoOpcio"].ToString(), //21
-                DiaOpcional = reader["DiaOpcio"].ToString(), //22
-                HoraOpcional = reader["HoraOpcio"].ToString(), //23
-
-                // TABLA PAPAS 
-
-                NombrePapas = reader["NombrePapas"].ToString(), //24
-                CelularPapas = reader["CelularPapas"].ToString(), //25
-                FacebookPaps = reader["FacebookPapas"].ToString(), //26
-                EmailPapas = reader["E-mail"].ToString(), //27
-                TutorRecoger = reader["TutorRecoger"].ToString(), //28
-                CelularTR = reader["CelularTR]"].ToString(),//29
-                NumeroEmergencia = reader["NumEmergencia"].ToString(), //30  
-
-                // TABLA ESTUDIOS 
-                Estudios = (bool)reader["Estudios"], //31
-                GradoEstudios = reader["GradoEstudios"].ToString(), //32
-                EscuelaActual = reader["EscuelaActual"].ToString(), //33
-                Trabajas = (bool)reader["Trabajas"], //34
-                LugarTrabajo = reader["LugarTrabajo"].ToString(), //35  
-
-                // TABLA CONOCIMIENTOS 
-                ConActual = reader["ConActual"].ToString(), //36
-                Instrumento = reader["Instrumento"].ToString(), //37
-                InstrumentoCasa = (bool)reader["InstrumentoCasa"], //38
-                NoInstrumento = reader["InstrumentoCasa"].ToString(), //39
-                EnterasteESc = reader["EnterasteEsc"].ToString(), //40
-                InteresGroMusical = (bool)reader["InteresGnroMusical"], //41 
-                Cuales = reader["Cuales"].ToString(), //42 
-
-                // TABLA INTEREES 
-                Otro = reader["Otro"].ToString(), //43
-
-                // TABLA PERSONAL
-                ClasOpcional = (bool)reader["ClasOpcional"], //44
-                Descuento = (bool)reader["DescuentoP"], //45
-                Amable = (bool)reader["Amable"], //46
-
-                // TABLA RECEPCIONISTA
-                NombreRecepcionista = reader["Nombre"].ToString()  //47
-
-            };
-        }
-
-
-        // insert Alumno 
-
-        public async Task<bool> InsertarAlumno(InsertAlumnoModel value)
-        {
-            Random rnd = new Random();
-            long folio = rnd.NextInt64(100000000000, 1000000000000);
-            folio.ToString("D12");
-            DateTime fecha = DateTime.Now;
-
-
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_usp_AlumnoInsertar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", value.IdClase));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", value.FechaInscripcion));
-                    cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
-                    cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.NoDiaClases));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", value.FechaInicioClaseGratis));
-                    //cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@Nombre", value.Nombre));
-                    //cmd.Parameters.Add(new SqlParameter("@ApellidoP", value.ApPaterno));
-                    //cmd.Parameters.Add(new SqlParameter("@ApellidoM", value.ApMaterno));
-                    cmd.Parameters.Add(new SqlParameter("@Edad", value.Edad));
-                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimiento));
-                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", value.TelefonoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@Celular", value.Celular));
-                    cmd.Parameters.Add(new SqlParameter("@Facebook", value.Facebook));
-                    cmd.Parameters.Add(new SqlParameter("@EmailAluno", value.Email));
-                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", value.Enfermedades));
-
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", value.InstrumentoBase));
-                    cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", value.InstrumentoOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", value.DiaOpcio));
-                    //cmd.Parameters.Add(new SqlParameter("@HoraDiaOpcional", value.HoraOpcio));
-
-                    // para tabla papas
-                    cmd.Parameters.Add(new SqlParameter("@NombrePapas", value.NombrePapa));
-                    cmd.Parameters.Add(new SqlParameter("@CelularPapas", value.CelularPapas));
-                    cmd.Parameters.Add(new SqlParameter("@FacebookPapas", value.FacebookPapas));
-                    cmd.Parameters.Add(new SqlParameter("@EmailPapas", value.EmailPapas));
-                    cmd.Parameters.Add(new SqlParameter("@TutorRecoger", value.TutorRecoger));
-                    cmd.Parameters.Add(new SqlParameter("@CelularTR", value.CelularTR));
-                    cmd.Parameters.Add(new SqlParameter("@NumEmergencia", value.NumEmergencia));
-
-                    // Tabla Estudios
-
-                    cmd.Parameters.Add(new SqlParameter("@Estudios", value.Estudios));
-                    cmd.Parameters.Add(new SqlParameter("@GradoEstudios", value.GradoEstudios));
-                    cmd.Parameters.Add(new SqlParameter("@EscuelaActuales", value.EscuelaActuales));
-                    cmd.Parameters.Add(new SqlParameter("@Trabajas", value.Trabajas));
-                    cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", value.LugarTrabajo));
-
-                    // conocimientos Actuales
-                    cmd.Parameters.Add(new SqlParameter("@ConActual", value.ConActual));
-                    cmd.Parameters.Add(new SqlParameter("@Instrumento", value.Instrumento));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", value.InstrumentoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@NoInstrumento", value.NoInstrumento));
-                    cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", value.EnterasteEscuela));
-                    cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", value.InteresGnroMusical));
-                    cmd.Parameters.Add(new SqlParameter("@Cuales", value.Cuales));
-
-                    // tabla interes 
-                    cmd.Parameters.Add(new SqlParameter("@Otro", value.Otro));
-
-                    // Tabla personal 
-                    cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", value.ClaseOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DescuentoP", value.DescuentoP));
-                    cmd.Parameters.Add(new SqlParameter("@Amables", value.amable));
-
-                    // tabla rececpcionista
-                    cmd.Parameters.Add(new SqlParameter("@NombreRecepcionista", value.NombreRecepcionista));
-
-                    // tabla pagos
-                    cmd.Parameters.Add(new SqlParameter("@Folio", folio));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", fecha));
-                    cmd.Parameters.Add(new SqlParameter("@Mes", value.Mes));
-                    cmd.Parameters.Add(new SqlParameter("@IdPromosion", value.IdPromosionales));
-                    cmd.Parameters.Add(new SqlParameter("@IdClasePago", value.IdClasePago));
-                    cmd.Parameters.Add(new SqlParameter("@IdHorario", value.IdHorario));
-                    cmd.Parameters.Add(new SqlParameter("@DiaAlumnoPago", value.DiaAlumnoPago));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoAlumnoPago", value.InstrumentoAlimnoPago));
-                    cmd.Parameters.Add(new SqlParameter("@CostoLibro", value.CostoLibro));
-                    cmd.Parameters.Add(new SqlParameter("@NombreLibro", value.NombreLibro));
-                    cmd.Parameters.Add(new SqlParameter("@Atendio", value.Atendio));
-                    cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
-                    cmd.Parameters.Add(new SqlParameter("@Subtotal", value.Subtotal));
-                    cmd.Parameters.Add(new SqlParameter("@IVA", value.IVA));
-                    cmd.Parameters.Add(new SqlParameter("@Total", value.Total));
-
-
-
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-
-        // eliminar Alumno 
-
-        public async Task<bool> DeleteByIdAlumno(int Id)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_AlumnosEliminar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IDAlumnos", Id));
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-
-        // Actualizar Alumno 
-
-        public async Task<bool> UpdateAlumnos(int IdAlumno, int IdClase, string Tag, int NoDiaClases, DateTime FechaInicioClaseGratis, DateTime FechaFinClaseGratis, string Nombre, string ApellidoP, string ApellidoM, int Edad, DateTime FechaNacimiento, string TelefonoCasa, string Celular, string Facebook, string Email, string Enfermedades, bool Discapacidad, string InstrumentoBase, string Dia, string Hora, string InstrumentoOpcional, string DiaOpcional, string HoraOpcional, string CelularPapas, string EmailPapas, string RecogerPapas, string CelularTR, string NumEmergencia)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_AlumnosActualizar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdAlumno", IdAlumno));
-                    cmd.Parameters.Add(new SqlParameter("@IdClase", IdClase));
-                    cmd.Parameters.Add(new SqlParameter("Tag", Tag));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", FechaFinClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", FechaFinClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@Nombre", Nombre));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoP", ApellidoP));
-                    cmd.Parameters.Add(new SqlParameter("@ApellidoM", ApellidoM));
-                    cmd.Parameters.Add(new SqlParameter("@Edad", Edad));
-                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", FechaNacimiento));
-                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", TelefonoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@Celular", Celular));
-                    cmd.Parameters.Add(new SqlParameter("@Facebook", Facebook));
-                    cmd.Parameters.Add(new SqlParameter("@Email", Email));
-                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", Enfermedades));
-                    cmd.Parameters.Add(new SqlParameter("@Discapacidad", Discapacidad));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", InstrumentoBase));
-                    cmd.Parameters.Add(new SqlParameter("@Dia", Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Hora", Hora));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", InstrumentoOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", DiaOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@HoraOpcional", HoraOpcional));
-
-                    // tabla Papas
-
-                    cmd.Parameters.Add(new SqlParameter("@CelularPapas", CelularPapas));
-                    cmd.Parameters.Add(new SqlParameter("@EmailPapas", EmailPapas));
-                    cmd.Parameters.Add(new SqlParameter("@RecogerPapas", RecogerPapas));
-                    cmd.Parameters.Add(new SqlParameter("@CelularTR", CelularTR));
-                    cmd.Parameters.Add(new SqlParameter("@NumEmergencia", NumEmergencia));
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-        // nuevos requirimientos 
-
-        // insert Alumno 
-
-        public async Task<bool> InsertarAlumnosParteI(AlumnosNuevo value)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_AlumnoInsertarI", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@FechaInscripcion", value.FechaInsctipcion));
-                    cmd.Parameters.Add(new SqlParameter("@Tag", value.Tag));
-                    cmd.Parameters.Add(new SqlParameter("@NoDiaClases", value.Dias));
-                    cmd.Parameters.Add(new SqlParameter("@FechaInicioClaseGratis", value.FechaInicioClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@FechaFinClaseGratis", value.FechaFinClaseGratis));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoBase", value.InstrumentoBase));
-                    cmd.Parameters.Add(new SqlParameter("@Dia", value.Dia));
-                    cmd.Parameters.Add(new SqlParameter("@Hora", value.Hora));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoOpcional", value.InstrumentoOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DiaOpcional", value.DiaOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@HoraOpcional", value.HoraOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@NombreCompleto", value.NombreCompleto));
-                    cmd.Parameters.Add(new SqlParameter("@Edad", value.Edad));
-                    cmd.Parameters.Add(new SqlParameter("@FechaNacimiento", value.FechaNacimientoAlumno));
-                    cmd.Parameters.Add(new SqlParameter("@TelefonoCasa", value.TelefonoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@Celular", value.Celular));
-                    cmd.Parameters.Add(new SqlParameter("@Facebook", value.Facebook));
-                    cmd.Parameters.Add(new SqlParameter("@Email", value.Email));
-                    cmd.Parameters.Add(new SqlParameter("@Enfermedades", value.Enfermedades));
-
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-
-
-        public async Task<bool> InsertarPapas(PapasNuevo value)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_PapasInsertar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@Nombrepapa", value.NombrePapa));
-                    cmd.Parameters.Add(new SqlParameter("@Celular", value.CelularPapa));
-                    cmd.Parameters.Add(new SqlParameter("@FacebookPapa", value.FacebookPapas));
-                    cmd.Parameters.Add(new SqlParameter("@Email", value.Email));
-                    cmd.Parameters.Add(new SqlParameter("@NombredelTutorRecoger", value.NombreTutorRecoger));
-                    cmd.Parameters.Add(new SqlParameter("@CelularTutorRecoger", value.CelularTutorRecoger));
-                    cmd.Parameters.Add(new SqlParameter("@NumeroEmergencia", value.NumeroEmergencia));
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-
-            }
-        }
-
-        public async Task<bool> InsertarEstudios(EstudiosNuevo value)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_EstudiosInsertar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@Estudios", value.Estudios));
-                    cmd.Parameters.Add(new SqlParameter("@GradoEstudios", value.GradoEstuidos));
-                    cmd.Parameters.Add(new SqlParameter("@NombreEscuela", value.NombreEscuelaActual));
-                    cmd.Parameters.Add(new SqlParameter("@Trabajas", value.trabajas));
-                    cmd.Parameters.Add(new SqlParameter("@LugarTrabajo", value.LugarTrabajo));
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-        public async Task<bool> InsertarConocimientosMusicales(ConocimientosMusicales value)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_ConocimientosInsertar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@ConMusical", value.ConMusical));
-                    cmd.Parameters.Add(new SqlParameter("@Instrumento", value.InstrumentoMusicalConocimiento));
-                    cmd.Parameters.Add(new SqlParameter("@InstrumentoCasa", value.IntrumentoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@NoInstrumento", value.NombreInstrumentoCasa));
-                    cmd.Parameters.Add(new SqlParameter("@EnterasteEsc", value.EnterasteEsc));
-                    cmd.Parameters.Add(new SqlParameter("@InteresGnroMusical", value.GeneroMusical));
-                    cmd.Parameters.Add(new SqlParameter("@Cuales", value.Cuales));
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-        public async Task<bool> InsertarHobbys(Hoobys value)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_ConocimientosInsertar", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    // para tabla de alumnos 
-                    cmd.Parameters.Add(new SqlParameter("@Hobby", value.Hooby));
-                    cmd.Parameters.Add(new SqlParameter("@Otro", value.Otro));
-                    cmd.Parameters.Add(new SqlParameter("@ClaseOpcional", value.ClaseOpcional));
-                    cmd.Parameters.Add(new SqlParameter("@DescuentoP", value.DescuentoP));
-                    cmd.Parameters.Add(new SqlParameter("Amable", value.Amable));
-                    cmd.Parameters.Add(new SqlParameter("NombreRecepcionista", value.NombreRecepcionista));
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
-
-
-
-
-
         #endregion
 
         #region "Secciones ---> Adicionales"
@@ -2869,28 +2364,6 @@ namespace EMAI.Datos
         #endregion
 
         #region "Secciones ---> Promosiones"
-        //public async Task<List<PromosionesModel>> GetPromosiones()
-        //{
-        //    using (SqlConnection sql = new SqlConnection(EMAIConnection))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("usp_ObtenerPromosiones", sql))
-        //        {
-        //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        //            var response = new List<PromosionesModel>(); //1
-        //            await sql.OpenAsync();
-
-        //            using (var reader = await cmd.ExecuteReaderAsync())
-        //            {
-        //                while (await reader.ReadAsync())
-        //                {
-        //                    response.Add(MapToPromosiones(reader));//2
-        //                }
-        //            }
-
-        //            return response;
-        //        }
-        //    }
-        //}
         public async Task<bool> InsertarPromocionesV1(PromocionesModelV1 request)
         {
             bool success = false;
@@ -3024,18 +2497,6 @@ namespace EMAI.Datos
                 throw new Exception("Se presento problema Conexion de la Base de Datos", ex);
             }
         }
-
-        //private PromosionesModel MapToPromosiones(SqlDataReader reader)
-        //{
-        //    return new PromosionesModel()
-        //    {
-
-        //        IdPromosion = (int)reader["IdPromosion"],
-        //        IdAlumno = (int)reader["IdAlumno"],
-        //        Porcentaje = (int)reader["Porcentaje"],
-        //        Fecha = (DateTime)reader["Fecha"],
-        //    };
-        //}
         private PromocionesModelV1 MapToPromocionV1(SqlDataReader reader)
         {
             return new PromocionesModelV1()
@@ -4350,6 +3811,7 @@ namespace EMAI.Datos
             GC.Collect();
         }
 
+   
 
 
 
