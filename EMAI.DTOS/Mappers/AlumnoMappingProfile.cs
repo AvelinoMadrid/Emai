@@ -28,7 +28,11 @@ namespace EMAI.DTOS.Mappers
             CreateMap<InsertarAlumnoModelV1, AlumnoRequest>().ReverseMap();
 
             CreateMap<InsertarAlumnoModelV1, AlumnoRequestV1>().ReverseMap();
-            CreateMap<AlumnoRequestV1, InsertarAlumnoModelV1>().ReverseMap();
+            CreateMap<AlumnoRequestV1, InsertarAlumnoModelV1>().ForMember(d=>d.FacebookPapas,option=>option.MapFrom(scr=>string.IsNullOrEmpty(scr.FacebookPapas) ? "Sin Facebook" : scr.FacebookPapas)).
+                                                                ForMember(d => d.Facebook, option => option.MapFrom(scr => string.IsNullOrEmpty(scr.Facebook) ? "Sin Facebook" : scr.Facebook)).
+                                                                ForMember(d => d.Email, option => option.MapFrom(scr => string.IsNullOrEmpty(scr.Email) ? "Sin Correo" : scr.Email)).
+                                                                ForMember(d => d.GradoEstudios, option => option.MapFrom(scr => string.IsNullOrEmpty(scr.GradoEstudios) ? "Sin Datos" : scr.GradoEstudios)).
+                                                                ReverseMap();
         }
     }
 }

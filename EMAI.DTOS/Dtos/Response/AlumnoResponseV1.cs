@@ -46,7 +46,7 @@ namespace EMAI.DTOS.Dtos.Response
         public string EnterasteEsc { get; set; } = null!;
         public string InteresGnroMusical { get; set; }
         public string CualesMusicales { get; set; } = null!;
-
+        //--------------------------------------------------
         public string ClaseOpcional { get; set; }
         public string DescuentoP { get; set; }
         public string Amables { get; set; }

@@ -135,6 +135,7 @@
                                         var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
 
                                         fechaInicio.value = fechaFormateada.Date.toISOString();
+                                        
                                     });
                                 </script>
 
@@ -239,23 +240,6 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
-                                <script>
-                                    var fecha = new Date();
-                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    document.getElementById("FechaNacimiento").value = fechaZone.toJSON().slice(0, 10);
-
-                                    var fechaInicio = document.getElementById("FechaNacimiento");
-
-                                    fechaInicio.addEventListener("change", function () {
-
-                                        var fechaSeleccionada = fechaInicio.value;
-                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
-
-                                        fechaInicio.value = fechaFormateada.Date.toISOString();
-
-                                    });
-                                </script>
-
                                 @*Telefono del alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Telefono">Teléfono de Casa</label>
@@ -661,7 +645,7 @@
 
                                 @***********************************************************@
 
-                                @*Botones de guardar*@
+                               
                                 <div class="col-md-6 form-group" data-target="#pagos-part" id="desactivarGuardarCambios">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
@@ -669,6 +653,7 @@
                                 <div class="col-md-6 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
+                                @*Botones de Editar*@
                                 <div class="col-md-6 form-group" data-target="#pagos-part" id="ActivarEditar0">
                                     <button id="guardarCambios" type="submit" class="btn btn-success" style="width:100% !important">Guardar Cambios</button>
                                 </div>
@@ -832,6 +817,7 @@
                                 <input type="hidden" asp-for="Activo" id="Activo" value="true" />
 
                                 @******************************************@
+                                @*Boton para agregar*@
                                 <div class="col-md-12 form-group" data-target="#pagos-part" id="desacctivarEditar">
                                     <button id="guardar" type="submit" class="btn btn-success" style="width:100% !important">Guardar y pagar </button>
                                 </div>
@@ -905,6 +891,11 @@
         var DiaAndHoraClaseBase = document.getElementById('DiaAndHoraClaseBase');
         var DiaAndHoraClaseOpcional = document.getElementById('DiaAndHoraClaseBaseOpcional');
         var selectOpcionales = document.getElementById("SeleccionarClase2");
+
+        var fechaNacimiento = document.getElementById('FechaNacimiento');
+        var edad = document.getElementById('Edad');
+        
+
 
         var select1Emisor = "SeleccionarClase1";
         var select2Emisor = "SeleccionarClase2";
@@ -1095,6 +1086,70 @@
             var resultado = parseFloat((porcentajeV1 * mensualidad) / 100);
             return resultado;
         }
+        //calcula la edad de una persona
+
+        async function calcularEdadAsync(fecha) {
+            return new Promise((resolve, reject) => {
+                try {
+                    const today = new Date();
+                    const array_fecha = fecha.split("/");
+                    if (array_fecha.length !== 3)
+                        reject(new Error("Fecha Inválida"));
+
+                    let year = parseInt(array_fecha[2]);
+                    if (isNaN(year))
+                        reject(new Error("Año inválido"));
+
+                    let month = parseInt(array_fecha[1]);
+                    if (isNaN(month))
+                        reject(new Error("Mes inválido"));
+
+                    let day = parseInt(array_fecha[0]);
+                    if (isNaN(day))
+                        reject(new Error("Día inválido"));
+
+                    if (year <= 99)
+                        year += 1900;
+
+                    let edad = today.getFullYear() - year - 1;
+
+                    if (today.getMonth() + 1 - month < 0)
+                        resolve(edad);
+                    if (today.getMonth() + 1 - month > 0)
+                        resolve(edad + 1);
+
+                    if (today.getUTCDate() - day >= 0)
+                        resolve(edad + 1);
+
+                    resolve(edad);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+        }
+
+
+        fechaNacimiento.addEventListener('blur', async function () {
+
+            var fechaM = this.value; 
+            var fechallegada = new Date(this.value);
+            var dia = fechallegada.getDate();
+            var mes = fechallegada.getMonth() + 1;
+            var año = fechallegada.getFullYear();
+
+            var fechaFormateada = (dia < 10 ? '0' : '') + dia + '/' +
+                (mes < 10 ? '0' : '') + mes + '/' +
+                año;
+
+            this.value = fechaFormateada; 
+            var edades = await calcularEdadAsync(fechaFormateada);
+            edad.value = edades;
+            this.value = fechaM;
+            var valor = this.value = fechaM;
+            console.log("valor de la fecha es" + valor);
+        });
+
+   
 
     </script>
 }

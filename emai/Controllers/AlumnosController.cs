@@ -16,6 +16,7 @@ using System;
 using emai.Servicios.Dtos.Response;
 using Humanizer;
 using Microsoft.IdentityModel.Tokens;
+using emai.Servicios.Dtos.Request;
 
 namespace emai.Controllers
 {
@@ -34,7 +35,6 @@ namespace emai.Controllers
             BaseResponseV1<AlumnoModel> alumnos = await _ServicioAlumnos_Api.ListarAllAlumnos();
             return View(alumnos);
         }
-
         public async Task<IActionResult> NuevoAlumno()
         {
             var folioGenerador = await GenerarFolioV1();
@@ -55,14 +55,6 @@ namespace emai.Controllers
             Alumnos alumno = new Alumnos();
 
             ViewBag.Accion = "Nuevo Alumno";
-            if (IdAlumno != 0)
-            {
-                baseReponse = await _ServicioAlumnos_Api.ObtenerAlumnoById(IdAlumno);
-                alumno = baseReponse.Data;
-                ViewBag.Accion = "Editar Alumno";
-            }
-
-
 
             var folioGenerador = await GenerarFolioV1();
 
@@ -81,15 +73,11 @@ namespace emai.Controllers
         [HttpPost]
         public async Task<IActionResult> GuardarCambiosV1(Alumnos entity)
         {
-            BaseResponseV2<bool> result;
+            BaseResponseV2<bool> result=null;
 
             if (entity.IdAlumno == 0)
             {
                 result = await _ServicioAlumnos_Api.InsertarAlumnoV1(entity);
-            }
-            else
-            {
-                result = await _ServicioAlumnos_Api.UpdateAlumnoById(entity.IdAlumno, entity);
             }
 
             if (result.IsSuccess && result.Data)
@@ -98,12 +86,46 @@ namespace emai.Controllers
                 return RedirectToAction(nameof(Alumnos));
             }
             else
-            {
-              
+            { 
                 return View("Alumnos");
             }
         }
+        public async Task<IActionResult> EditarAlumno(int IdAlumno)
+        {
+            BaseResponseV2<EditarAlumnoRequest> baseReponse = new BaseResponseV2<EditarAlumnoRequest>();
 
+            EditarAlumnoRequest alumnoData = new EditarAlumnoRequest();
+
+            baseReponse = await _ServicioAlumnos_Api.ObtenerAlumnoById(IdAlumno);
+
+            ViewBag.Action = "Editar Clase";
+            //obtener la data del id;
+            if (IdAlumno != 0)
+            {
+                baseReponse = await _ServicioAlumnos_Api.ObtenerAlumnoById(IdAlumno);
+                alumnoData = baseReponse.Data;
+                alumnoData.ListarClasesSelect= await _ServicioAlumnos_Api.ListarClasesSelect();
+                alumnoData.ListClasesUnique= await _ServicioAlumnos_Api.ListarClasesSelectUnique();
+                alumnoData.ListarHorarioSelect = await _ServicioAlumnos_Api.ListarHorarioSelect();
+            }
+            return View(alumnoData);
+        }
+        public async  Task<IActionResult> EditarAlumnoData(EditarAlumnoRequest requestData){
+            
+            BaseResponseV2<bool> result;
+
+            result = await _ServicioAlumnos_Api.UpdateAlumnoById(requestData);
+
+            if(result.Data ==true)
+            {
+                ViewBag.mensaje = result.Message;
+                return RedirectToAction(nameof(Alumnos),new {mensaje= result.Message});
+            }
+            else
+            {
+                return View("Alumnos");
+            }
+        }
 
         [HttpGet]
         public async Task<IActionResult> EliminarAlumnosV1(int IdAlumno)
@@ -135,23 +157,23 @@ namespace emai.Controllers
             }
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ObtenerAlumnoById(int IdAlumno)
-        {
-            BaseResponseV2<Alumnos> baseReponse = new BaseResponseV2<Alumnos>();
-            Alumnos dataAlumno = new Alumnos();
-            baseReponse = await _ServicioAlumnos_Api.ObtenerAlumnoById(IdAlumno);
-            dataAlumno = baseReponse.Data;
+        //[HttpGet]
+        //public async Task<IActionResult> ObtenerAlumnoById(int IdAlumno)
+        //{
+        //    BaseResponseV2<Alumnos> baseReponse = new BaseResponseV2<Alumnos>();
+        //    Alumnos dataAlumno = new Alumnos();
+        //    baseReponse = await _ServicioAlumnos_Api.ObtenerAlumnoById(IdAlumno);
+        //    dataAlumno = baseReponse.Data;
 
-            if (dataAlumno != null)
-            {
-                return RedirectToAction("agregaralumnos");
-            }
-            else
-            {
-                return RedirectToAction("Alumnos");
-            }
-        }
+        //    if (dataAlumno != null)
+        //    {
+        //        return RedirectToAction("agregaralumnos");
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Alumnos");
+        //    }
+        //}
 
         [HttpGet]
         public async Task<IActionResult> SelectListClasesHorario(int IdClase)

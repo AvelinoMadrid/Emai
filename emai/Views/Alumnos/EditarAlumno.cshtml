@@ -5,6 +5,13 @@
 @{
     ViewData["Title"] = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string valorEstudio = "Sin Datos Estudios";
+    string valorFacebookPapa = "Sin Redes Sociales";
+    string valorCorreoPapa = "Sin Correo";
+    string valorFacebookAlumno = "Sin Redes Sociales";
+    string valorOtrosInteres = "Otros";
+    string valorMusicaInteres =  "Otros";
 }
 <div class="col-md-12">
     <div class="card card-default">
@@ -51,7 +58,7 @@
                     </div>
                 </div>
                 <div class="bs-stepper-content">
-                    <form asp-action="editarAlumnoData" asp-controller="Alumnos" method="post" name="formAddAlumno" class="needs-validation" novalidate>
+                    <form asp-action="EditarAlumnoData" asp-controller="Alumnos" method="post" name="formAddAlumno" class="needs-validation" novalidate>
 
                         <!-- your steps content here -->
                         <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
@@ -65,21 +72,6 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                <script>
-                                    var fecha = new Date();
-                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    document.getElementById("FechaInscripcion").value = fechaZone.toJSON().slice(0, 10);
-
-                                    var fechaInscripcion = document.getElementById("FechaInscripcion");
-
-                                    fechaInscripcion.addEventListener("change", function () {
-
-                                        var fechaSeleccionada = fechaInscripcion.value;
-                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
-
-                                        fechaInscripcion.value = fechaFormateada.Date.toISOString;
-                                    });
-                                </script>
 
                                 @*Tag de Registro*@
                                 <div class="col-md-3 form-group">
@@ -111,26 +103,10 @@
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
-                                <script>
-                                    var fecha = new Date();
-                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    document.getElementById("FechaInicioClase").value = fechaZone.toJSON().slice(0, 10);
-
-                                    var fechaInicio = document.getElementById("FechaInicioClase");
-
-                                    fechaInicio.addEventListener("change", function () {
-
-                                        var fechaSeleccionada = fechaInicio.value;
-                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
-
-                                        fechaInicio.value = fechaFormateada.Date.toISOString();
-                                    });
-                                </script>
-
                                 @*Instumento Base*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="SeleccionarClase1">Instrumento Base</label>
-                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" required>
+                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase1" id="SeleccionarClase1" name="SeleccionarClase1" >
                                         <option value="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
@@ -148,7 +124,7 @@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="dia">Seleccione sus horario</label>
                                     <div class="input-group">
-                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases1" name="tomarClases1" required>
+                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases1" name="tomarClases1" >
                                             @* <option value="0">Seleccionar...</option> *@
                                         </select>
                                         <div class="valid-feedback">Válido.</div>
@@ -167,7 +143,7 @@
                                 @*Instrumento Opcional*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="SeleccionarClase2">Instrumento Opcional</label>
-                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="SeleccionarClase2" required>
+                                    <select class="form-control form-control-sa" asp-for="SeleccionarClase2" id="SeleccionarClase2" name="SeleccionarClase2" >
                                         <option value="0">Seleccionar...</option>
                                         @if (Model != null && Model.ListarClasesSelect != null)
                                         {
@@ -184,7 +160,7 @@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="dia">Seleccione sus horario</label>
                                     <div class="input-group">
-                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases2" name="tomarClases2" required>
+                                        <select multiple="multiple" class="form-control form-control-sa" id="tomarClases2" name="tomarClases2" >
                                             @* <option value="0">Seleccionar...</option> *@
                                         </select>
                                         <div class="valid-feedback">Válido.</div>
@@ -218,7 +194,6 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
-
                                 @*Fecha Nacimiento del Alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento del Alumno</label>
@@ -228,22 +203,6 @@
                                         <div class="invalid-feedback">Por favor rellene este campo.</div>
                                     </div>
                                 </div>
-                                <script>
-                                    var fecha = new Date();
-                                    var fechaZone = new Date(fecha.getTime() - (fecha.getTimezoneOffset() * 60000));
-                                    document.getElementById("FechaNacimiento").value = fechaZone.toJSON().slice(0, 10);
-
-                                    var fechaInicio = document.getElementById("FechaNacimiento");
-
-                                    fechaInicio.addEventListener("change", function () {
-
-                                        var fechaSeleccionada = fechaInicio.value;
-                                        var fechaFormateada = new Date(fechaSeleccionada).toISOString().split('T')[0];
-
-                                        fechaInicio.value = fechaFormateada.Date.toISOString();
-
-                                    });
-                                </script>
 
                                 @*Telefono del alumno*@
                                 <div class="col-md-3 form-group">
@@ -261,10 +220,12 @@
                                     <div class="invalid-feedback">Ingrese un numero Telefónico (Celular).</div>
                                 </div>
 
-                                @*Facebook del Alumno*@
+                                @*Facebook del Alumno *@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Facebook">Facebook</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="Facebook" name="Facebook" placeholder="URL o Nombre" />
+                                    <input type="text" class="form-control form-control-sa" asp-for="Facebook" id="Facebook"
+                                     value="@((Model.Facebook!=null && Model.Facebook!="")? Model.Facebook : valorFacebookAlumno)"
+                                    name="Facebook"  placeholder="URL o Nombre" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese Facebook.</div>
                                 </div>
@@ -272,7 +233,7 @@
                                 @*Email del Alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Email">Email del Alumno</label>
-                                    <input type="email" class="form-control form-control-sa" asp-for="Email" id="Email" name="Email" />
+                                    <input type="email" class="form-control form-control-sa" asp-for="Email" id="Email" name="Email"  />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Ingrese Email.</div>
                                 </div>
@@ -316,7 +277,9 @@
                                 @*Facebook del papa*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="FacebookPapas">Facebook papá o mamá</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="FacebookPapas" name="FacebookPapas" />
+                                    <input type="text" class="form-control form-control-sa" asp-for="FacebookPapas" id="FacebookPapas"
+                                           value="@((Model.FacebookPapas!=null && Model.FacebookPapas!="")? Model.FacebookPapas : valorFacebookPapa)"
+                                    name="FacebookPapas" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -324,7 +287,9 @@
                                 @*Email del papa *@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="email">Email</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="EmailPapas" name="EmailPapas" />
+                                    <input type="text" class="form-control form-control-sa" asp-for="EmailPapas" id="EmailPapas"
+                                           value="@((Model.EmailPapas!=null && Model.EmailPapas!="")? Model.EmailPapas : valorCorreoPapa)"
+                                    name="EmailPapas" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo..</div>
                                 </div>
@@ -389,7 +354,8 @@
                                 @*Grado de Estudios*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="GradoEstudios">Grado de estudios</label>
-                                    <input type="text" class="form-control form-control-sa" asp-for="GradoEstudios" id="GradoEstudios" name="GradoEstudios" required />
+                                    <input type="text" class="form-control form-control-sa" asp-for="GradoEstudios" value="@((Model.GradoEstudios != null && Model.GradoEstudios != "") ? Model.GradoEstudios : valorEstudio)"
+                                    id="GradoEstudios" name="GradoEstudios" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -495,7 +461,6 @@
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
 
-
                                 @*Interes musical*@
                                 <div class="col-md-4 form-group">
                                     <label class="form-label" for="InteresGnroMusical">¿Tienes algun género en especial?</label>
@@ -566,7 +531,10 @@
                                 @*Otro *@
                                 <div class="col-md-12 form-group" style="display:none" id="OtroInteresV1">
                                     <label class="form-label" for="OtroOpcional">¿Algun otro interés musical?</label>
-                                    <input type="text" class="form-control form-control-sa" placeholder="Mencionalo" asp-for="OtroOpcional" id="OtroOpcional" name="OtroOpcional" />
+                                    <input type="text" class="form-control form-control-sa" placeholder="Mencionalo" asp-for="OtroOpcional"
+                                           value="@((Model.OtroOpcional!=null && Model.OtroOpcional!="") ? Model.OtroOpcional : valorOtrosInteres)"
+                                    
+                                    id="OtroOpcional" name="OtroOpcional" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -589,7 +557,9 @@
                                 @*Musica de Interes *@
                                 <div class="col-md-12 form-group">
                                     <label class="form-label" for="MusicalInteres">¿Musica de Interes?</label>
-                                    <input type="text" class="form-control form-control-sa" placeholder="Cumbia" asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres" />
+                                    <input type="text" class="form-control form-control-sa" placeholder="Cumbia"
+                                           value="@((Model.MusicalInteres!=null && Model.MusicalInteres!="") ? Model.MusicalInteres : valorMusicaInteres)"
+                                    asp-for="MusicalInteres" id="MusicalInteres" name="MusicalInteres" />
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
@@ -645,23 +615,15 @@
                                     <div class="valid-feedback">Válido.</div>
                                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-
+                                <input type="hidden" asp-for="Activo" id="Activo" value="true" />
 
                                 @***********************************************************@
-
-                                @*Botones de guardar*@
-                                <div class="col-md-6 form-group" data-target="#pagos-part" id="desactivarGuardarCambios">
-                                    <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
-                                </div>
-
-                                <div class="col-md-6 form-group">
-                                    <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
-                                </div>
-
                                 <div class="col-md-12 form-group" data-target="#pagos-part" id="desacctivarEditar">
                                     <button id="guardar" type="submit" class="btn btn-success" style="width:100% !important">Editar Registro </button>
                                 </div>
-
+                                <div class="col-md-6 form-group">
+                                    <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
+                                </div>
                                 @***********************************************************@
 
                             </div>
@@ -675,3 +637,155 @@
     </div>
     <!-- /.card -->
 </div>
+@section Scripts {
+    <script>
+        var selectDay = document.getElementById("NoDiaClases");
+        var DiaAndHoraClaseBase = document.getElementById('DiaAndHoraClaseBase');
+        var DiaAndHoraClaseOpcional = document.getElementById('DiaAndHoraClaseBaseOpcional');
+        var selectOpcionales = document.getElementById("SeleccionarClase2");
+        var select1Emisor = "SeleccionarClase1";
+        var select2Emisor = "SeleccionarClase2";
+        var selectDestino = "tomarClases1";
+        var select2Destino = "tomarClases2";
+
+        async function obtenerIdAlumno() {
+            return new Promise(resolve => {
+                const inputIdAlumno = document.getElementById("IdAlumno").value;
+                resolve(inputIdAlumno);
+            });
+        }
+
+        $(document).ready(function () {
+            cargaListHoario(select1Emisor, selectDestino);
+            cargaListHoario(select2Emisor, select2Destino);
+        });
+
+        function cargaListHoario(typeSelecccionClass, elegirDestinoSelect) {
+
+            var IdClaseValue = $(`#${typeSelecccionClass} option:selected`).val();
+            $.ajax({
+                url: '@Url.Action("SelectListClasesHorarioV1Nombre", "Alumnos")',
+                type: 'GET',
+                data: {
+                    IdClase: IdClaseValue
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (response.success) {
+                        var data = response.data;
+                        var tam = data.length;
+                        var i = 0;
+
+                        $(`#${elegirDestinoSelect}`).empty();
+
+                        $(`#${elegirDestinoSelect}`).append(
+                            $("<option>").attr("value", " ").text("Seleccionar...")
+                        );
+
+                        while (i < tam) {
+                            $(`#${elegirDestinoSelect}`).append(
+                                $("<option>").attr("value", data[i].dia).text(data[i].dia)
+                            );
+
+                            i++;
+                        }
+
+                    } else {
+                        console.error('Error al obtener la lista de horarios de la clase: ', response.message);
+                    }
+                },
+                error: function (error) {
+                    console.error('Error al llamar a la action SelectListClasesHorario: ', error);
+                }
+            });
+        }
+
+        selectDay.addEventListener("change", function () {
+
+            var varDaySeleccion = selectDay.value;
+            // console.log("Select de dioa es " + varDaySeleccion);
+        });
+
+        var selectOpcionalesV1 = 0;
+
+        selectOpcionales.addEventListener("change", function () {
+            selectOpcionalesV1 = this.value;
+            //console.log("Esrata Vaciao " + selectOpcionalesV1);
+        });
+
+        $('#tomarClases2').on("change", function () {
+
+            var selectOp = selectOpcionalesV1;
+            var selectOne = this.value;
+
+            if (selectOp == '0') {
+                DiaAndHoraClaseOpcional.value = "{}";
+            } else {
+                DiaAndHoraClaseOpcional.value = "{" + selectOne + "}";
+            }
+
+        });
+        $('#tomarClases1').on("change", function () {
+
+            var selectDayV1 = selectDay.value;
+
+            if (selectDayV1 == "") {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "warning",
+                    title: "Seleccione la Cantidad de Dia de clases",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+
+                var valoresSeleccionado = [];
+                var selectedOptions = this.selectedOptions;
+                for (var i = 0; i < selectedOptions.length; i++) {
+                    var selectValue = selectedOptions[i].value;
+                    valoresSeleccionado.push(selectValue);
+                }
+                DiaAndHoraClaseBase.value = JSON.stringify("{ " + valoresSeleccionado.join(" , ") + " }");
+
+                if (valoresSeleccionado.length > selectDayV1) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "warning",
+                        title: "No puede Seleccionar más de " + selectDayV1 + " clases",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }
+        });
+
+        $("#SeleccionarClase1").on("change", function () {
+            cargaListHoario(select1Emisor, selectDestino);
+            $('#tomarClases1').trigger('change');//trigger entiendo como un diusparador de eventos
+        });
+        $("#SeleccionarClase2").on("change", function () {
+            cargaListHoario(select2Emisor, select2Destino);
+            $('#tomarClases2').trigger('change');//trigger entiendo como un diusparador de eventos
+        });
+
+    </script>
+}
+
+<script>
+
+    (() => {
+        'use strict';
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms).forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>

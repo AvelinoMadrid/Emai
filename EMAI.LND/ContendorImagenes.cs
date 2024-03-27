@@ -12,6 +12,7 @@ namespace EMAI.LND
 {
     public class ContendorImagenes : IContendorImagenes
     {
+        //se editara
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IHttpContextAccessor _htpContextAccessor;
         public ContendorImagenes(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor htpContextAccessor)

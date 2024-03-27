@@ -1,5 +1,6 @@
 ﻿using emai.Models;
 using emai.Servicios.Commons;
+using emai.Servicios.Dtos.Request;
 using emai.Servicios.Dtos.Response;
 
 
@@ -17,8 +18,8 @@ namespace emai.Servicios
         Task<BaseResponseV2<bool>> EliminarAlumnoV1(int IdAlumno);
         Task<BaseResponseV2<bool>> ReactivarAlumnoV1(int IdAlumno);
         Task<BaseResponseV2<bool>> InsertarAlumnoV1(Alumnos entity);
-        Task<BaseResponseV2<Alumnos>> ObtenerAlumnoById(int IdAlumno);
-        Task<BaseResponseV2<bool>> UpdateAlumnoById(int IdAlumno, Alumnos entity);
+        Task<BaseResponseV2<EditarAlumnoRequest>> ObtenerAlumnoById(int IdAlumno);
+        Task<BaseResponseV2<bool>> UpdateAlumnoById(EditarAlumnoRequest entity);
         Task<List<ClasesResponse>> ListarClasesSelect();
         Task<BaseResponseV1<ClasesResponse>> ListarClasesSelectUnique();
         Task<List<HorarioResponse>> ListarHorarioSelect();

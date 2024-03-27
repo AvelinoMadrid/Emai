@@ -1,5 +1,6 @@
 ﻿using emai.Models;
 using emai.Servicios.Commons;
+using emai.Servicios.Dtos.Request;
 using emai.Servicios.Dtos.Response;
 using Email.Utiilities.Static;
 using Newtonsoft.Json;
@@ -20,10 +21,9 @@ namespace emai.Servicios
             _baseurl = builder.GetSection("ApiSetting:baseUrl").Value;
 
         }
-
-        public async Task<BaseResponseV2<Alumnos>> ObtenerAlumnoById(int IdAlumno)
+        public async Task<BaseResponseV2<EditarAlumnoRequest>> ObtenerAlumnoById(int IdAlumno)
         {
-            var response = new BaseResponseV2<Alumnos>();
+            var response = new BaseResponseV2<EditarAlumnoRequest>();
 
             try
             {
@@ -38,7 +38,7 @@ namespace emai.Servicios
                         var json_respuesta = await responseHttp.Content.ReadAsStringAsync();
                         var destinoData = JsonConvert.DeserializeObject<BaseResponseV2<AlumnoResponseById>>(json_respuesta);
 
-                        var alumno = new Alumnos();
+                        var alumno = new EditarAlumnoRequest();
                         alumno.asingarResponseV1(destinoData.Data);
 
 
@@ -62,7 +62,7 @@ namespace emai.Servicios
 
             return response;
         }
-        public async Task<BaseResponseV2<bool>> UpdateAlumnoById(int IdAlumno, Alumnos entity)
+        public async Task<BaseResponseV2<bool>> UpdateAlumnoById(EditarAlumnoRequest entity)
         {
             var dataFinal = new BaseResponseV2<bool>();
 
@@ -78,7 +78,7 @@ namespace emai.Servicios
 
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/Update/" + IdAlumno);
+                var requestUrl = new Uri("https://localhost:7265/api/Alumnos/Update/" + entity.IdAlumno);
 
                 var response = await client.PutAsync(requestUrl, requestContent).ConfigureAwait(false);
 
@@ -95,7 +95,6 @@ namespace emai.Servicios
             }
             catch (Exception ex)
             {
-
                 dataFinal.IsSuccess = false;
                 dataFinal.Message = $"Error al Editar Alumno {ex.Message}";
             }

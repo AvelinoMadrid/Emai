@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMAI.Helpers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad0771134576741c5832f62be0c8129ef50e5487")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3da487d7bcc8e791a6d6a5051f0e98c4bb709ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMAI.Helpers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMAI.Helpers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,6 +16,7 @@ namespace emai.Servicios.Dtos.Request
         public string FechaInicioClase { get; set; }
         public string NombreCompleto { get; set; } = null!;
         public int Edad { get; set; }
+
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public string FechaNacimiento { get; set; }
         public string TelefonoCasa { get; set; } = null!;
@@ -50,7 +51,6 @@ namespace emai.Servicios.Dtos.Request
         public string EnterasteEsc { get; set; } = null!;
         public bool InteresGnroMusical { get; set; }//
         public string CualesMusicales { get; set; } = null!;
-
         public string TipoInteres { get; set; } = null!;
         public string OtroOpcional { get; set; } = null!;
         public string MusicalInteres { get; set; } = null!;
@@ -115,8 +115,8 @@ namespace emai.Servicios.Dtos.Request
             }
         }
         public List<ClasesResponse> ListarClasesSelect { get; set; }
-        public BaseResponseV1<Promosiones> ListSelectPromocion { get; set; }
         public BaseResponseV1<ClasesResponse> ListClasesUnique { get; set; }
+        public List<HorarioResponse> ListarHorarioSelect { get; set; }
 
     }
 }

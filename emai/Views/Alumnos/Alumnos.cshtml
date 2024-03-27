@@ -78,7 +78,7 @@
                                             <td>@alumno.DiaAndHoraClaseOpcional</td>
 
                                             <td>
-                                                <a asp-action="agregaralumnos" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
+                                                    <a asp-action="EditarAlumno" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>
                                                 <a asp-action="EliminarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-danger btn-sm" style="width:100%;">Desactivar </a>
                                                 <a asp-action="ReactivarAlumnosV1" asp-controller="Alumnos" asp-route-IdAlumno="@alumno.IdAlumno" class="btn btn-success btn-sm" style="width:100%;">Reactivar</a>
                                             </td>
