@@ -57,6 +57,8 @@
                                 @{
                                     foreach (var alumno in Model.Data)
 
+                                        @if (Model.Data != null && Model.Data.Any())
+
                                     {
                                         <tr>
                                             <td>@alumno.IdAlumno</td>
@@ -84,6 +86,10 @@
 
                                         </tr>
                                     }
+                                        else
+                                        {
+                                            <p>No hay datos de alumnos disponibles.</p>
+                                        }
 
                                 }
 

@@ -117,6 +117,8 @@ namespace emai.Models
         public decimal Inscripcion { get; set; }
         public decimal Mensualidad { get; set; }
 
+        public List<Alumnos> Data { get; set; }
+
     }
 
 

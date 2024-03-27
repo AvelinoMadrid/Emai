@@ -73,6 +73,7 @@ namespace emai.Controllers
             alumno.ListarHorarioSelect = await _ServicioAlumnos_Api.ListarHorarioSelect();
             alumno.ListClasesUnique = await _ServicioAlumnos_Api.ListarClasesSelectUnique();
 
+
             return View("agregaralumnos", alumno);
 
         }
@@ -84,20 +85,22 @@ namespace emai.Controllers
 
             if (entity.IdAlumno == 0)
             {
-
                 result = await _ServicioAlumnos_Api.InsertarAlumnoV1(entity);
             }
             else
             {
                 result = await _ServicioAlumnos_Api.UpdateAlumnoById(entity.IdAlumno, entity);
             }
+
             if (result.IsSuccess && result.Data)
             {
-                return View("Alumnos");
+                
+                return RedirectToAction(nameof(Alumnos));
             }
             else
             {
-                return NoContent();
+              
+                return View("Alumnos");
             }
         }
 

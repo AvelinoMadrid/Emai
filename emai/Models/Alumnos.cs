@@ -129,6 +129,8 @@ namespace emai.Models
         public List<MesesModel> ListarMesesSelect { get; set; }
         public List<HorarioResponse> ListarHorarioSelect { get; set; }
         public string GeneradorFolioV1 { get; set; }
+
+        public List<Alumnos> Data { get; set; }
         //public BaseResponseV1<SelectLisHorario> SelectListHorario { get; set; }
     }
 }
