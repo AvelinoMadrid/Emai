@@ -10,8 +10,10 @@ namespace emai.Models
     {
         public int IdLibro { get; set; }
         public string NombreLibro { get; set; }
-        public decimal costo { get; set; }
-        public bool Status { get; set; }
+        public string DescripcionLibro { get; set; }
+        public decimal Costo { get; set; }
+        public int Stock { get; set; }
+        public string Estado { get; set; }
         public List<Libro> Lista { get; set; }
     }
 }

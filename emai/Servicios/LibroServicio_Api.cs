@@ -48,22 +48,71 @@ namespace emai.Servicios
             return lista;
         }
 
-        public async Task<Libro> Obtener(int IdLibro)
+        /*optener la lista de los inactivos*/
+        public async Task<List<Libro>> ListaInactivo()
         {
-            Libro libro = new Libro();
+            if (string.IsNullOrEmpty(_baseurl))
+            {
+                throw new ArgumentException("La URL base no puede ser nula o vacía");
+            }
 
-            var cliente = new HttpClient();
-            cliente.BaseAddress = new Uri(_baseurl);
-            var response = await cliente.GetAsync($"api/Libro/{IdLibro}");
+            List<Libro> lista = new List<Libro>();
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(_baseurl);
+                var response = await httpClient.GetAsync($"/api/LibrosInactivo");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonRespuesta = await response.Content.ReadAsStringAsync();
+                    lista = JsonConvert.DeserializeObject<List<Libro>>(jsonRespuesta);
+                }
+                else
+                {
+                    // Manejar el caso cuando la respuesta no es exitosa
+                    // Puedes lanzar una excepción, registrar el error, etc.
+                    throw new Exception($"La solicitud GET no fue exitosa. Código de estado: {response.StatusCode}");
+                }
+            }
+
+            return lista;
+        }
+
+        public async Task<Libro> Obtener(int idActivo)
+        {
+            Libro libroA = new Libro();
+
+            var libroActivo = new HttpClient();
+            libroActivo.BaseAddress = new Uri(_baseurl);
+            var response = await libroActivo.GetAsync($"/api/Libro/{idActivo}");
 
             if (response.IsSuccessStatusCode)
             {
                 var json_respuesta = await response.Content.ReadAsStringAsync();
                 var resultado1 = JsonConvert.DeserializeObject<Libro>(json_respuesta);
-                libro = resultado1;
+                libroA = resultado1;
             }
 
-            return libro;
+            return libroA;
+        }
+        /*listado de los inactivos*/
+        public async Task<Libro> ObtenerInactivo(int idInactivo, string Estado)
+        {
+            Libro libroI = new Libro();
+
+            var libroInactivo = new HttpClient();
+            libroInactivo.BaseAddress = new Uri(_baseurl);
+            var response = await libroInactivo.GetAsync($"/api/LibroInactivo/{idInactivo}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json_respuesta = await response.Content.ReadAsStringAsync();
+                var resultado1 = JsonConvert.DeserializeObject<Libro>(json_respuesta);
+                libroI = resultado1;
+            }
+
+            return libroI;
         }
 
         public async Task<bool> Guardar(Libro Libro)
@@ -90,7 +139,7 @@ namespace emai.Servicios
             var Libro2 = new HttpClient();
             Libro2.BaseAddress = new Uri(_baseurl);
             var content = new StringContent(JsonConvert.SerializeObject(Libro), Encoding.UTF8, "application/json");
-            var response = await Libro2.PutAsync($"api/Libros/ActualizarCosto/", content);
+            var response = await Libro2.PutAsync($"/api/Libros/Actualizar", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -100,39 +149,23 @@ namespace emai.Servicios
             return Lib;
         }
 
-        public async Task<bool> EditarDes(Libro Libro)
+        public async Task<bool> ActivarLibro(Libro Libro)
         {
-            bool Libr = false;
+            bool respuesta = false;
 
-            var Libro3 = new HttpClient();
-            Libro3.BaseAddress = new Uri(_baseurl);
+            var activar = new HttpClient();
+            activar.BaseAddress = new Uri(_baseurl);
             var content = new StringContent(JsonConvert.SerializeObject(Libro), Encoding.UTF8, "application/json");
-            var response = await Libro3.PutAsync($"api/Libros/Desactivar/", content);
+            var response = await activar.PutAsync($"/api/Libros/Activar/", content);
 
             if (response.IsSuccessStatusCode)
             {
-                Libr = true;
+                respuesta = true;
             }
 
-            return Libr;
+            return respuesta;
         }
 
 
-        public async Task<bool> EditarActivar(Libro Libro)
-        {
-            bool Libroo = false;
-
-            var Libro4 = new HttpClient();
-            Libro4.BaseAddress = new Uri(_baseurl);
-            var content = new StringContent(JsonConvert.SerializeObject(Libro), Encoding.UTF8, "application/json");
-            var response = await Libro4.PutAsync($"api/Libros/Activar/", content);
-
-            if (response.IsSuccessStatusCode)
-            {
-                Libroo = true;
-            }
-
-            return Libroo;
-        }
     }
 }

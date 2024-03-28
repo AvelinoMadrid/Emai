@@ -39,9 +39,10 @@
                                     <th>Telefono</th>
                                     <th>FechaNacimiento</th>
                                     <th>Status</th>
-                                    <th>Dias trabajada</th>
-                                    <th>Pago por Hora</th>
-                                    <th>Pago Semanal</th>
+                                   
+                                    <th>Horas Trabajada</th>
+                                    <th>Pago por hora</th>
+                                    <th>Total Semanal</th>
                                     <th>Área</th>
                                     <th>Editar/Eliminar</th>
                                 </tr>
@@ -63,9 +64,11 @@
                                         <td>
                                             @item.Estatus
                                         </td>
-                                        <td>@item.PagoSemanal</td>
-                                        <td>@item.Pago</td>
+                                       
                                         <td>@item.PagoHora</td>
+                                        <td>@item.Pago</td>
+                                        <td>@item.PagoSemanal</td>
+                                        
                                         <td>@item.Area</td>
                                         <td>
                                             <a asp-action="agregarmaestro" asp-controller="Maestro" asp-route-IdMaestro="@item.IdMaestro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR </a>

@@ -18,21 +18,22 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Libro</h3>
-                        <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="0" class="btn btn-dark btn-sm" style="float: right !important">Nuevo Libro</a>
+                        <a asp-action="LibroInactivo" asp-controller="Libro" class="btn btn-warning btn-sm" style="margin-right:10px; float: right !important">Actualizar Status</a>
+
+                        <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="0" class="btn btn-dark btn-sm" style="margin-right:10px;float: right !important">Nuevo Libro</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                      
 
-
-                        <table id="example1" class="table table-bordered table-hover table-striped">
+                        <table id="example2" class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
                                     <th>IdLibro</th>
                                     <th>Nombre</th>
+                                    <th>Descripción</th>
                                     <th>Costo</th>
-                                    <th>Status</th>
+                                    <th>Stock</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -44,28 +45,21 @@
 
                                         <td>@item.IdLibro</td>
                                         <td>@item.NombreLibro</td>
-                                        <td>$@item.costo</td>
-                                        <td>@item.Status</td>
+                                        <td>@item.DescripcionLibro</td>
+                                        <td>$@item.Costo</td>
+                                        <td>@item.Stock</td>
+
+
                                         <td>
-                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">EDITAR COSTO </a>
-                                            <a asp-action="agregarlibro1" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-primary btn-sm" style="width:100%; margin-bottom:10px">ACTIVAR</a>
-                                            <a asp-action="agregarlibro2" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-danger btn-sm" style="width:100%">DESACTIVAR </a>
-                                           
+
+                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">Editar </a>
+
+
 
                                         </td>
                                     </tr>
                                 }
                             </tbody>
-                            @* <tfoot>
-                            <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>   
-                            </tr>
-                            </tfoot>*@
                         </table>
                     </div>
                     <!-- /.card-body -->
@@ -80,4 +74,43 @@
     </div>
     <!-- /.container-fluid -->
 </section>
+@section Scripts {
+    <script>
+            function ConfirmarActualizar() {
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: 'Esta acción actualizará el registro',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, actualizar!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Si el usuario confirma, ejecuta la función de actualización
+                        ActualizarRegistro();
+                    }
+                });
+            }
 
+        function ActualizarRegistro() {
+            // Realiza una solicitud AJAX al servidor para actualizar el registro
+            $.ajax({
+                type: 'POST',
+                url: '/api/Libros/Activar', // Ajusta la URL según tu configuración
+                data: '{}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    // Maneja la respuesta del servidor (puede ser vacía si no necesitas nada específico)
+                    // Por ejemplo, podrías recargar la lista de registros después de actualizar uno
+                    //window.location.reload();
+                },
+                error: function (xhr, status, error) {
+                    // Maneja errores de la solicitud AJAX si es necesario
+                }
+            });
+        }
+    </script>
+}

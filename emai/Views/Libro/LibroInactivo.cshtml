@@ -1,0 +1,65 @@
+﻿@model IEnumerable<emai.Models.Libro>
+
+@{
+    ViewData["Title"] = "LibroInactivo";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Libro Inactivo</h3>
+                        <a asp-action="Libro" asp-controller="Libro"  class="btn btn-dark btn-sm" style="margin-right:10px;float: right !important">Mostrar libros activos</a>
+
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+                        <table id="example2" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>IdLibro</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Activar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdLibro</td>
+                                        <td>@item.NombreLibro</td>
+                                        <td>@item.DescripcionLibro</td>
+
+
+                                        <td>
+                                            <a asp-action="ActivarLibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">Activar libro </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+

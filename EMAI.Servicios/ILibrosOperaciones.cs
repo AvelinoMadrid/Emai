@@ -11,12 +11,16 @@ namespace EMAI.Servicios
     {
 
         Task<List<LibrosModel>> GetAllLibros();
+        Task<List<LibrosModel>> GetAllLibrosInactivos();
         Task<LibrosModel> GetLibrobyId(int id);
+        Task<LibrosModel> GetLibrobyIdInactivos(int idInactivo);
         Task<bool> InsertLibro(InsertLibrosModel value);
-        Task<bool> UpdateLibro(int IDLibro, decimal costo);
-        Task<bool> StatusDesactivadoLibro(int IdLibro);
-        Task<bool> StatusActivadorLibro(int IdLibro);
-       
+        Task<bool> UpdateLibro(int IdLibro, string NombreLibro, string DescripcionLibro, decimal Costo, string Estado);
+        //  Task<bool> ActivarDesactivarLibro(int IdLibro,string Estado);
+
+        Task<bool> ActivarLibro(int IdLibro, string Estado);
+        //Task<bool> DesactivarLibro(int IdLibro);
+
 
     }
 }

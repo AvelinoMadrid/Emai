@@ -11,76 +11,68 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-        <form asp-action="GuardarCambios" asp-controller="Libro" method="post" class="was-validated" novalidate>
+        <form asp-action="GuardarCambios" asp-controller="Libro" method="post" class="needs-validation" novalidate>
 
             <div class="row">
 
-            <input asp-for="IdLibro" type="hidden" />
+                <input asp-for="IdLibro" type="hidden" />
 
-            <div class="col-md-3 form-group">
-                <label class="form-label">NombreLibro</label>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Nombre de libro</label>
                     <input type="text" class="form-control form-control-sa" asp-for="NombreLibro" name="NombreLibro" id="NombreLibro" required />
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
 
-           @* <div class="mb-2">
-                <label class="form-label">costo</label>
-                <input type="text" class="form-control form-control-sa" asp-for="costo" />
-            </div>*@
-
-
-            <div class="col-md-3 form-group">
-                <label class="form-label">Costo</label>
-                <input type="number" class="form-control form-control-sa" asp-for="costo" name="costo" id="costo" required value="$" />
-                <div class="valid-feedback">Válido.</div>
-                <div class="invalid-feedback">Por favor rellene este campo.</div>
-            </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Descripción de libro</label>
+                    <input type="text" class="form-control form-control-sa" asp-for="DescripcionLibro" name="DescripcionLibro" id="DescripcionLibro" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
 
 
-          @*  <div class="mb-2">
-                <label class="form-label">Status</label>
-                <input type="text" class="form-control form-control-sa" asp-for="Status" />
-            </div>
-*@
-                <div class="col-md-3 form-group">
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Costo</label>
+                    <input type="number" class="form-control form-control-sa" asp-for="Costo" name="Costo" id="Costo" required value="$" />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+
+                <div class="col-md-4 form-group">
                     <label class="form-label">Stock</label>
-                    <input type="number" class="form-control form-control-sa" id="stock" required value="$" />
+                    <input type="number" class="form-control form-control-sa" asp-for="Stock" name="Stock" id="Stock" value="0" required />
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor rellene este campo.</div>
                 </div>
 
 
-            <div class="col-md-3 form-group">
-                <div class="form-group">
-                    <label>Status</label>
-                    <select class="form-control select2" style="width: 100%;" asp-for="Status" name="Status" id="Status" required>
-                        <option selected disabled value="">Escoger el Status</option>
-                        <option value="Activo">Activo</option>
-                        <option value="Desactivo">Desactivo</option>
-                      
+                <div class="col-md-4 form-group">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-control select2" style="width: 100%;" asp-for="Estado" name="Estado" id="Estado">
+                            <option value="1">Activo</option>
+                            <option value="0">Desactivo</option>
 
-                    </select>
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
                 </div>
-            </div>
 
 
 
                 <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
-            </div>
+                </div>
                 <div class="col-md-6 form-group">
                     <a asp-action="Libro" asp-controller="Libro" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
-            </div>
+                </div>
 
             </div>
         </form>
-
-        @*<a asp-action="agregarusuario" asp-controller="Usuarios" asp-route-IdUsuario="0" class="btn btn-primary btn-sm">Nuevo Usuario </a>*@
-
-
 
 
     </div>

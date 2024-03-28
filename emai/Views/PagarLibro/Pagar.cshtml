@@ -1,0 +1,91 @@
+﻿@model emai.Models.PagarLibro
+
+@{
+    ViewData["Title"] = "Pagar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        @ViewBag.Accion
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+
+        <form asp-action="GuardarCambios" asp-controller="Libro" method="post" class="needs-validation" novalidate>
+
+            <div class="row">
+
+                <input asp-for="IdPagarLibro" type="hidden" />
+
+                <div class="col-md-6 form-group">
+
+                    <div class="form-group">
+                        <label class="form-label">Alumno</label>
+                        <select class="form-control select2" asp-for="IdAlumno" required>
+                            <option selected disabled value="">Escoger un Alumno</option>
+                            @*@foreach (var alumno in Model.AlumnoDisponible)
+                            {
+                                <option value="@alumno.IdAlumno">@alumno.NombreCompleto</option>
+                            }*@
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 form-group">
+
+                    <div class="form-group">
+                        <label class="form-label">Libro</label>
+                        <select class="form-control select2" asp-for="IdLibro" required>
+                            <option selected disabled value="">Escoger un Libro</option>
+                           @* @foreach (var libro in Model.LibroDisponible)
+                            {
+                                <option value="@libro.IdLibro">@libro.NombreLibro</option>
+                            }
+                            *@
+                        </select>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Costo</label>
+                    <input type="number" class="form-control form-control-sa"  value="0" required />
+                    <div class="valid-feedback">Válido.</div>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Cantidad</label>
+                    <input type="number" class="form-control form-control-sa" asp-for="Cantidad" name="Cantidad" id="Cantidad" value="0" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Total</label>
+                    <input type="number" class="form-control form-control-sa" asp-for="TotalPagado" name="TotalPagado" id="TotalPagado" value="0" required />
+                    <div class="valid-feedback">Válido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <a asp-action="PagarLibro" asp-controller="PagarLibro" class="btn btn-warning btn-sm" style="width:100% !important">Volver a la vista </a>
+                </div>
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success btn-sm" ng-click="submitForm()" style="width:100% !important">Guardar Cambios</button>
+                </div>
+                
+
+            </div>
+        </form>
+
+
+    </div>
+</div>
+
+

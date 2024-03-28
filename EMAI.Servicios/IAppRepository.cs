@@ -142,11 +142,14 @@ namespace EMAI.Servicios
 
         #region "Libros"
         Task<List<LibrosModel>> GetAllLibros();
-        Task<LibrosModel> GetLibrobyId(int id);
+        Task<List<LibrosModel>> GetAllLibrosInactivo();
+        Task<LibrosModel> GetLibrobyId(int idActivo);
+        Task<LibrosModel> GetLibrobyIdInactivos(int idInactivo);
         Task<bool> InsertLibro(InsertLibrosModel value);
-        Task<bool> UpdateLibro(int IDLibro, decimal costo);
-        Task<bool> StatusDesactivadoLibro(int IdLibro);
-        Task<bool> StatusActivadorLibro(int IdLibro);
+        Task<bool> UpdateLibro(int IdLibro, string NombreLibro, string DescripcionLibro, decimal Costo, string Estado);
+        //Task<bool> ActivarDesactivarLibro(int IdLibro,string Estado);
+        Task<bool> ActivarLibro(int IdLibro, string Estado);
+        // Task<bool> DesactivarLibro(int IdLibro);
         #endregion
 
         #region "Maestros" 

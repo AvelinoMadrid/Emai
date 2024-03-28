@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EMAI.LND
 {
-    public class LibrosOperaciones: ILibrosOperaciones
+    public class LibrosOperaciones : ILibrosOperaciones
     {
 
         public async Task<List<LibrosModel>> GetAllLibros()
@@ -35,26 +35,42 @@ namespace EMAI.LND
 
         }
 
-        public async Task<bool> UpdateLibro(int IDLibro, decimal costo)
+        public async Task<bool> UpdateLibro(int IdLibro, string NombreLibro, string DescripcionLibro, decimal Costo, string Estado)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.UpdateLibro(IDLibro, costo);
+            var rsp = await db.UpdateLibro(IdLibro, NombreLibro, DescripcionLibro, Costo, Estado);
             return rsp;
         }
 
-        public async Task<bool> StatusDesactivadoLibro(int IdLibro)
-        {
-            using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.StatusDesactivadoLibro(IdLibro);
-            return rsp; 
-        }
 
-        public async Task<bool> StatusActivadorLibro(int IdLibro)
+        public async Task<bool> ActivarLibro(int IdLibro, string Estado)
         {
             using var db = AppRepositoryFactory.GetAppRepository();
-            var rsp = await db.StatusActivadorLibro(IdLibro);
+            var rsp = await db.ActivarLibro(IdLibro, Estado);
             return rsp;
         }
 
+        /*public async Task<bool> DesactivarLibro(int IdLibro)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.DesactivarLibro(IdLibro);
+            return rsp;
+        }
+        */
+
+        /*LIBROA INACTIVOS */
+        public async Task<List<LibrosModel>> GetAllLibrosInactivos()
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.GetAllLibrosInactivo();
+            return rsp;
+        }
+
+        public async Task<LibrosModel> GetLibrobyIdInactivos(int idInactivo)
+        {
+            using var db = AppRepositoryFactory.GetAppRepository();
+            var rsp = await db.GetLibrobyIdInactivos(idInactivo);
+            return rsp;
+        }
     }
 }

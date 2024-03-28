@@ -28,6 +28,13 @@ namespace emai.Controllers
             return View(Lista);
         }
 
+        public async Task<IActionResult> LibroInactivo()
+        {
+            List<Libro> Lista = await _ServicioLibro_Api.ListaInactivo();
+
+            return View(Lista);
+        }
+
         public async Task<IActionResult> agregarlibro(int IdLibro)
         {
             Libro modelo_lib = new Libro();
@@ -62,44 +69,34 @@ namespace emai.Controllers
                 return NoContent();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> GuardarCambios1(Libro ob_libroo)
+
+
+        /*pendiente*/
+        public async Task<IActionResult> ActivarLibro(int IdLibro, string Estado)
         {
-            bool lib1;
+            Libro model_Inactivo = new Libro();
 
-            if (ob_libroo.IdLibro == 0)
-            {
-                lib1 = await _ServicioLibro_Api.Guardar(ob_libroo);
-            }
-            else
-            {
-                lib1 = await _ServicioLibro_Api.EditarDes(ob_libroo);
-            }
+            model_Inactivo = await _ServicioLibro_Api.ObtenerInactivo(IdLibro, Estado);
+            ViewBag.Action = "Activar Libro";
 
-            if (lib1)
+
+            return View(model_Inactivo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GuardarCambiosInactivo(Libro libro_inactivo)
+        {
+            bool libroActivar;
+
+            libroActivar = await _ServicioLibro_Api.ActivarLibro(libro_inactivo);
+
+
+            if (libroActivar)
                 return RedirectToAction("Libro");
             else
                 return NoContent();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> GuardarCambios2(Libro ob_libroo)
-        {
-            bool lib1;
 
-            if (ob_libroo.IdLibro == 0)
-            {
-                lib1 = await _ServicioLibro_Api.Guardar(ob_libroo);
-            }
-            else
-            {
-                lib1 = await _ServicioLibro_Api.EditarActivar(ob_libroo);
-            }
-
-            if (lib1)
-                return RedirectToAction("Libro");
-            else
-                return NoContent();
-        }
     }
 }

@@ -1924,16 +1924,19 @@ namespace EMAI.Datos
             {
                 IdLibro = (int)reader["IdLibro"],
                 NombreLibro = reader["NombreLibro"].ToString(),
-                costo = (decimal)reader["Costo"],
-                Status = (bool)reader["Status"]
+                DescripcionLibro = reader["DescripcionLibro"].ToString(),
+                Costo = (decimal)reader["Costo"],
+                Stock = (int)reader["Stock"],
+                Estado = (string)reader["Estado"].ToString()
             };
         }
+
 
         public async Task<List<LibrosModel>> GetAllLibros()
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_ObtenerLibros", sql))
+                using (SqlCommand cmd = new SqlCommand("ObtenerTodosLibros", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     var response = new List<LibrosModel>(); //1
@@ -1951,23 +1954,33 @@ namespace EMAI.Datos
                 }
             }
         }
-
-        public async Task<LibrosModel> GetLibrobyId(int id)
+        /*obtener libros Inactivo*/
+        /*libro inactivo*/
+        private LibrosModel MapToLibrosInactivo(SqlDataReader reader)
+        {
+            return new LibrosModel()
+            {
+                IdLibro = (int)reader["IdLibro"],
+                NombreLibro = reader["NombreLibro"].ToString(),
+                DescripcionLibro = reader["DescripcionLibro"].ToString(),
+                Estado = (string)reader["Estado"].ToString()
+            };
+        }
+        public async Task<List<LibrosModel>> GetAllLibrosInactivo()
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_LibroObtenerByID", sql))
+                using (SqlCommand cmd = new SqlCommand("ObtenerTodosLibrosInactivo", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Libro", id));
-                    LibrosModel response = null;//3
+                    var response = new List<LibrosModel>(); //1
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         while (await reader.ReadAsync())
                         {
-                            response = MapToLibros(reader);//3
+                            response.Add(MapToLibrosInactivo(reader));//2
                         }
                     }
 
@@ -1976,16 +1989,67 @@ namespace EMAI.Datos
             }
         }
 
+        public async Task<LibrosModel> GetLibrobyId(int idActivo)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("OptenerPorIDLibro", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdLibro", idActivo));
+                    LibrosModel responseA = null;//3
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            responseA = MapToLibros(reader);//3
+                        }
+                    }
+
+                    return responseA;
+                }
+            }
+        }
+
+        /*obtener inactivos por id*/
+        public async Task<LibrosModel> GetLibrobyIdInactivos(int idInactivo)
+        {
+            using (SqlConnection sql = new SqlConnection(EMAIConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("OptenerPorIDLibroInactivo", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@IdLibro", idInactivo));
+                    LibrosModel responseI = null;
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            responseI = MapToLibrosInactivo(reader);
+                        }
+                    }
+
+                    return responseI;
+                }
+            }
+        }
+
         public async Task<bool> InsertLibro(InsertLibrosModel value)
         {
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_InsertarLibro", sql))
+                using (SqlCommand cmd = new SqlCommand("InsertarLibrosU", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@NombreLibro", value.NombreLibro));
-                    cmd.Parameters.Add(new SqlParameter("@Costo", value.costo));
-                    cmd.Parameters.Add(new SqlParameter("@Status", value.Status));
+                    cmd.Parameters.Add(new SqlParameter("@DescripcionLibro", value.DescripcionLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Costo", value.Costo));
+                    cmd.Parameters.Add(new SqlParameter("@Stock", value.Stock));
+                    cmd.Parameters.Add(new SqlParameter("@Estado", value.Estado));
 
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
@@ -1994,16 +2058,19 @@ namespace EMAI.Datos
             }
         }
 
-        public async Task<bool> StatusDesactivadoLibro(int IdLibro)
+        /*actualizar libro activos*/
+        public async Task<bool> UpdateLibro(int IdLibro, string NombreLibro, string DescripcionLibro, decimal Costo, string Estado)
         {
-            int status = 0;
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_DesactivadorLibro", sql))
+                using (SqlCommand cmd = new SqlCommand("ActualizarLibros", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdLibro", IdLibro));
-                    cmd.Parameters.Add(new SqlParameter("@Status", status));
+                    cmd.Parameters.Add(new SqlParameter("@NombreLibro", NombreLibro));
+                    cmd.Parameters.Add(new SqlParameter("@DescripcionLibro", DescripcionLibro));
+                    cmd.Parameters.Add(new SqlParameter("@Costo", Costo));
+                    cmd.Parameters.Add(new SqlParameter("@Estado", Estado));
 
 
                     await sql.OpenAsync();
@@ -2013,19 +2080,18 @@ namespace EMAI.Datos
             }
         }
 
+    
 
-        public async Task<bool> StatusActivadorLibro(int IdLibro)
+        /*Actualizar libros inactivo*/
+        public async Task<bool> ActivarLibro(int IdLibro, string Estado)
         {
-            int status = 1;
             using (SqlConnection sql = new SqlConnection(EMAIConnection))
             {
-                using (SqlCommand cmd = new SqlCommand("usp_ActivadorLibro", sql))
+                using (SqlCommand cmd = new SqlCommand("ActivarLibroU", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@IdLibro", IdLibro));
-                    cmd.Parameters.Add(new SqlParameter("@Status", status));
-
-
+                    cmd.Parameters.Add(new SqlParameter("@Estado", Estado));
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return true;
@@ -2033,24 +2099,6 @@ namespace EMAI.Datos
             }
         }
 
-
-        public async Task<bool> UpdateLibro(int IDLibro, decimal costo)
-        {
-            using (SqlConnection sql = new SqlConnection(EMAIConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_UpdateLibroLibro", sql))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@IdLibro", IDLibro));
-                    cmd.Parameters.Add(new SqlParameter("@Costo", costo));
-
-
-                    await sql.OpenAsync();
-                    await cmd.ExecuteNonQueryAsync();
-                    return true;
-                }
-            }
-        }
 
         #endregion
 

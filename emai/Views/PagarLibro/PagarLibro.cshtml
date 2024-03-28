@@ -1,0 +1,77 @@
+﻿@model IEnumerable<emai.Models.PagarLibro>
+
+@{
+    ViewData["Title"] = "PagarLibro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    div.dt-buttons {
+        position: initial;
+        display: none !important;
+    }
+</style>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Lista de libros vendidos</h3>
+                        <a asp-action="Pagar" asp-controller="PagarLibro" asp-route-IdLibro="0" class="btn btn-dark btn-sm" style="margin-right:10px;float: right !important">Realizar pago de libro</a>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+
+                        <table id="example2" class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>IdPago</th>
+                                    <th>Nombre de Alumno</th>
+                                    <th>Libro</th>
+                                    <th>Costo</th>
+                                    <th>Cantidad</th>
+                                    <th>Total Pagado</th>
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@item.IdLibro</td>
+                                        <td>@item.NombreLibro</td>
+                                        <td>@item.DescripcionLibro</td>
+                                        <td>$@item.Costo</td>
+                                        <td>@item.Stock</td>
+
+
+                                        <td>
+
+                                            <a asp-action="agregarlibro" asp-controller="Libro" asp-route-IdLibro="@item.IdLibro" class="btn btn-light btn-sm" style="width:100%; margin-bottom:10px">Editar </a>
+
+
+
+                                        </td>
+                                    </tr>
+                                }
+                                *@
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+

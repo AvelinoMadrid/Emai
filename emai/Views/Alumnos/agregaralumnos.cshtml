@@ -221,6 +221,16 @@
                                     </div>
                                 </div>
 
+                                @*Fecha Nacimiento del Alumno*@
+                                <div class="col-md-3 form-group">
+                                    <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento del Alumno</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control form-control-sa" asp-for="FechaNacimiento" id="FechaNacimiento" required />
+                                        <div class="valid-feedback">Válido.</div>
+                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                </div>
+
                                 @*Edad del Alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="NombreCompleto">Edad del Alumno</label>
@@ -231,15 +241,7 @@
                                     </div>
                                 </div>
 
-                                @*Fecha Nacimiento del Alumno*@
-                                <div class="col-md-3 form-group">
-                                    <label class="form-label" for="FechaNacimiento">Fecha de Nacimiento del Alumno</label>
-                                    <div class="input-group">
-                                        <input type="date" class="form-control form-control-sa" asp-for="FechaNacimiento" id="FechaNacimiento" required />
-                                        <div class="valid-feedback">Válido.</div>
-                                        <div class="invalid-feedback">Por favor rellene este campo.</div>
-                                    </div>
-                                </div>
+                             
                                 @*Telefono del alumno*@
                                 <div class="col-md-3 form-group">
                                     <label class="form-label" for="Telefono">Teléfono de Casa</label>
@@ -349,11 +351,11 @@
                                 </div>
 
                                 @*Botones de guardar*@
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
 
@@ -421,11 +423,11 @@
 
 
                                 @*Botones de guardar*@
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
 
@@ -528,12 +530,12 @@
                                 </script>
 
                                 @*Botones de guardar*@
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
 
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
                             </div>
@@ -646,15 +648,15 @@
                                 @***********************************************************@
 
                                
-                                <div class="col-md-6 form-group" data-target="#pagos-part" id="desactivarGuardarCambios">
+                                <div class="col-md-12 form-group" data-target="#pagos-part" id="desactivarGuardarCambios">
                                     <a class="btn btn-success" style="width:100% !important" onclick="stepper.next()">Siguiente</a>
                                 </div>
 
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <a class="btn btn-warning " style="width:100% !important" onclick="stepper.previous()">Regresar</a>
                                 </div>
                                 @*Botones de Editar*@
-                                <div class="col-md-6 form-group" data-target="#pagos-part" id="ActivarEditar0">
+                                <div class="col-md-12 form-group" data-target="#pagos-part" id="ActivarEditar0">
                                     <button id="guardarCambios" type="submit" class="btn btn-success" style="width:100% !important">Guardar Cambios</button>
                                 </div>
 

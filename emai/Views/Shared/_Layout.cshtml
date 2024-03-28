@@ -278,12 +278,21 @@
                                         <p>Gastos</p>
                                     </a>
                                 </li>
+
+                                @*Nueva vista*@
                                 <li class="nav-item">
                                     <a href="@Url.Action("Libro", "Libro")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "Libro" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Pago de libro</p>
+                                        <p>Mis Libros</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("PagarLibro", "PagarLibro")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "PagarLibro" ? "active" : "") nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pagar Libro</p>
+                                    </a>
+                                </li>
+                                @****************************************@
                                 <li class="nav-item">
                                     <a href="@Url.Action("VerComprobacion", "Comprobacion")" class=" @(ViewContext.RouteData.Values["Action"].ToString() == "VerComprobacion" ? "active" : "") nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -578,6 +587,7 @@
     </script>
 
     <script>
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": false,
@@ -586,11 +596,39 @@
             $('#example2').DataTable({
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": true,
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+                "language": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla =(",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Buscar:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    },
+                    "buttons": {
+                        "copy": "Copiar",
+                        "colvis": "Visibilidad"
+                    }
+                }
             });
         });
     </script>
